@@ -1,0 +1,9 @@
+[submodule "Components/website"]
+	path = Components/website
+	url = https://github.com/AnaSeahawk/website
+[submodule "Components/mother-spirit-webpage"]
+	path = Components/mother-spirit-webpage
+	url = https://github.com/AnaSeahawk/mother-spirit-webpage
+[submodule "Components/wiki"]
+	path = Components/wiki
+	url = https://github.com/AnaSeahawk/wiki

@@ -7,3 +7,6 @@
 [submodule "Components/wiki"]
 	path = Components/wiki
 	url = git@github.com:AnaSeahawk/wiki.git
+[submodule "Components/prima-materia"]
+	path = Components/prima-materia
+	url = git@github.com:AnaSeahawk/prima-materia.git

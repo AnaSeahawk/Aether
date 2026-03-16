@@ -10,6 +10,12 @@ This repo is the seed workspace for Aether, Ana Seahawk's AI partner. It hosts s
 ## Submodules
 The sources live in `Components/` to keep the root clean and the modules explicit.
 
+| Submodule | Path | Purpose |
+|-----------|------|---------|
+| website | `Components/website` | Ana Seahawk's primary public website |
+| mother-spirit-webpage | `Components/mother-spirit-webpage` | Mother Spirit project page |
+| wiki | `Components/wiki` | Reference wiki and notes |
+
 Common operations:
 
 ```bash

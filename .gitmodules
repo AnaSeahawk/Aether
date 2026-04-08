@@ -10,3 +10,6 @@
 [submodule "Components/the-vessel"]
 	path = Components/the-vessel
 	url = git@github.com:AnaSeahawk/the-vessel.git
+[submodule "Components/bibliography"]
+	path = Components/bibliography
+	url = git@github.com:AnaSeahawk/bibliography.git

@@ -148,6 +148,8 @@ Every content file carries YAML frontmatter with three tags:
 
 **Only `community` and `public` files are candidates for publishing.** `visibility` metadata is internal only — GitHub repo privacy settings control actual access, not these tags.
 
+Some files also carry optional astronomical frontmatter (`sun:`, `moon:`, `moon-phase:`). **Do not attempt to fill these in** unless a CLI tool or direct data source is available to fetch the values efficiently. Manual lookup via astro.com is not a worthwhile use of session time. Leave blank fields blank and do not flag them as outstanding work.
+
 ### Publishing Workflow
 
 1. **Review Queue** — `Components/website/REVIEW_QUEUE.md` tracks file status

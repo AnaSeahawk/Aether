@@ -104,6 +104,20 @@ In parts of Africa, the Middle East, and Asia, girls are cut. Female genital cut
 
 ---
 
+## Women Did Not Design This
+
+The conditions the mother's fear was responding to — the economic arrangements, the social consensus, the medical authority, the vocabulary of hygiene and disgust — these were not women's designs. Women inherited them, transmitted them, administered them with their own hands inside the most intimate register of care. But the architecture was built elsewhere. And it was built to run on fear wearing the face of love because that is the most complete delivery mechanism there is. You do not need external enforcers when the mothers will do it. The suppression reaches its finished form when it has moved inside — inside the relationships where it cannot be named as harm, inside the hands of the people who most want to protect the ones they are wounding.
+
+This is how you weaponise people against themselves.
+
+And death came early to these generations. The girls in the menstruation huts who died from cold and exposure and snake bites while the household slept warm. The women whose bound feet became infected, rotted, collapsed over decades. The girls who died from cutting or lived with its complications through every childbirth after. The bodies force-fed into shapes they could not sustain. The practices framed as preparing girls for life were shortening those lives. The love that administered the harm was real. The harm was also real. Both things were true simultaneously and that is exactly what made it so difficult to name and so durable across centuries.
+
+It is the wound we all carry. Not only those who underwent these practices directly — the wound moves through the maternal line, through the inherited fear, through generations of hands that did what fear demanded and called it love. It arrives in every body that learned, before it had language, that what the body produces is disgusting. That the body's own knowledge is dangerous. That the correct response to what the body does is management, containment, disposal.
+
+Every practitioner who approaches this work arrives with some version of this already installed. The distillation does not run around that wound. It runs directly through it.
+
+---
+
 ## The Body, Not Only the Woman
 
 Somewhere inside all of this, it extends to boys.

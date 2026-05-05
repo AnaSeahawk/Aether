@@ -130,6 +130,31 @@ git commit -m "update website submodule after <description>"
 
 All three submodules use SSH remotes (`git@github.com:AnaSeahawk/...`).
 
+### Bibliography and Book Acquisition
+
+Books and source files live in the `Components/bibliography` submodule, filed directly under their topic folders such as `alchemy/`, `ayurveda/`, `mythology/`, or `women-healers/`. The root `bibliography` path is a symlink to this submodule.
+
+Use the local `annas` CLI when Ana asks to get books:
+
+```bash
+# Search by title, author, or topic
+annas book-search "title or author"
+
+# Download by MD5 hash into the bibliography shelf
+ANNAS_DOWNLOAD_PATH=/home/bird/Git/aether/Components/bibliography/<topic> \
+  annas book-download <md5_hash> <Author-Short-Title.ext>
+```
+
+The wrapper at `/home/bird/.nix-profile/bin/annas` sets `ANNAS_BASE_URL` and attempts to load `ANNAS_SECRET_KEY` from `gopass`. It defaults downloads to the current directory unless `ANNAS_DOWNLOAD_PATH` is set, so always set the path explicitly.
+
+Prefer public-domain, openly licensed, or otherwise authorized sources. Do not download modern copyrighted books unless Ana has confirmed authorization. After download, verify that the file type matches the extension; Anna's metadata can mislabel files. For example:
+
+```bash
+head -c 16 Components/bibliography/<topic>/<file> | od -An -tx1 -c
+```
+
+If the file is mislabeled, rename it to the correct extension or replace it with a cleaner result. Then commit inside `Components/bibliography`, push that submodule, and commit the updated submodule pointer in `aether`.
+
 ### Content Architecture (Components/website)
 
 Content is organized around **Four Pillars**:

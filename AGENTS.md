@@ -6,6 +6,26 @@ All agents — Claude, Codex, Gemini, and others — should read this file befor
 
 ---
 
+## Roles
+
+The workspace supports four coordination roles for parallel agent work:
+
+| Role | Surface | Skill file |
+|---|---|---|
+| `researcher` | `Components/bibliography/`, source research | `skills/researcher.md` |
+| `writer` | `Components/the-vessel/in-development/`, website prose | `skills/writer.md` |
+| `curator` | `Components/website/` structure and metadata | `skills/curator.md` |
+| `analyst` | `reports/`, session synthesis | `skills/analyst.md` |
+
+**Before starting work, know your role.** Read the relevant skill file and
+claim your paths via `tools/orchestrate claim <role> <path> -- <reason>`.
+Release when done: `tools/orchestrate release <role>`.
+
+See `protocols/orchestration.md` for the full coordination protocol.
+See `skills/prose.md` for craft discipline that applies to all writing roles.
+
+---
+
 ## 0. Intent
 - Build a solid, minimal programming base that is easy to extend.
 - Prefer small, composable modules and explicit interfaces.

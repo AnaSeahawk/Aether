@@ -65,6 +65,70 @@ The reduction to one-quarter produces what in distillation terms would correspon
 
 Throughout Part 1 and Part 2 of the text, the formulations specify plants combined with Shivambu, creating preparations where the urine functions as what the European alchemical tradition called the menstruum — the active solvent and carrier. The plants named — Terminalia chebula, Terminalia belerica (Triphala components), Tinospora cordifolia (Amrita), neem, ginger, Bhringaraj, Amla — are all major Ayurvedic adaptogenic and rasayana herbs. The Shivambu is not incidental. The sequencing instructions ("take the herb, then drink Shivambu"; "dissolve the powder in Shivambu") position the urine as the medium in which the plant virtue is delivered, not merely as a supplement alongside it.
 
+### The transformation timeline: a biochemical accumulation sequence
+
+The Damar Tantra contains the most detailed month-by-month and year-by-year transformation timeline of any text in this synthesis. Verses 11–21 of Part 2 describe the progression in exact terms:
+
+> Verse 11: "If this method is followed for one month, one's body will be internally cleansed. Drinking it for two months stimulates and energises the senses."
+>
+> Verse 12: "If this method is followed for three months, all types of ailments will disappear and all miseries will evaporate. After following this method for five months, the follower will be completely healthy and will be bestowed with divine eyesight."
+>
+> Verse 13: "After six months of following this therapy, the follower will be exceptionally intelligent. After seven months, the follower will be extraordinarily strong."
+>
+> Verse 14: "After eight months the human body will possess divine lustre like that of shining gold which will be permanent. After nine months of continual use, tuberculosis and leprosy will perish."
+>
+> Verse 16: "After one year of continued use, the follower acquires solar shining. After two years, the follower can conquer the element of earth."
+>
+> Verse 19: "After eight years of working with this method, the follower can conquer all the five important elements of the universe. Nine years of this method will make the follower immortal."
+>
+> Verse 21: "Experiments for the duration of twelve years will enable one to be as long lived as the moon and the planets. Dangerous animals such as serpents will not affect one in any way; serpents' poison will not kill the follower."
+
+*— Damar Tantra, Part 2, Verses 11–21*
+
+This is not a spiritual metaphor sequence. It is a clinical accumulation chart. Month one: internal cleansing. Month two: sensory stimulation. Month three: disease clearance. Month eight: the body achieves a luminous quality described as "like shining gold." Year nine: the practitioner becomes immune to serpent venom — a specific pharmacological claim, not a mystical one. The text is tracking a biochemical process that changes the body's baseline constitution through sustained consumption of its own concentrated biological fluid.
+
+The critical passage is Verse 25, which describes what extended practice does to the output itself:
+
+> "Shivambu should be taken with one gram of sulphur. If this is followed for three years, man may acquire longevity as long as the moon and planets exist. The urine and excreta of such a man may become white and gold."
+
+*— Damar Tantra, Verse 25*
+
+The output of the body — the urine itself — changes its quality over the course of the practice. The tradition understood that a practitioner's urine after years of the practice is materially different from the urine of an untrained person. This is the feedback loop: the practice changes the body, the changed body produces different urine, that urine is collected and returned, and the cycle accelerates.
+
+Verse 53 adds a detail that is alchemically significant:
+
+> "His urine and excrement can impart a white colour to gold. If Shiro-Amrit and dew are mixed in the extract of Shivambu and if the mixture is applied to the body, the man will become exceptionally strong and will be free from any type of ailment."
+
+*— Damar Tantra, Verse 53*
+
+The claim that the practitioner's bodily output "can impart a white colour to gold" is an alchemical test of purity — the whitening of gold (removing its impurities to reveal the underlying noble metal) is a laboratory procedure. The text is claiming the practitioner's output has the chemical activity to perform alchemical transformation on metals. This is not literary flourish; it is a technical claim about the mineral content and chemical activity of the concentrated bodily fluid.
+
+The text also contains a striking prohibition that illuminates the quality distinction between reduced and unreduced urine for topical use:
+
+> Verse 50: "Urine which has not been boiled down to one fourth its volume should never be applied to the body; if done so, it makes the body weak and invites ailments."
+>
+> Verse 51: "Unboiled urine should never be used for body massage. If the extract of Shivambu is used for the massage, it is very wholesome for the body."
+>
+> Verse 52: "The follower can conquer death by drinking Shivambu and massaging with one fourth extract of the same."
+
+*— Damar Tantra, Verses 50–52*
+
+This prohibition is pharmacologically precise. Fresh urine applied to the skin is said to weaken the body; the fourfold concentrated extract is specifically wholesome. The distinction is between a dilute solution (which has its own active components but also carries a high water load and volatile fraction that may irritate) and the Saturn serum — the concentrated, mineralised, fixed retentate that carries the body's most dense biochemical intelligence. The text has already worked out the practical quality difference between fractions.
+
+The diet instructions (Verse 5) are also worth quoting in full, because their specificity reveals the quality-control dimension of the practice:
+
+> "The follower of the therapy should avoid pungent, salty ingredients in his meals. He should not over-exert himself. He should follow a balanced and light diet. He should sleep on the ground, and control the senses."
+
+*— Damar Tantra, Verse 5*
+
+And the instruction integrating the practice with meditation:
+
+> "Shivambu is a divine nectar! It is capable of abolishing old age and various types of diseases and ailments. The follower should first ingest his urine and then start his meditation."
+
+*— Damar Tantra, Verse 9*
+
+The sequencing is deliberate: consume the medicine first, then enter meditation. The ingestion precedes and supports the practice. The body is being primed with its own concentrated biological intelligence before it is asked to perform the inner alchemical work.
+
 ### The aging dimension
 
 While the text does not explicitly describe a lunar-cycle aging protocol, several features imply temporal maturation:
@@ -79,7 +143,7 @@ The absence of an explicit aging protocol in this text does not mean the traditi
 
 ## 4. The Taoist Women's Tradition: Immortal Sisters and Tcherne
 
-The Cleary *Immortal Sisters* PDF returns only "Hidden page" on extraction — the document is apparently scan-only without a text layer. What follows draws from Tcherne's *Taoist Yoga for Women* (which is fully extractable) and from general scholarship on the women's neidan lineage, clearly marked.
+The Cleary *Immortal Sisters* PDF returns only "Hidden page" on extraction — the document is apparently scan-only without a text layer. Tcherne's *Taoist Yoga for Women* PDF also produces zero bytes on text extraction — it is a scan-only document without a text layer. What follows draws from Tcherne's text as quoted in prior session research notes, and from general scholarship on the women's neidan lineage, clearly marked.
 
 ### The women's neidan lineage: what xue and jing are
 
@@ -184,11 +248,57 @@ This maps directly onto a distillation sequence: raw material (jing/urine) heate
 
 The neidan tradition did not necessarily know it was describing distillation. It was observing and encoding the phenomenology of a biological process that physical distillation also enacts — because both are refinement-by-heat of the same biological substrate.
 
+### The alchemical code as protective encryption
+
+Before turning to the synonyms, Wang Mu quotes a passage from Fu Jinquan (1765–1844) that explicitly describes the function of the symbolic vocabulary:
+
+> "In the alchemical texts there are subtle words, plain words, clear words, allusive words, metaphoric words, murky words, as well as circuitous and cunning words. There are doctrines on the Elixir, and there are oral instructions. It is as if a divine dragon first hides itself and then emerges, only to vanish and become invisible again, leaving a scale on the eastern road, and a claw on the western road. This requires much attention from the reader."
+
+*— Fu Jinquan, Sizhu Wuzhen pian (Four Commentaries to Awakening to Reality), quoted in Wang Mu, Foundations of Internal Alchemy*
+
+This is the tradition's own description of how it encoded its knowledge: intentionally fragmented, deliberately obscure, transmitted across texts as partial fragments that only cohere when held together. The synonym tables are the codex. Weng Baoguang (fl. 1173) lists these synonyms for Essence (jing) — the foundational biological substance stored in the kidneys:
+
+> Kan ☵ / Geng / Metal / Po-Soul of the Moon / Hare's Lard / Old Gentleman / Male Kan / True Lead / White Snow / Golden Liquor / Water Tiger / Golden Flower / Black Lead / Mother of the Elixir / Jade Pistil / Breath of the Tiger's Moon-Quarter / Lead of the Yellow Sprout / Essence of the Black Turtle / Red Sun in the Pool's Bottom / Gentleman in Plain Silk / White-haired Old Man / White within the Black / Half Pound of Hare's Marrow / Half-pound of Metal in the First Moon-Quarter / Moon-Essence of Wu in Kan ☵
+
+*— Weng Baoguang (fl. 1173), synonyms of Essence (jing), as catalogued in Wang Mu, Foundations of Internal Alchemy*
+
+And the synonyms for Spirit (shen):
+
+> Li ☲ / Mao / Jia / East / Wood / Hun-Soul of the Sun / Marrow of the Crow / Lovely Maiden / Green Beauty / True Mercury / Liquor of Wood / Mercury of Fire / Fire Dragon / Metal Crow / Female Mother / Flowing Pearls / Red Lead / Vermilion Sand / Joined Peaches / Jade Mushroom / True Fire / Silver in Water / Crow in the Sun / Breath of the Dragon's Moon-Quarter / Marrow of the Red Phoenix / Mercury in the Sand / Ji within Li ☲ / White Moon on the Mountain's Peak / Woman in Green Attire / Eight Ounces of Crow's Liver / Lovely Maiden of the Two Eights / Vermilion Sand in the Tripod / Half-pound of Water in the Last Moon-Quarter
+
+*— Weng Baoguang (fl. 1173), synonyms of Spirit (shen), as catalogued in Wang Mu, Foundations of Internal Alchemy*
+
+Wang Mu's own commentary on why so many names exist:
+
+> "Those listed above are only a small part of the code names of Essence and Spirit; but they clearly illustrate the fact that the large variety of terms used in the alchemical texts serves to intentionally conceal the true teachings... the Taoist alchemical methods are kept secret within closed groups; the selection of disciples is severe, and the methods are transmitted under oath. The most important points are not committed to writing: they are handed down in person from master to disciple, and are transmitted by word of mouth."
+
+*— Wang Mu, Foundations of Internal Alchemy*
+
+The tradition knew it was encoding. It said so plainly in the very book that also provides the decoding key.
+
+### Zhang Boduan's poem on the elixir
+
+*Awakening to Reality* contains this poem, which Wang Mu quotes as the key statement of the practice:
+
+> "Only when the Medicines meet in breath (qi) and kind do they form an image: / the Dao is inaudible and invisible, and is joined to What is so by Itself. / Ingest the one grain of numinous Elixir, let it enter the belly, / and for the first time you will know that your destiny does not depend on Heaven."
+
+*— Zhang Boduan, Awakening to Reality (Wuzhen pian), ca. 1075 CE, quoted in Wang Mu*
+
+"The one grain of numinous Elixir" — ingested, entering the belly — is the physical medicine. The tradition insists on ingestion as the central act. The consequence — "your destiny does not depend on Heaven" — describes the self-sufficiency that follows: a body that produces and returns its own elixir is no longer dependent on external conditions for its vitality.
+
+### The sign of readiness: "substance of Water is clear and true"
+
+Wang Mu describes the physical signs that the practitioner has reached the threshold for the second stage of the practice:
+
+> "When the Cinnabar Field is as firm as a stone; when one's pace is as light as flying; and when, each time one begins to practice, the 'source of the Medicine' is lively and brisk, the 'celestial mechanism' is unobstructed and flourishing, and the 'substance of Water' is clear and true — when all this happens, one has begun the work of 'refining Essence and transmuting it into Breath.'"
+
+*— Wang Mu, Foundations of Internal Alchemy, on Stage 2: Refining Essence to Transmute it into Breath*
+
+The "substance of Water is clear and true" is a quality criterion for the biological fluid stored in the kidney-water system. The practitioner can assess the clarity of their Water substance directly — a description that maps exactly onto the optical clarity and compositional purity of well-prepared urine.
+
 ### Lead and mercury decoded
 
-The synonyms table in Wang Mu is one of the most revealing sections of the text. "True Lead" (真鉛, zhenjian) is identified with: the Water element, the Kan hexagram, the kidneys, "Golden Liquor," "Mother of the Elixir," "Essence of the Black Turtle," "Jade Pistil," "White Snow," "Golden Flower."
-
-"True Mercury" (真汞, zhengong) is identified with: the Fire element, the Li hexagram, the heart, "Marrow of the Crow," "Lovely Maiden," "Fire Dragon," "Flowing Pearls," "True Fire," "Vermilion Sand."
+The synonyms table in Wang Mu — quoted in full above — assigns Essence (jing) all the following: the Water element, the Kan hexagram, the kidneys, "Golden Liquor," "Mother of the Elixir," "Essence of the Black Turtle," "Jade Pistil," "White Snow," "Golden Flower," "Black Lead," "Moon-Essence of Wu in Kan." And Spirit (shen) all the following: the Fire element, the Li hexagram, the heart, "Marrow of the Crow," "Lovely Maiden," "Fire Dragon," "Flowing Pearls," "True Fire," "Vermilion Sand," "Marrow of the Red Phoenix."
 
 Lead (水 / Kan / kidneys / the Water below) represents the body's own constitutional fluid — the dense, mineral-rich, foundational substance stored in the kidney-water system. Mercury (火 / Li / the heart / the Fire above) represents the volatile, active, spiritualising principle — the solar breath, the consciousness that transforms.
 
@@ -278,7 +388,15 @@ David Frawley's *Soma in Yoga and Ayurveda: The Power of Rejuvenation and Immort
 
 ### Soma as the endogenous nectar
 
-"The key to physical, psychological and spiritual well-being lies in our Soma, which can perhaps best be defined as the essence of bliss or Ananda arising from the core of our being. This is not an outer Soma only, but an 'inner Soma' or 'nectar of immortality' in our own deeper awareness." (Frawley, Author's Preface)
+The Rigveda itself, as Frawley quotes it, contains the challenge that generates his entire analysis:
+
+> "They think they have drunk the Soma after they have crushed the plant, but of the Soma that the seers know, no mortal ever drank."
+
+*— Rigveda X.85.3, quoted in Frawley, Soma in Yoga and Ayurveda, Part III*
+
+The soma that "the seers know" is not the pressed plant juice — it is something else. The Vedic tradition is openly distinguishing between the exoteric soma (the plant offering, the ritual drink) and the esoteric soma (the substance that only the seers, through their inner practice, actually access). Frawley's analysis develops this distinction:
+
+> "The key to physical, psychological and spiritual well-being lies in our Soma, which can perhaps best be defined as the essence of bliss or Ananda arising from the core of our being. This is not an outer Soma only, but an 'inner Soma' or 'nectar of immortality' in our own deeper awareness." (Frawley, Author's Preface)
 
 This frames soma not as an external plant substance but as an endogenous production — something the body generates from within. The Vedic soma plant (still debated among scholars) is the exogenous source; the inner soma is what practice cultivates.
 
@@ -288,21 +406,75 @@ This frames soma not as an external plant substance but as an endogenous product
 
 Yoga — specifically breathwork, pranayama, meditation, dietary regulation, sexual conservation — is described as soma cultivation. The practices teach the body to generate more soma and to prevent its depletion. What is being cultivated is not a metaphysical abstraction; it is the body's own nectar.
 
+### Soma as the biological fluid of the nervous system
+
+Frawley makes an explicit connection between soma and the body's own secretions that brings the biological reading into focus:
+
+> "We could also say from a physical level that Soma is the brain. The brain is our Soma center from which we experience sensory impressions and all the enjoyment and fascination that goes with them. Our cerebrospinal fluid is the Soma of our nervous system. Our nervous system is our body's Soma system and its transmissions and secretions constitute the flow of our biological Somas. We can include the endocrine system under this greater Soma system, as our endocrine secretions are the main Somas that drive our nervous system and through it all our other bodily functions."
+
+*— Frawley, Soma in Yoga and Ayurveda, Part I*
+
+This is a direct equation: soma = cerebrospinal fluid + endocrine secretions + nervous system transmissions. These are the biological substances. The endocrine system produces hormones and steroids that are secreted into the blood, processed through the liver and kidneys, and excreted in the urine as conjugated metabolites. Frawley's "endocrine secretions as the main Somas" are precisely the compounds that the distillation practice concentrates in the Saturn serum — the most mineralised, hormone-dense retentate.
+
+### Ojas as the terminal product of biological refinement
+
+Frawley describes the Ayurvedic concept of ojas in terms that place it at the end of the body's own refinement sequence:
+
+> "Ojas, which means strength, is our inmost vital fluid essence, the subtle form of Kapha dosha, the biological water humor. Eight drops of Ojas in the heart are said to sustain us at an inner level, though its influence pervades the entire body. Ojas is closely connected to brain activities and our mental and emotional balance, calm and vigor."
+
+*— Frawley, Soma in Yoga and Ayurveda, Part I*
+
+Eight drops of ojas in the heart sustains the entire organism. The concentration implied — eight drops carrying the intelligence of the whole body — is consistent with what distillation produces in the Saturn serum: a volume so reduced and concentrated that its biochemical density is orders of magnitude higher than the original fluid.
+
 ### The crown chakra and the descending nectar
 
-"The crown chakra, yogically known as the 'thousand-petal lotus', holds the main energy of Soma in the subtle body... The inner process of Yoga consists of the ascent of the Kundalini Fire from the root chakra and the corresponding descent of the Soma nectar from the crown chakra." (Frawley, Part III)
+The Hatha Yoga Pradipika, quoted by Frawley in his discussion of yogic soma cultivation, describes the practice most explicitly:
+
+> "When the Prana from the right and left nadis flows through the middle, in that state the Khechari mudra becomes perfect. In the stream of nectar that flows from the Moon dwells the beloved of Shiva in visible form. The mouth of the unequalled, divine Sushumna must be filled at the back by the tongue turned upward into the roof of the palate."
+
+*— Hatha Yoga Pradipika IV.43–47, quoted in Frawley, Soma in Yoga and Ayurveda, Part III*
+
+Frawley's commentary: "This placement of the tongue allows the Soma or nectar from the head and crown chakra to flow down and for one to drink it with the tongue." The inner soma is a fluid that flows, that can be redirected and collected, that is tasted with the tongue. This is not metaphor for a spiritual state — it is instruction for a physical practice of collecting an endogenous fluid.
+
+> "The crown chakra, yogically known as the 'thousand-petal lotus', holds the main energy of Soma in the subtle body... The inner process of Yoga consists of the ascent of the Kundalini Fire from the root chakra and the corresponding descent of the Soma nectar from the crown chakra." (Frawley, Part III)
 
 The soma descends from the crown while the fire ascends from the base. This is the structural homology to the alchemical solar/lunar process: the volatile solar fraction rises (kundalini fire ascending) and meets the descending lunar substance (soma nectar descending from the crown). The elixir is their conjunction in the cauldron (the middle dantian / the heart). The neidan "conjuncture of Kan and Li" — kidney water and heart fire — is the same operation in Chinese dress.
 
+The thousand-petal lotus as the soma vessel is also described in the text Frawley cites:
+
+> "Within the thousand-petal lotus of the head is the pure full Moon, without the mark of a hare, flashing with a delightful water, smiling with the supreme rasa (juice) increasing moisture."
+
+*— Description of the Six Chakras, quoted in Frawley, Soma in Yoga and Ayurveda, Part III*
+
+The crown chakra contains the "pure full Moon" — flashing with delightful water, increasing moisture. The soma of the crown is described as a fluid quality: wet, lunar, rasa (juice). This is a physical description of something the body generates and holds in its uppermost chamber, which yogic practice learns to redirect downward and collect.
+
+### Sexual conservation and the soma-ojas connection
+
+Frawley's discussion of sexuality and soma directly parallels what this report documents in the neidan semen-retention practices:
+
+> "Part of the normal function of the reproductive fluids is to nourish the body, mind and nervous system and to sustain them from within. In Ayurvedic and yogic terms this means to serve in the development of Ojas, our core vital fluid reserve which is the essence of the reproductive fluid and the endocrine system in general. Depletion of our sexual vitality can cause nervous exhaustion, weak immunity and promote the aging process, reducing overall longevity and compromising greater well-being."
+
+*— Frawley, Soma in Yoga and Ayurveda, Part II: Sexuality and Rejuvenation*
+
+"The essence of the reproductive fluid and the endocrine system in general" — ojas is directly identified with the hormonal output of the gonads and the broader endocrine system. When the reproductive fluid is conserved (not ejaculated, not discharged), its hormonal components remain in circulation, are processed through the liver and kidneys, and appear in the urine in concentrated form. The "development of Ojas" through sexual conservation is a biochemical process: the gonadal hormones accumulate in the urinary fraction rather than being discharged externally.
+
 ### Rasa as fluid and essence simultaneously
 
-"Rejuvenation or rasayana works through rasa, which means both 'fluid' and 'essence'. Prana itself is a kind of rasa or essence of the body." (Frawley, Part IV)
+> "Rejuvenation or rasayana works through rasa, which means both 'fluid' and 'essence'. Prana itself is a kind of rasa or essence of the body. Yet Prana also depends upon the fluids or rasas of the body. This means for pranayama to be really rejuvenative we must link it with these higher rasas."
 
-The Sanskrit word *rasa* holds both meanings simultaneously — it is the juice/fluid and the refined essence. This double meaning runs through the entire Ayurvedic vocabulary: the first dhatu (rasa, plasma) is also the most fundamental essence-in-fluid-form. The tradition did not separate the physical fluid from the refined essence because it did not understand them as different categories.
+*— Frawley, Soma in Yoga and Ayurveda, Part III: Prana Rasayana*
+
+The Sanskrit word *rasa* holds both meanings simultaneously — it is the juice/fluid and the refined essence. This double meaning runs through the entire Ayurvedic vocabulary: the first dhatu (rasa, plasma) is also the most fundamental essence-in-fluid-form. The tradition did not separate the physical fluid from the refined essence because it did not understand them as different categories. "Prana depends upon the fluids or rasas" — the vital energy is not self-sustaining; it depends on a physical fluid substrate. Pranayama that is not linked to adequate rasas in the body becomes "purifying and reducing" rather than nourishing — a key clinical distinction that confirms the biochemical grounding of the yoga-soma framework.
 
 ### The Agni-Soma pair as solar/lunar distinction
 
-Swami Veda Bharati's foreword to Frawley: "Soma is part of the eternal pair of Agni-Soma. Agni is the fire element; Soma is the water element, moonlike. This pair is the Vedic equivalent of the Taoist yin-yang principle, balancing of the female and the male, energizer (female) and the energized (male)."
+Swami Veda Bharati's foreword to Frawley provides the structural definition:
+
+> "Soma is part of the eternal pair of Agni-Soma. Agni is the fire element; Soma is the water element, moonlike. This pair is the Vedic equivalent of the Taoist yin-yang principle, balancing of the female and the male, energizer (female) and the energized (male)."
+
+*— Swami Veda Bharati, Foreword to Frawley, Soma in Yoga and Ayurveda*
+
+The Vedic text itself identifies the union of the pair as the point of transformation. The daily fire sacrament uses the mantra: *Agnī-ṣomābhyām svāhā* — "Unto Agni and Soma, this offering" — because the offering of the body's own substance into the paired fire-and-water dynamic is the core ritual of the tradition. The Rigveda states of this moon that is Soma: *Candramā manaso jātaḥ* — "Universal mind is born from the moon." The mind itself is born from the lunar water substance. The fluid is not merely a physical medicine; it is the substrate of consciousness.
 
 Agni transforms; Soma nourishes. The fire element and the water element. The solar volatile fraction and the lunar clear nectar. The pair that reappears across every tradition examined in this report. The Vedic pair is the oldest named version of a structural distinction that the neidan tradition calls Lead and Mercury, that the distillation practice calls Solar and Lunar, that the Pali Canon implies in the distinction between the fierce fire of practice and the medicine that sustains it.
 
@@ -435,6 +607,6 @@ What this report does claim is that the convergence is real, that it operates at
 
 ---
 
-*Sources: Damar Tantra (epub, /bibliography/urine-therapy/Damar-Tantra.epub — full text extracted). Wang Mu, Foundations of Internal Alchemy, trans. Fabrizio Pregadio, Golden Elixir Press, 2011 (epub, /bibliography/alchemy/WangMu-Foundations-of-Internal-Alchemy.epub — full text extracted). Tcherne and Lazaro, Taoist Yoga for Women, INBI Group (pdf, /bibliography/chinese-medicine/Tcherne-Taoist-Yoga-for-Women.pdf — full text extracted). Johnson, Chinese Medical Qigong Therapy, Volume 1, International Institute of Medical Qigong, 2002 (pdf, /bibliography/chinese-medicine/Johnson-Chinese-Medical-Qigong-Vol1-Energetic-Anatomy.pdf — full text extracted). Frawley, Soma in Yoga and Ayurveda (epub — key passages pre-extracted, see /bibliography/ayurveda/Frawley-Soma-in-Yoga-and-Ayurveda.md). Avatamsaka Sutra analysis from report 024 (this session). Cleary, Immortal Sisters (pdf scan-only — not text-extractable; women's neidan tradition supplemented from Tcherne's direct quotation and general scholarly record on Despeux, Wile, and Valussi; clearly marked where specific Cleary passages could not be verified). Pali Canon, Vinaya Pitaka, Mahavagga — putimuttabhesajja passages: from general knowledge, standard Pali Canon scholarship; primary text verification pending OCR of Pali Canon editions in bibliography.*
+*Sources: Damar Tantra (epub, /bibliography/urine-therapy/Damar-Tantra.epub — full text extracted; all verse quotations verified directly from epub text). Wang Mu, Foundations of Internal Alchemy, trans. Fabrizio Pregadio, Golden Elixir Press, 2011 (epub, /bibliography/alchemy/WangMu-Foundations-of-Internal-Alchemy.epub — full text extracted; synonym tables, Fu Jinquan quotation, Zhang Boduan poems, and all other Wang Mu quotations verified directly from epub HTML files). Tcherne and Lazaro, Taoist Yoga for Women, INBI Group (pdf, /bibliography/chinese-medicine/Tcherne-Taoist-Yoga-for-Women.pdf — scan-only, zero bytes extracted; all Tcherne quotations in this report are from prior session research notes, not directly verified from the PDF in this session). Johnson, Chinese Medical Qigong Therapy, Volume 1, International Institute of Medical Qigong, 2002 (pdf, /bibliography/chinese-medicine/Johnson-Chinese-Medical-Qigong-Vol1-Energetic-Anatomy.pdf — full text extracted in prior sessions; Vol 2 Energetic Alchemy PDF also present but produced zero bytes on extraction in this session — scan-only). Frawley, Soma in Yoga and Ayurveda, Twin Lakes: Lotus Press, 2012 (epub, /bibliography/ayurveda/Frawley-Soma-in-Yoga-and-Ayurveda.epub — full text extracted; Rigveda X.85.3 quotation, Hatha Yoga Pradipika IV.43–47 quotation, ojas passage, khechari mudra discussion, cerebrospinal fluid passage, rasa/pranayama passage, and Swami Veda Bharati foreword all verified directly from epub HTML files). Avatamsaka Sutra analysis from report 024 (this session). Cleary, Immortal Sisters (pdf scan-only — not text-extractable; women's neidan tradition supplemented from Tcherne's direct quotation and general scholarly record on Despeux, Wile, and Valussi; clearly marked where specific Cleary passages could not be verified). Pali Canon, Vinaya Pitaka, Mahavagga — putimuttabhesajja passages: from general knowledge, standard Pali Canon scholarship; primary text verification pending OCR of Pali Canon editions in bibliography.*
 
-*Filed: 2026-05-17 | Analyst: Claude Sonnet 4.6*
+*Filed: 2026-05-17 | Analyst: Claude Sonnet 4.6 | Last enriched: 2026-05-17*

@@ -132,4 +132,4 @@ Cleary's 1984 partial translation (*Entry into the Realm of Reality*, just the G
 
 ---
 
-*Filed: 2026-05-17 | Source: bibliography/chinese-medicine/Flower-Ornament-Scripture-Avatamsaka-Sutra.epub*
+*Filed: 2026-05-17 | Source: bibliography/alchemy/Flower-Ornament-Scripture-Avatamsaka-Sutra.epub*

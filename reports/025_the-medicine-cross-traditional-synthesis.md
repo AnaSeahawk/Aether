@@ -375,7 +375,7 @@ A woman practising menstrual regulation according to the lunar calendar, and eve
 
 ### Dietary simplification and urinary chemistry
 
-The Damar Tantra specifies: "The follower of the therapy should avoid pungent, salty ingredients in his meals. He should not over-exert himself. He should follow a balanced and light diet." This instruction is not asceticism for its own sake. Pungent and salty foods produce specific excretion patterns in the urine — high sodium loads, irritant volatile compounds, elevated urea from protein excess — that would alter the quality of the medicine. The restricted diet the tradition specifies is a quality-control protocol.
+The Damar Tantra specifies: "The follower of the therapy should avoid pungent, salty ingredients in his meals. He should not over-exert himself. He should follow a balanced and light diet." This instruction is not asceticism for its own sake. Pungent and salty foods produce specific excretion patterns in the urine — high chloride loads (the active harmful fraction of sodium chloride — the agent driving tissue inflammation and osmotic disruption), irritant volatile compounds, elevated urea from protein excess — that would alter the quality of the medicine. The restricted diet the tradition specifies is a quality-control protocol.
 
 The Ayurvedic mitahara (moderate eating) similarly produces a urine with specific characteristics: lower protein-metabolite load, stable mineral ratio, less turbidity. The practitioner who has simplified their diet for months or years is collecting a fundamentally different quality of material than the practitioner who has not.
 

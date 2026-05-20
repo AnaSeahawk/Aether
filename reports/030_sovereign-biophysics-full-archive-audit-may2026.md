@@ -115,7 +115,7 @@ Three major claims verified across multiple files:
 |--------|------|--------|
 | Olivier's First Distillation — Feb 18–19 | Feb 18–19, 2026 | Complete ✓ |
 | Ana's First Distillation — Feb 22 | Feb 22, 2026 | Complete ✓ |
-| Fresh Combined Plasma — Two-Pass | **Date missing** | See note |
+| Fresh Combined Plasma — Two-Pass | March 6, 2026 | Complete ✓ |
 | March 8 — The Polishing Run | March 8, 2026 | Complete ✓ |
 
 **Flag:** experiment-report-fresh-combined-two-pass.md lacks an explicit date. The run is implied to be between Feb 22 and March 8 from context. Worth adding the actual date to the frontmatter.
@@ -180,7 +180,6 @@ A few things that aren't gaps but are worth naming:
 ## 9. Recommendations by Priority
 
 **Immediate (small effort, high coherence gain):**
-- Add explicit date to experiment-report-fresh-combined-two-pass.md frontmatter
 - Add cross-reference from agni.md to vilepi-and-the-krama.md for the four agni states
 - Add brief bridging paragraph to both Inanna pieces connecting myth ↔ astronomy ↔ alchemical process
 

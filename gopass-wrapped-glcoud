@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+gopass_bin="${GOPASS_BIN:-gopass}"
+gcloud_bin="${GCLOUD_BIN:-/nix/store/i9ykb9jwl8kmvc83ds6gk8zn6kick8fr-google-cloud-sdk-548.0.0/bin/gcloud}"
+gopass_path="${GOPASS_GCLOUD_TOKEN_PATH:-gcloude/api-key}"
+
+token="$("$gopass_bin" show -o "$gopass_path" 2>/dev/null || true)"
+if [[ -z "$token" && "$gopass_path" == "gcloude/api-key" ]]; then
+  token="$("$gopass_bin" show -o "gcloud/api-key" 2>/dev/null || true)"
+fi
+
+if [[ -z "$token" ]]; then
+  printf 'gopass-wrapped-glcoud: no token found at %s\n' "$gopass_path" >&2
+  printf 'set GOPASS_GCLOUD_TOKEN_PATH to override the gopass secret path\n' >&2
+  exit 1
+fi
+
+runtime_dir="${XDG_RUNTIME_DIR:-/tmp}"
+token_file="$(mktemp "$runtime_dir/gcloud-token.XXXXXX")"
+chmod 600 "$token_file"
+
+cleanup() {
+  rm -f "$token_file"
+}
+trap cleanup EXIT INT TERM
+
+printf '%s' "$token" > "$token_file"
+unset token
+
+"$gcloud_bin" --access-token-file="$token_file" "$@"

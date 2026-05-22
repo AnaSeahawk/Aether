@@ -10,6 +10,12 @@
 
 Stem cells are living cells, not inert residue, protein precipitate, or "ash" at the bottom of a dish. But "stemness" is not a visible substance inside the cell. It is an observed capacity: the cell can self-renew and can generate differentiated descendants under the right conditions.
 
+*Ojas* in Ayurveda and *qi* in Chinese medical tradition follow the same structure. Neither is a visible substance isolable from living tissue. Both are observed capacities — *ojas* is the body's power to sustain vitality and generate refined biological intelligence; *qi* is the body's capacity for coherent transformation and self-regulation. Both are known by functional evidence: what the living system can do under the right conditions, not by any single marker extracted from it.
+
+Soil biology makes the same claim from a third direction. Soil health is not a visible substance inside the soil — it is an observed capacity: the system can cycle nutrients, support plant growth, and build stable carbon under the right conditions. You can measure proxies — organic matter percentage, microbial biomass, cation exchange capacity — but fertility is only demonstrated by what the living system does. The rhizosphere is not a boundary you can draw but a functional space defined entirely by what happens there. Mycelium is not a nutrient but a network capacity — transport phosphorus, share carbon, suppress pathogens — and the capacity disappears when the network is cut even if the biomass remains. Humus is the closest thing soil science has to a visible substance with this quality: the dense, microbiologically transformed residue of everything the system processed, stable and bioavailable in ways raw organic matter is not.
+
+Stemness, *ojas*, *qi*, soil health. Four vocabularies, four contexts. The same epistemological structure in each: a real capacity, not isolable as a discrete substance, known by what the living system can do in its native environment, degraded or destroyed by the conditions of extraction. The assay problem is identical in all four cases — whatever you measure is a proxy, and the isolation method is always under suspicion.
+
 The clean epistemic frame is:
 
 - A stem cell is a real cell.

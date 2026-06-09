@@ -1,7 +1,7 @@
 # 43. Archive Flow and Accuracy Audit
 
-**Date:** 2026-06-04  
-**Agent:** Codex / GPT-5  
+**Date:** 2026-06-04
+**Agent:** Codex / GPT-5
 **Session topic:** Full archive audit for flow, link health, metadata, claim accuracy, and outstanding work from recent reports.
 
 ---
@@ -55,15 +55,15 @@ Website inventory:
 
 Sovereign Biophysics subsection inventory:
 
-| SB section | Markdown files | Lines |
-|---|---:|---:|
-| `00-orientation` | 31 | 4632 |
-| `10-method` | 16 | 2709 |
-| `20-experiments` | 5 | 415 |
-| `30-analysis` | 9 | 1326 |
-| `40-synthesis` | 3 | 419 |
-| `50-presentations` | 1 | 167 |
-| `Dictionary` | 11 | 726 |
+| SB section         | Markdown files | Lines |
+| --------------------| ---------------:| ------:|
+| `00-orientation`   | 31             | 4632  |
+| `10-method`        | 16             | 2709  |
+| `20-experiments`   | 5              | 415   |
+| `30-analysis`      | 9              | 1326  |
+| `40-synthesis`     | 3              | 419   |
+| `50-presentations` | 1              | 167   |
+| `Dictionary`       | 11             | 726   |
 
 Link health:
 

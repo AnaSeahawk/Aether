@@ -1,2 +1,5 @@
 .secrets/
 *.lock
+.video-work/
+__pycache__/
+*.pyc

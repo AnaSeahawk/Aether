@@ -61,7 +61,7 @@ The likely risk was unit conversion in the midday conductivity reading:
 
 The entry includes a `Data Check` section showing that both EC/TDS pairs are internally coherent:
 
-- early morning: `3,570 µS/cm`, `1,810 ppm`, ratio `0.51`
+- early morning: `3,570 µS/cm`, `1,800 ppm`, ratio `0.50`
 - midday: `13,590 µS/cm`, `6,850 ppm`, ratio `0.50`
 
 This keeps the check in the permanent record instead of leaving it only in chat.

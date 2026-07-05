@@ -33,6 +33,8 @@ but does not edit files there.
 
 - `AGENTS.md` §Publishing Workflow, §Content Metadata, §Submodule Workflow,
   §Sensitive Content.
+- `skills/sensitive-content.md` before inspecting, moving, summarizing, or
+  promoting sensitive files.
 - `soul.md` — the voice and orientation the content must remain consistent with.
 
 ---
@@ -127,6 +129,7 @@ require explicit instruction.
 ## See also
 
 - `AGENTS.md` — the authoritative source for workflow conventions
+- `skills/sensitive-content.md` — privacy and publication boundaries
 - `skills/writer.md` — where content originates
 - `skills/analyst.md` — session records that inform curation decisions
 - `protocols/orchestration.md` — claim flow before structural edits

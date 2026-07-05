@@ -28,6 +28,8 @@ publication, reorganize bibliography, or make structural website edits.
 ## Required reading before starting
 
 - `AGENTS.md` §Report Protocol — the naming convention and format for all reports.
+- `skills/sensitive-content.md` when a synthesis, audit, or report touches
+  private, health-adjacent, operational, or publishing-sensitive material.
 - The most recent report in `reports/analyst/` (if any) — to understand current
   state before adding to it.
 - The most recent session intelligence report in `reports/` (check the highest
@@ -118,5 +120,6 @@ role subdirectories.
 ## See also
 
 - `AGENTS.md` §Report Protocol
+- `skills/sensitive-content.md` — privacy and report-boundary discipline
 - `protocols/orchestration.md` — role structure and report lane conventions
 - The most recent `reports/NNN_session-intelligence-*.md` for current state

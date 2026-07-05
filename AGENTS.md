@@ -22,7 +22,18 @@ claim your paths via `tools/orchestrate claim <role> <path> -- <reason>`.
 Release when done: `tools/orchestrate release <role>`.
 
 See `protocols/orchestration.md` for the full coordination protocol.
-See `skills/prose.md` for craft discipline that applies to all writing roles.
+See `skills/index.md` for the compact skill map.
+
+### Skill Loading
+
+Load only the skill files the work actually triggers:
+
+- Always read this file and the skill file for the role you are using.
+- Read `skills/prose.md` for drafting, editing, or evaluating prose.
+- Read `skills/sensitive-content.md` before touching private, operational,
+  health-adjacent, collaboration-private, or publishing-sensitive material.
+- Do not scan every skill file unless the task is explicitly about the skill
+  system itself.
 
 ---
 
@@ -205,6 +216,9 @@ Some files also carry optional astronomical frontmatter (`sun:`, `moon:`, `moon-
 ### Sensitive Content
 
 The `sovereign-biophysics-distillation/` folder contains sensitive operational material. The intended direction (as of 2026-03-16) is to migrate this content to a separate private GitHub repo. Do not assume it is safe to publish or share. When in doubt about sensitivity, ask before acting.
+
+Read `skills/sensitive-content.md` before inspecting, editing, summarizing, or
+moving sensitive files.
 
 ### Language Conventions
 

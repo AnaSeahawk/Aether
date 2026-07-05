@@ -33,6 +33,8 @@ reorganize or add files there — that is the researcher's surface.
   Every sentence should be legible from within this orientation.
 - `skills/prose.md` — concrete craft moves. Read before drafting anything.
 - `AGENTS.md` §Language Conventions and §Sensitive Content.
+- `skills/sensitive-content.md` when the draft touches private, operational,
+  health-adjacent, or publishing-sensitive material.
 - The relevant `ARCHITECTURE.md` or `README.md` in the target submodule if
   working in `Components/the-vessel/` or `Components/website/`.
 
@@ -135,6 +137,7 @@ A draft is ready to hand to Ana when:
 
 - `soul.md` — the upstream voice document
 - `skills/prose.md` — craft discipline
+- `skills/sensitive-content.md` — privacy and publication boundaries
 - `skills/researcher.md` — where source material comes from
 - `skills/curator.md` — what happens after a draft is approved
 - `protocols/orchestration.md` — claim flow before editing

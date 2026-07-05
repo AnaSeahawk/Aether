@@ -34,6 +34,8 @@ where it can be used.
 
 - `AGENTS.md` — the full repo contract, especially §Bibliography and Book
   Acquisition, §Language Conventions, §Sensitive Content.
+- `skills/sensitive-content.md` when source work touches private,
+  health-adjacent, or unpublished operational material.
 - `soul.md` — the voice and orientation of the work. Research serves this orientation;
   do not source material that flatly contradicts it without flagging the tension.
 - `skills/prose.md` — citation conventions and primary-source structure.
@@ -149,6 +151,7 @@ report in `reports/researcher/` with the standard header (see
 ## See also
 
 - `AGENTS.md` §Bibliography and Book Acquisition
+- `skills/sensitive-content.md` — privacy and publication boundaries
 - `skills/prose.md` — citation form in prose
 - `skills/writer.md` — the surface that consumes research output
 - `protocols/orchestration.md` — claim/release flow before editing bibliography

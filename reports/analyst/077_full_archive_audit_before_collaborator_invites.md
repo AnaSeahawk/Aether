@@ -409,7 +409,7 @@ It is close, but Ana should review it before sharing.
 Recommended first review packet:
 
 - `water-magicians/README.md`
-- `telegram-ana-megan-fiona-consent-map.md`
+- `consent-map.md`
 - `water-magicians/alchemy-matter-saturn-microbe-archive-source-packet.md`
 - Fiona-specific review notes from `microscopy.md`
 - Megan-specific correction context from `megan-feedback-source-correction.md`

@@ -145,4 +145,4 @@ Any quote, paraphrase, public summary, support-page language, book use, or teach
 
 ---
 
-*Source files: `35-collaboration-private/water-magicians/README.md`, `collective-archive-support-path.md`, `living-journal-participation-template.md`, `telegram-ana-megan-fiona-emergent-patterns-report.md`, `telegram-ana-megan-fiona-collaboration-use-map.md`*
+*Source files: `35-collaboration-private/water-magicians/README.md`, `collective-archive-support-path.md`, `living-journal-participation-template.md`, `emergent-patterns-report.md`, `collaboration-use-map.md`*

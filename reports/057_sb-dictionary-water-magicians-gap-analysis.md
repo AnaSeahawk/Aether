@@ -137,4 +137,4 @@ The microscopy term page should wait until Fiona's pattern catalog archive-use m
 
 ---
 
-*Source files: `Dictionary/README.md`, `Dictionary/terms/plasma.md`, `Dictionary/terms/distillate.md`, `Dictionary/terms/field.md`, `Dictionary/tradition-registers.md`, `Dictionary/language-guardrails.md`, `10-method/plasma-forms-taxonomy.md`, `10-method/sovereign-biophysics-translation-map.md`, `10-method/sediment-field-guide.md`, `35-collaboration-private/2026-06-27-telegram-ana-megan-fiona-emergent-patterns-report.md`, `35-collaboration-private/2026-07-01-telegram-ana-megan-fiona-collaboration-use-map.md`*
+*Source files: `Dictionary/README.md`, `Dictionary/terms/plasma.md`, `Dictionary/terms/distillate.md`, `Dictionary/terms/field.md`, `Dictionary/tradition-registers.md`, `Dictionary/language-guardrails.md`, `10-method/plasma-forms-taxonomy.md`, `10-method/sovereign-biophysics-translation-map.md`, `10-method/sediment-field-guide.md`, `35-collaboration-private/telegram-ana-megan-fiona-emergent-patterns-report.md`, `35-collaboration-private/telegram-ana-megan-fiona-collaboration-use-map.md`*

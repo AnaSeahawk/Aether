@@ -105,10 +105,10 @@ This solved the earlier "scattered files" problem enough for navigation. It has 
 New/current workflow files:
 
 - `water-magicians/source-packet-template.md`
-- `water-magicians/bridge-map-collaboration-private-to-sb-2026-07-02.md`
-- `water-magicians/archive-review-collaboration-private-2026-07-02.md`
-- `water-magicians/archive-review-sovereign-biophysics-2026-07-02.md`
-- `water-magicians/source-packet-alchemy-matter-saturn-microbe-archive-2026-07-03.md`
+- `water-magicians/collaboration-private-to-sovereign-biophysics-bridge-map.md`
+- `water-magicians/collaboration-private-archive-review.md`
+- `water-magicians/sovereign-biophysics-archive-review-from-collaboration-lane.md`
+- `water-magicians/alchemy-matter-saturn-microbe-archive-source-packet.md`
 
 This is the main unfinished trial flow.
 
@@ -409,10 +409,10 @@ It is close, but Ana should review it before sharing.
 Recommended first review packet:
 
 - `water-magicians/README.md`
-- `2026-06-27-telegram-ana-megan-fiona-consent-map.md`
-- `water-magicians/source-packet-alchemy-matter-saturn-microbe-archive-2026-07-03.md`
+- `telegram-ana-megan-fiona-consent-map.md`
+- `water-magicians/alchemy-matter-saturn-microbe-archive-source-packet.md`
 - Fiona-specific review notes from `microscopy.md`
-- Megan-specific correction context from `2026-06-27-megan-feedback-source-correction.md`
+- Megan-specific correction context from `megan-feedback-source-correction.md`
 
 Do not ask them to review the whole archive first. Ask for exact corrections on
 narrow source uses. If the first access is via GitHub, remember that a direct

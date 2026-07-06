@@ -74,7 +74,7 @@ Activity intensified June 22-26, when the conversation turned toward presentatio
 
 ## The Proposed Structure: Water Magicians As A Shared Support Lane
 
-Drafted June 29: [collective-archive-support-path-2026-06-29.md](../Components/the-vessel/35-collaboration-private/water-magicians/collective-archive-support-path-2026-06-29.md)
+Drafted June 29: [collective-archive-support-path.md](../Components/the-vessel/35-collaboration-private/water-magicians/collective-archive-support-path.md)
 
 The proposal is a simple donation support path under the Water Magicians name. Its first purpose is to fund the ongoing research and archive labor. Each woman keeps her own house; the shared lane runs beside those containers.
 
@@ -90,7 +90,7 @@ The proposal is a simple donation support path under the Water Magicians name. I
 
 ## The Living Journal Participation Template
 
-Drafted July 1: [living-journal-participation-template-2026-07-01.md](../Components/the-vessel/35-collaboration-private/water-magicians/living-journal-participation-template-2026-07-01.md)
+Drafted July 1: [living-journal-participation-template.md](../Components/the-vessel/35-collaboration-private/water-magicians/living-journal-participation-template.md)
 
 The template gives people a way to enter the archive without pretending their practice history begins today. It covers:
 
@@ -145,4 +145,4 @@ Any quote, paraphrase, public summary, support-page language, book use, or teach
 
 ---
 
-*Source files: `35-collaboration-private/water-magicians/README.md`, `collective-archive-support-path-2026-06-29.md`, `living-journal-participation-template-2026-07-01.md`, `2026-06-27-telegram-ana-megan-fiona-emergent-patterns-report.md`, `2026-07-01-telegram-ana-megan-fiona-collaboration-use-map.md`*
+*Source files: `35-collaboration-private/water-magicians/README.md`, `collective-archive-support-path.md`, `living-journal-participation-template.md`, `telegram-ana-megan-fiona-emergent-patterns-report.md`, `telegram-ana-megan-fiona-collaboration-use-map.md`*

@@ -210,18 +210,36 @@ Facilitator bridge:
 
 ### 8. Participant Reflection: 15 Minutes
 
-If turnout is large, use chat prompts first. Then invite a few voices live.
+This is the online version of a circle round. The chat becomes part of the circle so every woman has a place, even when there is not time for every voice to speak aloud.
+
+Ana hosts this portion. Megan keeps time and helps the room stay paced. Fiona listens for the larger field and can name one or two threads after the chat begins to move.
+
+Slide text:
+
+> The Circle Is Open  
+> Write in the chat.  
+> Raise your hand to speak.  
+> Remain in witness.  
+> Passing is welcome.
+
+Host opening:
+
+> The circle is open now. Because we are online, we will let the chat become part of the circle. Everyone has a place here, whether you write, speak, or stay in quiet witness. If you would like to speak aloud, raise your hand. Megan will help us keep time so each voice has room and the circle stays held.
 
 Chat prompts:
 
-- One word for what brought you here.
-- One question you are carrying.
-- One place where you want more careful language.
-- One thing you want this circle to protect.
+- What brought you here?
+- What are you curious about?
+- What question are you carrying?
+- What would you like this circle to hold with care?
 
 Live-share prompt:
 
-> Speak from your own body and your own story. A few sentences are enough.
+> Speak from "I." One thread is enough.
+
+Field-witness bridge:
+
+> Fiona can name a few threads she hears moving through the room before the circle shifts into questions.
 
 ### 9. Questions for the Hosts: 7 Minutes
 
@@ -241,7 +259,7 @@ Slide text:
 
 ### 10. Closing Round: 3 Minutes
 
-Invite everyone to leave with one phrase, either in chat or silently.
+Close the circle by mirroring the online round. Invite one word or one sentence in the chat, with silence also welcome.
 
 Prompt:
 
@@ -249,7 +267,7 @@ Prompt:
 
 Host close:
 
-> Thank you for helping make a room where this subject can be spoken carefully. May what is useful remain simple. May what is not yours pass by. May each body keep its own authority.
+> We are going to close the circle here. Thank you for what was spoken, what was written, and what was held quietly. May each woman leave with what is hers, and leave behind what is not hers to carry. The body remains sovereign. The circle continues through care.
 
 Final slide text:
 
@@ -271,6 +289,8 @@ Final slide text:
 Total: 90 minutes.
 
 This gives Megan a natural grounding role near the beginning, gives Fiona a substantive place in the field-naming portion, and keeps Ana's opening focused on threshold, purpose, and boundaries. If the room is full, the participant reflection can lean on chat first, then a small number of brief live voices.
+
+Online circle adaptation: chat functions as the full-room round, hand-raises allow a few live voices, and quiet witness remains an equal form of participation.
 
 ## Places for Images With Text
 
@@ -410,9 +430,25 @@ Image prompt:
 
 > Abstract watercolor field suggesting warmth, clarity, and gentle inner weather, pale gold, soft rose, clear blue, organic flowing forms, feminine luminous fractal-crystal energy, womb-like containment, no anatomical details, no medical imagery, no words, no letters, calm spacious slide background
 
-### 11. Questions
+### 11. The Circle Is Open
 
-Use before Q&A or chat reflections.
+Use when the participant reflection begins.
+
+Overlay text:
+
+> The Circle Is Open  
+> Write in the chat.  
+> Raise your hand to speak.  
+> Remain in witness.  
+> Passing is welcome.
+
+Image prompt:
+
+> A luminous circle of water and crystal light opening gently at the center, soft ivory and muted teal background, feminine fractal-crystal energy, womb-like containment, subtle gold botanical linework, spacious calm room for text, no people, no words, no letters, no symbols resembling text, horizontal 16:9
+
+### 12. Questions
+
+Use before Q&A with the hosts.
 
 Overlay text:
 
@@ -423,7 +459,7 @@ Image prompt:
 
 > A single pearl-like drop of water suspended above a still bowl, soft shadow, ivory and muted teal background, subtle gold ring, faint crystal fractal light inside the drop, feminine contemplative mood, womb-like stillness, large blank space for text, no words, no letters, no people
 
-### 12. Discoveries
+### 13. Discoveries
 
 Use when gathering insights or surprises.
 
@@ -436,7 +472,7 @@ Image prompt:
 
 > Dawn light moving across clear water with tiny gold flecks and delicate plant silhouettes, feminine luminous fractal-crystal reflections, womb-like warmth, sense of gentle revelation, clean luminous atmosphere, no words, no text, no people, horizontal 16:9
 
-### 13. Closing
+### 14. Closing
 
 Use for the final slide.
 

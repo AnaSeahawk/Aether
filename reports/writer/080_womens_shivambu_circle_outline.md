@@ -59,7 +59,31 @@ Possible opening language:
 >
 > This circle is not here to persuade anyone. It is here to make room for personal record, shared discernment, and the dignity of each woman's own body.
 
-### 3. Safety and Circle Agreements: 5-7 Minutes
+### 3. Grounding the Room: 5 Minutes
+
+Megan leads a short grounding meditation before the circle agreements. This gives the room a shared breath before the subject is named in more detail.
+
+Keep the meditation simple, optional, and consent-based.
+
+Possible frame:
+
+> Megan will take us through a short grounding now. Let this be simple. Eyes open or closed, seated or standing, present in whatever way is available.
+
+Suggested arc:
+
+- Arrive with the breath.
+- Feel the support underneath the body.
+- Let attention come into the room.
+- Make space for curiosity without pressure.
+- Return to the sovereignty of each body.
+
+Overlay text:
+
+> Arrive.  
+> Soften.  
+> Listen.
+
+### 4. Safety and Circle Agreements: 7 Minutes
 
 Keep this simple and explicit.
 
@@ -78,21 +102,43 @@ Overlay text:
 > Let the body remain sovereign.  
 > Let the circle remain kind.
 
-### 4. Host Introductions: 9-12 Minutes
+### 5. Three-Host Opening Arc: 13 Minutes
 
-Each host gets 3-4 minutes.
+The three hosts enter by function, not biography. Ana names the threshold, Megan carries the embodied thread, and Fiona names the wider field.
 
-Suggested prompt for each host:
+Ana: why now, why this circle.
 
-- What brought me to this conversation.
+Suggested focus:
+
+- The response already gathering around this subject.
+- The need for a careful women-only room.
+- The boundary that this is witness, not prescription.
+
+Megan: what it means to enter the subject through the body.
+
+Suggested focus:
+
+- Why grounding matters before speaking about a charged or tender subject.
+- How a settled room changes what can be received.
+- The invitation to stay simple, present, and self-led.
+
+Fiona: the field we are naming.
+
+Suggested focus:
+
+- Women carrying body knowledge privately and relationally.
+- The tenderness, taboo, curiosity, and courage around Shivambu.
+- The value of a room where questions can be held without being rushed into answers.
+
+Shared prompt for all three hosts:
+
+- What brought me here.
 - What I am holding for this circle.
 - One question I am still living with.
 
-This prevents the introductions from becoming biographies and keeps the room oriented toward shared inquiry.
-
 Slide text:
 
-> Your Hosts  
+> Three Women Holding the Circle  
 > Ana Seahawk  
 > Fiona Gardner  
 > Megan Macdonald
@@ -101,9 +147,9 @@ Optional prompt on the slide:
 
 > What brought me here. What I am holding. What I am still asking.
 
-### 5. The Field We Are Naming: 7-10 Minutes
+### 6. The Field We Are Naming: Built Into the Opening Arc
 
-This is where Ana can name the larger context without making claims.
+This portion can be led primarily by Fiona, with Ana and Megan adding one brief thread each. It does not need to feel like a separate talk. It can be the woven opening that moves the room from arrival into shared inquiry.
 
 Possible themes:
 
@@ -118,7 +164,7 @@ Possible language:
 >
 > Tonight we are not trying to settle the subject. We are giving it a clean room.
 
-### 6. Practice, Cycles, Body Changes, Questions, Discoveries: 20-30 Minutes
+### 7. Practice, Cycles, Body Changes, Questions, Discoveries: 25 Minutes
 
 This can be the heart of the gathering. Use the five poster words as the structure.
 
@@ -165,7 +211,7 @@ Facilitator bridge:
 
 > We are going to move through these as doorways, not conclusions.
 
-### 7. Participant Reflection: 20-30 Minutes
+### 8. Participant Reflection: 15 Minutes
 
 If turnout is large, use chat prompts first. Then invite a few voices live.
 
@@ -180,7 +226,7 @@ Live-share prompt:
 
 > Speak from your own body and your own story. A few sentences are enough.
 
-### 8. Questions for the Hosts: 15-20 Minutes
+### 9. Questions for the Hosts: 7 Minutes
 
 The hosts can answer from lived experience and boundaries, not authority.
 
@@ -196,7 +242,7 @@ Slide text:
 > Questions  
 > Personal experience. Careful language. No prescriptions.
 
-### 9. Closing Round: 5-10 Minutes
+### 10. Closing Round: 3 Minutes
 
 Invite everyone to leave with one phrase, either in chat or silently.
 
@@ -216,15 +262,18 @@ Final slide text:
 ## 90-Minute Run of Show
 
 - Arrival: 10
-- Welcome and agreements: 12
-- Host introductions: 12
-- The field we are naming: 8
+- Welcome and threshold: 5
+- Megan grounding meditation: 5
+- Circle agreements: 7
+- Three-host opening arc: 13
 - Five doorways: 25
 - Participant reflection: 15
-- Questions: 5
+- Questions: 7
 - Closing: 3
 
-This keeps the main teaching and witnessing portion inside a clear middle arc, with enough arrival time for a larger room to settle. If the room is full, the participant reflection can lean on chat first, then a small number of brief live voices.
+Total: 90 minutes.
+
+This gives Megan a natural grounding role near the beginning, gives Fiona a substantive place in the field-naming portion, and keeps Ana's opening focused on threshold, purpose, and boundaries. If the room is full, the participant reflection can lean on chat first, then a small number of brief live voices.
 
 ## Places for Images With Text
 
@@ -255,7 +304,21 @@ Image prompt:
 
 > An open circular threshold made of light, water, and fine gold lines, soft cream background, quiet sense of beginning, delicate botanical traces, moonlit warmth, sacred but grounded, no people, no words, no letters, no text, vertical composition
 
-### 3. Circle Agreements
+### 3. Grounding
+
+Use while Megan leads the short grounding meditation.
+
+Overlay text:
+
+> Arrive.  
+> Soften.  
+> Listen.
+
+Image prompt:
+
+> A calm pool of clear water at dawn, soft ivory light, a single gold circle reflected on the surface, delicate botanical shadows, spacious and quiet, meditative atmosphere, no people, no words, no letters, horizontal 16:9 slide background with open space for text
+
+### 4. Circle Agreements
 
 Use when naming privacy and non-prescriptive language.
 
@@ -268,12 +331,13 @@ Image prompt:
 
 > Three simple stones in shallow clear water, concentric ripples, warm morning light, soft ivory and muted teal palette, minimal composition with open blank space in the center for later text, no words, no lettering, no people, high resolution
 
-### 4. Your Hosts
+### 5. Three-Host Opening Arc
 
-Use before the three host introductions.
+Use before Ana, Megan, and Fiona each speak into the opening.
 
 Overlay text:
 
+> Three Women Holding the Circle  
 > Ana Seahawk  
 > Fiona Gardner  
 > Megan Macdonald
@@ -282,7 +346,7 @@ Image prompt:
 
 > Three luminous botanical stems rising from a shared pool of clear water, each stem distinct but harmonious, gold ink and watercolor style, cream and pale blue background, elegant feminine gathering atmosphere, ample blank center space for text, no words, no letters, no faces, vertical composition
 
-### 5. Body Autonomy
+### 6. Body Autonomy
 
 Use before the central conversation begins.
 
@@ -295,7 +359,7 @@ Image prompt:
 
 > A soft golden compass inside a circle of water, moonlight and sunlight balanced, delicate herbal forms at the edges, quiet sovereign feeling, refined watercolor and gold leaf texture, spacious blank center, no words, no letters, no anatomical imagery, vertical composition
 
-### 6. The Five Doorways
+### 7. The Five Doorways
 
 Use as a main section marker.
 
@@ -308,7 +372,7 @@ Image prompt:
 
 > Five small moonlit doorways arranged in a gentle arc, each doorway glowing softly from within, water and botanical motifs, ivory, gold, muted teal, quiet ceremonial atmosphere, no people, no text, no letters, spacious vertical poster layout
 
-### 7. Practice
+### 8. Practice
 
 Use for the first doorway.
 
@@ -321,7 +385,7 @@ Image prompt:
 
 > A small ceramic cup beside a bowl of clear water on linen, early morning light, gold thread, simple ritual still life, intimate but clean, no labels, no words, no letters, no clinical objects, horizontal 16:9 slide background
 
-### 8. Cycles
+### 9. Cycles
 
 Use for menstrual, lunar, seasonal, or life-stage reflections.
 
@@ -334,7 +398,7 @@ Image prompt:
 
 > Moon phases reflected in a calm circular pool, subtle red-gold thread woven through pale water and cream fabric, botanical shadows, feminine cyclical symbolism, no words, no lettering, no people, horizontal 16:9 composition with open space for text
 
-### 9. Body Changes
+### 10. Body Changes
 
 Use with extra care. Keep the language observational.
 
@@ -347,7 +411,7 @@ Image prompt:
 
 > Abstract watercolor field suggesting warmth, clarity, and gentle inner weather, pale gold, soft rose, clear blue, organic flowing forms, no anatomical details, no medical imagery, no words, no letters, calm spacious slide background
 
-### 10. Questions
+### 11. Questions
 
 Use before Q&A or chat reflections.
 
@@ -360,7 +424,7 @@ Image prompt:
 
 > A single pearl-like drop of water suspended above a still bowl, soft shadow, ivory and muted teal background, subtle gold ring, quiet contemplative mood, large blank space for text, no words, no letters, no people
 
-### 11. Discoveries
+### 12. Discoveries
 
 Use when gathering insights or surprises.
 
@@ -373,7 +437,7 @@ Image prompt:
 
 > Dawn light moving across clear water with tiny gold flecks and delicate plant silhouettes, sense of gentle revelation, clean luminous atmosphere, no words, no text, no people, horizontal 16:9
 
-### 12. Closing
+### 13. Closing
 
 Use for the final slide.
 

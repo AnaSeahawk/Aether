@@ -183,13 +183,6 @@ Live-share prompt:
 
 > Speak from your own body and your own story. A few sentences are enough.
 
-If breakout rooms are used:
-
-- 2-3 people per room.
-- 8 minutes.
-- One prompt only: "What made this subject feel ready to speak?"
-- Return with one word or phrase, not full reports.
-
 ### 8. Questions for the Hosts: 15-20 Minutes
 
 The hosts can answer from lived experience and boundaries, not authority.
@@ -451,4 +444,3 @@ Hosted by Ana Seahawk, Fiona Gardner, and Megan Macdonald. Event links are share
 - Keep live shares short and witnessed.
 - Repeat the boundary often enough that the room can relax: personal experience, no prescriptions, no medical claims.
 - The power of the first gathering is the clean container. The subject does not need to be over-explained.
-

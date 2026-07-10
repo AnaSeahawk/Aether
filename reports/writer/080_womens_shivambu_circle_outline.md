@@ -457,6 +457,8 @@ Women are gathering for a first Shivambu Circle on Friday, July 24 at 17:00 UTC.
 
 This is a space for practice, cycles, body changes, questions, and discoveries, held through direct experience and body autonomy.
 
+No Shivambu experience is required. Curiosity about the practice is enough.
+
 Event links are shared inside the Mother-Spirit.com community.
 
 ### Warmer

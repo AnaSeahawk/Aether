@@ -274,6 +274,8 @@ This gives Megan a natural grounding role near the beginning, gives Fiona a subs
 
 ## Places for Images With Text
 
+Shared visual direction for the full set: feminine, luminous, fractal-crystal energy with a womb-like sense of containment. Keep it abstract and atmospheric, with no anatomical imagery, no clinical objects, no people, no words, and no letters inside the generated image.
+
 ### 1. Arrival / Holding Slide
 
 Use before the room opens and while people arrive.
@@ -286,7 +288,7 @@ Overlay text:
 
 Image prompt:
 
-> A luminous ceremonial water circle with soft moon phases above, warm ivory center, pale turquoise edges, subtle gold botanical linework, gentle feminine ritual atmosphere, elegant poster background, no people, no words, no letters, no symbols resembling text, vertical 4:5 composition, refined, spacious, quiet, high resolution
+> A luminous ceremonial water circle with soft moon phases above, warm ivory center, pale turquoise edges, subtle gold botanical linework, feminine fractal-crystal energy, womb-like containment, elegant poster background, no people, no words, no letters, no symbols resembling text, vertical 4:5 composition, refined, spacious, quiet, high resolution
 
 ### 2. Threshold Slide
 
@@ -299,7 +301,7 @@ Overlay text:
 
 Image prompt:
 
-> An open circular threshold made of light, water, and fine gold lines, soft cream background, quiet sense of beginning, delicate botanical traces, moonlit warmth, sacred but grounded, no people, no words, no letters, no text, vertical composition
+> An open circular threshold made of light, water, and fine gold lines, soft cream background, quiet sense of beginning, delicate botanical traces, moonlit warmth, feminine luminous fractal-crystal atmosphere, womb-like containment, sacred but grounded, no people, no words, no letters, no text, vertical composition
 
 ### 3. Grounding
 
@@ -313,7 +315,7 @@ Overlay text:
 
 Image prompt:
 
-> A calm pool of clear water at dawn, soft ivory light, a single gold circle reflected on the surface, delicate botanical shadows, spacious and quiet, meditative atmosphere, no people, no words, no letters, horizontal 16:9 slide background with open space for text
+> A calm pool of clear water at dawn, soft ivory light, a single gold circle reflected on the surface, subtle crystal fractal shimmer in the water, delicate botanical shadows, womb-like quiet, spacious and meditative, no people, no words, no letters, horizontal 16:9 slide background with open space for text
 
 ### 4. Circle Agreements
 
@@ -326,7 +328,7 @@ Overlay text:
 
 Image prompt:
 
-> Three simple stones in shallow clear water, concentric ripples, warm morning light, soft ivory and muted teal palette, minimal composition with open blank space in the center for later text, no words, no lettering, no people, high resolution
+> Three simple stones in shallow clear water, concentric ripples, warm morning light, soft ivory and muted teal palette, faint luminous crystal geometry beneath the water, feminine and contained, minimal composition with open blank space in the center for later text, no words, no lettering, no people, high resolution
 
 ### 5. Three-Host Opening Arc
 
@@ -341,7 +343,7 @@ Overlay text:
 
 Image prompt:
 
-> Three luminous botanical stems rising from a shared pool of clear water, each stem distinct but harmonious, gold ink and watercolor style, cream and pale blue background, elegant feminine gathering atmosphere, ample blank center space for text, no words, no letters, no faces, vertical composition
+> Three luminous botanical stems rising from a shared pool of clear water, each stem distinct but harmonious, gold ink and watercolor style, cream and pale blue background, feminine fractal-crystal glow, womb-like shared containment, elegant gathering atmosphere, ample blank center space for text, no words, no letters, no faces, vertical composition
 
 ### 6. Body Autonomy
 
@@ -354,7 +356,7 @@ Overlay text:
 
 Image prompt:
 
-> A soft golden compass inside a circle of water, moonlight and sunlight balanced, delicate herbal forms at the edges, quiet sovereign feeling, refined watercolor and gold leaf texture, spacious blank center, no words, no letters, no anatomical imagery, vertical composition
+> A soft golden compass inside a circle of water, moonlight and sunlight balanced, delicate herbal forms at the edges, luminous crystal lattice barely visible in the water, feminine womb-like containment, quiet sovereign feeling, refined watercolor and gold leaf texture, spacious blank center, no words, no letters, no anatomical imagery, vertical composition
 
 ### 7. The Five Doorways
 
@@ -367,7 +369,7 @@ Overlay text:
 
 Image prompt:
 
-> Five small moonlit doorways arranged in a gentle arc, each doorway glowing softly from within, water and botanical motifs, ivory, gold, muted teal, quiet ceremonial atmosphere, no people, no text, no letters, spacious vertical poster layout
+> Five small moonlit doorways arranged in a gentle arc, each doorway glowing softly from within, water and botanical motifs, ivory, gold, muted teal, feminine luminous fractal-crystal energy, womb-like interior warmth, quiet ceremonial atmosphere, no people, no text, no letters, spacious vertical poster layout
 
 ### 8. Practice
 
@@ -380,7 +382,7 @@ Overlay text:
 
 Image prompt:
 
-> A small ceramic cup beside a bowl of clear water on linen, early morning light, gold thread, simple ritual still life, intimate but clean, no labels, no words, no letters, no clinical objects, horizontal 16:9 slide background
+> A small ceramic cup beside a bowl of clear water on linen, early morning light, gold thread, subtle crystalline shimmer in the water, feminine ritual still life, womb-like warmth and containment, intimate but clean, no labels, no words, no letters, no clinical objects, horizontal 16:9 slide background
 
 ### 9. Cycles
 
@@ -393,7 +395,7 @@ Overlay text:
 
 Image prompt:
 
-> Moon phases reflected in a calm circular pool, subtle red-gold thread woven through pale water and cream fabric, botanical shadows, feminine cyclical symbolism, no words, no lettering, no people, horizontal 16:9 composition with open space for text
+> Moon phases reflected in a calm circular pool, subtle red-gold thread woven through pale water and cream fabric, botanical shadows, feminine cyclical symbolism, luminous fractal-crystal reflections, womb-like quiet, no words, no lettering, no people, horizontal 16:9 composition with open space for text
 
 ### 10. Body Changes
 
@@ -406,7 +408,7 @@ Overlay text:
 
 Image prompt:
 
-> Abstract watercolor field suggesting warmth, clarity, and gentle inner weather, pale gold, soft rose, clear blue, organic flowing forms, no anatomical details, no medical imagery, no words, no letters, calm spacious slide background
+> Abstract watercolor field suggesting warmth, clarity, and gentle inner weather, pale gold, soft rose, clear blue, organic flowing forms, feminine luminous fractal-crystal energy, womb-like containment, no anatomical details, no medical imagery, no words, no letters, calm spacious slide background
 
 ### 11. Questions
 
@@ -419,7 +421,7 @@ Overlay text:
 
 Image prompt:
 
-> A single pearl-like drop of water suspended above a still bowl, soft shadow, ivory and muted teal background, subtle gold ring, quiet contemplative mood, large blank space for text, no words, no letters, no people
+> A single pearl-like drop of water suspended above a still bowl, soft shadow, ivory and muted teal background, subtle gold ring, faint crystal fractal light inside the drop, feminine contemplative mood, womb-like stillness, large blank space for text, no words, no letters, no people
 
 ### 12. Discoveries
 
@@ -432,7 +434,7 @@ Overlay text:
 
 Image prompt:
 
-> Dawn light moving across clear water with tiny gold flecks and delicate plant silhouettes, sense of gentle revelation, clean luminous atmosphere, no words, no text, no people, horizontal 16:9
+> Dawn light moving across clear water with tiny gold flecks and delicate plant silhouettes, feminine luminous fractal-crystal reflections, womb-like warmth, sense of gentle revelation, clean luminous atmosphere, no words, no text, no people, horizontal 16:9
 
 ### 13. Closing
 
@@ -445,7 +447,7 @@ Overlay text:
 
 Image prompt:
 
-> A closed circle of water, moonlight, and fine gold botanical linework resting on a warm ivory background, peaceful completion, soft teal edges, elegant and grounded, no words, no letters, no people, vertical or horizontal adaptable composition
+> A closed circle of water, moonlight, and fine gold botanical linework resting on a warm ivory background, feminine luminous fractal-crystal energy, womb-like containment, peaceful completion, soft teal edges, elegant and grounded, no words, no letters, no people, vertical or horizontal adaptable composition
 
 ## Short Social Caption Options
 

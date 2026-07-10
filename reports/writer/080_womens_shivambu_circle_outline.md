@@ -141,10 +141,7 @@ Slide text:
 > Three Women Holding the Circle  
 > Ana Seahawk  
 > Fiona Gardner  
-> Megan Macdonald
-
-Optional prompt on the slide:
-
+> Megan Macdonald  
 > What brought me here. What I am holding. What I am still asking.
 
 ### 6. The Field We Are Naming: Built Into the Opening Arc

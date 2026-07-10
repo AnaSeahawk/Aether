@@ -187,7 +187,7 @@ Questions:
 
 - What remains unclear.
 - What people wish had been named earlier.
-- What needs research, lineage, or more careful conversation.
+- What asks for deeper discovery or inquiry.
 
 Discoveries:
 

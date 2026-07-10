@@ -139,10 +139,9 @@ Shared prompt for all three hosts:
 Slide text:
 
 > Three Women Holding the Circle  
-> Ana Seahawk  
-> Fiona Gardner  
-> Megan Macdonald  
-> What brought me here. What I am holding. What I am still asking.
+> Ana Seahawk - Threshold  
+> Megan Macdonald - Ground  
+> Fiona Gardner - Field
 
 ### 6. The Field We Are Naming: Built Into the Opening Arc
 
@@ -357,13 +356,13 @@ Use before Ana, Megan, and Fiona each speak into the opening.
 Overlay text:
 
 > Three Women Holding the Circle  
-> Ana Seahawk  
-> Fiona Gardner  
-> Megan Macdonald
+> Ana Seahawk - Threshold  
+> Megan Macdonald - Ground  
+> Fiona Gardner - Field
 
 Image prompt:
 
-> Three luminous botanical stems rising from a shared pool of clear water, each stem distinct but harmonious, gold ink and watercolor style, cream and pale blue background, feminine fractal-crystal glow, womb-like shared containment, elegant gathering atmosphere, ample blank center space for text, no words, no letters, no faces, vertical composition
+> Three luminous alchemical vessels arranged in a gentle triangle around a shared pool of clear water, each vessel distinct but harmonious, fine gold geometry, moonlit crystal refractions, feminine fractal-crystal glow, womb-like shared containment, subtle botanical traces, elegant ceremonial atmosphere, ample blank center space for text, no words, no letters, no faces, vertical composition
 
 ### 6. Body Autonomy
 

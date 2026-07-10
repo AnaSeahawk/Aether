@@ -459,7 +459,7 @@ This is a space for practice, cycles, body changes, questions, and discoveries, 
 
 No Shivambu experience is required. Curiosity about the practice is enough.
 
-Event links are shared inside the Mother-Spirit.com community.
+This is a free gathering. Event links are shared inside the Mother-Spirit.com community.
 
 ### Warmer
 

@@ -39,10 +39,7 @@ Music, if used, should be minimal and warm. Avoid anything that makes the room f
 Overlay text:
 
 > Women's Shivambu Circle  
-> We will begin shortly.
-
-Optional smaller line:
-
+> We will begin shortly.  
 > Practice. Cycles. Body changes. Questions. Discoveries.
 
 ### 2. Welcome and Threshold: 5 Minutes
@@ -238,7 +235,8 @@ Use before the room opens and while people arrive.
 Overlay text:
 
 > Women's Shivambu Circle  
-> We will begin shortly.
+> We will begin shortly.  
+> Practice. Cycles. Body changes. Questions. Discoveries.
 
 Image prompt:
 

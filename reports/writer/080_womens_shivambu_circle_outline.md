@@ -216,18 +216,7 @@ Final slide text:
 > The body remains sovereign.  
 > The circle continues through care.
 
-## Optional Timing Plans
-
-### 75-Minute Version
-
-- Arrival: 5
-- Welcome and agreements: 10
-- Host introductions: 10
-- Five doorways: 25
-- Participant reflection: 15
-- Questions and close: 10
-
-### 90-Minute Version
+## 90-Minute Run of Show
 
 - Arrival: 10
 - Welcome and agreements: 12
@@ -238,16 +227,7 @@ Final slide text:
 - Questions: 5
 - Closing: 3
 
-### 2-Hour Version
-
-- Arrival: 10
-- Welcome and agreements: 12
-- Host introductions: 15
-- The field we are naming: 10
-- Five doorways: 30
-- Breakout rooms or chat reflection: 20
-- Questions: 15
-- Closing: 8
+This keeps the main teaching and witnessing portion inside a clear middle arc, with enough arrival time for a larger room to settle. If the room is full, the participant reflection can lean on chat first, then a small number of brief live voices.
 
 ## Places for Images With Text
 

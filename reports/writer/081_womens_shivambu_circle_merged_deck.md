@@ -37,9 +37,9 @@ the slides.
 | Wonder / field permission | 7 min | Fiona |
 | Grounding and agreements | 8 min | Megan |
 | Shivambu as doorway | 8 min | Ana |
-| Five doorways | 20 min | Ana / all hosts |
+| Five doorways | 20 min | Ana, Megan, Fiona each hold one thread |
 | Circle opens | 17 min | Ana hosts, Megan timekeeping, Fiona field witness |
-| Questions and reflections | 10 min | hosts |
+| Questions and reflections | 10 min | all hosts |
 | Wonder remains | 5 min | Fiona |
 | Closing | 5 min | Ana |
 
@@ -238,17 +238,28 @@ Small line:
 
 > Doorways, not conclusions.
 
-**Speaker cue: Ana / hosts**
+**Speaker cue: shared host arc**
 
 We will move through five doorways: practice, cycles, body changes, questions,
 and discoveries.
 
 These are not conclusions. They are ways to let the conversation find shape.
 
-Practice can include what has felt possible or not possible. Cycles can include
-menstrual, lunar, seasonal, emotional, creative, or life-stage rhythms. Body
-changes means changes women have noticed, held carefully and without
-generalizing. Questions can remain open. Discoveries can be small.
+Ana opens with **Practice** as a doorway into lived relationship: what has felt
+possible, what has not felt possible, and how Shivambu has entered direct
+experience without becoming an instruction.
+
+Megan carries **Cycles** and **Body Changes** through the body-safety thread:
+rhythm, timing, consent, pacing, and changes women have noticed without turning
+them into claims for other bodies.
+
+Fiona carries **Questions** and **Discoveries** through field witness: what
+remains tender, what asks to be named, what has surprised the room, and what can
+stay open without being solved.
+
+All three hosts can add one brief thread. Keep the movement spacious. This
+section should feel like three women holding the same bowl from different
+places, not three separate talks.
 
 **Image direction:** five soft openings, pools, or moonlit doorways arranged as
 a quiet sequence. No figures needed.
@@ -460,4 +471,3 @@ instead of shown.
 10. Questions and Reflections
 11. Wonder Remains
 12. Closing the Circle
-

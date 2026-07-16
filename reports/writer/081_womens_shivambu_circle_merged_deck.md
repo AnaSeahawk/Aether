@@ -457,6 +457,41 @@ The most important cleanup is removing:
 One small host line on the arrival slide is enough, and even that can be spoken
 instead of shown.
 
+## Clean Draft Deck
+
+A clean draft PPTX has been generated outside the repo:
+
+`/home/bird/Downloads/Women's Circle/Women_s_Shivambu_Circle_Merged_Clean_Draft.pptx`
+
+It rebuilds the deck with fresh text and cropped image-only panels from the
+existing Downloads slides, so the visible `Speaker:` labels and repeated name
+footers are removed.
+
+The cropped image panels live at:
+
+`/home/bird/Downloads/Women's Circle/merged_clean_deck_assets/`
+
+## Image Reuse Map
+
+| Merged slide | Existing image status | Production note |
+|---|---|---|
+| 1. Arrival | usable with crop | Right image field from `1-Circle of light and unity.png` works well. |
+| 2. Threshold | usable as placeholder, regenerate ideal | Reuses the doorway image from slide 4. A cleaner no-figure threshold would be better. |
+| 3. Wonder | usable with crop | Right image field from `2-Contemplative serenity and cosmic wonder.png` fits the mood. |
+| 4. Grounding | usable as placeholder, regenerate ideal | Reuses moonlit water from slide 6. A simpler still-water grounding plate would be better. |
+| 5. Circle Agreements | usable with crop | Right image field from `3-Serene safety gathering under moonlight.png` works. |
+| 6. Shivambu as a Doorway | usable with crop | Right image field from `4-A portal toward observation.png` works. |
+| 7. Five Doorways | usable as placeholder, regenerate ideal | Reuses `7-Questions and reflections in moonlight.png`. A specific five-doorway image would be better. |
+| 8. The Circle Is Open | usable with crop | Right image field from `5-Mystical opening of a sacred circle.png` works. |
+| 9. What Does This Bring Up? | usable with crop | Right image field from `6-Celestial reflections and botanical whispers.png` works. |
+| 10. Questions and Reflections | usable with crop | Right image field from `7-Questions and reflections in moonlight.png` works. |
+| 11. Wonder Remains | usable with crop | Right image field from `8-Wonder remains: a peaceful offering.png` works. |
+| 12. Closing the Circle | usable with crop | Right image field from `9-A serene night of reflection.png` works. |
+
+Only three slides need new custom image generation for a polished final deck:
+Threshold, Grounding, and Five Doorways. The rest can be built from the current
+images if the text layer is rebuilt cleanly.
+
 ## Minimal Final Slide List
 
 1. Arrival

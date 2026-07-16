@@ -98,9 +98,12 @@ Suggested agreements:
 
 Overlay text:
 
-> Speak from "I."  
-> Let the body remain sovereign.  
-> Let the circle remain kind.
+> Speak from personal experience.  
+> No medical advice or treatment claims.  
+> No pressure to share.  
+> No recording or screenshots unless explicitly agreed.  
+> Hold names and stories with care.  
+> Curiosity is welcome. Correction and debate can wait.
 
 ### 5. Three-Host Opening Arc: 13 Minutes
 
@@ -342,8 +345,12 @@ Use when naming privacy and non-prescriptive language.
 
 Overlay text:
 
-> Speak from "I."  
-> Let the body remain sovereign.
+> Speak from personal experience.  
+> No medical advice or treatment claims.  
+> No pressure to share.  
+> No recording or screenshots unless explicitly agreed.  
+> Hold names and stories with care.  
+> Curiosity is welcome. Correction and debate can wait.
 
 Image prompt:
 

@@ -29,6 +29,19 @@ Load these only when triggered:
 | `skills/prose.md` | drafting, editing, reviewing, or evaluating writing |
 | `skills/sensitive-content.md` | touching private, operational, health-adjacent, collaboration-private, or publishing-sensitive material |
 
+---
+
+## Task skills
+
+Capability workflows any role may load when the task involves that tooling. Not
+tied to an orchestration lane — claim the relevant path under your current role.
+
+| Skill | Use when |
+|---|---|
+| `skills/video.md` | turning a recording into cleaned video, a transcript, and publishing drafts (`tools/mother_spirit_video`, `tools/whisper-transcribe`) |
+
+---
+
 Do not scan all skills by default. Let the role and the task choose the reading.
 
 ---

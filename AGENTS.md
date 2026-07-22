@@ -32,6 +32,8 @@ Load only the skill files the work actually triggers:
 - Read `skills/prose.md` for drafting, editing, or evaluating prose.
 - Read `skills/sensitive-content.md` before touching private, operational,
   health-adjacent, collaboration-private, or publishing-sensitive material.
+- Read `skills/video.md` when turning a recording into cleaned video, a
+  transcript, or publishing drafts (`tools/mother_spirit_video`).
 - Do not scan every skill file unless the task is explicitly about the skill
   system itself.
 

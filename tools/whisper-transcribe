@@ -1,0 +1,146 @@
+#!/usr/bin/env bash
+#
+# whisper-transcribe — transcribe one audio/video file to a timed .srt using
+# OpenAI's hosted transcription API. Companion to tools/mother_spirit_video:
+# produce the .srt here, then import it with
+#   tools/mother_spirit_video transcribe <project> --transcript <file.srt>
+#
+# Matches the credential/pattern used by the desktop dictation tool (listener):
+#   - endpoint https://api.openai.com/v1/audio/transcriptions
+#   - API key resolved via `gopass show -o openai/api-key`
+#   - 25 MiB hosted upload cap
+# It differs on one point, deliberately: the model defaults to `whisper-1`,
+# not `gpt-4o-transcribe`. The gpt-4o transcribe models only return plain text,
+# but this pipeline needs timestamps (chapters + clip windows are parsed from
+# the SRT), and whisper-1 is the model that emits `response_format=srt`.
+#
+# The key is never placed on a command line or printed. It is written to a
+# private curl --config file (mode 600, in a mktemp dir, removed on exit) and
+# passed to curl via that file only.
+
+set -euo pipefail
+
+readonly ENDPOINT="https://api.openai.com/v1/audio/transcriptions"
+readonly GOPASS_KEY="openai/api-key"
+readonly MAX_UPLOAD_BYTES=$((25 * 1024 * 1024))
+# Target a bit under the hard cap so the multipart envelope also fits.
+readonly TARGET_BYTES=$((23 * 1024 * 1024))
+
+MODEL="whisper-1"
+LANGUAGE="en"
+PROMPT="Transcribe spoken English. Preserve names, product names, and acronyms exactly when spoken. Do not translate."
+INPUT=""
+OUTPUT=""
+
+usage() {
+  cat >&2 <<'EOF'
+Usage: whisper-transcribe <audio-or-video-file> [options]
+
+Options:
+  --output <file.srt>   Where to write the SRT (default: <input>.srt alongside input)
+  --model <name>        OpenAI model (default: whisper-1; must support SRT output)
+  --language <code>     ISO language hint (default: en; pass "" to auto-detect)
+  --prompt <text>       Spelling/vocabulary hint passed to the model
+  -h, --help            Show this help
+
+The audio is transcoded to compact mono 16 kHz MP3 before upload, with the
+bitrate chosen from the clip's duration so it lands under the 25 MiB cap. Very
+long recordings may still exceed it; split them first if so.
+EOF
+}
+
+die() { echo "whisper-transcribe: $*" >&2; exit 1; }
+
+while [[ $# -gt 0 ]]; do
+  case "$1" in
+    --output)   OUTPUT="${2:?--output needs a path}"; shift 2 ;;
+    --model)    MODEL="${2:?--model needs a value}"; shift 2 ;;
+    --language) LANGUAGE="${2-}"; shift 2 ;;
+    --prompt)   PROMPT="${2-}"; shift 2 ;;
+    -h|--help)  usage; exit 0 ;;
+    -*)         die "unknown option: $1" ;;
+    *)
+      [[ -z "$INPUT" ]] || die "unexpected extra argument: $1"
+      INPUT="$1"; shift ;;
+  esac
+done
+
+[[ -n "$INPUT" ]] || { usage; exit 2; }
+[[ -f "$INPUT" ]] || die "input not found: $INPUT"
+
+for dep in ffmpeg curl gopass; do
+  command -v "$dep" >/dev/null 2>&1 || die "required tool not on PATH: $dep"
+done
+
+if [[ -z "$OUTPUT" ]]; then
+  OUTPUT="${INPUT%.*}.srt"
+fi
+mkdir -p "$(dirname "$OUTPUT")"
+
+WORKDIR="$(mktemp -d "${TMPDIR:-/tmp}/whisper-transcribe.XXXXXX")"
+trap 'rm -rf "$WORKDIR"' EXIT
+chmod 700 "$WORKDIR"
+
+# --- pick a bitrate that keeps the compressed upload under the cap ----------
+duration="$(ffprobe -v error -show_entries format=duration \
+  -of default=noprint_wrappers=1:nokey=1 "$INPUT" 2>/dev/null || true)"
+
+bitrate_k=32
+if [[ "$duration" =~ ^[0-9]+([.][0-9]+)?$ ]] && \
+   awk "BEGIN{exit !($duration > 0)}"; then
+  # bits budget / seconds -> kbps, clamped to a sane speech range
+  bitrate_k="$(awk -v b="$TARGET_BYTES" -v d="$duration" \
+    'BEGIN{k=(b*8)/d/1000; if(k>64)k=64; if(k<12)k=12; printf "%d", k}')"
+fi
+
+AUDIO="$WORKDIR/audio.mp3"
+echo "whisper-transcribe: transcoding to mono 16 kHz MP3 @ ${bitrate_k}k ..." >&2
+ffmpeg -nostdin -hide_banner -loglevel error -y \
+  -i "$INPUT" -vn -ac 1 -ar 16000 -c:a libmp3lame -b:a "${bitrate_k}k" \
+  "$AUDIO"
+
+audio_bytes="$(wc -c < "$AUDIO")"
+if (( audio_bytes > MAX_UPLOAD_BYTES )); then
+  die "compressed audio is ${audio_bytes} bytes, over the 25 MiB hosted cap.
+Split this recording into shorter parts (e.g. with tools/mother_spirit_video
+clip) and transcribe each part separately."
+fi
+
+# --- resolve the key into a private curl config, never onto a command line --
+api_key="$(gopass show -o "$GOPASS_KEY" 2>/dev/null || true)"
+[[ -n "$api_key" ]] || die "no OpenAI key at gopass path '$GOPASS_KEY'"
+
+CURL_CONFIG="$WORKDIR/curl.cfg"
+umask 077
+: > "$CURL_CONFIG"
+chmod 600 "$CURL_CONFIG"
+printf 'header = "Authorization: Bearer %s"\n' "$api_key" > "$CURL_CONFIG"
+unset api_key
+
+# --- call the API; body -> temp file, status -> stdout ----------------------
+BODY="$WORKDIR/response.srt"
+form=( -F "file=@${AUDIO};type=audio/mpeg" -F "model=${MODEL}" -F "response_format=srt" )
+[[ -n "$LANGUAGE" ]] && form+=( -F "language=${LANGUAGE}" )
+[[ -n "$PROMPT" ]] && form+=( -F "prompt=${PROMPT}" )
+
+echo "whisper-transcribe: uploading to OpenAI ($MODEL) ..." >&2
+http_code="$(curl --silent --show-error \
+  --config "$CURL_CONFIG" \
+  --max-time 600 \
+  -o "$BODY" -w '%{http_code}' \
+  "$ENDPOINT" "${form[@]}")" || die "curl request failed"
+
+if [[ "$http_code" != "200" ]]; then
+  echo "whisper-transcribe: OpenAI returned HTTP $http_code:" >&2
+  # Error bodies are JSON and do not contain the key.
+  cat "$BODY" >&2 || true
+  exit 1
+fi
+
+if [[ ! -s "$BODY" ]]; then
+  die "OpenAI returned an empty transcript"
+fi
+
+mv "$BODY" "$OUTPUT"
+echo "whisper-transcribe: wrote $OUTPUT" >&2
+echo "$OUTPUT"

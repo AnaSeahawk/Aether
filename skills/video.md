@@ -21,6 +21,35 @@ it over the offline transcriber.
 
 ---
 
+## Hardware-accelerated encode/decode only — never CPU
+
+**All video decoding and encoding on this machine must run on the GPU. Do not
+fall back to CPU (`libx264`/`libx265`, software `trim`+`concat` filtergraphs that
+force software decode) for any real render — the machine cannot carry it.**
+
+The GPU here is an **Intel CometLake UHD Graphics iGPU** at `/dev/dri/renderD128`
+(no NVIDIA). The working path is **VAAPI** for both decode and encode:
+
+- Decode: `-hwaccel vaapi -hwaccel_output_format vaapi -vaapi_device /dev/dri/renderD128`
+- Encode: `-c:v h264_vaapi -rc_mode CQP -qp 23` (raise/lower qp for quality)
+- Any scaling/format step must stay on-GPU: `-vf 'scale_vaapi=format=nv12'`
+
+Confirm the pipeline is actually on the GPU before a long run: `scale_vaapi`
+only accepts GPU surfaces, so if it runs, decode is genuinely offloaded. A quick
+3-second test encode should report a high `speed=` (≈15–17× on this box);
+real-time or slower means it silently fell back to CPU — stop and fix it.
+
+**Cutting out segments the hardware way.** VAAPI frames can't flow through the
+software `trim`/`concat` filtergraph. Instead, decode+encode each *keep*-segment
+independently on the GPU (input `-ss START -t DURATION`, frame-accurate) to
+MPEG-TS parts, then stitch them with the concat demuxer using stream copy
+(`-f concat -safe 0 -i list.txt -c copy -movflags +faststart out.mp4`) — that
+final join does zero video re-encode. Audio can re-encode to AAC on CPU; it is
+negligible. This is the pattern used for the Darlene Teahan exchange cut; the
+script lived in the session scratchpad as `darlene_hwcut.sh`.
+
+---
+
 ## The tool
 
 `tools/mother_spirit_video` is a self-contained Python CLI built on FFmpeg. The

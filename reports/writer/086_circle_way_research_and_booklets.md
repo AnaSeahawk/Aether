@@ -1,18 +1,17 @@
-# 85. The Circle Way — Research and Two Participant Booklets
+# 86. The Circle Way — Research and Circle Booklets
 
 **Date:** 2026-07-28
 **Agent:** Claude Fable 5 (writer role)
-**Session topic:** Research The Circle Way; draft participant booklets for the Women's Shivambu Circle and the Mother Spirit Community Call
+**Session topic:** Research The Circle Way; draft circle booklets for the Women's Shivambu Circle and the Mother Spirit Community Call
 
-*Replaces report 084 after the Mother Spirit booklet was brought in line
-with Ana's direction: Ana hosts that call alone, and the pause protocol
-now applies to both gatherings.*
+*Replaces report 085 after the visual hand-out booklet was made from the
+circle slides.*
 
 ---
 
 ## What was made
 
-Two participant-facing booklet drafts in `Components/the-vessel/in-development/`:
+Three participant-facing booklet drafts in `Components/the-vessel/in-development/`:
 
 1. `circle-way-booklet-womens-shivambu-circle-2026-07-28.md` — grounded in
    the actual flow of the first circle (2026-07-24), sourced from
@@ -45,6 +44,15 @@ Two participant-facing booklet drafts in `Components/the-vessel/in-development/`
    protocol as the shivambu booklet (all-caps PAUSE in chat, palm to
    camera; the host names the pause), and its leadership note reflects
    Ana as sole host with an open invitation.
+3. `circle-way-visual-booklet-womens-shivambu-circle-2026-07-28.md` — the
+   **hand-out version**: nine phone-readable pages pairing the nine slide
+   images from the July 24 circle
+   (`35-water-magicians-private/womens-shivambu-circle-final/slides/`,
+   referenced by relative path rather than copied — ~23 MB already in the
+   repo) with condensed text from the participant booklet, closing with a
+   "To go further" page pointing to mother-spirit.com for more info or to
+   attend a circle. Intended to be passed out to attendees after Ana's
+   review.
 
 Both are `status: draft`, `visibility: private`. Not cleared for
 distribution without an explicit review pass.
@@ -132,6 +140,7 @@ three — the July 24 facilitator flow is its natural spine.
    community members (Mother Spirit call): draft the hosts' companion
    booklet (host + guardian + scribe guidance, drawing on the facilitator
    flow and The Circle Way's virtual hosting guide).
-2. Format next step: these are markdown drafts. If a phone-readable image
-   booklet like `living-waters-short-booklet-2026-06-22.md` is wanted,
-   slides/images can be laid out to match the existing circle slide art.
+2. Distribution format for the visual booklet: it is markdown with image
+   embeds. If Ana wants a single shareable file (PDF or image pages, like
+   the Fresh Shivambu guide PDFs), that render pass is the next step and
+   needs her go-ahead since it produces a distributable artifact.

@@ -1,11 +1,12 @@
-# 84. The Circle Way — Research and Two Participant Booklets
+# 85. The Circle Way — Research and Two Participant Booklets
 
 **Date:** 2026-07-28
 **Agent:** Claude Fable 5 (writer role)
 **Session topic:** Research The Circle Way; draft participant booklets for the Women's Shivambu Circle and the Mother Spirit Community Call
 
-*Replaces report 083. The booklet no longer pins roles to individuals; the
-three founding hosts rotate through all three roles.*
+*Replaces report 084 after the Mother Spirit booklet was brought in line
+with Ana's direction: Ana hosts that call alone, and the pause protocol
+now applies to both gatherings.*
 
 ---
 
@@ -35,12 +36,15 @@ Two participant-facing booklet drafts in `Components/the-vessel/in-development/`
      have attended a number of circles and are in close contact with the
      hosts.
 2. `circle-way-booklet-mother-spirit-community-call-2026-07-28.md` — a
-   **proposed** flow. The monthly Mother Spirit call has no formal circle
-   structure on record; the booklet drafts one by adapting the same Circle
-   Way arc to a mixed, open, monthly practitioner call. Flagged in its
-   frontmatter (`note:`) and pending Ana's judgment. Not yet updated with
-   the role/pause revisions made to the shivambu booklet — align it once
-   Ana confirms the call should carry the same structure.
+   **proposed** flow, adapting the same Circle Way arc to a mixed, open,
+   monthly practitioner call (the call has no formal circle structure on
+   record; flagged in its frontmatter `note:`). Per Ana (2026-07-28):
+   Megan and Fiona are not part of this call. Ana hosts it alone at the
+   moment, open to community members who want to participate more in
+   holding the space. The booklet carries the same "Asking for a pause"
+   protocol as the shivambu booklet (all-caps PAUSE in chat, palm to
+   camera; the host names the pause), and its leadership note reflects
+   Ana as sole host with an open invitation.
 
 Both are `status: draft`, `visibility: private`. Not cleared for
 distribution without an explicit review pass.
@@ -124,11 +128,10 @@ three — the July 24 facilitator flow is its natural spine.
 
 ## Open questions for Ana
 
-1. Should the Mother Spirit call adopt the same roles and pause protocol,
-   or stay lighter? Its booklet still reflects the first draft.
-2. When roles open beyond Ana/Fiona/Megan: draft the hosts' companion
+1. When roles open beyond the founding hosts (shivambu circle) or to
+   community members (Mother Spirit call): draft the hosts' companion
    booklet (host + guardian + scribe guidance, drawing on the facilitator
    flow and The Circle Way's virtual hosting guide).
-3. Format next step: these are markdown drafts. If a phone-readable image
+2. Format next step: these are markdown drafts. If a phone-readable image
    booklet like `living-waters-short-booklet-2026-06-22.md` is wanted,
    slides/images can be laid out to match the existing circle slide art.

@@ -1,10 +1,11 @@
-# 83. The Circle Way — Research and Two Participant Booklets
+# 84. The Circle Way — Research and Two Participant Booklets
 
 **Date:** 2026-07-28
 **Agent:** Claude Fable 5 (writer role)
 **Session topic:** Research The Circle Way; draft participant booklets for the Women's Shivambu Circle and the Mother Spirit Community Call
 
-*Replaces report 082 after Ana's same-day revisions (roles, pause protocol, opening-round wording).*
+*Replaces report 083. The booklet no longer pins roles to individuals; the
+three founding hosts rotate through all three roles.*
 
 ---
 
@@ -26,11 +27,13 @@ Two participant-facing booklet drafts in `Components/the-vessel/in-development/`
      all-caps **PAUSE** in Zoom chat = pause signal (works with cameras
      off); open palm to camera as secondary. Guardian names the pause, one
      shared breath, resume.
-   - "Who holds the circle" section naming the three Circle Way roles as
-     they naturally landed at the first circle: **Ana host, Fiona
-     guardian, Megan scribe**. Roles rotate among the three; will slowly
-     open to women who have attended a number of circles and are in close
-     contact with the hosts.
+   - "Who holds the circle" section describing the three Circle Way roles
+     (host, guardian, scribe) in participant language. At the first circle
+     the three founding hosts fell into these roles naturally; the booklet
+     deliberately does **not** pin a role to a person — Ana, Fiona, and
+     Megan rotate through all three. Roles will slowly open to women who
+     have attended a number of circles and are in close contact with the
+     hosts.
 2. `circle-way-booklet-mother-spirit-community-call-2026-07-28.md` — a
    **proposed** flow. The monthly Mother Spirit call has no formal circle
    structure on record; the booklet drafts one by adapting the same Circle
@@ -76,9 +79,8 @@ Components, per the official guidelines:
 
 **Roles.** The Circle Way names host (calls the circle, sets intention,
 leads as a peer), guardian (watches energy, rings the pause), and scribe
-(keeps the record). At the July 24 circle the three hosts fell into these
-naturally — Ana host, Fiona guardian, Megan scribe — and the booklet now
-records that mapping.
+(keeps the record). This matches the "leader in every chair" principle:
+roles rotate rather than belonging to individuals.
 
 **Role-specific materials.** The Circle Way publishes free booklets at
 different depths rather than one document: the two-page Basic Guidelines
@@ -122,8 +124,8 @@ three — the July 24 facilitator flow is its natural spine.
 
 ## Open questions for Ana
 
-1. Should the Mother Spirit call adopt the same named roles and pause
-   protocol, or stay lighter? Its booklet still reflects the first draft.
+1. Should the Mother Spirit call adopt the same roles and pause protocol,
+   or stay lighter? Its booklet still reflects the first draft.
 2. When roles open beyond Ana/Fiona/Megan: draft the hosts' companion
    booklet (host + guardian + scribe guidance, drawing on the facilitator
    flow and The Circle Way's virtual hosting guide).

@@ -38,6 +38,7 @@ tied to an orchestration lane — claim the relevant path under your current rol
 
 | Skill | Use when |
 |---|---|
+| `.agents/skills/audio-transcription/SKILL.md` | creating a timed transcript from existing audio/video; hosted OpenAI is the default and local inference requires explicit instruction |
 | `skills/video.md` | turning a recording into cleaned video, a transcript, and publishing drafts (`tools/mother_spirit_video`, `tools/whisper-transcribe`) |
 
 ---

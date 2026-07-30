@@ -88,6 +88,11 @@ There are two ways to produce that transcript.
 
 ### Default — hosted: `tools/whisper-transcribe`
 
+Read
+[`audio-transcription`](../.agents/skills/audio-transcription/SKILL.md) before
+running this step. It is the canonical cross-agent workflow and credential
+boundary for existing media.
+
 ```sh
 tools/whisper-transcribe .video-work/<slug>/inspection/audio_16k.wav \
   --output .video-work/<slug>/transcripts/audio_16k.srt
@@ -99,20 +104,23 @@ tools/mother_spirit_video transcribe .video-work/<slug> \
 `whisper-transcribe` transcodes the audio to fit the 25 MiB upload cap, calls
 the OpenAI transcription API, and writes a timed `.srt`. Notes:
 
-- The API key is read from **gopass at `openai/api-key`** — the same secret the
-  desktop dictation tool uses. The key is written to a private, mode-600 curl
-  config file and never placed on a command line or printed.
+- The API key is read from **gopass at `openai/api-key`** inside the HTTPS
+  client process. It is never placed in an environment variable, command
+  argument, log, output, or temporary file.
 - It defaults to model **`whisper-1`**, because that is the model whose API
   returns SRT with timestamps. The `gpt-4o-transcribe` model returns plain text
   only, which would lose the timing `bundle` depends on.
 - Pass `--prompt "..."` with names or jargon that should be spelled correctly.
-- Very long recordings that still exceed the cap after compression should be
-  split first with `tools/mother_spirit_video clip`, then transcribed per part.
+- Pass `--dry-run` to validate duration and upload size without reading the key
+  or making a paid API call.
+- Long recordings are split into private, resumable 10-minute hosted chunks and
+  merged into one SRT with corrected timestamps.
 
 ### Offline fallback — local `whisper` CLI
 
-Use when you do not want to upload audio or spend API budget. Proven on real
-calls; you manage the local model.
+Use only when Ana explicitly requests local/offline transcription. Do not infer
+this choice from privacy concerns; pause and ask if hosted upload has not been
+authorized.
 
 ```sh
 whisper .video-work/<slug>/inspection/audio_16k.wav \

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audio Transcription"
+  short_description: "Secure hosted transcription for media files"
+  default_prompt: "Use $audio-transcription to create a timed private transcript from this recording."

@@ -32,6 +32,9 @@ Load only the skill files the work actually triggers:
 - Read `skills/prose.md` for drafting, editing, or evaluating prose.
 - Read `skills/sensitive-content.md` before touching private, operational,
   health-adjacent, collaboration-private, or publishing-sensitive material.
+- Read `.agents/skills/audio-transcription/SKILL.md` when transcribing an
+  existing audio or video file. Use its hosted route unless Ana explicitly
+  requests the offline fallback.
 - Read `skills/video.md` when turning a recording into cleaned video, a
   transcript, or publishing drafts (`tools/mother_spirit_video`).
 - Do not scan every skill file unless the task is explicitly about the skill

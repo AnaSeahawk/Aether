@@ -123,7 +123,8 @@ collaborators may eventually share their own experience.
 
 ### 4. Megan Source Attribution Was Corrected
 
-Report `074` is now the reliable source on the Megan systems hypothesis packet.
+Report `089` is now the reliable source on the systems document. (Report `074`,
+current when this audit was written, has since been deleted and replaced.)
 
 Current rule:
 
@@ -131,8 +132,9 @@ Current rule:
   must be separated in any future derivative.
 - The Western medical framing in the `.docx` should not be treated as Megan's
   authored position without further review.
-- The long-practice Shivambu example is Shakti Mhi, not Lynne Taillefer, and
-  remains private unless separately cleared.
+- The long-practice Shivambu example was attributed to the wrong person; the
+  correction is recorded privately. Named individuals' personal and health
+  accounts remain private absent their own consent.
 
 This correction is important because it models exactly the kind of provenance
 discipline the collaborator lane will need.

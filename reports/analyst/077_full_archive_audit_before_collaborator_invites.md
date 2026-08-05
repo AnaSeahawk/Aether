@@ -464,7 +464,7 @@ Use these for current orientation:
 
 - `reports/analyst/077_full_archive_audit_before_collaborator_invites.md` - this report; current whole-archive state.
 - `reports/analyst/075_full_archive_audit_current_intention_flow.md` - previous whole-archive audit; still useful for the June 28 baseline.
-- `reports/analyst/074_megan_macdonald_systems_hypothesis_corrected_integration.md` - authoritative Megan attribution correction.
+- `reports/analyst/089_systems_document_provenance_closed.md` - systems document provenance; replaced the deleted report `074`.
 - `reports/curator/070_paid_access_prep_threads_metadata_privacy.md` - access boundary, thread vocabulary, and private community-story routing.
 - `reports/analyst/076_ligoldragon_skills_comparison_july5.md` - current answer on LiGoldragon skills versus Aether skills.
 - `reports/056_water-magicians-report.md` and `reports/057_sb-dictionary-water-magicians-gap-analysis.md` - useful Water Magicians overview and dictionary gap report, though private files have advanced beyond them.

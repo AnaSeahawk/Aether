@@ -8,9 +8,10 @@
 
 ## Decisions From Ana
 
-This report supersedes the open decision list in
-`reports/analyst/077_full_archive_audit_before_collaborator_invites.md` where
-noted below.
+This report supersedes the open decision list in report 077 where noted below.
+(Report 077 has since been deleted and replaced by
+`reports/analyst/091_july_audits_superseded.md`; the decisions recorded here
+remain current.)
 
 Current decisions:
 
@@ -29,7 +30,7 @@ Current decisions:
 
 July 3 source packet:
 
-- `Components/the-vessel/35-collaboration-private/water-magicians/alchemy-matter-saturn-microbe-archive-source-packet.md`
+- `Components/the-vessel/35-water-magicians-private/alchemy-matter-saturn-microbe-archive-source-packet.md`
 
 What it is: the first filled private source packet testing the Water Magicians
 workflow. It narrows one collaboration thread around Saturn retentate, sun-dried
@@ -40,7 +41,7 @@ SB movement yet.
 
 Support path:
 
-- `Components/the-vessel/35-collaboration-private/water-magicians/collective-archive-support-path.md`
+- `Components/the-vessel/35-water-magicians-private/collective-archive-support-path.md`
 
 What it is: a private draft for explaining Water Magicians as a
 community-supported living research archive. It frames support as funding the

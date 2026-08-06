@@ -285,7 +285,7 @@ The Water Magicians index makes files findable, but understanding still requires
 - what review is needed from Ana/Megan/Fiona;
 - what the next packet is.
 
-Report `056_water-magicians-report.md` is useful, but current private files have advanced beyond it.
+Report `056_water-magicians-report.md` is useful, but current private files have advanced beyond it. (It has since been deleted and replaced by `reports/analyst/090_water_magicians_lane_pointer.md`.)
 
 ### June Synthesis Is Present But Not Canonical
 
@@ -467,7 +467,7 @@ Use these for current orientation:
 - `reports/analyst/089_systems_document_provenance_closed.md` - systems document provenance; replaced the deleted report `074`.
 - `reports/curator/070_paid_access_prep_threads_metadata_privacy.md` - access boundary, thread vocabulary, and private community-story routing.
 - `reports/analyst/076_ligoldragon_skills_comparison_july5.md` - current answer on LiGoldragon skills versus Aether skills.
-- `reports/056_water-magicians-report.md` and `reports/057_sb-dictionary-water-magicians-gap-analysis.md` - useful Water Magicians overview and dictionary gap report, though private files have advanced beyond them.
+- `reports/analyst/090_water_magicians_lane_pointer.md` (replaced the deleted `reports/056_water-magicians-report.md`) and `reports/057_sb-dictionary-water-magicians-gap-analysis.md` - Water Magicians lane pointer and dictionary gap report, though private files have advanced beyond the latter.
 
 ### Useful But Not Current Task Lists
 

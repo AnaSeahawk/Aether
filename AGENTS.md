@@ -22,6 +22,10 @@ claim your paths via `tools/orchestrate claim <role> <path> -- <reason>`.
 Release when done: `tools/orchestrate release <role>`.
 
 See `protocols/orchestration.md` for the full coordination protocol.
+
+See `protocols/active-surfaces.md` for which repos are public, what must never
+be published, and the current sensitivity watchpoints. Read it before writing
+into any public repo — `aether` itself is public.
 See `skills/index.md` for the compact skill map.
 
 ### Skill Loading

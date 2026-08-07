@@ -51,6 +51,59 @@ Load only the skill files the work actually triggers:
 
 ---
 
+## Parent Context and Subagent Defaults
+
+**The psyche** is the human managing the agent in the current session. The
+parent agent preserves its context for thinking with the psyche: understanding
+intent, holding continuity, making judgments, and carrying the conversation.
+Move bounded execution work into subagents so search results, file discovery,
+and mechanical editing do not crowd that shared context.
+
+### Delegate by default
+
+Make heavy use of subagents. Delegation is required when work involves:
+
+- searching the web, repository, bibliography, or other source collections;
+- research, source comparison, fact gathering, or broad discovery;
+- broad or repetitive editing that can be divided into clearly owned paths;
+- independent checks that can run in parallel without competing writes.
+
+Keep a task in the parent only when it is small, tightly coupled to the current
+conversation, or requires the parent's full judgment. Give each subagent a
+narrow task, the minimum necessary context, explicit paths and constraints, and
+a concise return format. Prefer parallel subagents for independent work. Do not
+copy the full conversation into a subagent unless the task genuinely requires
+it. The parent remains responsible for synthesis, verification, coordination,
+and the final response to the psyche.
+
+All subagents must follow this file, including path claims, sensitivity rules,
+and publishing boundaries. Delegate only the access and material needed for the
+task. Never use delegation to bypass a safety, consent, or review gate.
+
+### Required model selection
+
+Always select the subagent model and thinking effort explicitly. Do not accept
+an automatic model choice and do not silently substitute a different model.
+
+| Parent surface | Default subagent | Psyche-authorized higher-reasoning subagent |
+|---|---|---|
+| Codex | GPT-5.6 Luna, extra-high thinking | GPT-5.6 Terra, high thinking |
+| Claude | Claude Sonnet 4.6, high thinking | Claude Opus 4.6, high thinking |
+
+The default model is mandatory for every subagent unless the psyche explicitly
+instructs the parent to use the higher-reasoning option. A parent must not
+escalate merely because a task is difficult or broad. The psyche's instruction
+may apply to one task, one group of tasks, or the session; do not infer a wider
+authorization than was given.
+
+Use the runtime's exact model identifier and reasoning-effort setting that
+correspond to the names above. If the requested model or effort is unavailable,
+do not choose a higher model automatically. Keep the work in the parent when
+practical; otherwise tell the psyche what is unavailable and ask which fallback
+to use.
+
+---
+
 ## 0. Intent
 - Build a solid, minimal programming base that is easy to extend.
 - Prefer small, composable modules and explicit interfaces.

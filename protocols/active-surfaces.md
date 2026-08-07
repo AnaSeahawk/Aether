@@ -89,8 +89,10 @@ message no export contains. That is what exposed the July 2–4 gap on August 6.
 
 ## Reports
 
-- One global number sequence across all role folders. Next number is one above
-  the highest in `reports/` and `reports/*/` together.
+- One global number sequence covers files directly in `reports/` and directly
+  in each `reports/<role>/` folder. Dynamic session lanes use a local sequence
+  inside `reports/<role>/<lane>/`; ignore those nested files when selecting the
+  next global number.
 - Stale reports are deleted and replaced, not edited in place. Confirm with Ana
   first when the content is substantive.
 - Two known numbering faults: two reports share `056` (one root, one analyst),

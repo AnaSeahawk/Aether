@@ -21,6 +21,11 @@ The workspace supports four coordination roles for parallel agent work:
 claim your paths via `tools/orchestrate claim <role> <path> -- <reason>`.
 Release when done: `tools/orchestrate release <role>`.
 
+When more than one agent uses the same role, each must use a unique session
+lane: `tools/orchestrate claim <role> --lane <session> <path> -- <reason>`.
+Release that same lane with
+`tools/orchestrate release <role> --lane <session>`.
+
 See `protocols/orchestration.md` for the full coordination protocol.
 
 See `protocols/active-surfaces.md` for which repos are public, what must never
@@ -110,17 +115,26 @@ Load only the skill files the work actually triggers:
 
 When a session-end response is longer than a few lines, write it to a numbered report file instead of (or in addition to) returning it inline. This lets Ana review the report at her own pace while the agent continues other work, and keeps a readable audit trail outside the chat harness.
 
-**Location:** `reports/` at the repo root.
+**Location:** Default role reports go in `reports/<role>/`; cross-role session
+intelligence may go in `reports/` at the repo root. A dynamic session lane
+writes only in `reports/<role>/<lane>/`.
 
-**Naming:** zero-padded three-digit prefix, followed by a short slug:
+**Naming:** Default role and top-level reports use the existing global,
+zero-padded three-digit prefix:
 
 ```
+reports/<role>/001_<slug>.md
 reports/001_<slug>.md
-reports/002_<slug>.md
 ...
 ```
 
-Find the next available number by scanning existing files in `reports/` and incrementing the highest prefix.
+Find the next global number by scanning files directly in `reports/` and
+directly in `reports/<role>/`, then incrementing the highest prefix. Ignore
+files nested inside a dynamic session-lane directory.
+
+Dynamic session-lane reports use a sequence local to their unique directory,
+beginning with `001`. The coordinating analyst writes any final consolidated
+report into the global sequence after parallel work has finished.
 
 **Report file format:**
 

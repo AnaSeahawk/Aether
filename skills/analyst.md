@@ -48,7 +48,19 @@ For analyst reports: `reports/analyst/NNN_slug.md`
 For top-level (cross-role) session intelligence: `reports/NNN_slug.md`
 
 Find the next number by scanning the highest prefix across all files in `reports/`
-and its subdirectories, then incrementing. Zero-pad to three digits.
+and the files directly inside each role subdirectory, then incrementing.
+Zero-pad to three digits. Ignore reports nested in dynamic session-lane
+directories.
+
+When the analyst is assigned a dynamic lane, reports go in:
+
+```text
+reports/analyst/<lane>/<NNN>_<slug>.md
+```
+
+That `NNN` sequence is local to the lane directory and begins with `001`.
+After parallel work finishes, the coordinating analyst may write one
+consolidated report using the global sequence.
 
 ---
 

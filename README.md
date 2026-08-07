@@ -22,5 +22,24 @@ git submodule update --init --recursive
 git submodule update --remote --merge
 ```
 
+## Agent coordination
+
+Agents claim the exact paths they edit through `tools/orchestrate`. Existing
+single-agent role commands remain valid:
+
+```bash
+tools/orchestrate claim researcher /absolute/path -- reason
+tools/orchestrate release researcher
+```
+
+When multiple agents share one role, each uses a unique session lane:
+
+```bash
+tools/orchestrate claim researcher --lane caraka-notes /absolute/path -- reason
+tools/orchestrate release researcher --lane caraka-notes
+```
+
+See `protocols/orchestration.md` for the complete workflow.
+
 ## Notes
 This repo is intentionally minimal. Keep changes small, documented, and aligned with `AGENTS.md`.

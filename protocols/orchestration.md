@@ -1,8 +1,9 @@
 # Orchestration Protocol
 
 Coordinates multiple agents working in the same repo simultaneously. Simple
-mechanism: each role claims its paths before editing, releases when done. Two
-agents cannot hold overlapping paths at the same time.
+mechanism: each agent claims its paths before editing and releases when done.
+Agents may use a role's original single lane or a uniquely named session lane.
+Two agents cannot hold overlapping paths at the same time.
 
 This is a coordination protocol, not a hard filesystem lock. It works when each
 agent reads this file, checks the current locks, claims before editing, and
@@ -16,52 +17,61 @@ Use this when running Claude Code, Codex, or another agent at the same time.
 
 1. Decide what each agent is doing and choose the role that matches the work:
    `researcher`, `writer`, `curator`, or `analyst`.
-2. Give each agent a narrow path, not the whole repo.
-3. Start each agent with the standard coordination prompt below.
-4. If an agent reports a conflict, let it work somewhere else or wait until the
+2. If two agents share a role, give each a short session-lane name such as
+   `caraka-notes` or `alchemy-notes`.
+3. Give each agent a narrow path, not the whole repo.
+4. Start each agent with the standard coordination prompt below.
+5. If an agent reports a conflict, let it work somewhere else or wait until the
    other agent releases.
-5. At the end of the session, make sure the agent committed, pushed, and ran
-   `tools/orchestrate release <role>`.
+6. At the end of the session, make sure the agent committed, pushed, and
+   released the same role and lane it claimed.
 
 Standard coordination prompt:
 
 ```text
 Read AGENTS.md and protocols/orchestration.md before editing.
 Use role: <role>.
+Use session lane: <lane>. (Omit this line when the role has only one agent.)
 Target path: <absolute path>.
 First run tools/orchestrate status.
-If the target is only your own reports/<role>/ lane, reports are exempt:
-write only there and do not claim.
+If the target is only your own report lane, reports are exempt:
+write in reports/<role>/<lane>/ when assigned a session lane, or
+reports/<role>/ when using the default role lane. Do not claim either path.
 Otherwise, claim the target path with:
-tools/orchestrate claim <role> <absolute path> -- <short reason>
+tools/orchestrate claim <role> [--lane <lane>] <absolute path> -- <short reason>
 If there is a conflict, stop and tell me.
 Work only inside the claimed path unless I approve more.
 Commit and push substantive changes, then release with:
-tools/orchestrate release <role>
+tools/orchestrate release <role> [--lane <lane>]
 ```
 
-Example Claude/Codex split:
+The bracketed `--lane` option means: include it only when a session lane was
+assigned. It is explanatory notation, not text to paste literally.
+
+Example with two researchers working at the same time:
 
 ```text
 Claude Code:
-Use role: curator.
-Target path: /home/bird/Git/aether/Components/website
-Reason: website archive metadata work
+Use role: researcher.
+Use session lane: caraka-notes.
+Target path: /home/bird/Git/aether/Components/bibliography/ayurveda
+Reason: Caraka source notes
 
 Codex:
-Use role: analyst.
-Target path: /home/bird/Git/aether/reports/analyst
-Reason: session synthesis
+Use role: researcher.
+Use session lane: alchemy-notes.
+Target path: /home/bird/Git/aether/Components/bibliography/alchemy
+Reason: alchemy source notes
 ```
 
-This lets one agent work in website structure while another writes analysis,
-without both touching the same files.
+Both agents inherit the researcher discipline, but their separate locks and
+report directories make their parallel work visible.
 
 ---
 
 ## Roles
 
-| Role | Lock file | Reports subdir | Natural surface |
+| Role | Default lock | Reports subdir | Natural surface |
 |---|---|---|---|
 | `researcher` | `researcher.lock` | `reports/researcher/` | `Components/bibliography/`, source research |
 | `writer` | `writer.lock` | `reports/writer/` | `Components/the-vessel/in-development/`, website prose |
@@ -77,12 +87,37 @@ the role and path are claimed honestly.
 
 ---
 
+## Session lanes
+
+A role names the discipline. A session lane names one agent's current seat
+inside that discipline.
+
+The original commands remain valid when only one agent uses a role:
+
+```sh
+tools/orchestrate claim researcher <path> -- <reason>
+tools/orchestrate release researcher
+```
+
+When two agents share a role, each uses a unique lowercase lane name:
+
+```sh
+tools/orchestrate claim researcher --lane caraka-notes <path> -- <reason>
+tools/orchestrate claim researcher --lane alchemy-notes <path> -- <reason>
+```
+
+Lane names may contain lowercase letters, digits, and hyphens. Choose a name
+for the work, not the model. The helper stores dynamic lanes as
+`<role>--<lane>.lock` and checks them against every default and dynamic lane.
+
+---
+
 ## Claim before editing
 
 Before editing any file, claim its path:
 
 ```sh
-tools/orchestrate claim <role> <path> [more-paths] -- <reason>
+tools/orchestrate claim <role> [--lane <session>] <path> [more-paths] -- <reason>
 ```
 
 Example:
@@ -93,8 +128,9 @@ tools/orchestrate claim researcher \
   -- pulling Caraka quotes for Living Waters
 ```
 
-The helper writes your role's lock file, checks every other lock for overlap,
-and rejects the claim if there is a conflict.
+The helper writes your lane's lock file, checks every other lock for overlap,
+and rejects the claim if there is a conflict. Existing role-only commands use
+the role's default lane.
 
 Use absolute paths. Claiming a directory covers all files under it.
 
@@ -121,10 +157,11 @@ parallel work flowing.
 ## Release when done
 
 ```sh
-tools/orchestrate release <role>
+tools/orchestrate release <role> [--lane <session>]
 ```
 
-Release as soon as the work is finished. Don't hold paths between sessions.
+Release the same lane used for the claim as soon as the work is finished.
+Don't hold paths between sessions.
 
 If work narrows, release and reclaim the smaller path. Idle locks make the next
 agent guess whether a surface is still active.
@@ -137,7 +174,7 @@ agent guess whether a surface is still active.
 tools/orchestrate status
 ```
 
-Shows every role's current lock file.
+Shows every default role lane and every active dynamic session lane.
 
 Run this before asking a second agent to start. It gives the current map of
 what is safe to touch.
@@ -146,8 +183,8 @@ what is safe to touch.
 
 ## Lock file format
 
-`<role>.lock` is plain text. Each line is one claimed path, optionally
-followed by `# reason`. Empty file means idle.
+`<role>.lock` and `<role>--<lane>.lock` are plain text. Each line is one
+claimed path, optionally followed by `# reason`. Empty file means idle.
 
 ```
 /home/bird/Git/aether/Components/bibliography/ayurveda # pulling Caraka quotes
@@ -160,21 +197,26 @@ Lock files are runtime state — **do not commit them**. They are listed in
 
 ## Reports — exempt from claim flow
 
-Reports are partitioned by role subdirectory. Each role's subdirectory is its
-implied write lane. Do not claim report paths in your own lane; do not write
-into another role's subdirectory.
+Reports are partitioned by role. A default role lane writes directly in its
+role directory. A dynamic session lane writes in its own subdirectory:
 
 ```
 reports/researcher/   ← researcher only
+reports/researcher/caraka-notes/   ← that session lane only
 reports/writer/       ← writer only
 reports/curator/      ← curator only
 reports/analyst/      ← analyst only
 reports/              ← top-level: cross-role session intelligence (any role)
 ```
 
-Top-level session intelligence reports (`reports/NNN_session-intelligence-*.md`)
-may be written by any role. Use the next available number across all files in
-`reports/` and subdirectories.
+Dynamic session reports use a three-digit sequence local to their unique
+directory, beginning with `001`. This prevents two simultaneous agents from
+selecting the same global report number. After the parallel work finishes, the
+coordinating analyst may write one consolidated top-level report using the next
+available global number.
+
+Do not claim report paths in your own lane and do not write into another
+lane's report directory.
 
 Even though reports are exempt, agents should still run
 `tools/orchestrate status` before beginning so they understand what else is
@@ -184,12 +226,13 @@ happening in the repo.
 
 ## When paths conflict
 
-If another role holds a path you need, either:
+If another lane holds a path you need, either:
 - Wait for the other agent to release, then claim.
 - File a note in `reports/analyst/` naming the blocker and the next action,
   and work something else.
 
-Do not proceed without claiming. The value of the system is that Ana can see
+Claims are coordination records, not operating-system locks. Do not proceed
+after an overlap is reported. The value of the system is that Ana can see
 exactly what is in flight at any moment by reading the lock files.
 
 If Claude Code and Codex both need the same path, the cleanest flow is:

@@ -48,6 +48,26 @@ domain without a protocol or URL path. For example: `hetzner.com/login`.
 
 ---
 
+## Default login metadata
+
+Use the `my-email` Gopass entry as the default login for every new password
+entry unless the user explicitly supplies a different login. Store its content
+as a `login: <email>` line.
+
+After generating a new password, append that metadata without displaying or
+copying the email:
+
+```sh
+set -o pipefail
+gopass generate <domain>/login 32
+gopass show -o my-email | gopass insert --append <domain>/login
+```
+
+Use `--force` only when the user explicitly asks to replace an existing
+password.
+
+---
+
 ## The pipe pattern
 
 Move a secret by connecting the producer's stdout directly to the
@@ -115,14 +135,9 @@ Generate and store without ever printing the value:
 gopass generate <path> 32
 ```
 
-Or from a CSPRNG:
-
-```sh
-head -c 32 /dev/urandom | base64 | gopass insert -f <path> >/dev/null
-```
-
-Confirm by `gopass ls | grep -F <name>` and exit code. Never
-decrypt-to-check.
+Do not substitute a CSPRNG-to-`gopass insert` pipeline for password creation.
+Use `gopass generate` so Gopass owns generation and storage. Confirm by
+`gopass ls | grep -F <name>` and exit code. Never decrypt-to-check.
 
 ---
 

@@ -12,10 +12,10 @@ The workspace supports four coordination roles for parallel agent work:
 
 | Role | Surface | Skill file |
 |---|---|---|
-| `researcher` | `Components/bibliography/`, source research | `skills/researcher.md` |
-| `writer` | `Components/the-vessel/in-development/`, website prose | `skills/writer.md` |
-| `curator` | `Components/website/` structure and metadata | `skills/curator.md` |
-| `analyst` | `reports/`, session synthesis | `skills/analyst.md` |
+| `researcher` | `Components/bibliography/`, source research | `.agents/skills/researcher/SKILL.md` |
+| `writer` | `Components/the-vessel/in-development/`, website prose | `.agents/skills/writer/SKILL.md` |
+| `curator` | `Components/website/` structure and metadata | `.agents/skills/curator/SKILL.md` |
+| `analyst` | `reports/`, session synthesis | `.agents/skills/analyst/SKILL.md` |
 
 **Before starting work, know your role.** Read the relevant skill file and
 claim your paths via `tools/orchestrate claim <role> <path> -- <reason>`.
@@ -31,21 +31,23 @@ See `protocols/orchestration.md` for the full coordination protocol.
 See `protocols/active-surfaces.md` for which repos are public, what must never
 be published, and the current sensitivity watchpoints. Read it before writing
 into any public repo — `aether` itself is public.
-See `skills/index.md` for the compact skill map.
+See `.agents/skills/README.md` for the compact skill map.
 
 ### Skill Loading
 
 Load only the skill files the work actually triggers:
 
 - Always read this file and the skill file for the role you are using.
-- Read `skills/prose.md` for drafting, editing, or evaluating prose.
-- Read `skills/sensitive-content.md` before touching private, operational,
+- Read `.agents/skills/prose/SKILL.md` for drafting, editing, or evaluating prose.
+- Read `.agents/skills/sensitive-content/SKILL.md` before touching private, operational,
   health-adjacent, collaboration-private, or publishing-sensitive material.
 - Read `.agents/skills/audio-transcription/SKILL.md` when transcribing an
   existing audio or video file. Use its hosted route unless Ana explicitly
   requests the offline fallback.
-- Read `skills/video.md` when turning a recording into cleaned video, a
+- Read `.agents/skills/video/SKILL.md` when turning a recording into cleaned video, a
   transcript, or publishing drafts (`tools/mother_spirit_video`).
+- Read `.agents/skills/passwords/SKILL.md` before any task involving passwords,
+  API tokens, credentials, or `gopass`.
 - Do not scan every skill file unless the task is explicitly about the skill
   system itself.
 
@@ -293,7 +295,7 @@ Some files also carry optional astronomical frontmatter (`sun:`, `moon:`, `moon-
 
 The `sovereign-biophysics-distillation/` folder contains sensitive operational material. The intended direction (as of 2026-03-16) is to migrate this content to a separate private GitHub repo. Do not assume it is safe to publish or share. When in doubt about sensitivity, ask before acting.
 
-Read `skills/sensitive-content.md` before inspecting, editing, summarizing, or
+Read `.agents/skills/sensitive-content/SKILL.md` before inspecting, editing, summarizing, or
 moving sensitive files.
 
 ### Language Conventions

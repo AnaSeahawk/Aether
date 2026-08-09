@@ -1,3 +1,8 @@
+---
+name: video
+description: Turning a raw recording into cleaned video, transcript, and publishing drafts using tools/mother_spirit_video and whisper-transcribe. Any role may load this.
+---
+
 # Skill — video
 
 *Turning one raw recording into reviewable video and publishing drafts.*
@@ -157,7 +162,7 @@ Water Magicians calls:
 - Keep the review index alongside the clips, not just in chat.
 
 Recordings are operational, often health-adjacent material — read
-[`skills/sensitive-content.md`](sensitive-content.md) before handling them.
+[`.agents/skills/sensitive-content/SKILL.md`](.agents/skills/sensitive-content/SKILL.md) before handling them.
 
 ---
 
@@ -173,6 +178,6 @@ uploaded by this workflow.
 ## See also
 
 - [`tools/mother_spirit_video.md`](../tools/mother_spirit_video.md) — full command reference
-- [`skills/sensitive-content.md`](sensitive-content.md) — privacy and consent boundaries
-- [`skills/curator.md`](curator.md) — installing the archive entry into the website
+- [`.agents/skills/sensitive-content/SKILL.md`](.agents/skills/sensitive-content/SKILL.md) — privacy and consent boundaries
+- [`.agents/skills/curator/SKILL.md`](.agents/skills/curator/SKILL.md) — installing the archive entry into the website
 - `AGENTS.md` — the authoritative repo contract

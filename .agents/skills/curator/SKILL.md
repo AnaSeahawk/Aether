@@ -1,3 +1,8 @@
+---
+name: curator
+description: Website structure, frontmatter, review/publish workflow, and submodule commit discipline. Use for publishing pipeline, metadata, and content architecture.
+---
+
 # Skill — curator
 
 *Structure, publishing workflow, and the health of the website.*
@@ -33,7 +38,7 @@ but does not edit files there.
 
 - `AGENTS.md` §Publishing Workflow, §Content Metadata, §Submodule Workflow,
   §Sensitive Content.
-- `skills/sensitive-content.md` before inspecting, moving, summarizing, or
+- `.agents/skills/sensitive-content/SKILL.md` before inspecting, moving, summarizing, or
   promoting sensitive files.
 - `soul.md` — the voice and orientation the content must remain consistent with.
 
@@ -129,7 +134,7 @@ require explicit instruction.
 ## See also
 
 - `AGENTS.md` — the authoritative source for workflow conventions
-- `skills/sensitive-content.md` — privacy and publication boundaries
-- `skills/writer.md` — where content originates
-- `skills/analyst.md` — session records that inform curation decisions
+- `.agents/skills/sensitive-content/SKILL.md` — privacy and publication boundaries
+- `.agents/skills/writer/SKILL.md` — where content originates
+- `.agents/skills/analyst/SKILL.md` — session records that inform curation decisions
 - `protocols/orchestration.md` — claim flow before structural edits

@@ -1,3 +1,8 @@
+---
+name: prose
+description: Craft moves for writing that says true things in the voice of this work. Load when drafting, editing, reviewing, or evaluating prose.
+---
+
 # Skill — prose
 
 *Craft moves for writing that says true things in the voice of this work.*
@@ -9,7 +14,7 @@
 Every piece of writing in this repo — essays, orientation entries, presentation
 slides, companion notes — lives or dies on its sentences. This skill names the
 concrete moves: how to open, how to close, what to delete, how to let a primary
-source carry weight. It is the craft layer between `skills/writer.md` (the role)
+source carry weight. It is the craft layer between `.agents/skills/writer/SKILL.md` (the role)
 and `soul.md` (the upstream voice).
 
 ---
@@ -156,6 +161,6 @@ structure is what the prose was trying to reach.
 ## See also
 
 - `soul.md` — upstream voice; the criterion prose is held to
-- `skills/writer.md` — the role that applies this discipline
-- `skills/researcher.md` — citation conventions and source acquisition
+- `.agents/skills/writer/SKILL.md` — the role that applies this discipline
+- `.agents/skills/researcher/SKILL.md` — citation conventions and source acquisition
 - `AGENTS.md` §Language Conventions

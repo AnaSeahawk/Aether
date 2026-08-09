@@ -1,3 +1,8 @@
+---
+name: writer
+description: Drafting and revising prose for The Vessel, orientation entries, Living Waters, and website content. Use when the task is writing sentences.
+---
+
 # Skill — writer
 
 *Prose that says true things in the voice of the work.*
@@ -10,7 +15,7 @@ The writer drafts. Essays for The Vessel, orientation entries, the Living Waters
 presentation, content for the website — anywhere prose is the load-bearing surface.
 
 The writer's discipline: say what is true, in the voice described in `soul.md`,
-with the craft named in `skills/prose.md`. The researcher supplies sources; the
+with the craft named in `.agents/skills/prose/SKILL.md`. The researcher supplies sources; the
 curator handles publication. The writer's job is the sentence.
 
 ---
@@ -31,9 +36,9 @@ reorganize or add files there — that is the researcher's surface.
 
 - `soul.md` — voice, themes, boundaries. The single most important document.
   Every sentence should be legible from within this orientation.
-- `skills/prose.md` — concrete craft moves. Read before drafting anything.
+- `.agents/skills/prose/SKILL.md` — concrete craft moves. Read before drafting anything.
 - `AGENTS.md` §Language Conventions and §Sensitive Content.
-- `skills/sensitive-content.md` when the draft touches private, operational,
+- `.agents/skills/sensitive-content/SKILL.md` when the draft touches private, operational,
   health-adjacent, or publishing-sensitive material.
 - The relevant `ARCHITECTURE.md` or `README.md` in the target submodule if
   working in `Components/the-vessel/` or `Components/website/`.
@@ -100,7 +105,7 @@ and precise, not performative. Assume the reader has clinical or practice
 experience; do not over-explain.
 
 When sourcing Ayurvedic material, pull verified quotes from the Caraka Saṃhitā
-holdings (see `skills/researcher.md` §Caraka Saṃhitā). Always attribute with
+holdings (see `.agents/skills/researcher/SKILL.md` §Caraka Saṃhitā). Always attribute with
 sthāna, adhyāya, and verse number.
 
 ---
@@ -136,8 +141,8 @@ A draft is ready to hand to Ana when:
 ## See also
 
 - `soul.md` — the upstream voice document
-- `skills/prose.md` — craft discipline
-- `skills/sensitive-content.md` — privacy and publication boundaries
-- `skills/researcher.md` — where source material comes from
-- `skills/curator.md` — what happens after a draft is approved
+- `.agents/skills/prose/SKILL.md` — craft discipline
+- `.agents/skills/sensitive-content/SKILL.md` — privacy and publication boundaries
+- `.agents/skills/researcher/SKILL.md` — where source material comes from
+- `.agents/skills/curator/SKILL.md` — what happens after a draft is approved
 - `protocols/orchestration.md` — claim flow before editing

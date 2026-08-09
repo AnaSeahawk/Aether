@@ -1,3 +1,8 @@
+---
+name: sensitive-content
+description: Closed-by-default handling for private, operational, health-adjacent, collaboration-private, or publishing-sensitive material. Load before touching any sensitive files.
+---
+
 # Skill — sensitive content
 
 *Closed-by-default handling for private, operational, and publishing-sensitive material.*
@@ -85,6 +90,6 @@ the stale report in place.
 ## See also
 
 - `AGENTS.md` §Sensitive Content
-- `skills/writer.md` — prose boundaries and non-clinical framing
-- `skills/curator.md` — publication and frontmatter workflow
-- `skills/prose.md` — craft discipline for writing
+- `.agents/skills/writer/SKILL.md` — prose boundaries and non-clinical framing
+- `.agents/skills/curator/SKILL.md` — publication and frontmatter workflow
+- `.agents/skills/prose/SKILL.md` — craft discipline for writing

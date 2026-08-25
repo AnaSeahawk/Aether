@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Ana Seahawk's project constellation</title>
+  <desc id="desc">A systems map connecting Aether, Sovereign Biophysics, Mother Spirit, the Bibliography, The Vessel, and the historical Wiki around Ana Seahawk.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f2e8"/>
+      <stop offset="0.55" stop-color="#f2eee7"/>
+      <stop offset="1" stop-color="#e7ece9"/>
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="42%" r="65%">
+      <stop offset="0" stop-color="#567b78"/>
+      <stop offset="1" stop-color="#263f4b"/>
+    </radialGradient>
+    <marker id="arrowTeal" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#4f8079"/>
+    </marker>
+    <marker id="arrowCopper" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#b36f4f"/>
+    </marker>
+    <style>
+      .sans { font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .serif { font-family: Iowan Old Style, Baskerville, "Times New Roman", serif; }
+      .card { fill: #fffdf8; stroke: #d7d0c4; stroke-width: 1.5; }
+      .card-title { fill: #243b45; font-size: 27px; font-weight: 650; letter-spacing: 0.3px; }
+      .card-kicker { fill: #6d746f; font-size: 12px; font-weight: 750; letter-spacing: 1.7px; }
+      .card-body { fill: #4a585b; font-size: 17px; }
+      .card-small { fill: #71807e; font-size: 14px; }
+      .link { fill: none; stroke: #99aaa7; stroke-width: 2.2; stroke-linecap: round; }
+      .label { fill: #5c6968; font-size: 13px; font-weight: 650; letter-spacing: 0.4px; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#background)"/>
+  <circle cx="1450" cy="910" r="300" fill="#dce5e1" opacity="0.35"/>
+  <circle cx="140" cy="120" r="220" fill="#efdccc" opacity="0.28"/>
+
+  <g class="sans">
+    <text x="80" y="78" fill="#233d47" font-size="46" font-weight="680" letter-spacing="-0.8">Ana's project constellation</text>
+    <text x="82" y="116" fill="#667572" font-size="18">A living system of inquiry, memory, community, and care</text>
+
+    <g transform="translate(1150 58)">
+      <rect x="0" y="0" width="370" height="76" rx="18" fill="#fffdf8" opacity="0.82"/>
+      <circle cx="27" cy="25" r="6" fill="#4f8079"/>
+      <text x="42" y="30" class="label">PUBLIC</text>
+      <circle cx="135" cy="25" r="6" fill="#b36f4f"/>
+      <text x="150" y="30" class="label">PRIVATE</text>
+      <circle cx="257" cy="25" r="6" fill="#87949c"/>
+      <text x="272" y="30" class="label">HISTORICAL</text>
+      <line x1="24" y1="54" x2="63" y2="54" class="link"/>
+      <text x="72" y="59" class="label" font-weight="500">relationship</text>
+      <line x1="181" y1="54" x2="220" y2="54" stroke="#b36f4f" stroke-width="2.5" stroke-dasharray="5 5"/>
+      <text x="230" y="59" class="label" font-weight="500">review gate</text>
+    </g>
+  </g>
+
+  <!-- Core relationships -->
+  <g>
+    <path d="M690 500 C615 465 550 420 480 370" class="link"/>
+    <path d="M800 420 C800 410 800 405 800 400" class="link"/>
+    <path d="M910 500 C985 465 1050 420 1120 370" class="link"/>
+    <path d="M690 580 C615 615 550 660 480 700" class="link"/>
+    <path d="M800 660 C800 670 800 678 800 685" class="link"/>
+    <path d="M910 580 C985 615 1050 660 1120 700" class="link"/>
+
+    <path d="M480 704 C555 635 542 482 646 388" fill="none" stroke="#4f8079" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+    <rect x="493" y="526" width="141" height="30" rx="15" fill="#e7f0ec" stroke="#bdd0ca"/>
+    <text x="563.5" y="546" class="sans label" text-anchor="middle" fill="#426e68">sources the archive</text>
+
+    <path d="M892 685 C1055 614 1054 477 954 388" fill="none" stroke="#b36f4f" stroke-width="3" stroke-linecap="round" stroke-dasharray="7 7" marker-end="url(#arrowCopper)"/>
+    <rect x="970" y="526" width="136" height="30" rx="15" fill="#f4e8df" stroke="#d9b7a4"/>
+    <text x="1038" y="546" class="sans label" text-anchor="middle" fill="#8b543d">reviewed material</text>
+  </g>
+
+  <!-- Aether -->
+  <g>
+    <rect x="80" y="220" width="400" height="190" rx="28" fill="#20323a" opacity="0.08"/>
+    <rect x="80" y="210" width="400" height="190" rx="28" class="card"/>
+    <rect x="80" y="210" width="9" height="190" rx="4.5" fill="#5e7892"/>
+  </g>
+  <g class="sans">
+    <text x="116" y="249" class="card-kicker" fill="#5e7892">PUBLIC COORDINATION SEED</text>
+    <text x="116" y="289" class="card-title">Aether</text>
+    <text x="116" y="326" class="card-body">AI companionship and archive coordination.</text>
+    <text x="116" y="356" class="card-small">Instructions - protocols - skills - reports</text>
+    <rect x="359" y="236" width="80" height="28" rx="14" fill="#e9eef3"/>
+    <text x="399" y="255" text-anchor="middle" class="card-kicker" fill="#526b84">SPINE</text>
+  </g>
+
+  <!-- Sovereign Biophysics -->
+  <g>
+    <rect x="600" y="175" width="400" height="235" rx="28" fill="#20323a" opacity="0.08"/>
+    <rect x="600" y="165" width="400" height="235" rx="28" class="card"/>
+    <rect x="600" y="165" width="9" height="235" rx="4.5" fill="#4f8079"/>
+  </g>
+  <g class="sans">
+    <text x="636" y="204" class="card-kicker" fill="#4f8079">PUBLIC READER-FACING ARCHIVE</text>
+    <text x="636" y="244" class="card-title">Sovereign Biophysics</text>
+    <text x="636" y="280" class="card-body">The living record of personal inquiry</text>
+    <text x="636" y="305" class="card-body">into endogenous distillation.</text>
+    <line x1="636" y1="328" x2="964" y2="328" stroke="#e0ddd5"/>
+    <text x="636" y="354" class="card-small">Foundations - Relationship - Living Record</text>
+    <text x="636" y="377" class="card-small" style="font-size:13px">Orientation - Method - Experiments - Analysis - Synthesis</text>
+  </g>
+
+  <!-- Mother Spirit -->
+  <g>
+    <rect x="1120" y="220" width="400" height="190" rx="28" fill="#20323a" opacity="0.08"/>
+    <rect x="1120" y="210" width="400" height="190" rx="28" class="card"/>
+    <rect x="1120" y="210" width="9" height="190" rx="4.5" fill="#9b705f"/>
+  </g>
+  <g class="sans">
+    <text x="1156" y="249" class="card-kicker" fill="#9b705f">PUBLIC COMMUNITY INVITATION</text>
+    <text x="1156" y="289" class="card-title">Mother Spirit</text>
+    <text x="1156" y="326" class="card-body">A gathering place for inner peace,</text>
+    <text x="1156" y="351" class="card-body">communion, and women's companionship.</text>
+    <text x="1156" y="380" class="card-small">Standalone public site and community call</text>
+  </g>
+
+  <!-- Bibliography -->
+  <g>
+    <rect x="80" y="670" width="400" height="190" rx="28" fill="#20323a" opacity="0.08"/>
+    <rect x="80" y="660" width="400" height="190" rx="28" class="card"/>
+    <rect x="80" y="660" width="9" height="190" rx="4.5" fill="#658168"/>
+  </g>
+  <g class="sans">
+    <text x="116" y="699" class="card-kicker" fill="#658168">PUBLIC SOURCE ECOLOGY</text>
+    <text x="116" y="739" class="card-title">Bibliography</text>
+    <text x="116" y="776" class="card-body">The texts that ground and widen the work.</text>
+    <text x="116" y="806" class="card-small">Alchemy - Ayurveda - Mythology - Water</text>
+    <text x="116" y="829" class="card-small">Women healers - Plants - Dreamwork - Embodiment</text>
+  </g>
+
+  <!-- The Vessel -->
+  <g>
+    <rect x="600" y="697" width="400" height="190" rx="28" fill="#172a32" opacity="0.16"/>
+    <rect x="600" y="685" width="400" height="190" rx="28" fill="#2d4652" stroke="#b36f4f" stroke-width="2"/>
+    <rect x="600" y="685" width="9" height="190" rx="4.5" fill="#c8815e"/>
+  </g>
+  <g class="sans">
+    <text x="636" y="724" font-size="12" font-weight="750" letter-spacing="1.7" fill="#e6b296">PRIVATE PROTECTED SOURCE</text>
+    <text x="636" y="764" font-size="27" font-weight="650" fill="#fffaf1">The Vessel</text>
+    <text x="636" y="801" font-size="17" fill="#e5ecea">The container for intimate, relational,</text>
+    <text x="636" y="826" font-size="17" fill="#e5ecea">operational, and unreviewed material.</text>
+    <rect x="865" y="711" width="94" height="28" rx="14" fill="#4c5d65" stroke="#cb8c6b"/>
+    <text x="912" y="730" text-anchor="middle" font-size="12" font-weight="750" letter-spacing="1.4" fill="#f1c2a9">BOUNDARY</text>
+  </g>
+
+  <!-- Wiki -->
+  <g>
+    <rect x="1120" y="670" width="400" height="190" rx="28" fill="#20323a" opacity="0.08"/>
+    <rect x="1120" y="660" width="400" height="190" rx="28" fill="#f8f8f5" stroke="#cbd1d2" stroke-width="1.5"/>
+    <rect x="1120" y="660" width="9" height="190" rx="4.5" fill="#87949c"/>
+  </g>
+  <g class="sans">
+    <text x="1156" y="699" class="card-kicker" fill="#77868e">PUBLIC HISTORICAL MEMORY</text>
+    <text x="1156" y="739" class="card-title">Wiki</text>
+    <text x="1156" y="776" class="card-body">Earlier notes and collaborative context.</text>
+    <text x="1156" y="806" class="card-small">A dormant record that preserves provenance</text>
+    <rect x="1390" y="686" width="90" height="28" rx="14" fill="#e6eaeb"/>
+    <text x="1435" y="705" text-anchor="middle" class="card-kicker" fill="#68777f">DORMANT</text>
+  </g>
+
+  <!-- Ana at the center -->
+  <g>
+    <circle cx="800" cy="550" r="120" fill="#172a32" opacity="0.16"/>
+    <circle cx="800" cy="540" r="120" fill="url(#centerGlow)" stroke="#f6e9da" stroke-width="5"/>
+    <circle cx="800" cy="540" r="104" fill="none" stroke="#8eb0aa" stroke-opacity="0.45"/>
+  </g>
+  <g class="sans" text-anchor="middle">
+    <text x="800" y="516" fill="#d6e7e3" font-size="12" font-weight="750" letter-spacing="2.4">LIVING AS ART</text>
+    <text x="800" y="552" fill="#fffdf8" font-size="27" font-weight="680">ANA SEAHAWK</text>
+    <line x1="752" y1="570" x2="848" y2="570" stroke="#c98b69" stroke-width="2"/>
+    <text x="800" y="598" fill="#d8e4e1" font-size="15">inquiry - relation - rhythm</text>
+  </g>
+
+  <text x="800" y="945" class="sans" text-anchor="middle" fill="#6e7c79" font-size="15">The archive moves outward through review. The private source remains protected.</text>
+</svg>

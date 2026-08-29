@@ -123,11 +123,12 @@ Contributors choose their level of visibility:
 - **Pseudonym** — chosen name, no link to real identity
 - **Anonymous** — entry carries only a unique identifier
 
-The archive will implement cryptographic key pairs for contributor identity:
-each contributor holds a private key, a public key sits with the archive. This
-allows anonymous contributors to prove authorship later if they choose, prevents
-duplicate entries (one person, one entry), and provides anti-spam protection
-without requiring personal information.
+A future goal is cryptographic key pairs for contributor identity: each
+contributor would hold a private key, a public key would sit with the archive.
+This would allow anonymous contributors to prove authorship later if they
+choose, prevent duplicate entries (one person, one entry), and provide
+anti-spam protection without requiring personal information. This is not yet
+built. For now, deduplication is managed manually by the archive steward.
 
 Raw recordings from audio interviews are retained privately but never published.
 Only transcripts enter the public archive.
@@ -163,7 +164,7 @@ on 2026-08-29 established:
 - The current state of the evidence gap (no clinical trials exist)
 - The structural suppression loop (platforms, AI, funding, social shame)
 - The contributor template design
-- The technical foundation (git repo, static site, key pairs for identity)
+- The technical foundation (git repo, static site, future key pairs for identity)
 - The minimum viable product: template + repo + entries + a searchable page
 
 The full conversation is preserved as part of the archive's methodology.

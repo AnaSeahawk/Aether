@@ -41,5 +41,19 @@ tools/orchestrate release researcher --lane caraka-notes
 
 See `protocols/orchestration.md` for the complete workflow.
 
+## Projects
+
+- [Sovereign Biophysics](Components/website/sovereign-biophysics-distillation/) — a living research archive of endogenous distillation
+- [The Water of Life](Components/the-water-of-life/) — an open observational archive collecting first-person accounts of auto-urine practice
+- [Mother Spirit](https://linktr.ee/motherspirit) — community
+
+## Support this work
+
+This is independent, unfunded research. If it has been useful to you, you can
+contribute to keeping it alive.
+
+- [PayPal](https://www.paypal.com/paypalme/vivarium)
+- [Wise](https://wise.com/pay/me/joannel78)
+
 ## Notes
 This repo is intentionally minimal. Keep changes small, documented, and aligned with `AGENTS.md`.

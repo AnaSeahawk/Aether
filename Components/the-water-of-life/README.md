@@ -21,6 +21,16 @@ Read `templates/contributor-template.md` and fill it out, or request an
 interview. See `methodology/founding-document.md` for the full reasoning
 behind the archive's design.
 
+## Support the archive
+
+This archive is unfunded and open source. Running costs are near zero, but
+stewardship, transcription, and growth take time.
+
+- [PayPal](https://www.paypal.com/paypalme/vivarium)
+- [Wise](https://wise.com/pay/me/joannel78)
+
+Every contribution keeps the archive alive and accessible.
+
 ## License
 
 The archive structure and methodology are open source. Individual entries are

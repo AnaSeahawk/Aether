@@ -1,0 +1,79 @@
+{{ define "main" }}
+  <h1>The Water of Life</h1>
+
+  <p>An open-source, participatory observational archive collecting first-person
+  accounts of engagement with auto-urine practice.</p>
+
+  <p>No claims. No diagnoses. No prescriptions. Just the data.</p>
+
+  <hr>
+
+  <h2>What this is</h2>
+
+  <p>This archive holds self-reported experiences from practitioners, in their
+  own words, alongside everything else that was happening in their lives at the
+  time. It does not interpret, diagnose, or evaluate. It collects.</p>
+
+  <p>As of August 2026, no controlled clinical trial on auto-urine therapy in
+  humans has been conducted. The institutional dismissal is based on the absence
+  of evidence, not on evidence of absence. The historical record spans five
+  thousand years. The structured dataset of self-reported experiences does not
+  exist. This archive builds it.</p>
+
+  <hr>
+
+  <h2>Contribute</h2>
+
+  <p>Your experience matters — not because it proves anything, but because it
+  exists. You can contribute in two ways:</p>
+
+  <ul>
+    <li><strong><a href="/contribute/">Fill out the template</a></strong> — a
+    structured set of questions you can answer in writing</li>
+    <li><strong>Request an interview</strong> — a recorded conversation,
+    transcribed and formatted into an archive entry</li>
+  </ul>
+
+  <p>You choose how you are identified: real name, pseudonym, or fully
+  anonymous.</p>
+
+  <hr>
+
+  <h2>Read the archive</h2>
+
+  {{ $entries := where .Site.RegularPages "Section" "entries" }}
+  {{ if $entries }}
+  <ul class="entry-list">
+    {{ range $entries }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ with .Params.date }}<span class="date"> — {{ . }}</span>{{ end }}
+    </li>
+    {{ end }}
+  </ul>
+  {{ else }}
+  <p><em>The archive is new. The first entries are being collected.</em></p>
+  {{ end }}
+
+  <hr>
+
+  <h2>Support this work</h2>
+
+  <p>This archive is independent and unfunded. If it has been useful to you,
+  you can contribute to keeping it alive.</p>
+
+  <div class="support-links">
+    <a href="{{ .Site.Params.paypal }}">PayPal</a>
+    <a href="{{ .Site.Params.wise }}">Wise</a>
+  </div>
+
+  <hr>
+
+  <h2>Methodology</h2>
+
+  <p>Read the <a href="/methodology/founding-document/">founding document</a>
+  for the full reasoning behind the archive's design — why observational
+  framing, why no diagnostic labels, why concurrent factors are mandatory,
+  and how this conversation started.</p>
+
+{{ end }}

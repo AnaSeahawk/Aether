@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ .Site.Title }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <style>
+    :root {
+      --text: #2c2c2c;
+      --bg: #fafaf8;
+      --muted: #6b6b6b;
+      --border: #e0ddd8;
+      --accent: #4a6741;
+      --link: #4a6741;
+      --max-width: 42rem;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #d8d4cf;
+        --bg: #1a1a18;
+        --muted: #918d87;
+        --border: #333330;
+        --accent: #8aab7f;
+        --link: #8aab7f;
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+    }
+
+    header nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 1.5rem;
+    }
+
+    header .site-title {
+      font-size: 1.15rem;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--text);
+      text-decoration: none;
+      margin-right: auto;
+    }
+
+    header a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    header a:hover { color: var(--text); }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.5rem 1rem 4rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      font-weight: normal;
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+      font-style: italic;
+      margin-top: 2.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--muted);
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: normal;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p { margin-bottom: 1rem; }
+
+    a { color: var(--link); }
+
+    ul, ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li { margin-bottom: 0.3rem; }
+
+    blockquote {
+      border-left: 2px solid var(--border);
+      padding-left: 1rem;
+      margin: 1.5rem 0;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2.5rem 0;
+    }
+
+    .entry-list { list-style: none; padding-left: 0; }
+
+    .entry-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .entry-list .date {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .support-links {
+      display: flex;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      flex-wrap: wrap;
+    }
+
+    .support-links a {
+      display: inline-block;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .support-links a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    footer a { color: var(--muted); }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid var(--border);
+      background: var(--bg);
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    textarea { min-height: 6rem; resize: vertical; }
+
+    label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    input[type="checkbox"] { margin-right: 0.5rem; }
+
+    .checkbox-group { margin-bottom: 0.5rem; }
+
+    button[type="submit"] {
+      padding: 0.6rem 2rem;
+      border: 1px solid var(--accent);
+      background: transparent;
+      color: var(--accent);
+      font-family: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ .Site.BaseURL }}" class="site-title">The Water of Life</a>
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </header>
+
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer>
+    <p>The Water of Life — an open-source observational archive</p>
+    <p>
+      <a href="{{ .Site.Params.github }}">Source</a> ·
+      <a href="{{ .Site.Params.paypal }}">PayPal</a> ·
+      <a href="{{ .Site.Params.wise }}">Wise</a>
+    </p>
+  </footer>
+</body>
+</html>

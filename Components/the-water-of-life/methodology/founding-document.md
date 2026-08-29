@@ -24,8 +24,13 @@ documented, open to anyone who wants to contribute or read.
 As of August 2026, no controlled clinical trial on auto-urine therapy in
 humans has been conducted. The institutional position — from WHO, PubMed,
 major medical bodies, and platform content policies — is that "no scientific
-evidence supports" the practice. This position is based on the absence of
-evidence, not on evidence of absence. No one has done the study.
+evidence supports" the practice.
+
+The claim is not that someone studied it and found it doesn't work. The claim
+is that no one has studied it at all. No trial has been conducted. No data
+has been collected. The file is empty. And yet the empty file is being held
+up as if it contains a conclusion. It does not. It contains nothing, because
+no one has opened it.
 
 Meanwhile:
 

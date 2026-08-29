@@ -28,9 +28,17 @@ evidence supports" the practice.
 
 The claim is not that someone studied it and found it doesn't work. The claim
 is that no one has studied it at all. No trial has been conducted. No data
-has been collected. The file is empty. And yet the empty file is being held
-up as if it contains a conclusion. It does not. It contains nothing, because
-no one has opened it.
+has been collected. The file is empty.
+
+But the data is not missing. It is everywhere. People are living this
+practice right now — thousands of them, possibly far more — and have been
+for years, for decades, for generations. The experiences exist. The
+observations exist. No one in a position to make them "count" has collected
+them. The file is empty not because there is nothing to put in it, but
+because no one with institutional authority has been willing to open it.
+
+The dismissal is not a conclusion reached after investigation. It is a
+refusal to investigate.
 
 Meanwhile:
 

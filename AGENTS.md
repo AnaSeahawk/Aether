@@ -41,6 +41,9 @@ Load only the skill files the work actually triggers:
 - Read `.agents/skills/prose/SKILL.md` for drafting, editing, or evaluating prose.
 - Read `.agents/skills/sensitive-content/SKILL.md` before touching private, operational,
   health-adjacent, collaboration-private, or publishing-sensitive material.
+- Read `.agents/skills/water-of-life/SKILL.md` when working with The Water of
+  Life archive: contributor entries, templates, transcript processing, or
+  methodology.
 - Read `.agents/skills/audio-transcription/SKILL.md` when transcribing an
   existing audio or video file. Use its hosted route unless Ana explicitly
   requests the offline fallback.
@@ -116,6 +119,7 @@ to use.
 - **No dead code or unused dependencies.** Remove what you add if unused.
 - **No speculative features.** Implement only what is asked or clearly required.
 - **No destructive commands.** Never delete user data or repo history.
+- **No deferring to the psyche.** When a task requires tool configuration, environment setup, shell commands, or other mechanical work the agent can perform, the agent does it. Never ask the psyche to run a command, configure a tool, or complete setup steps that the agent has the ability to execute. The psyche delegates work to the agent, not the other way around.
 
 ## 2. Repo Hygiene
 - Keep root clean: only core files at repo root (`AGENTS.md`, `README.md`, config files). Place code in `src/` and tests in `tests/` when created.

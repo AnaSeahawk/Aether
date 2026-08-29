@@ -51,6 +51,7 @@ Capability workflows any role may load when the task involves that tooling:
 |---|---|
 | `audio-transcription` | creating a timed transcript from existing audio/video |
 | `video` | turning a recording into cleaned video, a transcript, and publishing drafts |
+| `water-of-life` | intake, processing, and stewardship for The Water of Life observational archive |
 
 ## See also
 

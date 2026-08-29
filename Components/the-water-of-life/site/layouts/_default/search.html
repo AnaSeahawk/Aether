@@ -1,0 +1,65 @@
+{{ define "main" }}
+  <h1>Search the archive</h1>
+
+  <input type="text" id="search-input" placeholder="Search entries, methodology, observations..." autofocus>
+
+  <div id="search-results"></div>
+
+  <script>
+    let index = [];
+
+    fetch('/index.json')
+      .then(r => r.json())
+      .then(data => { index = data; });
+
+    const input = document.getElementById('search-input');
+    const results = document.getElementById('search-results');
+
+    input.addEventListener('input', function() {
+      const query = this.value.toLowerCase().trim();
+      results.innerHTML = '';
+
+      if (query.length < 2) return;
+
+      const matches = index.filter(item =>
+        item.title.toLowerCase().includes(query) ||
+        item.content.toLowerCase().includes(query)
+      );
+
+      if (matches.length === 0) {
+        results.innerHTML = '<p style="color:var(--muted);margin-top:1rem;">No results found.</p>';
+        return;
+      }
+
+      const list = document.createElement('ul');
+      list.className = 'entry-list';
+
+      matches.forEach(item => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = item.url;
+        a.textContent = item.title;
+        li.appendChild(a);
+
+        const pos = item.content.toLowerCase().indexOf(query);
+        if (pos > -1) {
+          const start = Math.max(0, pos - 60);
+          const end = Math.min(item.content.length, pos + query.length + 60);
+          const snippet = document.createElement('p');
+          snippet.style.fontSize = '0.85rem';
+          snippet.style.color = 'var(--muted)';
+          snippet.style.marginTop = '0.25rem';
+          let text = (start > 0 ? '...' : '') +
+                     item.content.substring(start, end) +
+                     (end < item.content.length ? '...' : '');
+          snippet.textContent = text;
+          li.appendChild(snippet);
+        }
+
+        list.appendChild(li);
+      });
+
+      results.appendChild(list);
+    });
+  </script>
+{{ end }}

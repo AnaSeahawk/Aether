@@ -59,6 +59,13 @@ Follow-ups if needed:
 - *"How often?"*
 - *"Has it changed over time?"*
 - *"Is there a particular routine or timing?"*
+- *"Do you work with fresh, aged, or both?"*
+- *"Is it internal, external, or both?"*
+
+If they are open to specifics, you can walk through the pathways naturally:
+drinking, topical, nasal, eye or ear drops, compresses, baths, etc. Do not
+read a checklist at them — let it come up in conversation and note what
+they mention.
 
 ### The full picture
 
@@ -86,10 +93,41 @@ If they make a causal claim ("it cured my..."), do not correct them in
 the moment. Let them speak. The transcript preserves their words. The
 structured entry will reframe into observational language.
 
+### Pauses and breaks
+
+*"Have you ever stopped or taken a break? What did you notice when you
+did?"*
+
+This is a strong data point. What changes when the practice stops tells
+as much as what changes when it starts.
+
+### For women
+
+Only if relevant and if the person is comfortable:
+
+*"Have you noticed anything related to your cycle, hormones, or any
+phase of life like perimenopause or menopause?"*
+
+Do not press. If they want to share, they will.
+
+### Challenges
+
+*"Has anything about this been difficult or uncomfortable? Anything you
+did not expect that was not welcome?"*
+
+This question matters. The archive holds the full picture, and people
+need to know their difficult experiences are valued too.
+
 ### Timeline
 
 *"When did you start? How long has it been? Were there phases —
-a beginning that felt different from now?"*
+a beginning that felt different from now? What kept you going?"*
+
+### Testing
+
+*"Have you had any lab work done — blood tests, urine tests, anything
+like that — during the time you have been doing this? Would you be
+open to sharing them anonymously?"*
 
 ### Open space
 

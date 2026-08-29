@@ -35,6 +35,7 @@ Share as much or as little as you choose. None of these are required.
 
 - **How you would like to be identified:** (name / pseudonym / anonymous)
 - **Age range:** (e.g., 30s, 40s, 50s — or leave blank)
+- **Gender:** (if you consider it relevant — or leave blank)
 - **General context:** (anything about your life situation that feels relevant — where you live, what you do, your general relationship with your health)
 
 ---
@@ -60,12 +61,38 @@ specific moment, a book, a conversation, a tradition?
 
 Describe what you do. Be as specific as you are comfortable being.
 
-Consider:
-- Which pathways of engagement? (internal, external, or both)
-- How often? (daily, weekly, occasionally)
-- Any specific timing? (morning, particular cycles)
+### Internal engagement
+
+Check any that apply, and describe in your own words below:
+
+- [ ] Drinking fresh urine (daily / occasionally)
+- [ ] Drinking aged urine (daily / occasionally)
+- [ ] Swishing or gargling
+- [ ] Nasal drops (fresh / aged)
+- [ ] Eye drops (fresh / aged)
+- [ ] Ear drops (fresh / aged)
+- [ ] Navel application
+- [ ] Enemas or implants (fresh / aged)
+- [ ] Nebulizer (fresh / aged)
+- [ ] Other: ___
+
+### External engagement
+
+- [ ] Direct skin application (fresh / aged)
+- [ ] Compresses (joints, organs, specific areas)
+- [ ] Wound or skin care
+- [ ] Hair and scalp
+- [ ] Foot soaks or full-body baths
+- [ ] Other: ___
+
+### Practice details
+
+- How often do you engage? (daily, several times a week, occasionally)
+- Any specific timing? (morning first void, particular cycles, etc.)
 - How long have you been engaged with this practice?
 - Has your practice changed over time? If so, how?
+- Do you work with fresh urine, aged urine, or both? If aged, how do you
+  prepare it?
 
 ---
 
@@ -80,6 +107,7 @@ Consider:
 - Were there changes in your physical activity, sleep, or daily routine?
 - What was your stress level like? Any major life events?
 - Changes in your environment, relationships, work?
+- Any medications, supplements, or other substances?
 - Anything else you think could be relevant — even if you are not sure
 
 *The point of this section is not to explain away what you observed. It is to
@@ -98,17 +126,63 @@ things you were paying attention to, or something else entirely.
 
 *If nothing changed, that is also valuable information. Say so.*
 
+### If you have ever paused or stopped
+
+When you took a break from your practice — for days, weeks, or longer — what
+did you notice? Did anything shift, return, or change? Did anything stay the
+same?
+
+*If you have never paused, skip this.*
+
 ---
 
-## 7. Timeline
+## 7. For women
+
+If any of the following are relevant to your experience, share what you have
+observed. Skip anything that is not applicable.
+
+- Changes in menstrual cycle (timing, duration, flow, comfort)
+- Observations during perimenopause or menopause
+- Observations during pregnancy or postpartum
+- Anything related to hormonal patterns you have noticed
+
+---
+
+## 8. Timeline
 
 When did you begin? How long have you been engaged? Were there distinct
 phases — a beginning period that felt different from later? Any turning
 points? Any breaks and returns?
 
+What motivated you to stay consistent?
+
 ---
 
-## 8. Anything else
+## 9. Challenges
+
+Has anything about this practice been difficult, uncomfortable, or
+unexpected in a way that was not welcome? Describe what happened.
+
+*This archive holds the full picture, not only what went well.*
+
+---
+
+## 10. Testing
+
+Have you had any blood, urine, hair, or other lab work done during the period
+you have been engaged with this practice?
+
+- [ ] Yes — I have test results I am willing to share (anonymized)
+- [ ] Yes — but I prefer not to share them
+- [ ] No
+
+*If you have results and are willing to share, they can be included as
+supplementary data alongside your entry. Your name will not be attached to
+them unless you choose.*
+
+---
+
+## 11. Anything else
 
 Is there something this template did not ask that you want to share? Something
 about your experience that does not fit neatly into a category? A reflection,
@@ -118,7 +192,7 @@ This space is yours.
 
 ---
 
-## 9. Your consent
+## 12. Your consent
 
 By contributing to this archive, you confirm:
 
@@ -126,6 +200,8 @@ By contributing to this archive, you confirm:
 - [ ] I understand this entry will be part of an open-source, publicly accessible archive.
 - [ ] I have chosen my level of identification (named / pseudonym / anonymous) and understand it is permanent for this entry.
 - [ ] I understand the archive makes no medical claims and my contribution will not be used to make medical claims.
+- [ ] I am open to being contacted for a follow-up conversation: Yes / No
+- [ ] Contact email (optional, kept private): ___
 
 ---
 

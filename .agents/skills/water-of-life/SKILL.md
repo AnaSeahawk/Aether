@@ -115,24 +115,46 @@ practice. In their own language. No diagnostic labels required.>
 
 ## Their practice
 
-<What they do, which pathways, how often, how long they have been engaged.
-Specifics are the contributor's choice — some share extensively, some share
-minimally. Both are valid.>
+<What they do, which pathways (internal/external, fresh/aged), how often,
+how long they have been engaged. Include specific methods where shared:
+drinking, topical, nasal, compresses, baths, etc. Specifics are the
+contributor's choice — some share extensively, some share minimally.
+Both are valid.>
 
 ## The full picture
 
 <Everything else happening during the period of engagement: other treatments,
-dietary changes, lifestyle shifts, stress levels, environment, relationships,
-work. This section is what gives the entry its integrity.>
+medications, supplements, dietary changes, lifestyle shifts, stress levels,
+environment, relationships, work. This section is what gives the entry its
+integrity.>
 
 ## What they observed
 
 <Changes, shifts, surprises, things that stayed the same. In their own words.
-No interpretation imposed.>
+No interpretation imposed. Include observations from any pauses or breaks
+in practice if applicable.>
+
+## For women
+
+<Menstrual, hormonal, perimenopause, menopause, pregnancy, or postpartum
+observations if shared. Omit this section entirely if not applicable or
+not shared.>
 
 ## Timeline
 
-<When they began, any phases or turning points, duration at time of entry.>
+<When they began, any phases or turning points, duration at time of entry.
+What motivated consistency.>
+
+## Challenges
+
+<Anything difficult, uncomfortable, or unwelcome. Omit if nothing was
+shared, but actively ask — the archive holds the full picture.>
+
+## Testing
+
+<Any lab work (blood, urine, hair) done during the period of practice.
+Note whether results are available and whether the contributor consents
+to their inclusion.>
 
 ## In their own words
 

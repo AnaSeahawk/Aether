@@ -14,8 +14,12 @@ so that patterns can be seen across many entries, or not. That is all.
 ## Before you begin
 
 **Your identity is your choice.** You may use your real name, a chosen
-pseudonym, or remain fully anonymous. Whatever you choose, it cannot be changed
-after your entry is published — so take a moment to decide what feels right.
+pseudonym, or contribute anonymously (published without your name). If you
+choose anonymity, remember that details you share may still make you
+recognizable to people who know you. You may request removal of your entry
+at any time.
+
+**You must be 18 or older to contribute.**
 
 **There are no wrong answers.** Some people share extensively. Some share very
 little. Both are equally valuable to the archive. Share only what you are
@@ -154,7 +158,7 @@ When did you begin? How long have you been engaged? Were there distinct
 phases — a beginning period that felt different from later? Any turning
 points? Any breaks and returns?
 
-What motivated you to stay consistent?
+What influenced whether you continued, changed, paused, stopped, or returned?
 
 ---
 
@@ -194,16 +198,23 @@ This space is yours.
 
 ## 12. Your consent
 
+Before contributing, please read the Privacy & Data page on the website.
+It explains exactly what happens to your data.
+
 By contributing to this archive, you confirm:
 
+- [ ] I have read and understand the Privacy & Data page.
+- [ ] I am 18 years of age or older.
 - [ ] This is my own experience, described in my own words.
-- [ ] I understand this entry will be part of an open-source, publicly accessible archive.
-- [ ] I have chosen my level of identification (named / pseudonym / anonymous) and understand it is permanent for this entry.
-- [ ] I understand the archive makes no medical claims and my contribution will not be used to make medical claims.
+- [ ] I explicitly consent to The Water of Life processing the health-related information I choose to provide for the purpose of reviewing, preparing, publishing, and maintaining my archive entry.
+- [ ] I understand this entry will be published in a public archive and licensed under CC BY 4.0, meaning others may share, quote, and build on it with attribution — including for commercial purposes. This licence cannot be revoked once granted.
+- [ ] I understand that if I request removal, my entry will be removed from The Water of Life, but copies already downloaded, quoted, or reused under the CC BY 4.0 licence may remain beyond the archive's control.
+- [ ] I have chosen my level of identification for this entry.
+- [ ] I understand that The Water of Life does not present my contribution as proof of medical efficacy or use it to make medical claims.
 - [ ] I am open to being contacted for a follow-up conversation: Yes / No
 - [ ] Contact email (optional, kept private): ___
 
 ---
 
-*Thank you for contributing. Every entry matters — not because it proves
-anything, but because it exists.*
+*Thank you. What you just did matters. This dataset exists because people
+like you decided to build what no one else would.*

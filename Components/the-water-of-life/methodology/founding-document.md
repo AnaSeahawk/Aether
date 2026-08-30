@@ -1,13 +1,20 @@
-# Founding Document — The Water of Life Archive
+---
+title: "Founding Document"
+---
+
 
 **Date:** 2026-08-29
-**Author:** Ana Seahawk, with Aether (Claude Opus 4.6)
+**Founder and steward:** Ana Seahawk
+**AI-assisted drafting:** Claude Opus 4.6
+
+All methodological and editorial decisions remain the responsibility of
+the archive steward.
 
 ---
 
 ## What this is
 
-The Water of Life is an open-source, participatory observational archive
+The Water of Life is a public, participatory observational archive
 collecting first-person accounts of engagement with auto-urine practice.
 
 It is not a book. It is not a medical resource. It is not an advocacy site. It
@@ -21,53 +28,37 @@ documented, open to anyone who wants to contribute or read.
 
 ### The gap
 
-As of August 2026, no controlled clinical trial on auto-urine therapy in
-humans has been conducted. The institutional position — from WHO, PubMed,
-major medical bodies, and platform content policies — is that "no scientific
-evidence supports" the practice.
+As of August 2026, no controlled clinical trial evaluating auto-urine
+practice as a therapeutic intervention in humans has been identified.
+Published literature does exist — including historical reviews, case
+reports, laboratory work, and hypotheses — but it does not establish
+clinical efficacy.
 
-The claim is not that someone studied it and found it doesn't work. The claim
-is that no one has studied it at all. No trial has been conducted. No data
-has been collected. The file is empty.
+The absence of clinical evidence is not evidence that the practice works.
+It is not evidence that it does not. It is a gap.
 
-But the data is not missing. It is everywhere. People are living this
-practice right now — thousands of them, possibly far more — and have been
-for years, for decades, for generations. The experiences exist. The
-observations exist. No one in a position to make them "count" has collected
-them. The file is empty not because there is nothing to put in it, but
-because no one with institutional authority has been willing to open it.
+There is another layer of evidence that has gone largely uncollected:
+structured first-person accounts of what contemporary practitioners
+actually do, what else is happening in their lives, and what they observe
+over time. An unknown but potentially large number of people are living
+this practice right now — and have been for years, for decades, for
+generations. Their experiences exist. Their observations exist. No one
+has collected them in a structured, public, searchable form.
 
-The dismissal is not a conclusion reached after investigation. It is a
-refusal to investigate.
+This archive does not pretend to close the clinical gap. It documents
+the observational layer that has gone uncollected.
 
-Meanwhile:
+### The historical record
 
-- The historical record is extensive. References appear in the Damar Tantra
-  (~5,000 years old), Sushruta Samhita, Bhava Prakasha, Hatha Yoga Pradipika,
-  and across Ayurvedic tradition. John W. Armstrong's *The Water of Life*
-  (1944) is the foundational Western source, documenting decades of case
-  histories.
-- The practice is widespread but hidden. People engage with it privately and
-  often conceal it from the people closest to them — partners, family,
-  housemates — out of social shame and fear of ridicule.
-- Content about the practice is systematically suppressed on major platforms.
-  YouTube, Meta, and others remove content making therapeutic claims about
-  unapproved treatments under medical misinformation policies. This is
-  structurally understandable but creates a feedback loop: the data does not
-  get collected, so the evidence does not accumulate, so the dismissal
-  continues.
-- AI systems reproduce the dismissal. Language models trained on the web
-  corpus inherit the institutional framing and often issue safety warnings
-  when the topic is raised, even in the absence of any data supporting the
-  claimed risks. This creates friction for researchers, practitioners, and
-  anyone trying to document their experience using AI tools.
+Urine has a long history of medicinal and ritual use across multiple
+traditions. Auto-urine practice appears explicitly in later yogic sources
+such as the Haṭha Yoga Pradīpikā, while other Ayurvedic texts such as
+the Suśruta Saṃhitā document medicinal uses of human and animal urine.
+The dating and provenance of some texts commonly cited by modern
+practitioners, including the Damar Tantra, remain uncertain.
 
-The result is a vacuum. A practice with thousands of years of documented
-history and an unknown but potentially very large number of contemporary
-practitioners has no structured dataset of self-reported experiences. No one is
-building one.
-
-This archive builds one.
+John W. Armstrong's *The Water of Life* (1944) is the foundational
+Western source, documenting decades of case histories.
 
 ### The inspiration
 
@@ -98,7 +89,8 @@ contributor is the observer and the narrator.
 
 Armstrong made direct causal claims throughout his book. This archive makes
 none. Observations are documented. Concurrent factors are documented. Patterns
-emerge across entries, or they do not. The data speaks for itself.
+emerge across entries, or they do not. The data is preserved; interpretation
+remains separate.
 
 ---
 
@@ -128,7 +120,40 @@ institutional objections.
 
 ---
 
+## Limitations
+
+This archive is observational and self-reported. It will inevitably reflect:
+
+- **Self-selection bias** — people who had noticeable experiences are more
+  likely to contribute than those who did not.
+- **Recall bias** — contributors are describing events from memory, which
+  may not be precise.
+- **Survivorship bias** — the archive may over-represent people who continued
+  the practice and under-represent those who stopped.
+- **No comparison group** — there is no untreated control. Changes reported
+  alongside the practice may have other causes.
+- **Concurrent factors** — contributors are living full lives. Diet, stress,
+  medication, environment, and other treatments are all in play. The "full
+  picture" section documents these, but cannot isolate them.
+- **Inconsistent methods** — practitioners vary widely in what they do, how
+  often, and for how long.
+
+The archive cannot answer: *does auto-urine practice work?*
+
+It can answer: *what are people actually doing, what do they report observing,
+what unwanted experiences recur, what changes coincide with stopping or
+restarting, what timelines and patterns appear across entries, and where do
+accounts contradict one another?*
+
+That is a legitimate observational function. Positive experiences, negative
+experiences, no noticeable effect, short experiments, long-term practices, and
+experiences that ended in stopping are all equally valuable here.
+
+---
+
 ## Privacy and identity
+
+Contributors must be 18 or older.
 
 Contributors choose their level of visibility:
 
@@ -157,30 +182,32 @@ available:
   The archive can be forked, mirrored, and cannot be quietly altered without a
   trail.
 - **Access**: a static site generated from the repository, hosted free on
-  GitHub Pages or Cloudflare Pages.
-- **Sustainability**: donations through Open Collective and/or GitHub Sponsors.
-  Running costs are near zero (domain registration). Donations fund
-  transcription, stewardship time, and infrastructure growth as needed.
+  GitHub Pages.
+- **Contributions**: submitted via web form (processed through Formspree) or
+  through recorded interviews.
+- **Sustainability**: donations through PayPal and Wise. Running costs are
+  near zero. Donations fund transcription, stewardship time, and
+  infrastructure growth as needed.
 
 ---
 
 ## What this conversation established
 
 This founding document was written during the first working session on the
-archive. The conversation between Ana Seahawk and Aether (Claude Opus 4.6)
+archive. The conversation between Ana Seahawk and Claude Opus 4.6
 on 2026-08-29 established:
 
 - The archive's purpose and position
 - The observational framing and why it matters
 - The protective language model (observe, don't diagnose)
 - The problem with diagnostic labels as organizing categories
-- The current state of the evidence gap (no clinical trials exist)
-- The structural suppression loop (platforms, AI, funding, social shame)
+- The current state of the evidence gap (no controlled clinical trial identified)
 - The contributor template design
 - The technical foundation (git repo, static site, future key pairs for identity)
 - The minimum viable product: template + repo + entries + a searchable page
 
-The full conversation is preserved as part of the archive's methodology.
+The founding conversation is retained privately by the archive steward
+as part of the project's methodological record.
 
 ---
 
@@ -195,7 +222,9 @@ to violate the archive's consent terms. Removals are tracked in the git
 history — the record shows that the entry existed and was removed, and why.
 The archive does not quietly delete anything.
 
-Contributors may also request removal of their own entry at any time.
+Contributors may request removal of their own entry at any time.
+
+---
 
 ## Principles
 
@@ -203,13 +232,16 @@ Contributors may also request removal of their own entry at any time.
 2. The contributor is the observer. The archive holds what they said.
 3. Concurrent factors are mandatory. Context is integrity.
 4. No diagnostic labels as categories. People are not their conditions.
-5. One person, one entry. The archive is not a forum.
+5. One person, one entry — a living record that can grow over time.
 6. Privacy is structural, not optional.
 7. The archive evolves. When something needs to change, the change is
    documented, not hidden.
-8. The data speaks for itself.
+8. The archive preserves the observations. Interpretation remains separate,
+   transparent, and contestable.
 9. Transparency is non-negotiable. Additions, removals, and methodology
    changes are all visible in the public record.
+10. All experiences are valuable — positive, negative, inconclusive, brief,
+    long-term, and discontinued.
 
 ---
 

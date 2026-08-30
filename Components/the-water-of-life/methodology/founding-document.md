@@ -105,19 +105,18 @@ submit.
 
 Each observation records:
 
-1. **The contributor** — identified by name, pseudonym, or anonymous ID.
+1. **The contributor** — by display name, or anonymous by default.
 2. **The practice** — which pathways, how often, how long.
 3. **What they observed** — changes, non-changes, surprises.
 4. **Overall experience** — positive, neutral, mixed, negative, or
    discontinued.
-5. **What else was happening** — concurrent factors. This is the one
-   required field beyond consent. It is what gives the observation its
-   integrity. One sentence is enough.
+5. **What else was happening** — concurrent factors. One sentence is
+   enough. Together with the observation itself, these are the only
+   required fields beyond consent.
 
-Contributors can return and add more observations over time. One person
-may have many observations — an initial record, a follow-up months later,
-a note about pausing, a note about returning. The archive captures
-trajectories, not snapshots.
+One person may contribute many observations. Observations may stand
+alone or form an ongoing record when a contributor chooses to identify
+them consistently.
 
 For experiences that need depth, contributors can book a conversation.
 Interviews are a separate, richer layer — oral histories preserved
@@ -143,8 +142,8 @@ This archive is observational and self-reported. It will inevitably reflect:
 - **No comparison group** — there is no untreated control. Changes reported
   alongside the practice may have other causes.
 - **Concurrent factors** — contributors are living full lives. Diet, stress,
-  medication, environment, and other treatments are all in play. The "full
-  picture" section documents these, but cannot isolate them.
+  medication, environment, and other treatments are all in play. The
+  concurrent factors field documents these, but cannot isolate them.
 - **Inconsistent methods** — practitioners vary widely in what they do, how
   often, and for how long.
 
@@ -165,20 +164,14 @@ experiences that ended in stopping are all equally valuable here.
 
 Contributors must be 18 or older.
 
-Contributors choose their level of visibility:
+Contributors choose how they appear: a real name, a chosen display name,
+or anonymous (the default). One person can contribute as often as they
+want. Observations may stand alone. Where a contributor uses a display
+name, related observations may naturally become identifiable as part of
+an ongoing record.
 
-- **Named** — real name on the entry
-- **Pseudonym** — chosen name, no link to real identity
-- **Anonymous** — entry carries only a unique identifier
-
-A future goal is cryptographic key pairs for contributor identity: each
-contributor would hold a private key, a public key would sit with the archive.
-This would allow anonymous contributors to prove authorship later if they
-choose, prevent duplicate entries (one person, one entry), and provide
-anti-spam protection without requiring personal information. This is not yet
-built. For now, deduplication is managed manually by the archive steward.
-
-Raw recordings from audio interviews are retained privately but never published.
+Audio recordings from interviews are stored privately until the
+transcript is reviewed and approved by the contributor, then deleted.
 Only transcripts enter the public archive.
 
 ---
@@ -213,7 +206,7 @@ on 2026-08-29 established:
 - The problem with diagnostic labels as organizing categories
 - The current state of the evidence gap (no controlled clinical trial identified)
 - The contributor template design
-- The technical foundation (git repo, static site, future key pairs for identity)
+- The technical foundation (git repo, static site, web form)
 - The minimum viable product: template + repo + entries + a searchable page
 
 The founding conversation is retained privately by the archive steward

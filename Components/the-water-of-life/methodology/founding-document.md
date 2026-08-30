@@ -96,27 +96,37 @@ remains separate.
 
 ## The observational model
 
-Every entry in this archive follows the same structure:
+The archive is structured as a field notebook, not a biographical survey.
 
-1. **Context** — who the contributor is, to the degree they choose to share.
-2. **What brought them here** — what they were noticing, in their own language,
-   no diagnostic labels required.
-3. **How they came to the practice** — discovery, motivation, the moment of
-   decision.
-4. **Their practice** — what they do, which pathways, how often, how long.
-5. **The full picture** — everything else happening: other treatments, diet,
-   lifestyle, stress, environment. This section is non-negotiable. It is what
-   gives the entry its integrity.
-6. **What they observed** — changes, non-changes, surprises, in their own
-   words.
-7. **Timeline** — when, how long, any phases or turning points.
-8. **Open space** — anything the template did not ask.
+The basic unit is an **observation** — a short, structured record of what
+someone did, what they noticed, and what else was happening at the time.
+An observation can be a few sentences. It takes two to three minutes to
+submit.
 
-The template itself guides contributors into observational language — "I
-noticed," "I observed," "during this period" — rather than diagnostic or
-therapeutic language. This is not a legal workaround. It is the more rigorous
-approach. It also happens to protect the archive and its contributors from
-institutional objections.
+Each observation records:
+
+1. **The contributor** — identified by name, pseudonym, or anonymous ID.
+2. **The practice** — which pathways, how often, how long.
+3. **What they observed** — changes, non-changes, surprises.
+4. **Overall experience** — positive, neutral, mixed, negative, or
+   discontinued.
+5. **What else was happening** — concurrent factors. This is the one
+   required field beyond consent. It is what gives the observation its
+   integrity. One sentence is enough.
+
+Contributors can return and add more observations over time. One person
+may have many observations — an initial record, a follow-up months later,
+a note about pausing, a note about returning. The archive captures
+trajectories, not snapshots.
+
+For experiences that need depth, contributors can book a conversation.
+Interviews are a separate, richer layer — oral histories preserved
+alongside the structured observations.
+
+The form guides contributors into observational language — "I noticed,"
+"I observed," "during this period" — rather than diagnostic or
+therapeutic language. This is not a legal workaround. It is the more
+rigorous approach.
 
 ---
 
@@ -232,7 +242,8 @@ Contributors may request removal of their own entry at any time.
 2. The contributor is the observer. The archive holds what they said.
 3. Concurrent factors are mandatory. Context is integrity.
 4. No diagnostic labels as categories. People are not their conditions.
-5. One person, one entry — a living record that can grow over time.
+5. One person, many observations. The archive is a field notebook, not
+   a one-time survey.
 6. Privacy is structural, not optional.
 7. The archive evolves. When something needs to change, the change is
    documented, not hidden.

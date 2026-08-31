@@ -1,53 +1,61 @@
 ---
 name: water-of-life
-description: Intake, processing, and stewardship skill for The Water of Life open observational archive. Handles contributor templates, transcript formatting, entry validation, and framing discipline.
+description: Intake, processing, and stewardship skill for The Water of Life — a public, participatory observational archive for auto-urine practice. Handles observation formatting, transcript processing, framing discipline, and editorial principles.
 ---
 
 # Skill — The Water of Life Archive
 
-*Intake, processing, and stewardship for a participatory observational archive.*
+*Intake, processing, and stewardship for a collective field notebook.*
 
 ---
 
 ## What this skill is for
 
-Use this skill when working with contributor data for The Water of Life archive:
+Use this skill when:
 
-- generating or adapting the contributor template
-- processing audio transcripts into archive-format entries
-- validating entries for framing compliance
-- organizing and indexing the archive
-- evolving the template or methodology as the archive grows
+- Processing a form submission into a published observation
+- Formatting an interview transcript into an observation
+- Validating observations for framing compliance
+- Working on the website or archive structure
+- Evolving the methodology as the archive grows
+
+---
+
+## Repositories
+
+- **Website:** `/home/bird/Git/the-water-of-life/` → `github.com/AnaSeahawk/the-water-of-life`
+  - Hugo static site, deployed to GitHub Pages
+  - Site lives at `https://anaseahawk.github.io/the-water-of-life/`
+  - Hugo template functions (`relURL` etc.) do NOT work in content `.md` files — only in layout templates. Use relative paths (`../privacy/`) in content.
+- **Aether repo:** `/home/bird/Git/aether/Components/the-water-of-life/`
+  - Methodology and templates (synced with website versions)
+  - Skill file at `.agents/skills/water-of-life/SKILL.md`
+
+When editing the founding document, sync both copies.
 
 ---
 
 ## The archive's position
 
-The Water of Life is an open-source, participatory observational archive
+The Water of Life is a public, participatory observational archive
 collecting first-person accounts of engagement with auto-urine practice.
 
-It is **not** a medical resource, treatment guide, or advocacy site. It makes
-no therapeutic claims. It collects self-reported observations with concurrent
-factors documented, in the contributor's own language.
+It is **not** a medical resource, treatment guide, or advocacy site. It
+makes no therapeutic claims. It collects self-reported observations with
+concurrent factors documented, in the contributor's own words.
 
-The archive exists because:
-
-- No controlled clinical trials on auto-urine therapy in humans exist.
-- The dismissal of the practice is based on absence of evidence, not evidence
-  of absence.
-- The historical record (Damar Tantra, Sushruta Samhita, Bhava Prakasha,
-  Hatha Yoga Pradipika, Armstrong 1944) is extensive but entirely
-  practitioner-narrated, not self-reported.
-- People who practice often hide it. The data that does exist is scattered,
-  anecdotal, and frequently suppressed by platform content policies.
-- No one has built the dataset. This archive builds it.
+As of August 2026, no controlled clinical trial evaluating auto-urine
+practice as a therapeutic intervention in humans has been identified.
+Published literature does exist — historical reviews, case reports,
+laboratory work, hypotheses — but it does not establish clinical
+efficacy. The absence of that evidence is a gap, not a verdict.
 
 ---
 
 ## Framing discipline
 
-This is the most important section of this skill. Every piece of text that
-enters or leaves this archive must follow these rules.
+Every piece of text that enters or leaves this archive must follow
+these rules.
 
 ### Language rules
 
@@ -56,154 +64,162 @@ enters or leaves this archive must follow these rules.
 | "I observed..." | "It cured..." |
 | "I noticed..." | "It treated..." |
 | "During this period..." | "The therapy..." |
-| "My engagement included..." | "My treatment was..." |
-| "What I was experiencing before..." | "My diagnosis was..." / "I had [disease]..." |
-| "What else was happening in my life..." | "No other treatment was needed..." |
+| "What else was happening..." | "No other treatment was needed..." |
 | "Changes I noticed..." | "Results..." / "Outcomes..." |
 
 ### Structural rules
 
-1. **No diagnostic labels as categories.** Do not organize entries by condition
-   name. The archive is organized by contributor, not by pathology.
-2. **No causal claims.** Correlation is documented. Causation is never stated.
-3. **Concurrent factors are mandatory.** Every entry must document what else was
-   happening: other treatments, diet, lifestyle, stress, environment. An entry
-   without concurrent factors is incomplete.
-4. **The contributor is the observer.** The archive does not interpret, diagnose,
-   or evaluate. It holds what the person said they experienced.
-5. **No prescriptive language.** The archive never tells anyone to do anything.
-
-### When processing transcripts
-
-Audio interviews will contain natural speech that may include diagnostic labels,
-causal claims, or prescriptive statements. When formatting a transcript into an
-archive entry:
-
-- Preserve the contributor's words in the transcript section verbatim.
-- In the structured summary, reframe into observational language.
-- Flag any statements that make direct therapeutic claims — do not delete them,
-  but note them as the contributor's personal interpretation, not the archive's
-  position.
+1. **No diagnostic labels as categories.** Observations are not
+   organized by condition.
+2. **No causal claims.** Correlation is documented. Causation is never
+   stated by the archive.
+3. **Concurrent factors are mandatory.** Every observation must document
+   what else was happening. An observation without concurrent factors is
+   incomplete.
+4. **The contributor is the observer.** The archive holds what they said.
+5. **No prescriptive language.** The archive never tells anyone to do
+   anything.
 
 ---
 
-## Entry format
+## Editorial principles
 
-Every archive entry is a markdown file in `Components/the-water-of-life/entries/`.
+These were established while processing the first observations:
 
-Filename: `YYYYMMDD-<pseudonym-or-anon-id>.md`
+1. **First person.** Observations are published in the contributor's own
+   voice, exactly as they gave them. Do not convert to third person.
+2. **Preserve their words.** Correct grammar, clarify sequence, remove
+   unnecessary repetition — but do not change the meaning or intensity
+   of what someone said.
+3. **Their interpretation stays theirs.** If a contributor says "I felt
+   I was about to have a stroke" or "I feel it saved my life," that is
+   their experience. Keep it as their interpretation, not silently
+   convert it into the archive's claim or soften it into something they
+   didn't say.
+4. **Every form field they filled out appears in the published
+   observation.** Pathways, duration, overall experience, concurrent
+   factors — nothing submitted gets silently dropped.
+
+---
+
+## Observation format
+
+The archive uses a field notebook model. The basic unit is an
+**observation** — a short, first-person record of what someone did,
+what they noticed, and what else was happening at the time.
+
+Every observation is a markdown file in `site/content/entries/`.
+
+Filename: `YYYYMMDD-NNN.md` (date + sequence number)
 
 ```markdown
 ---
-entry_id: <unique identifier>
+title: "Observation NNN"
 date: YYYY-MM-DD
-contributor: <chosen name or "anonymous">
-method: written | interview | audio-transcription
-status: draft | review | published
+contributor: <display name or "anonymous">
+overall: <positive | neutral | mixed | negative | stopped>
 ---
 
-# Entry: <contributor name or anonymous identifier>
+## Practice
 
-## Context
+**Pathways:** <list all pathways used, inline>
 
-<Age range, general life context — only what the contributor chose to share.>
+**Duration:** <how long, how often>
 
-## What brought them here
+**Overall:** <positive | neutral | mixed | negative | stopped>
 
-<What they were noticing in their body or life that led them to explore this
-practice. In their own language. No diagnostic labels required.>
+## What I observed
 
-## Their practice
+<Their words. First person. What they did, what they noticed, what
+changed, what didn't, what surprised them.>
 
-<What they do, which pathways (internal/external, fresh/aged), how often,
-how long they have been engaged. Include specific methods where shared:
-drinking, topical, nasal, compresses, baths, etc. Specifics are the
-contributor's choice — some share extensively, some share minimally.
-Both are valid.>
+## What else was happening
 
-## The full picture
-
-<Everything else happening during the period of engagement: other treatments,
-medications, supplements, dietary changes, lifestyle shifts, stress levels,
-environment, relationships, work. This section is what gives the entry its
-integrity.>
-
-## What they observed
-
-<Changes, shifts, surprises, things that stayed the same. In their own words.
-No interpretation imposed. Include observations from any pauses or breaks
-in practice if applicable.>
-
-## For women
-
-<Menstrual, hormonal, perimenopause, menopause, pregnancy, or postpartum
-observations if shared. Omit this section entirely if not applicable or
-not shared.>
-
-## Timeline
-
-<When they began, any phases or turning points, duration at time of entry.
-What motivated consistency.>
-
-## Challenges
-
-<Anything difficult, uncomfortable, or unwelcome. Omit if nothing was
-shared, but actively ask — the archive holds the full picture.>
-
-## Testing
-
-<Any lab work (blood, urine, hair) done during the period of practice.
-Note whether results are available and whether the contributor consents
-to their inclusion.>
-
-## In their own words
-
-<Open space for anything the template did not ask. The contributor's voice,
-unstructured.>
+<Concurrent factors. Other treatments, diet, lifestyle, stress,
+medications, environment. Their words.>
 ```
 
-When the entry comes from an audio interview, add a `## Full transcript` section
-at the end containing the complete transcription.
+Optional additions if the contributor provided them:
+- Display name (otherwise anonymous)
+- Age range
+- "Anything else" section
+
+### Processing a form submission
+
+1. Receive submission from Formspree
+2. Format into observation using the template above
+3. Preserve the contributor's language — first person, their intensity
+4. Publish to `site/content/entries/`
+5. Build and push (`hugo` then `git push`)
+6. Delete raw submission from Formspree and email
+
+### Processing an interview
+
+1. Transcribe the recording
+2. Extract the observation from the conversation — what they did, what
+   they noticed, what else was happening
+3. Format in first person using their words
+4. Share draft with contributor for approval before publishing
+5. Once approved, publish and delete the audio recording
 
 ---
 
-## One person, one entry
+## One person, many observations
 
-Each contributor receives a unique identifier. The archive accepts one primary
-entry per contributor. Updates or follow-up observations are appended to the
-existing entry, not created as new entries.
-
-The identifier system (cryptographic key pairs for pseudonymous deduplication)
-is documented in the methodology. Until the key infrastructure is built,
-deduplication is managed manually by the archive steward.
+A person can contribute as often as they want. Observations stand alone.
+Where a contributor uses a display name, related observations may
+naturally become identifiable as part of an ongoing record. There is no
+identity management system, no deduplication infrastructure, no key
+pairs. If that's needed someday, build it then.
 
 ---
 
 ## Privacy
 
-Contributors choose their level of visibility:
+Contributors choose how they appear: a display name or anonymous (the
+default). The form collects no email addresses.
 
-- **Named**: real name appears on the entry
-- **Pseudonym**: chosen name, no link to real identity in the archive
-- **Anonymous**: entry carries only the unique identifier
+Audio recordings from interviews are stored privately until the
+transcript is reviewed and approved by the contributor, then deleted.
 
-Raw recordings (audio/video) are retained by the archive steward but never
-published. Only the transcript enters the public archive.
+Contact for data rights is through [anaseahawk.com](https://anaseahawk.com),
+not a published email address.
+
+---
+
+## Licensing
+
+Licensing for published observations has not yet been decided. CC BY 4.0
+was considered and deliberately deferred — solve when there are
+thousands of observations, not before. Do not add licensing language to
+the form or consent without explicit direction.
+
+---
+
+## Technical notes
+
+- **Hugo version:** 0.164.0 extended
+- **Form backend:** Formspree (`https://formspree.io/f/xnpqnbzk`), 50 submissions/month free tier
+- **Booking:** `https://cal.com/anaseahawk/the-water-of-life-a-conversation`
+- **Template functions in content files:** Hugo does NOT process Go template syntax (`relURL`, etc.) in `.md` content files. Use relative paths (`../privacy/`, `../images/foo.jpg`) instead.
+- **GitHub Pages base path:** site lives at `/the-water-of-life/`, not root
 
 ---
 
 ## Evolving this skill
 
-This archive will change as it grows. When a pattern emerges that the current
-template does not capture, or when a framing problem is discovered:
+When a pattern emerges that the current model does not capture, or when
+a framing problem is discovered:
 
 1. Document the issue in `Components/the-water-of-life/methodology/`.
 2. Update this skill file.
-3. Do not retroactively alter existing entries to fit new structure — append
-   notes or create a methodology record explaining the evolution.
+3. Do not retroactively alter existing observations to fit new
+   structure — the archive's integrity depends on observations
+   reflecting what was asked and answered at the time.
 
-The archive's integrity depends on its entries reflecting what was asked and
-answered at the time, not what we later wished we had asked.
+Before adding any new field, consent layer, classification system, or
+methodology requirement, answer: "What will this let us see that we
+cannot see without it?" If the answer isn't compelling, don't add it.
 
 ---
 
@@ -211,6 +227,5 @@ answered at the time, not what we later wished we had asked.
 
 - `Components/the-water-of-life/methodology/founding-document.md`
 - `Components/the-water-of-life/templates/contributor-template.md`
+- `Components/the-water-of-life/templates/interview-guide.md`
 - `.agents/skills/sensitive-content/SKILL.md`
-- `.agents/skills/prose/SKILL.md`
-- `soul.md`

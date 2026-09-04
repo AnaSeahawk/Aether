@@ -1,0 +1,10 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 612, "h": 792, "title": "Cover" },
+    { "file": "FindYourself.dc.html", "x": 712, "y": 0, "w": 612, "h": 792, "title": "Find Yourself" },
+    { "file": "SignOpener.dc.html", "x": 1424, "y": 0, "w": 612, "h": 792, "title": "Sign Opener (Aries)" },
+    { "file": "DailyEntry.dc.html", "x": 2136, "y": 0, "w": 612, "h": 792, "title": "Daily Entry" },
+    { "file": "MoonTracker.dc.html", "x": 2848, "y": 0, "w": 612, "h": 792, "title": "Moon Cycle" }
+  ],
+  "launch": { "view": "canvas" }
+}

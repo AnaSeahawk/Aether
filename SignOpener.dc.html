@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=IBM+Plex+Sans:wght@300;400;500&display=swap');
+    body { margin: 0; font-family: 'IBM Plex Sans', 'Helvetica Neue', sans-serif; }
+    a { color: #8b6f47; } a:hover { color: #6b5534; }
+  </style>
+</helmet>
+<div style="width: 612px; height: 792px; background: #f5f0e8; display: flex; flex-direction: column; position: relative; overflow: hidden;">
+
+  <!-- Subtle top accent line -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(139,111,71,0.15), transparent);"></div>
+
+  <!-- Main content area -->
+  <div style="flex: 1; display: flex; flex-direction: column; padding: 64px 72px 48px;">
+
+    <!-- Sign glyph - large, quiet -->
+    <div style="margin-bottom: 32px;">
+      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 56px; font-weight: 300; color: #8b6f47; opacity: 0.35; line-height: 1;">&#x2648;</div>
+    </div>
+
+    <!-- Sign name and degrees -->
+    <div style="margin-bottom: 8px;">
+      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 36px; font-weight: 300; color: #3d3428; letter-spacing: 1px; line-height: 1.1;">Aries</div>
+    </div>
+    <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 12px; font-weight: 300; color: #8b6f47; opacity: 0.6; letter-spacing: 1px;">1&#176; &#8212; 30&#176;</div>
+
+    <!-- Divider -->
+    <div style="width: 40px; height: 1px; background: #8b6f47; opacity: 0.2; margin: 28px 0;"></div>
+
+    <!-- Properties grid -->
+    <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 48px; margin-bottom: 32px;">
+      <div>
+        <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 8px; font-weight: 400; color: #8b6f47; opacity: 0.45; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">Season</div>
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 400; color: #3d3428; opacity: 0.75;">Spring begins</div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 8px; font-weight: 400; color: #8b6f47; opacity: 0.45; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">Quality</div>
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 400; color: #3d3428; opacity: 0.75;">Cardinal fire</div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 8px; font-weight: 400; color: #8b6f47; opacity: 0.45; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">Threshold</div>
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 400; color: #3d3428; opacity: 0.75;">Vernal equinox</div>
+      </div>
+      <div>
+        <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 8px; font-weight: 400; color: #8b6f47; opacity: 0.45; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">Light</div>
+        <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 16px; font-weight: 400; color: #3d3428; opacity: 0.75;">Days lengthening</div>
+      </div>
+    </div>
+
+    <!-- Train time reference -->
+    <div style="margin-top: 4px; padding: 16px 0; border-top: 1px solid rgba(139,111,71,0.08);">
+      <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 8px; font-weight: 300; color: #8b6f47; opacity: 0.35; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 6px;">Train time (approximate)</div>
+      <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 11px; font-weight: 300; color: #3d3428; opacity: 0.45;">~Mar 20 &#8211; ~Apr 19</div>
+    </div>
+
+    <!-- Spacer -->
+    <div style="flex: 1;"></div>
+
+    <!-- Degree index strip -->
+    <div style="margin-top: auto;">
+      <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 8px; font-weight: 300; color: #8b6f47; opacity: 0.3; letter-spacing: 1px; margin-bottom: 10px;">DEGREES</div>
+      <div style="display: flex; gap: 0; align-items: center;">
+        <div style="display: flex; gap: 1px; flex-wrap: wrap; max-width: 468px;">
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">1</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">2</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">3</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">4</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">5</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.4;">6</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">7</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">8</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">9</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.4;">10</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">11</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">12</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">13</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">14</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.4;">15</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">16</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">17</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">18</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">19</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.4;">20</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">21</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">22</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">23</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">24</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.4;">25</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">26</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">27</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">28</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.35;">29</div>
+          <div style="width: 14px; height: 14px; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Sans', sans-serif; font-size: 6.5px; font-weight: 300; color: #8b6f47; opacity: 0.4;">30</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

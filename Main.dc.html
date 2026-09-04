@@ -18,67 +18,64 @@
   <!-- Subtle radial texture -->
   <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(139,111,71,0.06) 0%, transparent 70%);"></div>
 
-  <!-- Outer circle -->
-  <div style="position: relative; width: 340px; height: 340px; display: flex; align-items: center; justify-content: center;">
-    <svg viewBox="0 0 340 340" width="340" height="340" style="position: absolute; inset: 0;">
-      <!-- Outer ring -->
-      <circle cx="170" cy="170" r="165" fill="none" stroke="#8b6f47" stroke-width="0.5" opacity="0.4"/>
-      <circle cx="170" cy="170" r="155" fill="none" stroke="#8b6f47" stroke-width="0.3" opacity="0.25"/>
+  <!-- Two-semicircle sun path sigil -->
+  <div style="position: relative; width: 340px; height: 240px; display: flex; align-items: center; justify-content: center;">
+    <svg viewBox="0 0 340 240" width="340" height="240" style="position: absolute; inset: 0;">
 
-      <!-- Degree marks - 360 tiny ticks -->
-      <g opacity="0.2">
-        <line x1="170" y1="6" x2="170" y2="10" stroke="#8b6f47" stroke-width="0.3" transform="rotate(0, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(30, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(60, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(90, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(120, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(150, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(180, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(210, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(240, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(270, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(300, 170, 170)"/>
-        <line x1="170" y1="6" x2="170" y2="12" stroke="#8b6f47" stroke-width="0.5" transform="rotate(330, 170, 170)"/>
-      </g>
+      <!-- Horizontal axis -->
+      <line x1="5" y1="120" x2="335" y2="120" stroke="#8b6f47" stroke-width="0.4" opacity="0.15"/>
 
-      <!-- Sign glyphs around the outer ring -->
-      <!-- Aries at top (0°/360°) -->
-      <text x="170" y="30" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x2648;</text>
-      <!-- Taurus -->
-      <text x="252" y="55" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x2649;</text>
-      <!-- Gemini -->
-      <text x="305" y="110" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x264A;</text>
-      <!-- Cancer -->
-      <text x="325" y="175" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x264B;</text>
-      <!-- Leo -->
-      <text x="305" y="240" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x264C;</text>
-      <!-- Virgo -->
-      <text x="252" y="295" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x264D;</text>
-      <!-- Libra -->
-      <text x="170" y="318" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x264E;</text>
-      <!-- Scorpio -->
-      <text x="88" y="295" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x264F;</text>
-      <!-- Sagittarius -->
-      <text x="35" y="240" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x2650;</text>
-      <!-- Capricorn -->
-      <text x="15" y="175" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x2651;</text>
-      <!-- Aquarius -->
-      <text x="35" y="110" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x2652;</text>
-      <!-- Pisces -->
-      <text x="88" y="55" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="14" fill="#8b6f47" opacity="0.6">&#x2653;</text>
+      <!-- Upper semicircle (light half) -->
+      <path d="M 10 120 A 80 80 0 0 1 170 120" fill="none" stroke="#8b6f47" stroke-width="0.6" opacity="0.35"/>
 
-      <!-- Inner ring -->
-      <circle cx="170" cy="170" r="100" fill="none" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
+      <!-- Lower semicircle (dark half) -->
+      <path d="M 170 120 A 80 80 0 0 1 330 120" fill="none" stroke="#8b6f47" stroke-width="0.6" opacity="0.35"/>
+
+      <!-- Faint division lines - upper (center 90,120) -->
+      <line x1="90" y1="120" x2="21" y2="80"  stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <line x1="90" y1="120" x2="50" y2="51"  stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <line x1="90" y1="120" x2="90" y2="40"  stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <line x1="90" y1="120" x2="130" y2="51" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <line x1="90" y1="120" x2="159" y2="80" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+
+      <!-- Faint division lines - lower (center 250,120) -->
+      <line x1="250" y1="120" x2="181" y2="160" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <line x1="250" y1="120" x2="210" y2="189" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <line x1="250" y1="120" x2="250" y2="200" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <line x1="250" y1="120" x2="290" y2="189" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <line x1="250" y1="120" x2="319" y2="160" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+
+      <!-- Small sign glyphs along the arcs -->
+      <text x="40"  y="107" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2648;</text>
+      <text x="56"  y="82"  text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2649;</text>
+      <text x="78"  y="66"  text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264A;</text>
+      <text x="102" y="66"  text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264B;</text>
+      <text x="124" y="82"  text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264C;</text>
+      <text x="140" y="107" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264D;</text>
+
+      <text x="200" y="140" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264E;</text>
+      <text x="216" y="162" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264F;</text>
+      <text x="238" y="178" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2650;</text>
+      <text x="262" y="178" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2651;</text>
+      <text x="284" y="162" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2652;</text>
+      <text x="300" y="140" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2653;</text>
+
+      <!-- Cardinal dots -->
+      <circle cx="10"  cy="120" r="1.5" fill="#8b6f47" opacity="0.2"/>
+      <circle cx="170" cy="120" r="1.5" fill="#8b6f47" opacity="0.2"/>
+      <circle cx="330" cy="120" r="1.5" fill="#8b6f47" opacity="0.2"/>
+      <circle cx="90"  cy="40"  r="1.5" fill="#8b6f47" opacity="0.2"/>
+      <circle cx="250" cy="200" r="1.5" fill="#8b6f47" opacity="0.2"/>
     </svg>
+  </div>
 
-    <!-- Center text -->
-    <div style="position: relative; z-index: 1; text-align: center; padding: 20px;">
-      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 11px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: #8b6f47; opacity: 0.5; margin-bottom: 16px;">The</div>
-      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 38px; font-weight: 300; letter-spacing: 1px; color: #3d3428; line-height: 1.1;">Solar</div>
-      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 38px; font-weight: 300; letter-spacing: 1px; color: #3d3428; line-height: 1.1;">Journal</div>
-      <div style="width: 40px; height: 1px; background: #8b6f47; opacity: 0.3; margin: 16px auto;"></div>
-      <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 300; letter-spacing: 2px; color: #8b6f47; opacity: 0.5;">1&#176; &#x2014; 360&#176;</div>
-    </div>
+  <!-- Title text below the sigil -->
+  <div style="position: relative; z-index: 1; text-align: center; margin-top: 28px;">
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 11px; font-weight: 300; letter-spacing: 4px; text-transform: uppercase; color: #8b6f47; opacity: 0.5; margin-bottom: 16px;">The</div>
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 38px; font-weight: 300; letter-spacing: 1px; color: #3d3428; line-height: 1.1;">Solar</div>
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 38px; font-weight: 300; letter-spacing: 1px; color: #3d3428; line-height: 1.1;">Journal</div>
+    <div style="width: 40px; height: 1px; background: #8b6f47; opacity: 0.3; margin: 16px auto;"></div>
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 13px; font-weight: 300; letter-spacing: 2px; color: #8b6f47; opacity: 0.5;">1&#176;&#8211;360&#176;</div>
   </div>
 
   <!-- Bottom text -->

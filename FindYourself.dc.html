@@ -16,134 +16,186 @@
 <div style="width: 612px; height: 792px; background: #f5f0e8; display: flex; flex-direction: column; align-items: center; position: relative; overflow: hidden;">
 
   <!-- Page title -->
-  <div style="margin-top: 48px; text-align: center;">
-    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; color: #3d3428; letter-spacing: 1px;">Find yourself in the circle</div>
-    <div style="width: 30px; height: 1px; background: #8b6f47; opacity: 0.3; margin: 14px auto;"></div>
+  <div style="margin-top: 44px; text-align: center;">
+    <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 24px; font-weight: 300; color: #3d3428; letter-spacing: 1px;">Find yourself in the year</div>
+    <div style="width: 30px; height: 1px; background: #8b6f47; opacity: 0.3; margin: 12px auto;"></div>
   </div>
 
-  <!-- Two-semicircle sun path diagram -->
-  <div style="position: relative; width: 500px; height: 340px; margin-top: 8px;">
-    <svg viewBox="0 0 500 340" width="500" height="340">
+  <!-- Sine wave diagram -->
+  <div style="position: relative; width: 520px; height: 340px; margin-top: 8px;">
+    <svg viewBox="0 0 520 340" width="520" height="340">
 
-      <!-- Horizontal axis (equinox line) -->
-      <line x1="8" y1="170" x2="492" y2="170" stroke="#8b6f47" stroke-width="0.5" opacity="0.2"/>
+      <!-- Tropic of Cancer (dashed) -->
+      <line x1="25" y1="60" x2="495" y2="60" stroke="#8b6f47" stroke-width="0.3" opacity="0.15" stroke-dasharray="4 4"/>
+      <text x="18" y="58" text-anchor="end" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.25" font-weight="300" transform="rotate(-90, 18, 58)">Tropic of Cancer</text>
 
-      <!-- Upper semicircle arc (light half: Aries-Virgo) -->
-      <path d="M 10 170 A 120 120 0 0 1 250 170" fill="none" stroke="#3d3428" stroke-width="0.8" opacity="0.5"/>
+      <!-- Equator -->
+      <line x1="25" y1="165" x2="495" y2="165" stroke="#8b6f47" stroke-width="0.5" opacity="0.2"/>
 
-      <!-- Lower semicircle arc (dark half: Libra-Pisces) -->
-      <path d="M 250 170 A 120 120 0 0 1 490 170" fill="none" stroke="#3d3428" stroke-width="0.8" opacity="0.5"/>
+      <!-- Tropic of Capricorn (dashed) -->
+      <line x1="25" y1="270" x2="495" y2="270" stroke="#8b6f47" stroke-width="0.3" opacity="0.15" stroke-dasharray="4 4"/>
+      <text x="502" y="272" text-anchor="start" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.25" font-weight="300" transform="rotate(90, 502, 272)">Tropic of Capricorn</text>
 
-      <!-- Upper semicircle division lines (from center 130,170) -->
-      <line x1="130" y1="170" x2="27"  y2="110" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
-      <line x1="130" y1="170" x2="70"  y2="66"  stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
-      <line x1="130" y1="170" x2="130" y2="50"  stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
-      <line x1="130" y1="170" x2="190" y2="66"  stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
-      <line x1="130" y1="170" x2="234" y2="110" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
+      <!-- Sine wave path (sun's declination through the year) -->
+      <!-- Points computed: x = 30 + (deg/360)*460, y = 165 - 105*sin(deg*pi/180) -->
+      <polyline fill="none" stroke="#3d3428" stroke-width="1" opacity="0.45" points="
+        30,165
+        42.8,146.8
+        55.6,129.1
+        68.3,112.5
+        81.1,97.5
+        93.9,84.7
+        106.7,74.1
+        119.4,66.2
+        132.2,61.2
+        145,59.5
+        157.8,61.2
+        170.6,66.2
+        183.3,74.1
+        196.1,84.7
+        208.9,97.5
+        221.7,112.5
+        234.4,129.1
+        247.2,146.8
+        260,165
+        272.8,183.2
+        285.6,200.9
+        298.3,217.5
+        311.1,232.5
+        323.9,245.3
+        336.7,255.9
+        349.4,263.8
+        362.2,268.8
+        375,270.5
+        387.8,268.8
+        400.6,263.8
+        413.3,255.9
+        426.1,245.3
+        438.9,232.5
+        451.7,217.5
+        464.4,200.9
+        477.2,183.2
+        490,165
+      "/>
 
-      <!-- Lower semicircle division lines (from center 370,170) -->
-      <line x1="370" y1="170" x2="266" y2="230" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
-      <line x1="370" y1="170" x2="310" y2="274" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
-      <line x1="370" y1="170" x2="370" y2="290" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
-      <line x1="370" y1="170" x2="430" y2="274" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
-      <line x1="370" y1="170" x2="474" y2="230" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
+      <!-- Sign boundary tick marks on the wave -->
+      <line x1="30"  y1="161" x2="30"  y2="169" stroke="#3d3428" stroke-width="0.6" opacity="0.35"/>
+      <line x1="106.7" y1="70.1" x2="106.7" y2="78.1" stroke="#3d3428" stroke-width="0.5" opacity="0.3"/>
+      <line x1="183.3" y1="70.1" x2="183.3" y2="78.1" stroke="#3d3428" stroke-width="0.5" opacity="0.3"/>
+      <line x1="260" y1="161" x2="260" y2="169" stroke="#3d3428" stroke-width="0.6" opacity="0.35"/>
+      <line x1="336.7" y1="251.9" x2="336.7" y2="259.9" stroke="#3d3428" stroke-width="0.5" opacity="0.3"/>
+      <line x1="413.3" y1="251.9" x2="413.3" y2="259.9" stroke="#3d3428" stroke-width="0.5" opacity="0.3"/>
+      <line x1="490" y1="161" x2="490" y2="169" stroke="#3d3428" stroke-width="0.6" opacity="0.35"/>
 
-      <!-- UPPER SEMICIRCLE sign glyphs -->
-      <!-- Aries (lower-left wedge) -->
-      <text x="55" y="155" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x2648;</text>
-      <text x="55" y="166" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">1&#176;&#8211;30&#176;</text>
+      <!-- Fainter ticks at 30° intervals -->
+      <line x1="68.3" y1="108.5" x2="68.3" y2="116.5" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
+      <line x1="145" y1="55.5" x2="145" y2="63.5" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
+      <line x1="221.7" y1="108.5" x2="221.7" y2="116.5" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
+      <line x1="298.3" y1="213.5" x2="298.3" y2="221.5" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
+      <line x1="375" y1="266.5" x2="375" y2="274.5" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
+      <line x1="451.7" y1="213.5" x2="451.7" y2="221.5" stroke="#8b6f47" stroke-width="0.3" opacity="0.2"/>
 
-      <!-- Taurus (upper-left wedge) -->
-      <text x="75" y="120" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x2649;</text>
-      <text x="75" y="131" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">31&#176;&#8211;60&#176;</text>
+      <!-- SIGN GLYPHS with degree ranges -->
+      <!-- Upper half (light half of the year) -->
 
-      <!-- Gemini (top-left) -->
-      <text x="110" y="95" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x264A;</text>
-      <text x="110" y="106" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">61&#176;&#8211;90&#176;</text>
+      <!-- Aries 1-30 -->
+      <text x="49" y="143" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x2648;</text>
+      <text x="49" y="154" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">1&#176;&#8211;30&#176;</text>
 
-      <!-- Cancer (top-right) -->
-      <text x="150" y="95" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x264B;</text>
-      <text x="150" y="106" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">91&#176;&#8211;120&#176;</text>
+      <!-- Taurus 31-60 -->
+      <text x="87" y="112" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x2649;</text>
+      <text x="87" y="123" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">31&#176;&#8211;60&#176;</text>
 
-      <!-- Leo (upper-right) -->
-      <text x="185" y="120" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x264C;</text>
-      <text x="185" y="131" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">121&#176;&#8211;150&#176;</text>
+      <!-- Gemini 61-90 -->
+      <text x="126" y="87" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x264A;</text>
+      <text x="126" y="98" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">61&#176;&#8211;90&#176;</text>
 
-      <!-- Virgo (lower-right wedge) -->
-      <text x="206" y="155" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x264D;</text>
-      <text x="206" y="166" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">151&#176;&#8211;180&#176;</text>
+      <!-- Cancer 91-120 -->
+      <text x="164" y="87" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x264B;</text>
+      <text x="164" y="98" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">91&#176;&#8211;120&#176;</text>
 
-      <!-- LOWER SEMICIRCLE sign glyphs -->
-      <!-- Libra (upper-left of lower arc) -->
-      <text x="295" y="196" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x264E;</text>
-      <text x="295" y="207" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">181&#176;&#8211;210&#176;</text>
+      <!-- Leo 121-150 -->
+      <text x="203" y="112" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x264C;</text>
+      <text x="203" y="123" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">121&#176;&#8211;150&#176;</text>
 
-      <!-- Scorpio -->
-      <text x="315" y="230" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x264F;</text>
-      <text x="315" y="241" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">211&#176;&#8211;240&#176;</text>
+      <!-- Virgo 151-180 -->
+      <text x="241" y="143" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x264D;</text>
+      <text x="241" y="154" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">151&#176;&#8211;180&#176;</text>
 
-      <!-- Sagittarius (bottom-left) -->
-      <text x="350" y="252" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x2650;</text>
-      <text x="350" y="263" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">241&#176;&#8211;270&#176;</text>
+      <!-- Lower half (dark half of the year) -->
 
-      <!-- Capricorn (bottom-right) -->
-      <text x="390" y="252" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x2651;</text>
-      <text x="390" y="263" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">271&#176;&#8211;300&#176;</text>
+      <!-- Libra 181-210 -->
+      <text x="279" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x264E;</text>
+      <text x="279" y="182" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">181&#176;&#8211;210&#176;</text>
 
-      <!-- Aquarius -->
-      <text x="425" y="230" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x2652;</text>
-      <text x="425" y="241" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">301&#176;&#8211;330&#176;</text>
+      <!-- Scorpio 211-240 -->
+      <text x="318" y="222" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x264F;</text>
+      <text x="318" y="212" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">211&#176;&#8211;240&#176;</text>
 
-      <!-- Pisces (upper-right of lower arc) -->
-      <text x="445" y="196" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" fill="#3d3428" opacity="0.6">&#x2653;</text>
-      <text x="445" y="207" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.4" font-weight="300">331&#176;&#8211;360&#176;</text>
+      <!-- Sagittarius 241-270 -->
+      <text x="356" y="245" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x2650;</text>
+      <text x="356" y="235" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">241&#176;&#8211;270&#176;</text>
+
+      <!-- Capricorn 271-300 -->
+      <text x="394" y="245" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x2651;</text>
+      <text x="394" y="235" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">271&#176;&#8211;300&#176;</text>
+
+      <!-- Aquarius 301-330 -->
+      <text x="432" y="222" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x2652;</text>
+      <text x="432" y="212" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">301&#176;&#8211;330&#176;</text>
+
+      <!-- Pisces 331-360 -->
+      <text x="471" y="192" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="15" fill="#3d3428" opacity="0.55">&#x2653;</text>
+      <text x="471" y="182" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6" fill="#8b6f47" opacity="0.4" font-weight="300">331&#176;&#8211;360&#176;</text>
 
       <!-- Cardinal point labels -->
       <!-- Spring Equinox - left -->
-      <text x="10" y="160" text-anchor="start" font-family="'IBM Plex Sans', sans-serif" font-size="7" fill="#8b6f47" opacity="0.45" font-weight="400" letter-spacing="0.5">Spring</text>
-      <text x="10" y="184" text-anchor="start" font-family="'IBM Plex Sans', sans-serif" font-size="7" fill="#8b6f47" opacity="0.45" font-weight="400" letter-spacing="0.5">Equinox</text>
-
-      <!-- Spring Equinox - right -->
-      <text x="490" y="160" text-anchor="end" font-family="'IBM Plex Sans', sans-serif" font-size="7" fill="#8b6f47" opacity="0.45" font-weight="400" letter-spacing="0.5">Spring</text>
-      <text x="490" y="184" text-anchor="end" font-family="'IBM Plex Sans', sans-serif" font-size="7" fill="#8b6f47" opacity="0.45" font-weight="400" letter-spacing="0.5">Equinox</text>
+      <text x="30" y="155" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.5" font-weight="400">Spring</text>
+      <text x="30" y="178" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.5" font-weight="400">Equinox</text>
 
       <!-- Summer Solstice - top -->
-      <text x="130" y="40" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="7" fill="#8b6f47" opacity="0.45" font-weight="400" letter-spacing="0.5">Summer Solstice</text>
-      <line x1="130" y1="44" x2="130" y2="50" stroke="#8b6f47" stroke-width="0.5" opacity="0.3"/>
+      <text x="145" y="50" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.5" font-weight="400">Summer Solstice</text>
 
       <!-- Autumn Equinox - center -->
-      <text x="250" y="160" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="7" fill="#8b6f47" opacity="0.45" font-weight="400" letter-spacing="0.5">Autumn</text>
-      <text x="250" y="184" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="7" fill="#8b6f47" opacity="0.45" font-weight="400" letter-spacing="0.5">Equinox</text>
+      <text x="260" y="155" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.5" font-weight="400">Autumn</text>
+      <text x="260" y="178" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.5" font-weight="400">Equinox</text>
 
       <!-- Winter Solstice - bottom -->
-      <text x="370" y="310" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="7" fill="#8b6f47" opacity="0.45" font-weight="400" letter-spacing="0.5">Winter Solstice</text>
-      <line x1="370" y1="290" x2="370" y2="303" stroke="#8b6f47" stroke-width="0.5" opacity="0.3"/>
+      <text x="375" y="288" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.5" font-weight="400">Winter Solstice</text>
 
-      <!-- Small dots at cardinal points -->
-      <circle cx="10" cy="170" r="2" fill="#8b6f47" opacity="0.3"/>
-      <circle cx="250" cy="170" r="2" fill="#8b6f47" opacity="0.3"/>
-      <circle cx="490" cy="170" r="2" fill="#8b6f47" opacity="0.3"/>
-      <circle cx="130" cy="50" r="2" fill="#8b6f47" opacity="0.3"/>
-      <circle cx="370" cy="290" r="2" fill="#8b6f47" opacity="0.3"/>
+      <!-- Spring Equinox - right -->
+      <text x="490" y="155" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.5" font-weight="400">Spring</text>
+      <text x="490" y="178" text-anchor="middle" font-family="'IBM Plex Sans', sans-serif" font-size="6.5" fill="#8b6f47" opacity="0.5" font-weight="400">Equinox</text>
+
+      <!-- Dots at cardinal points on the wave -->
+      <circle cx="30"  cy="165" r="2.5" fill="#8b6f47" opacity="0.3"/>
+      <circle cx="145" cy="59.5" r="2.5" fill="#8b6f47" opacity="0.3"/>
+      <circle cx="260" cy="165" r="2.5" fill="#8b6f47" opacity="0.3"/>
+      <circle cx="375" cy="270.5" r="2.5" fill="#8b6f47" opacity="0.3"/>
+      <circle cx="490" cy="165" r="2.5" fill="#8b6f47" opacity="0.3"/>
+
+      <!-- Small arrows at solstice dots -->
+      <line x1="145" y1="55" x2="145" y2="50" stroke="#8b6f47" stroke-width="0.5" opacity="0.3"/>
+      <line x1="375" y1="275" x2="375" y2="280" stroke="#8b6f47" stroke-width="0.5" opacity="0.3"/>
 
     </svg>
   </div>
 
   <!-- Instructions -->
-  <div style="margin-top: 12px; padding: 0 56px; text-align: center;">
+  <div style="margin-top: 8px; padding: 0 56px; text-align: center;">
     <div style="font-family: 'Cormorant Garamond', Georgia, serif; font-size: 14px; font-weight: 300; font-style: italic; color: #3d3428; line-height: 1.7; opacity: 0.7;">
       Before you begin writing, find where you are.
     </div>
-    <div style="margin-top: 12px; font-family: 'IBM Plex Sans', sans-serif; font-size: 9px; font-weight: 300; color: #8b6f47; line-height: 1.8; opacity: 0.55;">
+    <div style="margin-top: 10px; font-family: 'IBM Plex Sans', sans-serif; font-size: 9px; font-weight: 300; color: #8b6f47; line-height: 1.8; opacity: 0.55;">
       Look up today&#8217;s Sun position at astro.com or in an ephemeris.<br>
       Note the degree and sign. Turn to that section of this journal.<br>
-      The upper arc is the light half of the year. The lower arc is the dark half.<br>
+      Above the equator the days are long. Below it, the nights.<br>
       This is where your year begins &#8212; wherever the Sun is now.
     </div>
   </div>
 
   <!-- Bottom fields -->
-  <div style="position: absolute; bottom: 48px; left: 56px; right: 56px;">
+  <div style="position: absolute; bottom: 44px; left: 56px; right: 56px;">
     <div style="display: flex; gap: 24px; align-items: flex-end;">
       <div style="flex: 1;">
         <div style="font-family: 'IBM Plex Sans', sans-serif; font-size: 8px; font-weight: 300; color: #8b6f47; opacity: 0.45; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px;">I begin at</div>

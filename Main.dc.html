@@ -18,54 +18,80 @@
   <!-- Subtle radial texture -->
   <div style="position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(139,111,71,0.06) 0%, transparent 70%);"></div>
 
-  <!-- Two-semicircle sun path sigil -->
-  <div style="position: relative; width: 340px; height: 240px; display: flex; align-items: center; justify-content: center;">
-    <svg viewBox="0 0 340 240" width="340" height="240" style="position: absolute; inset: 0;">
+  <!-- Sine wave sigil -->
+  <div style="position: relative; width: 420px; height: 180px; display: flex; align-items: center; justify-content: center;">
+    <svg viewBox="0 0 420 180" width="420" height="180" style="position: absolute; inset: 0;">
 
-      <!-- Horizontal axis -->
-      <line x1="5" y1="120" x2="335" y2="120" stroke="#8b6f47" stroke-width="0.4" opacity="0.15"/>
+      <!-- Tropic of Cancer (upper bound) -->
+      <line x1="10" y1="20" x2="410" y2="20" stroke="#8b6f47" stroke-width="0.3" opacity="0.1" stroke-dasharray="3 3"/>
 
-      <!-- Upper semicircle (light half) -->
-      <path d="M 10 120 A 80 80 0 0 1 170 120" fill="none" stroke="#8b6f47" stroke-width="0.6" opacity="0.35"/>
+      <!-- Equator (center line) -->
+      <line x1="10" y1="90" x2="410" y2="90" stroke="#8b6f47" stroke-width="0.4" opacity="0.15"/>
 
-      <!-- Lower semicircle (dark half) -->
-      <path d="M 170 120 A 80 80 0 0 1 330 120" fill="none" stroke="#8b6f47" stroke-width="0.6" opacity="0.35"/>
+      <!-- Tropic of Capricorn (lower bound) -->
+      <line x1="10" y1="160" x2="410" y2="160" stroke="#8b6f47" stroke-width="0.3" opacity="0.1" stroke-dasharray="3 3"/>
 
-      <!-- Faint division lines - upper (center 90,120) -->
-      <line x1="90" y1="120" x2="21" y2="80"  stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-      <line x1="90" y1="120" x2="50" y2="51"  stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-      <line x1="90" y1="120" x2="90" y2="40"  stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-      <line x1="90" y1="120" x2="130" y2="51" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-      <line x1="90" y1="120" x2="159" y2="80" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
+      <!-- Sine wave: x = 20 + (deg/360)*380, y = 90 - 70*sin(deg*pi/180) -->
+      <polyline fill="none" stroke="#8b6f47" stroke-width="0.8" opacity="0.4" points="
+        20,90
+        30.6,77.9
+        41.1,66.3
+        51.7,55.8
+        62.2,46.9
+        72.8,40
+        83.3,35.1
+        93.9,32.4
+        104.4,32.1
+        115,34.1
+        125.6,38.5
+        136.1,44.9
+        146.7,53.2
+        157.2,62.9
+        167.8,73.7
+        178.3,85.1
+        188.9,96.6
+        199.4,107.7
+        210,118
+        220.6,127
+        231.1,134.4
+        241.7,139.8
+        252.2,143.1
+        262.8,143.9
+        273.3,142.4
+        283.9,138.5
+        294.4,132.5
+        305,124.9
+        315.6,115.8
+        326.1,105.6
+        336.7,94.9
+        347.2,83.7
+        357.8,73.1
+        368.3,63.2
+        378.9,54.9
+        389.4,48.2
+        400,43.5
+      "/>
 
-      <!-- Faint division lines - lower (center 250,120) -->
-      <line x1="250" y1="120" x2="181" y2="160" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-      <line x1="250" y1="120" x2="210" y2="189" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-      <line x1="250" y1="120" x2="250" y2="200" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-      <line x1="250" y1="120" x2="290" y2="189" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-      <line x1="250" y1="120" x2="319" y2="160" stroke="#8b6f47" stroke-width="0.3" opacity="0.1"/>
-
-      <!-- Small sign glyphs along the arcs -->
-      <text x="40"  y="107" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2648;</text>
-      <text x="56"  y="82"  text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2649;</text>
-      <text x="78"  y="66"  text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264A;</text>
-      <text x="102" y="66"  text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264B;</text>
-      <text x="124" y="82"  text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264C;</text>
-      <text x="140" y="107" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264D;</text>
-
-      <text x="200" y="140" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264E;</text>
-      <text x="216" y="162" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x264F;</text>
-      <text x="238" y="178" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2650;</text>
-      <text x="262" y="178" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2651;</text>
-      <text x="284" y="162" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2652;</text>
-      <text x="300" y="140" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.25">&#x2653;</text>
+      <!-- Sign glyphs along the wave, very faint -->
+      <text x="25" y="84" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x2648;</text>
+      <text x="57" y="56" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x2649;</text>
+      <text x="89" y="40" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x264A;</text>
+      <text x="120" y="40" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x264B;</text>
+      <text x="152" y="56" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x264C;</text>
+      <text x="184" y="84" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x264D;</text>
+      <text x="215" y="108" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x264E;</text>
+      <text x="247" y="135" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x264F;</text>
+      <text x="278" y="144" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x2650;</text>
+      <text x="310" y="135" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x2651;</text>
+      <text x="342" y="108" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x2652;</text>
+      <text x="373" y="84" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="10" fill="#8b6f47" opacity="0.18">&#x2653;</text>
 
       <!-- Cardinal dots -->
-      <circle cx="10"  cy="120" r="1.5" fill="#8b6f47" opacity="0.2"/>
-      <circle cx="170" cy="120" r="1.5" fill="#8b6f47" opacity="0.2"/>
-      <circle cx="330" cy="120" r="1.5" fill="#8b6f47" opacity="0.2"/>
-      <circle cx="90"  cy="40"  r="1.5" fill="#8b6f47" opacity="0.2"/>
-      <circle cx="250" cy="200" r="1.5" fill="#8b6f47" opacity="0.2"/>
+      <circle cx="20"  cy="90"   r="1.5" fill="#8b6f47" opacity="0.2"/>
+      <circle cx="115" cy="32.1" r="1.5" fill="#8b6f47" opacity="0.2"/>
+      <circle cx="210" cy="118"  r="1" fill="#8b6f47" opacity="0.15"/>
+      <circle cx="262.8" cy="143.9" r="1.5" fill="#8b6f47" opacity="0.2"/>
+      <circle cx="400" cy="43.5" r="1" fill="#8b6f47" opacity="0.15"/>
     </svg>
   </div>
 

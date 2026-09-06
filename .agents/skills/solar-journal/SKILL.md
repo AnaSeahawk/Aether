@@ -504,11 +504,28 @@ Plus ruled writing lines for the journal entry itself.
 
 ---
 
-## Branch and artifact
+## Where the journal lives
 
-- **Branch:** `claude/journal-design-tv0uqe`
+- **Repo:** `AnaSeahawk/solar-journal` — **private**, mounted at
+  `Components/solar-journal/`. Holds the artboards, `canvas.json`, and
+  the published canvas under `published/`.
+- **This skill** stays in `aether`: skills belong to the coordination seed.
 - **Artifact (current):** `https://claude.ai/code/artifact/44896e33-8c4d-4470-92fb-2d1ed696ec48`
-- **Format:** HTML artifact (11-page front matter), 612×792px US Letter
+- **Format:** 612×792px US Letter per artboard
+- **Superseded:** branch `claude/journal-design-tv0uqe`, where the design was
+  originally built. Its files now live in the repo above; treat the branch as
+  history, not as the working copy.
+
+The repo is private because the journal is an unreleased product. Make it
+public when it is ready to sell, not before.
+
+### Related skill
+
+`phoenix-calculator` implements the 138° Phoenix sequence computationally —
+Swiss Ephemeris solar-transit solving, Phoenix Anno Mundi assignment, and the
+same ordinal notation this journal uses. Read it before building page x (The
+Phoenix) or any Personal Phoenix Point content, so the printed values and the
+calculator agree.
 
 ---
 

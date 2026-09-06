@@ -13,3 +13,6 @@
 [submodule "Components/bibliography"]
 	path = Components/bibliography
 	url = git@github.com:AnaSeahawk/bibliography.git
+[submodule "Components/solar-journal"]
+	path = Components/solar-journal
+	url = git@github.com:AnaSeahawk/solar-journal.git

@@ -21,6 +21,7 @@ Proposed in report 075 (June 28), carried unbuilt through reports 077, 079, and
 | Bibliography | `Components/bibliography` | public | Acquired texts by topic folder |
 | The Water of Life | `Components/the-water-of-life` | **public** | Open observational archive: contributor entries, methodology, templates |
 | The Vessel | `Components/the-vessel` | **private** | Everything operational, relational, intimate, or unreviewed |
+| The Solar Journal | `Components/solar-journal` | **private** | The journal as a product: artboards, canvas, published design. Part of The Living Year. Private until release. |
 
 `aether` being public is the single most-missed fact in this archive's history.
 Five analyst reports reached it carrying private material before anyone noticed.

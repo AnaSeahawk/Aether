@@ -189,9 +189,12 @@ equinoxes and solstices on the sine wave).
 
 ### Masculine and feminine polarity
 
-Lives on the **Degree Key page**, not the Grammar page — the key's table
-already carries a polarity column, so the explanation sits with the
-evidence and the reader can read the alternation straight down it.
+Lives on the **Grammar of the Signs page** with the elements and the
+modalities — the three patterns are one lesson and belong together.
+(It was tried on the Degree Key page and moved back: the key was already
+the widest, densest page in the front matter.) The chip row that once
+illustrated it is gone for good; the key's polarity column shows the
+alternation sign by sign.
 
 
 The signs alternate: Aries is masculine, Taurus is feminine, Gemini
@@ -441,7 +444,20 @@ declination** — not a circle, not semicircles.
 
 The twelve signs are marked along the wave.
 
-### The four quarters (cardinal points)
+### Seasons and the four quarters
+
+The Degree Key page carries the seasonal table — each quarter is 90º,
+opening on a cardinal point: Spring 1º–90º, Summer 91º–180º, Autumn
+181º–270º, Winter 271º–360º. Season names are northern-hemisphere; the
+page says so, and notes that south of the equator the degrees hold while
+the seasons invert.
+
+**Quarter is a tracked field on every entry** — it replaced "Light",
+which Ana removed. Entries record: sun degree, moon degree + phase, year,
+location, solar time, quarter, train time. There is no "light" field and
+no printed example entry.
+
+### The four cardinal points on the wave
 
 The sine wave is structured by four cardinal points — the solstices
 and equinoxes. These are the backbone of the year:
@@ -880,8 +896,8 @@ Front matter / codebook (11 pages built in artifact):
 - [x] Page iii — Eight Moon Phases: phase visuals, soli-lunar types, ☉☽ calculation
 - [x] Page iv — Your Birth & Solar Return: birth degree, location, return tracking
 - [x] Page v — The Glyphs: zodiac signs, planets (incl. Pluto bident), nodes, aspects, ordinal indicator
-- [x] Page vi — The Degree Key: 12-sign reference table + polarity
-- [x] Page vii — Grammar of the Signs: elements, modalities
+- [x] Page vi — The Degree Key: 12-sign reference table + the four quarters
+- [x] Page vii — Grammar of the Signs: elements, modalities, polarity
 - [x] Page viii — The Zodiac Man: body correspondence (placeholder for drawn figure)
 - [x] Page ix — The Notation: Annus Mundi, date format, complete timestamp
 - [x] Page x — The Phoenix: 138/552 architecture, Personal Phoenix Point

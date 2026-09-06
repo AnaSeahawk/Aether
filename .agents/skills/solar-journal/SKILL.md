@@ -189,6 +189,11 @@ equinoxes and solstices on the sine wave).
 
 ### Masculine and feminine polarity
 
+Lives on the **Degree Key page**, not the Grammar page — the key's table
+already carries a polarity column, so the explanation sits with the
+evidence and the reader can read the alternation straight down it.
+
+
 The signs alternate: Aries is masculine, Taurus is feminine, Gemini
 is masculine, and so on through the entire zodiac. This alternation
 produces a rhythm — active/receptive, electric/magnetic — that runs
@@ -875,8 +880,8 @@ Front matter / codebook (11 pages built in artifact):
 - [x] Page iii — Eight Moon Phases: phase visuals, soli-lunar types, ☉☽ calculation
 - [x] Page iv — Your Birth & Solar Return: birth degree, location, return tracking
 - [x] Page v — The Glyphs: zodiac signs, planets (incl. Pluto bident), nodes, aspects, ordinal indicator
-- [x] Page vi — The Degree Key: full 12-sign reference table
-- [x] Page vii — Grammar of the Signs: elements, modalities, polarity
+- [x] Page vi — The Degree Key: 12-sign reference table + polarity
+- [x] Page vii — Grammar of the Signs: elements, modalities
 - [x] Page viii — The Zodiac Man: body correspondence (placeholder for drawn figure)
 - [x] Page ix — The Notation: Annus Mundi, date format, complete timestamp
 - [x] Page x — The Phoenix: 138/552 architecture, Personal Phoenix Point
@@ -894,6 +899,16 @@ Repeating sections (×12, one per sign — not yet started):
 
 These decisions were made during artifact development and should not
 be revisited without reason.
+
+### Don't repeat the zodiac glyphs
+
+The twelve sign glyphs appear on the sine wave, the phase page, the
+degree key, the element and modality tables, and the body map. That is
+enough. Two full repetitions have been removed for earning no new
+information: the zodiac row on the Glyphs page, and the alternating
+light/dark chip row that illustrated polarity. Before adding another
+set of twelve, ask what it tells the reader that the table beside it
+does not.
 
 ### Monochrome glyphs
 

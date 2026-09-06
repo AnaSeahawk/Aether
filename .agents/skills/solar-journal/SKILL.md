@@ -452,6 +452,31 @@ opening on a cardinal point: Spring 1º–90º, Summer 91º–180º, Autumn
 page says so, and notes that south of the equator the degrees hold while
 the seasons invert.
 
+### Solar time is looked up, not observed
+
+An earlier draft said "Observed, not looked up." That was reversed on
+Ana's instruction (2026-09-07) and the reason matters: the point of
+recording solar time is to *see the gap* between solar noon and clock
+noon. You cannot see a gap you estimated — you have to look up real
+figures for your coordinates.
+
+**Terms, verified:** the body's ~24-hour cycle entrained by light is the
+**circadian rhythm**. The strain of living out of step with it is
+**social jetlag**, coined by chronobiologist Till Roenneberg in 2006.
+Chronobiology frames it as three clocks — the social clock (local time),
+the sun clock (light and dark), the biological clock (physiology) — which
+is the journal's own distinction arrived at independently.
+
+**Spain, verified:** switched GMT → CET on 16 March 1940 under Franco to
+align with Berlin, and never switched back, though most of the country
+lies west of Greenwich. Computed for the journal's own example
+coordinates (36.72ºN, 4.42ºW), solar noon falls near 13:17 in midwinter
+and 14:19 in high summer — a gap of 1h17m to 2h19m.
+
+Keep the posture: name the gap, give the reader the means to measure
+their own, and stop. Do not argue with the clock, and do not list
+diseases — "the strain of that mismatch" is as far as the journal goes.
+
 **Quarter is a tracked field on every entry** — it replaced "Light",
 which Ana removed. Entries record: sun degree, moon degree + phase, year,
 location, solar time, quarter, train time. There is no "light" field and

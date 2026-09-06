@@ -1,8 +1,8 @@
 # Aether Agent Instructions
 
-These instructions guide AI agents working in the `anaseahawk/aether` seed repo. Keep the repo clean, predictable, and easy for Ana Seahawk to extend.
+These instructions guide Codex agents working in the `anaseahawk/aether` seed repo. Keep the repo clean, predictable, and easy for Ana Seahawk to extend.
 
-All agents — Claude, Codex, Gemini, and others — should read this file before making any changes.
+Codex agents should read this file before making any changes.
 
 ---
 
@@ -51,8 +51,6 @@ Load only the skill files the work actually triggers:
   transcript, or publishing drafts (`tools/mother_spirit_video`).
 - Read `.agents/skills/passwords/SKILL.md` before any task involving passwords,
   API tokens, credentials, or `gopass`.
-- Read `.agents/skills/remember/SKILL.md` whenever the psyche asks to continue,
-  resume, or remember another thread or session.
 - Do not scan every skill file unless the task is explicitly about the skill
   system itself.
 
@@ -100,10 +98,9 @@ Never use delegation to bypass a safety, consent, or review gate.
 Always select the subagent model and thinking effort explicitly. Do not accept
 an automatic model choice and do not silently substitute a different model.
 
-| Parent surface | Lightweight retrieval/mechanical work | Standard delegated judgment | Psyche-authorized higher reasoning |
-|---|---|---|---|
-| Codex | GPT-5.6 Luna, low reasoning | GPT-5.6 Luna, extra-high reasoning | GPT-5.6 Terra, high reasoning |
-| Claude | Claude Sonnet 4.6, light thinking | Claude Sonnet 4.6, high thinking | Claude Opus 4.6, high thinking |
+| Lightweight retrieval/mechanical work | Standard delegated judgment | Psyche-authorized higher reasoning |
+|---|---|---|
+| GPT-5.6 Luna, low reasoning | GPT-5.6 Luna, extra-high reasoning | GPT-5.6 Terra, high reasoning |
 
 Use the lightweight setting whenever the assignment is primarily retrieval or
 the application of decisions already made. Use the standard setting only when
@@ -118,14 +115,6 @@ correspond to the names above. If the requested model or effort is unavailable,
 do not choose a higher model automatically. Keep the work in the parent when
 practical; otherwise tell the psyche what is unavailable and ask which fallback
 to use.
-
-### Remembering another thread
-
-When the psyche asks to continue or remember a thread, load the `remember`
-skill before acting on that thread. Retrieval belongs to a lightweight
-subagent: Luna with low reasoning in Codex, or Sonnet 4.6 with light thinking
-in Claude. The parent receives a compact handoff and continues the work in the
-current conversation without loading the raw transcript into its own context.
 
 ---
 

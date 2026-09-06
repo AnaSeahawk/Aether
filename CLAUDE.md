@@ -1,11 +1,16 @@
 # CLAUDE.md
 
-All operating instructions for agents working in this repo live in [`AGENTS.md`](AGENTS.md).
+These instructions guide Claude working in the `anaseahawk/aether` seed repo.
+Keep the repo clean, predictable, and easy for Ana Seahawk to extend.
 
-Read `AGENTS.md` before making any changes. This file exists as a Claude Code entry point; canonical instructions are in `AGENTS.md` so that all agents (Codex, Gemini, Claude, etc.) share the same operating context.
+Claude skills live in `.claude/skills/`. Keep them self-contained there; do not
+symlink them to another harness's skill tree.
 
 For retrieval, transcript recovery, file discovery, and mechanical application
-of already-made decisions, delegate to Claude Sonnet 4.6 with light thinking.
-When Ana asks to continue, resume, or remember another thread, load
-`.claude/skills/remember/SKILL.md` and use its Sonnet-light remembering route
-before continuing the work in the present conversation.
+of already-made decisions, delegate to Sonnet with light thinking. Use Sonnet
+with high thinking only when the bounded subtask itself requires independent
+judgment. Use a higher-reasoning model only when Ana explicitly authorizes it.
+
+Subagents receive narrow context and return concise results. A subagent that
+changes files claims its exact paths, validates its work, commits and pushes its
+owned change, and releases its lane before returning.

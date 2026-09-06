@@ -10,24 +10,18 @@ searches and raw history.
 
 ## Delegate the remembering pass
 
-Send one small, read-only subagent with the minimum context needed to identify
-the prior thread.
+Send one small, read-only Sonnet subagent with light thinking. Give it only the
+supplied thread identifier, title, topic clues, and the handoff format below.
+Do not pass the full current conversation.
 
-Use the registered `remember` agent type. Its profile fixes the model to
-GPT-5.6 Luna with `low` reasoning.
-
-Select the model and effort explicitly. Do not pass the full current
-conversation. Give the subagent only the supplied thread identifier, title,
-topic clues, and the handoff format below.
-
-If the requested lightweight agent or effort is unavailable, do not silently
-substitute a stronger model. Say so briefly and perform the narrow retrieval in
-the parent when practical.
+If the requested subagent is unavailable, do not silently substitute a larger
+model. Say so briefly and perform the narrow retrieval in the parent when
+practical.
 
 ## Find the thread
 
 If Ana supplies a thread or session identifier, resolve that identifier first.
-Search recent tasks and transcripts before older records.
+Search recent threads and transcripts before older records.
 
 If she does not supply an identifier, search recent-first for the best semantic
 match to her words. Prefer the most recent conversation whose actual content
@@ -55,6 +49,5 @@ the minimum needed to resume safely.
 ## Continue in the present conversation
 
 The parent absorbs the handoff, verifies repository or external state when the
-next action depends on it, and resumes the unfinished work here. Do not create
-a new user-owned task merely to perform remembering. Do not act inside the old
-thread unless Ana explicitly asks to send something there.
+next action depends on it, and resumes the unfinished work here. Do not act
+inside the old thread unless Ana explicitly asks to send something there.

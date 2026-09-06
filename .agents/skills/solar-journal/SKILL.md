@@ -384,14 +384,24 @@ and moon are, run the formula, and record the result.
 
 > ☉☽ = Moon° − Sun° (add 360 if the result is negative)
 
-**Sign base degrees (for converting to absolute degrees):**
+**Each sign's first degree (for converting to absolute degrees):**
 
 | ♈ | ♉ | ♊ | ♋ | ♌ | ♍ | ♎ | ♏ | ♐ | ♑ | ♒ | ♓ |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 0 | 30 | 60 | 90 | 120 | 150 | 180 | 210 | 240 | 270 | 300 | 330 |
+| 1º | 31º | 61º | 91º | 121º | 151º | 181º | 211º | 241º | 271º | 301º | 331º |
 
-To convert any position to absolute degrees: sign base + degree
-within sign. Example: ♏ 10° → 210 + 10 = 220°.
+To convert any position to absolute degrees:
+
+> absolute = the sign's first degree + (your degree − 1)
+
+Example: ♏ 10º → 211 + (10 − 1) = 220º.
+
+**Never print a 0 in this table.** An earlier version listed base
+offsets (♈ 0, ♉ 30, …), which is the same arithmetic but puts a zero
+degree in a journal whose whole premise is that there isn't one. Ana
+caught this: "There is no zero. It's ordinal. It's not one. It's the
+first." The offsets also contradicted the Degree Key, which already
+gives Aries as 1º–30º. Use first-degree values and carry the −1.
 
 **Worked example:**
 

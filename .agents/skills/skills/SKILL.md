@@ -10,9 +10,10 @@ Maintain Codex skills as self-contained packages under `.agents/skills/`.
 ## Surface boundary
 
 Create each skill at `.agents/skills/<name>/SKILL.md`. Do not place instructions
-for another harness in this tree, and do not symlink this tree into another
-harness's skill directory. Similar skills on different agent surfaces are
-independent implementations, even when they serve the same user workflow.
+for another harness in this tree. A skill may be symlinked into another skill
+tree only when the instructions are genuinely identical and contain no
+harness-specific model, tool, path, or behavior. Similar skills that differ on
+any of those points must remain independent implementations.
 
 ## Creation workflow
 

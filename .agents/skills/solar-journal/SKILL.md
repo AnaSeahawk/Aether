@@ -507,8 +507,43 @@ Plus ruled writing lines for the journal entry itself.
   - `--rule` `#d4c9b8` — subtle dividers
   - `--faint` `#f0ebe2` — callout backgrounds
   - `--white` `#faf8f4` — lightest surface
-- **Page size:** 612×792px (US Letter)
-- **Side margins:** 56px
+- **Trim size:** **A5 — 148 × 210 mm.** Chosen by Ana 2026-09-06.
+  Author in physical units (mm, pt) with `@page { size: 148mm 210mm }`.
+  Never author page geometry or type in px again.
+- **Margins:** 13mm top, 12mm sides, 11mm bottom → 124mm content width
+- **Type floor: 7pt.** Nothing smaller, anywhere, including inside SVG.
+  Body 10pt, small 8pt, labels 7.5–9pt.
+- **SVG diagrams:** viewBox 500 units across a 124mm measure = 0.248mm
+  per unit, so a label needs ≥10 units to clear 7pt. Check this whenever
+  a diagram is added.
+
+**Why this matters:** the front matter was originally built on a fixed
+612×792 *pixel* canvas with no print stylesheet. Since a CSS px is 1/96in,
+that printed at 6.38 × 8.25in — not US Letter, as this skill previously
+claimed — with body type at 8.2pt and diagram labels at 4.1pt, below
+what most presses hold. Corrected 2026-09-06.
+
+### Three presentations, one source
+
+Print is the real page. Screen and phone are their own layouts, not a
+shrunken copy: desktop zooms the A5 page up, phone reflows to a single
+column with page geometry dropped. Do not try to make them identical —
+the phone version will be bad if you do.
+
+### Fillable
+
+Ruled blanks are real `<input>` elements styled as rules: they print as
+empty lines and are typeable on screen. Entries persist per viewer via
+`localStorage`, and via the `db` capability when the viewer's runtime
+grants it (`journal/front-matter`). The page must work with neither.
+
+### The degree mark renders inconsistently
+
+Every degree in the source carries º — that was never the problem. The
+ordinal indicator is simply *drawn* differently by Cormorant Garamond,
+Cormorant SC, and IBM Plex Sans, so the same character looks like three
+different marks on one page. Fixed by binding U+00BA to a single family
+with `@font-face { unicode-range: U+00BA }`.
 - **Style notes:** "train time" is always lowercase; degree ranges use
   en dash (–); dark theme is fully supported with token redefinition
 

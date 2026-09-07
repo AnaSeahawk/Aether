@@ -291,10 +291,12 @@ Every content file carries YAML frontmatter with three tags:
 
 - `status` — draft/review/approved/published
 - `visibility` — `private` | `community` | `public`
-- `claim_tier` — where a claim's authority comes from: `personal` (Ana's own
-  experience or interpretation), `observational` (observed and recorded), or
-  `evidential` (external checkable sources, carried with the file). Defined in
-  `.agents/skills/curator/SKILL.md`.
+- `claim_tier` — where a claim's authority comes from, and so what it takes to
+  release it: `personal` (Ana's own experience or interpretation),
+  `observational` (observed and recorded), `evidential` (external checkable
+  sources, carried with the file), or `relational-source` (a named
+  collaborator's material — released only by their consent, never by tidying).
+  Defined in `.agents/skills/curator/SKILL.md`.
 
 **Only `community` and `public` files are candidates for publishing.** `visibility` metadata is internal only — GitHub repo privacy settings control actual access, not these tags.
 

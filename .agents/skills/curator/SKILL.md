@@ -56,16 +56,24 @@ claim_tier: personal | observational | evidential
 ---
 ```
 
-**The three claim tiers** name where a claim's authority comes from:
+**The four claim tiers** name where a claim's authority comes from — and
+therefore what it would take to release it:
 
-| Tier | The claim rests on | Typical content |
-|---|---|---|
-| `personal` | Ana's own experience, account, or interpretation | Backstory, field notes, orientation writing |
-| `observational` | Something observed and recorded | Experiment reports, contributor observations |
-| `evidential` | External, checkable sources — published literature, documented history, computation | Research modules, cited findings, sourced history |
+| Tier | The claim rests on | Released by | Typical content |
+|---|---|---|---|
+| `personal` | Ana's own experience, account, or interpretation | Ana's judgement | Backstory, field notes, orientation writing |
+| `observational` | Something observed and recorded | Ana's judgement | Experiment reports, contributor observations |
+| `evidential` | External, checkable sources — published literature, documented history, computation | Nothing; it verifies itself | Research modules, cited findings, sourced history |
+| `relational-source` | A named person inside a collaboration | **That person's consent** | Water Magicians transcripts, intake reports, collaborator packets |
 
 `evidential` is the tier for material a reader could verify without trusting
 anyone in the archive. It carries its sources with it.
+
+`relational-source` is the one tier that is a **gate, not a description**. It
+marks material whose release is bound by someone else's consent rather than by
+Ana's judgement — see the Water Magicians watchpoint in
+`protocols/active-surfaces.md`. Never downgrade a file out of this tier to tidy
+metadata: the tag is doing safety work.
 
 **Only `community` and `public` files are candidates for publishing.**
 `visibility` is internal metadata — GitHub repo privacy controls actual access.

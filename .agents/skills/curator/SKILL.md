@@ -56,6 +56,17 @@ claim_tier: personal | observational | evidential
 ---
 ```
 
+**The three claim tiers** name where a claim's authority comes from:
+
+| Tier | The claim rests on | Typical content |
+|---|---|---|
+| `personal` | Ana's own experience, account, or interpretation | Backstory, field notes, orientation writing |
+| `observational` | Something observed and recorded | Experiment reports, contributor observations |
+| `evidential` | External, checkable sources — published literature, documented history, computation | Research modules, cited findings, sourced history |
+
+`evidential` is the tier for material a reader could verify without trusting
+anyone in the archive. It carries its sources with it.
+
 **Only `community` and `public` files are candidates for publishing.**
 `visibility` is internal metadata — GitHub repo privacy controls actual access.
 

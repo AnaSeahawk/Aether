@@ -229,6 +229,25 @@ to feet. This is one of the oldest astrological systems — the
 The journal presents this as a diagram — the Zodiac Man — so the
 reader can see the correspondence visually.
 
+### The drawing (settled 2026-09-07)
+
+- **The traditional male figure.** Faithful to the manuscript *Homo
+  Signorum*. The page keeps the title *The Zodiac Man*. This is a
+  deliberate exception to the feminine direction the website artwork has
+  taken (the Shivambu plate, the Jar's feminine v2) — the lineage claim
+  is worth more here than visual consistency with the web archive.
+- **Fine line engraving.** Single-weight contour line, no tone, no
+  hatching. It has to hold at A5 in one ink and sit beside the sine wave
+  and moon diagrams, which are hairline work. A tonal illustration would
+  print grey on Tomoe River-class stock and break that register.
+
+**The boundary to hold.** This is the one page that can drift into
+medical territory. It maps signs to body regions as an old
+correspondence system, not as diagnosis and not as an invitation to
+record symptoms. The historical Zodiac Man was used for bloodletting
+timing; that lineage is not this journal's, and should not be drawn in
+or referred to.
+
 ---
 
 ## Glyph legend / codebook

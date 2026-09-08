@@ -582,7 +582,29 @@ but a record of where you entered the cycle.
 
 ---
 
-## Tracks recorded per daily entry
+## This is not a day planner
+
+Settled by Ana 2026-09-08, and it governs the whole body of the book.
+
+The reader does **not** write every day, and does not work the coordinates
+every time. They write when they have something to record — sometimes days
+apart. A woman may do the calculation once at the start of her cycle. The
+journal is for seeing seasons and patterns, not for keeping a streak.
+
+**So the body pages are not daily-entry pages.** Do not build 360 dated
+slots. Do not name a template `daily-entry`. Do not write copy that
+presumes daily writing — "every day you write" has been removed from the
+front matter for this reason.
+
+An entry begins when the reader begins it. The coordinates are recorded at
+the moment of writing, whenever that is. Page format still to be designed.
+
+**Etymology worth using:** *journal* and *journey* are the same word —
+Latin *diurnus*, daily, from *diēs*, day, through Old French *jour*.
+*Jornal*, a day's record; *jornee*, a day's travelling. The word is built
+on the day, and one degree is one day.
+
+## Tracks recorded per entry
 
 Each daily entry captures:
 

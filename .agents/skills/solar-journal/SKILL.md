@@ -451,6 +451,50 @@ systems (solar year and lunation cycle) presented in parallel.
 
 ---
 
+## The fourfold — alchemy and astrology as one cycle
+
+Confirmed by Ana 2026-09-08. **Albedo opens at Aries 1º.** The four
+alchemical stages are quarters of the same 360º the journal already counts.
+
+| Stage | Degrees | Season | Moon | Breath |
+|---|---|---|---|---|
+| **nigredo** | 271º–360º | Winter | Last Quarter → Balsamic, the dark | emptied, before the turn |
+| **albedo** | 1º–90º | Spring | **New** → Crescent | inhaling, filling |
+| **citrinitas** | 91º–180º | Summer | First Quarter → Gibbous | **full**, held |
+| **rubedo** | 181º–270º | Autumn | **Full** → Disseminating | exhaling, releasing |
+
+### The cardinal points are the same four moments in every rhythm
+
+- **♈ Aries 1º** — new moon; mid-inhalation, air entering fastest; the
+  sprouting; the new year. Anything new is Aries.
+- **♋ Cancer 1º** — first quarter; lungs full; maximum declination north.
+- **♎ Libra 1º** — full moon; mid-exhalation, air leaving fastest; the
+  half-year, where growing turns to shedding.
+- **♑ Capricorn 1º** — last quarter; lungs empty; sun southernmost.
+
+**The declination wave is the breath.** Lung volume and solar declination
+are the same curve in the same phase — minimum at Capricorn, steepest
+ascent at Aries, maximum at Cancer, steepest descent at Libra. Page ii is
+already a picture of the breath at the scale of a year. Say so; don't
+present it as an analogy.
+
+**The journal already encodes this.** The printed phase boundaries land
+exactly on the cardinal degrees — New at 1º, First Quarter at 91º, Full at
+181º, Last Quarter at 271º. The correspondence has been in the numbers all
+along and has never been stated. Stating it is the work.
+
+### Correction outstanding
+
+`the-vessel/in-development/alchemy-of-return/living-year/fourfold-cycle-across-rhythms.md`
+has the solar column right and its **lunar and breath columns offset by a
+quarter** — it reads as though the new moon were nigredo. Correct it to the
+table above.
+
+Its menstrual column (menstruation nigredo, follicular albedo, ovulation
+citrinitas, luteal rubedo) is a fifth rhythm on the same wheel.
+
+---
+
 ## Visual language — the sine wave
 
 The zodiac year is represented as a **sine wave of the sun's

@@ -5,10 +5,6 @@ title: "Founding Document"
 
 **Date:** 2026-08-29
 **Founder and steward:** Ana Seahawk
-**AI-assisted drafting:** Claude Opus 4.6
-
-All methodological and editorial decisions remain the responsibility of
-the archive steward.
 
 ---
 
@@ -194,10 +190,9 @@ available:
 
 ---
 
-## What this conversation established
+## What the founding research established
 
-This founding document was written during the first working session on the
-archive. The conversation between Ana Seahawk and Claude Opus 4.6
+The research conducted during the archive's first working session
 on 2026-08-29 established:
 
 - The archive's purpose and position
@@ -205,12 +200,9 @@ on 2026-08-29 established:
 - The protective language model (observe, don't diagnose)
 - The problem with diagnostic labels as organizing categories
 - The current state of the evidence gap (no controlled clinical trial identified)
-- The contributor template design
+- The contribution model
 - The technical foundation (git repo, static site, web form)
-- The minimum viable product: template + repo + entries + a searchable page
-
-The founding conversation is retained privately by the archive steward
-as part of the project's methodological record.
+- The minimum viable product: form + repo + observations + a searchable page
 
 ---
 

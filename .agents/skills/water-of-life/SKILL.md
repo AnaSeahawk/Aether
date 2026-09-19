@@ -13,7 +13,7 @@ description: Intake, processing, and stewardship skill for The Water of Life —
 
 Use this skill when:
 
-- Processing a form submission into a published observation
+- Preparing a form submission for review and approved publication
 - Formatting an interview transcript into an observation
 - Validating observations for framing compliance
 - Working on the website or archive structure
@@ -146,21 +146,36 @@ Optional additions if the contributor provided them:
 
 ### Processing a form submission
 
-1. Receive submission from Formspree
-2. Format into observation using the template above
-3. Preserve the contributor's language — first person, their intensity
-4. Publish to `site/content/entries/`
-5. Build and push (`hugo` then `git push`)
-6. Delete raw submission from Formspree and email
+1. Receive the submission within the authorized intake scope and keep the raw
+   record private.
+2. Prepare a private draft using the template above. Preserve the contributor's
+   first-person language and intensity; apply the sensitive-content skill to
+   its working location. Do not place an unapproved draft in the public repo.
+3. Verify contributor consent for the proposed text and public display identity.
+   A submission alone is not proof of consent beyond what its form recorded.
+4. Prepare and check the proposed publication. Use Ana's explicit approval for
+   that release if already given; otherwise present the completed draft for it.
+5. Once the release is authorized, install the observation in
+   `site/content/entries/`, build, review the output, and commit/push only the
+   approved paths under the coordination protocol.
+6. Retain the raw Formspree submission and email unless Ana separately
+   authorizes deletion of those exact records. Verify the retained derivative
+   before carrying out an authorized deletion.
 
 ### Processing an interview
 
-1. Transcribe the recording
+1. Transcribe the recording using the audio-transcription skill and its upload
+   authorization requirements; keep the recording and working draft private.
 2. Extract the observation from the conversation — what they did, what
    they noticed, what else was happening
 3. Format in first person using their words
-4. Share draft with contributor for approval before publishing
-5. Once approved, publish and delete the audio recording
+4. Prepare the draft for contributor review. Send it only when communication
+   with that contributor is explicitly authorized; otherwise return it to Ana.
+5. Verify contributor approval and Ana's separate release approval, honoring
+   either when already given for this exact release. Then publish using the
+   checked form-submission release steps above.
+6. Preserve the recording until the transcript is committed, pushed, and
+   independently verified. Delete it only on a separate explicit request.
 
 ---
 
@@ -179,8 +194,10 @@ pairs. If that's needed someday, build it then.
 Contributors choose how they appear: a display name or anonymous (the
 default). The form collects no email addresses.
 
-Audio recordings from interviews are stored privately until the
-transcript is reviewed and approved by the contributor, then deleted.
+Audio recordings and raw submissions remain private. Contributor approval and
+publication do not authorize source deletion. Follow a separately authorized
+retention/deletion instruction for the exact records; surface any conflict with
+an existing consent or retention commitment before further processing.
 
 Contact for data rights is through [anaseahawk.com](https://anaseahawk.com),
 not a published email address.

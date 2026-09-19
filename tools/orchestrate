@@ -20,6 +20,8 @@ Without --lane, the role keeps its original single-lane behavior.
 
 Paths: absolute paths to files or directories.
 Claiming a directory covers all files under it.
+An active lane cannot be replaced. Release your own lane before changing paths.
+Concurrent sessions must use unique lanes. Claims and releases require flock.
 
 Lock files (<role>.lock or <role>--<session>.lock) are plain text.
 Empty means idle.
@@ -76,6 +78,16 @@ normal_path() {
   realpath -m "$1"
 }
 
+lock_workspace() {
+  command -v flock >/dev/null 2>&1 || {
+    printf '%s\n' 'flock is required for atomic coordination updates.' >&2
+    exit 69
+  }
+  # Keep one stable guard inode; lock records themselves are atomically renamed.
+  exec 9>"$workspace/.orchestrate.guard.lock"
+  flock -x 9
+}
+
 write_lock() {
   local role="$1"
   local lane="$2"
@@ -115,6 +127,8 @@ paths_overlap() {
   local left right
   left="$(normal_path "$1")"
   right="$(normal_path "$2")"
+  [ "$left" = / ] && return 0
+  [ "$right" = / ] && return 0
   [ "$left" = "$right" ] && return 0
   [[ "$left" == "$right"/* ]] && return 0
   [[ "$right" == "$left"/* ]] && return 0
@@ -190,11 +204,23 @@ claim() {
     exit 64
   fi
 
-  write_lock "$role" "$lane" "$reason" "${paths[@]}"
-  print_state
-
   local own_lock peer_lock peer_path own_path conflict=0
   own_lock="$(lock_path "$role" "$lane")"
+  if [ -s "$own_lock" ]; then
+    printf 'Lane %s is already active; claim unchanged. Use a unique lane, or release your own lane before changing paths.\n' \
+      "$(lock_identity "$own_lock")" >&2
+    exit 2
+  fi
+  for own_path in "${paths[@]}"; do
+    if [[ "$own_path" != /* || "$own_path" == *$'\n'* || "$own_path" == *$'\r'* || "$own_path" == *' #'* || "$own_path" =~ [[:space:]]$ ]]; then
+      printf '%s\n' 'Paths must be absolute and representable as one lock record (no trailing whitespace or " #").' >&2
+      exit 64
+    fi
+  done
+  if [[ "$reason" == *$'\n'* || "$reason" == *$'\r'* ]]; then
+    printf '%s\n' 'Claim reasons must occupy one line.' >&2
+    exit 64
+  fi
   while IFS= read -r peer_lock; do
     [ "$peer_lock" = "$own_lock" ] && continue
     while IFS= read -r peer_path; do
@@ -210,11 +236,11 @@ claim() {
   done < <(all_lock_paths)
 
   if [ "$conflict" -ne 0 ]; then
-    write_lock "$role" "$lane" ''
-    printf '%s\n' 'Claim cleared because of overlap.'
-    print_state
+    printf '%s\n' 'Claim rejected; existing claims unchanged.' >&2
     exit 2
   fi
+  write_lock "$role" "$lane" "$reason" "${paths[@]}"
+  print_state
 }
 
 release() {
@@ -241,14 +267,17 @@ case "${1:-}" in
   claim)
     shift
     [ "$#" -ge 2 ] || { usage >&2; exit 64; }
+    lock_workspace
     claim "$@"
     ;;
   release)
     shift
     [ "$#" -ge 1 ] || { usage >&2; exit 64; }
+    lock_workspace
     release "$@"
     ;;
   status)
+    lock_workspace
     print_state
     ;;
   -h|--help|help|'')

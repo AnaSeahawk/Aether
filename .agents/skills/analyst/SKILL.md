@@ -22,8 +22,13 @@ pick up exactly where this one ended without re-reading everything.
 
 ## Owned surface
 
-- `reports/` — the root reports directory and all role subdirectories
-- Reports filed in `reports/analyst/`
+- Write public reports in `reports/analyst/`, or the assigned session subdirectory.
+- Read other role reports; their directories remain owned by those roles.
+- A coordinating analyst may write a consolidated cross-role report directly
+  in `reports/` using the global sequence.
+
+All these Aether paths are public. For private continuity and ordinary read-only
+answers, follow `AGENTS.md` section 11; a role-owned lane is not private storage.
 
 The analyst reads freely across all surfaces. It does not draft prose for
 publication, reorganize bibliography, or make structural website edits.

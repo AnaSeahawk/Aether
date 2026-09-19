@@ -54,17 +54,24 @@ Use the `my-email` Gopass entry as the default login for every new password
 entry unless the user explicitly supplies a different login. Store its content
 as a `login: <email>` line.
 
-After generating a new password, append that metadata without displaying or
-copying the email:
+For a new entry, generate the password and append that metadata without
+displaying the email. Run from the Aether root:
 
 ```sh
-set -o pipefail
+set -euo pipefail
 gopass generate <domain>/login 32
-gopass show -o my-email | gopass insert --append <domain>/login
+gopass show -o my-email | python3 .agents/skills/passwords/scripts/append_login.py <domain>/login
 ```
 
 Use `--force` only when the user explicitly asks to replace an existing
 password.
+
+The bundled consumer validates a bounded single-line input, prefixes `login:`,
+and sends it to `gopass insert --append` over stdin. Store output is suppressed;
+failure returns a generic message and nonzero exit status. Use this append step
+only on the entry just created; do not blindly add duplicate login fields to an
+existing entry. Validate the helper with dummy inputs, never by displaying real
+metadata or passwords.
 
 ---
 
@@ -79,7 +86,10 @@ set -o pipefail
 gopass show -o <gopass-path> | <consumer-that-reads-stdin>
 ```
 
-This is the only approved shape. Variations:
+Use this shape for CLI secret transfer. A purpose-built consumer may retrieve
+a secret internally and use it in that same process, as the hosted transcription
+client does, provided it never exposes the value through output, arguments,
+environment variables, or files. CLI variations:
 
 ```sh
 # Feed a password to a CLI that reads from stdin
@@ -96,9 +106,9 @@ gopass show -o site/api-token | consumer --token-fd 0
 Never use any of these to move a secret:
 
 - **Command substitution** — `$(gopass show -o ...)` captures the value
-  into the shell, which the agent can see.
-- **Shell variables** — `TOKEN=$(...)` or `export TOKEN=...` exposes the
-  value in the environment, in `argv`, and to `ps`.
+  into the shell outside the consuming program.
+- **Shell variables** — shell expansion, tracing, export, or later argument
+  construction can expose them. Keep secret handling inside the consumer.
 - **Arguments** — `curl -u user:$(gopass show -o ...)` puts the secret
   in `argv`.
 - **Environment variables set by the agent** — same as shell variables.
@@ -118,12 +128,9 @@ Never use any of these to move a secret:
 Confirm success without decrypting:
 
 - **Exit code** — `echo $?` after the pipe.
-- **Byte count** — `gopass show -o <path> | wc -c` prints a count, not
-  the value.
 - **Entry exists** — `gopass ls | grep -F <name>` lists names only.
-- **Entry metadata** — `gopass show <path> | head -1` prints only the
-  first line if the entry has key-value metadata below the password, but
-  this is still risky. Prefer `gopass ls`.
+- **Entry metadata** — never print decrypted lines to verify a write. The first
+  line is normally the password. Use the consumer's exit status and entry names.
 
 ---
 
@@ -141,23 +148,14 @@ Use `gopass generate` so Gopass owns generation and storage. Confirm by
 
 ---
 
-## Wrapper pattern for programs that need environment variables
+## Programs that require environment variables
 
-When a program requires a secret in an environment variable, wrap the
-invocation so the secret is fetched at exec time:
-
-```sh
-set -o pipefail
-MYSECRET="$(gopass show -o <path>)" exec some-program
-```
-
-This is the one case where command substitution is acceptable — the value
-is consumed immediately by `exec` and never reaches the agent. The agent
-must not run this command with output capture; it must be a fire-and-forget
-`exec` or a background launch.
-
-If the consumer is a long-running service, the wrapper belongs in a systemd
-unit or a shell script the user maintains — not in agent-generated commands.
+There is no shell-wrapper exception. Use a supported stdin/file-descriptor
+interface, or implement a purpose-built consumer that retrieves and uses the
+credential internally. Validate it with dummy values before accessing a real
+credential. If the program only accepts an environment variable, report that
+interface limitation and select or implement a supported integration within the
+authorized task; do not silently export a secret or delegate setup to Ana.
 
 ---
 

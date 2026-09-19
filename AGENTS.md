@@ -26,6 +26,15 @@ lane: `tools/orchestrate claim <role> --lane <session> <path> -- <reason>`.
 Release that same lane with
 `tools/orchestrate release <role> --lane <session>`.
 
+Never reuse an active lane or release another session's claim. Writer and
+curator responsibilities do not divide ownership within one file: only one
+session may edit that file at a time. Read-only inspection needs no edit claim;
+sensitivity and consent boundaries still apply.
+
+Shared instructions (`AGENTS.md`, protocols, and role skills) need exact-path
+claims too. Coordinate a pause with other affected sessions before changing
+them, and communicate the new rules before those sessions resume.
+
 See `protocols/orchestration.md` for the full coordination protocol.
 
 See `protocols/active-surfaces.md` for which repos are public, what must never
@@ -162,6 +171,15 @@ to use.
 - Make atomic changes. One intention per commit.
 - Summarize changes and test status in responses.
 - Do not modify files unrelated to the task.
+- Preserve pre-existing and unrelated changes. Stage explicit task-owned paths;
+  never use repository-wide or wildcard staging in a shared working tree.
+- Immediately before a commit, recheck `tools/orchestrate status`, confirm your
+  claims, inspect `git status`, and review the complete staged diff. Stop if
+  the index contains work outside the task; do not reset another session's work.
+- Concurrent editing agents should use separate worktrees/checkouts. When they
+  share a working tree, coordinate exclusive use of that repository's index and
+  HEAD from staging through commit. Path claims do not serialize Git operations.
+  A submodule has its own index and needs the same coordination.
 
 ## 8. Safety & Security
 - Do not hardcode secrets or tokens.
@@ -181,7 +199,16 @@ to use.
 
 ## 11. Report Protocol
 
-When a session-end response is longer than a few lines, write it to a numbered report file instead of (or in addition to) returning it inline. This lets Ana review the report at her own pace while the agent continues other work, and keeps a readable audit trail outside the chat harness.
+Write a numbered report for substantive changes or when Ana requests a durable
+review. Ordinary read-only answers may remain in chat. A report requirement
+never authorizes moving sensitive material into a public repository.
+
+Every `reports/` directory in Aether is public, including role and session
+lanes. Public reports carry bounded decisions, paths, and verification results.
+When private continuity is needed, use
+`Components/the-vessel/90-ops/agent-reports/<session>/` after verifying the
+destination repository is still private; claim that destination before writing.
+If privacy cannot be verified, keep the answer in chat and create no file.
 
 **Location:** Default role reports go in `reports/<role>/`; cross-role session
 intelligence may go in `reports/` at the repo root. A dynamic session lane
@@ -220,7 +247,12 @@ report into the global sequence after parallel work has finished.
 
 Keep inline responses short (a sentence or two pointing to the report file). The full detail lives in the file.
 
-**End-of-session commit and push:** When a session ends with any file changes, commit all edits and push before closing. Use an atomic, descriptive commit message. If multiple repos were touched (e.g. a submodule plus the parent), commit each independently in the correct order (inner repo first, then update the parent pointer) and push both.
+**End-of-session commit and push:** Commit and push only task-owned changes
+whose destination and release are authorized. Follow the staged-diff and
+coordination checks in section 7. Preserve unrelated work. If multiple repos
+were touched, commit and push the inner repo first, then its parent pointer.
+This rule does not grant publication authority or require a public artifact for
+a read-only or sensitive answer.
 
 **Stale report handling:** When any information in an existing report is found to be outdated or no longer accurate, delete that report file and replace it with a new one at the next available number. The replacement should contain only information that is still valid, rewritten to reflect the current state. Do not edit stale reports in place — remove and replace so the report index stays trustworthy.
 
@@ -308,6 +340,13 @@ Some files also carry optional astronomical frontmatter (`sun:`, `moon:`, `moon-
 2. **Checklist** — `Components/website/PUBLISH_CHECKLIST.md` is the 10-point pre-publish gate
 3. **Batch Records** — `Components/website/PUBLISH_BATCH_YYYY-MM-DD.md` log approvals
 4. Nothing is published without explicit user approval.
+
+Carry forward explicit approval already given for the same release; do not ask
+again merely because a later workflow step is reached. Complete preparation and
+verification before requesting any missing release approval. Contributor consent
+and evidence review are prerequisites where applicable, not substitutes for
+Ana's release approval. Publication approval does not authorize deletion of
+source media, submissions, or history; those require separate explicit scope.
 
 ### Sensitive Content
 

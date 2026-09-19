@@ -29,6 +29,10 @@ an essay is not.
 - `Components/website/PUBLISH_BATCH_YYYY-MM-DD.md` files
 - Reports filed in `reports/curator/`
 
+Role responsibilities do not split edit ownership inside a file. Claim each
+file exclusively for the task, coordinate handoff with the writer, and follow
+`protocols/orchestration.md` for shared-index staging and commits.
+
 The curator reads `Components/the-vessel/` to understand what's in the pipeline,
 but does not edit files there.
 
@@ -52,26 +56,25 @@ Every content file carries:
 ---
 status: draft | review | approved | published
 visibility: private | community | public
-claim_tier: personal | observational | evidential
+claim_tier: personal | observational | evidential | relational-source
 ---
 ```
 
-**The four claim tiers** name where a claim's authority comes from — and
-therefore what it would take to release it:
+**The four claim tiers** name where a claim's authority comes from and which
+review it needs. Every public release also requires Ana's explicit approval.
 
-| Tier | The claim rests on | Released by | Typical content |
+| Tier | The claim rests on | Review requirement | Typical content |
 |---|---|---|---|
 | `personal` | Ana's own experience, account, or interpretation | Ana's judgement | Backstory, field notes, orientation writing |
 | `observational` | Something observed and recorded | Ana's judgement | Experiment reports, contributor observations |
-| `evidential` | External, checkable sources — published literature, documented history, computation | Nothing; it verifies itself | Research modules, cited findings, sourced history |
+| `evidential` | External, checkable sources — published literature, documented history, computation | Verify the supporting sources | Research modules, cited findings, sourced history |
 | `relational-source` | A named person inside a collaboration | **That person's consent** | Water Magicians transcripts, intake reports, collaborator packets |
 
 `evidential` is the tier for material a reader could verify without trusting
 anyone in the archive. It carries its sources with it.
 
-`relational-source` is the one tier that is a **gate, not a description**. It
-marks material whose release is bound by someone else's consent rather than by
-Ana's judgement — see the Water Magicians watchpoint in
+`relational-source` adds a consent gate. Its release requires the named
+person's consent as well as Ana's release approval — see the Water Magicians watchpoint in
 `protocols/active-surfaces.md`. Never downgrade a file out of this tier to tidy
 metadata: the tag is doing safety work.
 
@@ -101,6 +104,11 @@ status: published + push
 
 Nothing is published without explicit user approval. When running the checklist,
 flag any point that cannot be confirmed; do not assume it passes.
+
+Honor explicit approval already given for the same release. Finish preparation
+and verification before requesting missing approval. Neither evidence review
+nor contributor consent authorizes publication on its own, and publication
+does not authorize source deletion or a history rewrite.
 
 ---
 

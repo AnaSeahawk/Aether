@@ -39,7 +39,25 @@ tools/orchestrate claim researcher --lane caraka-notes /absolute/path -- reason
 tools/orchestrate release researcher --lane caraka-notes
 ```
 
-See `protocols/orchestration.md` for the complete workflow.
+An active lane cannot be overwritten; failed claims preserve existing records.
+To change paths, pause edits, release your own lane, and claim the new set.
+The helper requires Bash, realpath, and util-linux `flock` to serialize updates.
+`ORCHESTRATE_WORKSPACE_ROOT` can select a shared registry for multiple checkouts.
+
+Use separate worktrees for concurrent editing, or coordinate exclusive staging
+and commits in each shared repository. Before committing, recheck claims and
+review the full staged diff; include only explicit task-owned paths. Claims do
+not enforce Git ownership or grant publication/deletion approval.
+
+Run the coordination and dummy-data metadata checks with:
+
+```bash
+bash tests/test_orchestrate.sh
+python3 -m unittest discover -s tests -p test_password_login.py
+```
+
+See `protocols/orchestration.md` for the complete workflow and `AGENTS.md`
+section 11 for public versus private report placement.
 
 ## Projects
 

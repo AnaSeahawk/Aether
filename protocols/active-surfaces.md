@@ -31,6 +31,12 @@ Five analyst reports reached it carrying private material before anyone noticed.
 **Public reports carry the cross-lane view. Lane detail is referenced by path,
 not copied.**
 
+All Aether report lanes are public, including per-session directories. Private
+continuity may be written under
+`Components/the-vessel/90-ops/agent-reports/<session>/` only after verifying that
+repository remains private and claiming the destination. If that check cannot
+be completed, leave the answer in chat. See `AGENTS.md` section 11.
+
 Report 087 stated this; reports 090, 091, and 092 exist because five earlier
 reports did not follow it. If a report would let a reader reconstruct a private
 lane's contents, it is in the wrong repo.

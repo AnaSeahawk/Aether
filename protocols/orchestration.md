@@ -3,11 +3,12 @@
 Coordinates multiple agents working in the same repo simultaneously. Simple
 mechanism: each agent claims its paths before editing and releases when done.
 Agents may use a role's original single lane or a uniquely named session lane.
-Two agents cannot hold overlapping paths at the same time.
+The helper rejects overlapping claims, serializes claim changes, and refuses
+to replace an active lane. It requires Bash, realpath, and util-linux `flock`.
 
-This is a coordination protocol, not a hard filesystem lock. It works when each
-agent reads this file, checks the current locks, claims before editing, and
-releases when finished.
+These are advisory edit claims; they do not block filesystem writes or Git
+operations. Read-only inspection needs no edit claim, but all privacy and
+consent boundaries still apply.
 
 ---
 
@@ -107,7 +108,8 @@ tools/orchestrate claim researcher --lane alchemy-notes <path> -- <reason>
 ```
 
 Lane names may contain lowercase letters, digits, and hyphens. Choose a name
-for the work, not the model. The helper stores dynamic lanes as
+unique to the current session, not the model. Never reuse an active lane, even
+for the same role. The helper stores dynamic lanes as
 `<role>--<lane>.lock` and checks them against every default and dynamic lane.
 
 ---
@@ -128,11 +130,19 @@ tools/orchestrate claim researcher \
   -- pulling Caraka quotes for Living Waters
 ```
 
-The helper writes your lane's lock file, checks every other lock for overlap,
-and rejects the claim if there is a conflict. Existing role-only commands use
-the role's default lane.
+The helper checks for an active lane and overlapping paths before writing the
+claim. A rejected claim leaves all existing claims unchanged. Existing
+role-only commands use the role's default lane, so they are suitable only when
+that lane is idle and no other session will use it.
 
 Use absolute paths. Claiming a directory covers all files under it.
+Paths must fit one lock-file record: no newlines, trailing whitespace, or
+` #` delimiter. Reasons must occupy one line.
+
+Claims cover whole files. Writer and curator roles cannot simultaneously edit
+different conceptual layers of the same file. `AGENTS.md`, protocols, and role
+skills are shared edit surfaces too: claim their exact paths and coordinate a
+pause with affected sessions before changing their governing instructions.
 
 Prefer the smallest useful claim:
 
@@ -166,6 +176,11 @@ Don't hold paths between sessions.
 If work narrows, release and reclaim the smaller path. Idle locks make the next
 agent guess whether a surface is still active.
 
+Only release a claim belonging to your session. An active lane cannot be
+expanded or replaced by another `claim` call. To change its paths, pause edits,
+release your own lane, and claim the complete new path set. Resume only if that
+claim succeeds; another session may have claimed a path in the meantime.
+
 ---
 
 ## Status
@@ -190,6 +205,14 @@ claimed path, optionally followed by `# reason`. Empty file means idle.
 /home/bird/Git/aether/Components/bibliography/ayurveda # pulling Caraka quotes
 ```
 
+The helper uses `.orchestrate.guard.lock` to serialize validation and writes
+across processes; `status` reads under the same guard. Do not remove that file
+while helpers may be running. `ORCHESTRATE_WORKSPACE_ROOT` selects the shared
+claim registry (and supports temporary test workspaces). Agents in separate
+checkouts that coordinate shared surfaces must use the same registry. The
+helper does not authenticate lane owners; unique session names and correct
+release discipline remain necessary.
+
 Lock files are runtime state — **do not commit them**. They are listed in
 `.gitignore`.
 
@@ -197,7 +220,7 @@ Lock files are runtime state — **do not commit them**. They are listed in
 
 ## Reports — exempt from claim flow
 
-Reports are partitioned by role. A default role lane writes directly in its
+Public reports are partitioned by role. A default role lane writes directly in its
 role directory. A dynamic session lane writes in its own subdirectory:
 
 ```
@@ -217,6 +240,10 @@ available global number.
 
 Do not claim report paths in your own lane and do not write into another
 lane's report directory.
+
+This exemption applies to public Aether reports only. Private continuity goes
+to the verified private destination defined in `AGENTS.md` section 11 and needs
+an exact-path claim. A role or lane directory in Aether never makes data private.
 
 Even though reports are exempt, agents should still run
 `tools/orchestrate status` before beginning so they understand what else is
@@ -248,9 +275,20 @@ time. That is where merge confusion starts.
 
 ## Version control
 
-After any substantive change, commit and push. From `AGENTS.md`: atomic commits,
-one intention per commit. For submodule work: commit and push the submodule
-first, then commit the updated pointer in the parent.
+Use separate worktrees/checkouts for concurrent editing where practical. If a
+working tree is shared, agree on one session owning its index and HEAD from
+staging through commit. A submodule has its own index; coordinate it separately.
+The helper does not enforce this Git ownership.
+
+Before committing, recheck status and your claims, inspect `git status`, stage
+only explicit task-owned paths, and review the entire `git diff --cached`.
+Recheck if the index or HEAD changes. If unrelated work is staged, stop and
+coordinate; do not unstage or reset someone else's work. A displayed idle role
+is not authorization to include that role's files.
+
+Commit and push only authorized task changes. For submodule work, push the
+inner commit before updating the parent pointer. Preserve publication gates and
+pre-existing changes. See `AGENTS.md` sections 7 and 11.
 
 ---
 

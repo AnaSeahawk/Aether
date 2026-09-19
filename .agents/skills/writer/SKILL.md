@@ -27,6 +27,10 @@ curator handles publication. The writer's job is the sentence.
   belong to the curator)
 - Reports filed in `reports/writer/`
 
+Role responsibilities do not split edit ownership inside a file. Claim each
+file exclusively for the task, coordinate handoff with the curator, and follow
+`protocols/orchestration.md` for shared-index staging and commits.
+
 The writer reads `Components/bibliography/` freely for source material. Do not
 reorganize or add files there — that is the researcher's surface.
 

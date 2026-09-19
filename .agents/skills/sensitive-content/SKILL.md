@@ -41,9 +41,12 @@ the file is a candidate for review. It is not publication approval.
 ## Before touching sensitive content
 
 1. Confirm the task actually requires opening the sensitive file.
-2. Claim the narrowest path needed through `tools/orchestrate`.
-3. Keep any notes or reports in the appropriate private or role-owned report
-   lane.
+2. Read-only inspection needs no edit claim. Before writing or moving anything,
+   claim the narrowest destination and any source paths being changed.
+3. Keep private continuity in
+   `Components/the-vessel/90-ops/agent-reports/<session>/`, after verifying that
+   repository is still private. If privacy cannot be verified, keep the answer
+   in chat without creating a file. All Aether `reports/` lanes are public.
 4. Preserve single-subject framing: personal record and responsibility only.
 5. Avoid medical directives, treatment claims, or instructions to the reader's
    body.
@@ -68,6 +71,13 @@ Before any sensitive file moves toward publication, confirm:
 When in doubt, stop and ask. Do not infer publication intent from proximity,
 folder name, prior reports, or another agent's suggestion.
 
+Use explicit authorization already given for the same material and destination;
+do not ask for it again. Prepare a reviewable result before requesting missing
+release approval. Contributor consent does not replace Ana's publication
+approval. Publishing or approving a transcript never implicitly authorizes
+deleting its recording, submissions, or other source material. Deletion and
+history rewriting need their own explicit scope.
+
 ---
 
 ## Report hygiene
@@ -81,7 +91,8 @@ substance minimal:
 - record blockers and approvals clearly;
 - do not make stale reports look current.
 
-If existing report guidance about sensitivity is outdated, follow `AGENTS.md`
+Ordinary read-only answers do not require a report. If existing report guidance
+about sensitivity is outdated, follow `AGENTS.md`
 stale-report handling: replace it with a new numbered report instead of editing
 the stale report in place.
 

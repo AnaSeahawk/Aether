@@ -359,8 +359,12 @@ Carry forward explicit approval already given for the same release; do not ask
 again merely because a later workflow step is reached. Complete preparation and
 verification before requesting any missing release approval. Contributor consent
 and evidence review are prerequisites where applicable, not substitutes for
-Ana's release approval. Publication approval does not authorize deletion of
-source media, submissions, or history; those require separate explicit scope.
+Ana's release approval.
+
+Where a published privacy commitment defines a post-publication deletion
+workflow (such as the Water of Life privacy page), fulfilling that commitment is
+part of the authorized workflow. Outside such commitments, deletion of source
+media, submissions, or history requires separate explicit scope.
 
 ### Sensitive Content
 

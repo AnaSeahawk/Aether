@@ -144,38 +144,67 @@ Optional additions if the contributor provided them:
 - Age range
 - "Anything else" section
 
+If the contributor provided an email address, it is recorded only in
+the private archival original. It never appears in the published
+observation.
+
+### Consent and authority
+
+The form's consent checkbox and the privacy page together constitute the
+contributor's informed consent to processing, editing, and publication.
+The privacy page commits to deleting the raw submission from Formspree
+and email after the observation is formatted and published. Honoring
+that commitment is part of the workflow, not a separate authorization.
+
+Ana's role in the intake workflow is editorial review: framing
+compliance, formatting quality, and readiness for the public archive.
+She does not re-verify consent the form already captured.
+
 ### Processing a form submission
 
-1. Receive the submission within the authorized intake scope and keep the raw
-   record private.
-2. Prepare a private draft using the template above. Preserve the contributor's
-   first-person language and intensity; apply the sensitive-content skill to
-   its working location. Do not place an unapproved draft in the public repo.
-3. Verify contributor consent for the proposed text and public display identity.
-   A submission alone is not proof of consent beyond what its form recorded.
-4. Prepare and check the proposed publication. Use Ana's explicit approval for
-   that release if already given; otherwise present the completed draft for it.
-5. Once the release is authorized, install the observation in
-   `site/content/entries/`, build, review the output, and commit/push only the
-   approved paths under the coordination protocol.
-6. Retain the raw Formspree submission and email unless Ana separately
-   authorizes deletion of those exact records. Verify the retained derivative
-   before carrying out an authorized deletion.
+1. Receive the submission and save the original verbatim as a private
+   archival record in
+   `Components/the-vessel/80-archive-raw/water-of-life/YYYYMMDD-NNN-original.md`,
+   using the same date-sequence as the published observation. Claim that
+   path under the coordination protocol.
+2. Format the observation using the template above. Light editing for
+   clarity, sequence, and framing compliance is expected — contributors
+   do not always use observational language. Preserve the contributor's
+   first-person voice, intensity, and interpretation. Apply the
+   sensitive-content skill to the working location. Do not place the
+   draft in the public repo before review.
+3. Ana reviews the formatted draft for framing quality and readiness.
+   Use her explicit approval if already given; otherwise present the
+   completed draft.
+4. Once approved, install the observation in `site/content/entries/`,
+   build, review the output, and commit/push only the approved paths
+   under the coordination protocol.
+5. Delete the raw submission from Formspree and email, fulfilling the
+   privacy commitment. The original is preserved in the Vessel.
+
+The archive keeps both the original submission and the published
+version as its permanent record. Intermediate drafts need not be
+retained.
 
 ### Processing an interview
 
-1. Transcribe the recording using the audio-transcription skill and its upload
-   authorization requirements; keep the recording and working draft private.
-2. Extract the observation from the conversation — what they did, what
-   they noticed, what else was happening
-3. Format in first person using their words
-4. Prepare the draft for contributor review. Send it only when communication
-   with that contributor is explicitly authorized; otherwise return it to Ana.
-5. Verify contributor approval and Ana's separate release approval, honoring
-   either when already given for this exact release. Then publish using the
-   checked form-submission release steps above.
-6. Preserve the recording until the transcript is committed, pushed, and
-   independently verified. Delete it only on a separate explicit request.
+1. Transcribe the recording using the audio-transcription skill and its
+   upload authorization requirements; keep the recording and working
+   draft private.
+2. Save the original transcript in
+   `Components/the-vessel/80-archive-raw/water-of-life/` as the
+   archival original.
+3. Extract the observation — what they did, what they noticed, what
+   else was happening. Format in first person using their words; edit
+   lightly for framing compliance.
+4. Prepare the draft for contributor review. Send it only when
+   communication with that contributor is explicitly authorized;
+   otherwise return it to Ana.
+5. After the contributor approves the text and Ana approves publication,
+   install and push using the form-submission steps above.
+6. Delete the recording after the contributor has approved the
+   transcript, as committed in the privacy page. The transcript is
+   preserved in the Vessel.
 
 ---
 
@@ -192,12 +221,17 @@ pairs. If that's needed someday, build it then.
 ## Privacy
 
 Contributors choose how they appear: a display name or anonymous (the
-default). The form collects no email addresses.
+default). The form optionally collects an email address for linking
+observations privately. Email addresses are stored only in the private
+archival original in the Vessel — never in the published observation,
+never on the public site.
 
-Audio recordings and raw submissions remain private. Contributor approval and
-publication do not authorize source deletion. Follow a separately authorized
-retention/deletion instruction for the exact records; surface any conflict with
-an existing consent or retention commitment before further processing.
+The original submission and the published observation are both kept as
+the archive's permanent record — the original privately in the Vessel,
+the edited version publicly on the site. Raw submissions in Formspree
+and email are deleted after the observation is published, as the
+privacy page commits to. Audio recordings are deleted after the
+contributor approves the transcript.
 
 Contact for data rights is through [anaseahawk.com](https://anaseahawk.com),
 not a published email address.

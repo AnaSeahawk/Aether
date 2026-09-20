@@ -74,9 +74,13 @@ folder name, prior reports, or another agent's suggestion.
 Use explicit authorization already given for the same material and destination;
 do not ask for it again. Prepare a reviewable result before requesting missing
 release approval. Contributor consent does not replace Ana's publication
-approval. Publishing or approving a transcript never implicitly authorizes
-deleting its recording, submissions, or other source material. Deletion and
-history rewriting need their own explicit scope.
+approval.
+
+Where a published privacy commitment defines a deletion workflow — such as the
+Water of Life privacy page's commitment to delete raw submissions after
+publication — fulfilling that commitment is part of the authorized workflow, not
+a separate deletion authorization. Outside such commitments, deletion of source
+material and history rewriting need their own explicit scope.
 
 ---
 

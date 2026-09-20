@@ -29,20 +29,37 @@ single-agent role commands remain valid:
 
 ```bash
 tools/orchestrate claim researcher /absolute/path -- reason
-tools/orchestrate release researcher
+tools/orchestrate release researcher --token <token printed by the claim>
 ```
 
 When multiple agents share one role, each uses a unique session lane:
 
 ```bash
 tools/orchestrate claim researcher --lane caraka-notes /absolute/path -- reason
-tools/orchestrate release researcher --lane caraka-notes
+tools/orchestrate release researcher --lane caraka-notes --token <token>
 ```
 
 An active lane cannot be overwritten; failed claims preserve existing records.
 To change paths, pause edits, release your own lane, and claim the new set.
+Each claim prints a release token that the release requires, so one session
+cannot clear another's lane by accident. It is an accident guard, not a
+credential.
+
+A session that ends without releasing leaves its lane claimed; nothing expires
+on its own:
+
+```bash
+tools/orchestrate status                  # claim age; STALE marks a likely dead lane
+tools/orchestrate stale                   # lanes held past the threshold (12h default)
+tools/orchestrate clear researcher --lane caraka-notes
+```
+
+`clear` prints the record it removes and refuses a lane younger than the
+threshold unless given `--older-than <hours>` or `--force`.
+
 The helper requires Bash, realpath, and util-linux `flock` to serialize updates.
 `ORCHESTRATE_WORKSPACE_ROOT` can select a shared registry for multiple checkouts.
+`ORCHESTRATE_STALE_HOURS` sets the abandonment threshold.
 
 Use separate worktrees for concurrent editing, or coordinate exclusive staging
 and commits in each shared repository. Before committing, recheck claims and

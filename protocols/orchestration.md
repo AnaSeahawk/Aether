@@ -6,9 +6,16 @@ Agents may use a role's original single lane or a uniquely named session lane.
 The helper rejects overlapping claims, serializes claim changes, and refuses
 to replace an active lane. It requires Bash, realpath, and util-linux `flock`.
 
+A claim prints a release token and records when it was made. The token keeps one
+session from releasing another session's lane by accident; the claim time makes
+an abandoned lane visible and reclaimable. See "When a session ends without
+releasing".
+
 These are advisory edit claims; they do not block filesystem writes or Git
-operations. Read-only inspection needs no edit claim, but all privacy and
-consent boundaries still apply.
+operations. The release token is an accident guard, not a security credential:
+it is stored in the lock file, which any local process can read. Read-only
+inspection needs no edit claim, but all privacy and consent boundaries still
+apply.
 
 ---
 
@@ -26,6 +33,11 @@ Use this when running Claude Code, Codex, or another agent at the same time.
    other agent releases.
 6. At the end of the session, make sure the agent committed, pushed, and
    released the same role and lane it claimed.
+7. If a session ended without releasing — it was interrupted, closed, or ran
+   out of context — its lane stays claimed and blocks that path. Run
+   `tools/orchestrate stale` to see abandoned lanes and `tools/orchestrate
+   clear <role> [--lane <lane>]` to reclaim one. No agent has to wait on a
+   session that is gone.
 
 Standard coordination prompt:
 
@@ -42,8 +54,11 @@ Otherwise, claim the target path with:
 tools/orchestrate claim <role> [--lane <lane>] <absolute path> -- <short reason>
 If there is a conflict, stop and tell me.
 Work only inside the claimed path unless I approve more.
+Keep the release token your claim prints; you need it to release.
 Commit and push substantive changes, then release with:
-tools/orchestrate release <role> [--lane <lane>]
+tools/orchestrate release <role> [--lane <lane>] --token <your release token>
+If a lane you need is held by a session that has ended, run
+tools/orchestrate stale, then clear that lane and tell me what you cleared.
 ```
 
 The bracketed `--lane` option means: include it only when a session lane was
@@ -135,6 +150,16 @@ claim. A rejected claim leaves all existing claims unchanged. Existing
 role-only commands use the role's default lane, so they are suitable only when
 that lane is idle and no other session will use it.
 
+A successful claim prints a release token:
+
+```text
+Release token for researcher--caraka-notes: d87f8777eb
+```
+
+Keep it for the whole session — releasing needs it. If a conflicting lane is
+reported as `STALE`, its session has been holding the path past the
+abandonment threshold; see "When a session ends without releasing".
+
 Use absolute paths. Claiming a directory covers all files under it.
 Paths must fit one lock-file record: no newlines, trailing whitespace, or
 ` #` delimiter. Reasons must occupy one line.
@@ -176,10 +201,58 @@ Don't hold paths between sessions.
 If work narrows, release and reclaim the smaller path. Idle locks make the next
 agent guess whether a surface is still active.
 
-Only release a claim belonging to your session. An active lane cannot be
+Release requires the token the claim printed:
+
+```sh
+tools/orchestrate release curator --lane living-record --token d87f8777eb
+```
+
+Only release a claim belonging to your session. A missing or wrong token is
+refused with exit 3 and the lane is left standing, so one agent cannot clear
+another's lane by guessing at the command. Records written before tokens
+existed still release without one, and say so. An active lane cannot be
 expanded or replaced by another `claim` call. To change its paths, pause edits,
 release your own lane, and claim the complete new path set. Resume only if that
 claim succeeds; another session may have claimed a path in the meantime.
+
+---
+
+## When a session ends without releasing
+
+An interrupted session — closed terminal, exhausted context, crashed run —
+leaves its lane claimed. Nothing expires on its own, so the path stays blocked
+until someone reclaims it. This is the ordinary recovery path, not an
+emergency.
+
+Find abandoned lanes:
+
+```sh
+tools/orchestrate stale
+tools/orchestrate stale --older-than 2
+```
+
+A lane counts as abandoned once it has been held longer than the threshold:
+12 hours by default, or whatever `ORCHESTRATE_STALE_HOURS` sets. `status` marks
+those lanes `STALE`, and a claim blocked by one says so.
+
+Reclaim one:
+
+```sh
+tools/orchestrate clear <role> [--lane <session>]
+tools/orchestrate clear curator --lane living-record --older-than 2
+tools/orchestrate clear curator --lane living-record --force
+```
+
+`clear` prints the whole record it is removing — lane, claim time, paths, and
+reason — so what was discarded stays visible. It refuses a lane younger than
+the threshold: a recent claim usually means a session that is still working, and
+the right move is to coordinate with it. `--older-than` lowers the threshold for
+this call. `--force` skips the age check entirely; use it only when you know the
+owning session has ended, and say in your report that you cleared someone's
+lane.
+
+Clearing a lane releases the claim, not the work. If that session left edits in
+the working tree, inspect them before assuming the path is free.
 
 ---
 
@@ -189,29 +262,45 @@ claim succeeds; another session may have claimed a path in the meantime.
 tools/orchestrate status
 ```
 
-Shows every default role lane and every active dynamic session lane.
+Shows every default role lane and every active dynamic session lane, with when
+each claim was made and how long it has been held:
 
-Run this before asking a second agent to start. It gives the current map of
-what is safe to touch.
+```text
+--- curator/living-record --- claimed 2026-09-19T08:14:02Z, 1d6h ago STALE
+```
+
+`STALE` means the lane has been held past the abandonment threshold and its
+session may be gone. Run this before asking a second agent to start. It gives
+the current map of what is safe to touch.
 
 ---
 
 ## Lock file format
 
-`<role>.lock` and `<role>--<lane>.lock` are plain text. Each line is one
-claimed path, optionally followed by `# reason`. Empty file means idle.
+`<role>.lock` and `<role>--<lane>.lock` are plain text. Lines beginning with `#`
+are claim metadata; every other line is one claimed path, optionally followed by
+`# reason`. Empty file means idle.
 
 ```
+# lane: researcher--caraka-notes
+# claimed: 2026-09-20T14:20:20Z
+# epoch: 1789824021
+# token: d87f8777eb
 /home/bird/Git/aether/Components/bibliography/ayurveda # pulling Caraka quotes
 ```
+
+`claimed` is human-readable; `epoch` is what the helper measures age against. A
+record with no `epoch` falls back to the file's own timestamp, so age stays an
+honest lower bound.
 
 The helper uses `.orchestrate.guard.lock` to serialize validation and writes
 across processes; `status` reads under the same guard. Do not remove that file
 while helpers may be running. `ORCHESTRATE_WORKSPACE_ROOT` selects the shared
 claim registry (and supports temporary test workspaces). Agents in separate
 checkouts that coordinate shared surfaces must use the same registry. The
-helper does not authenticate lane owners; unique session names and correct
-release discipline remain necessary.
+helper does not authenticate lane owners: the release token prevents accidental
+cross-session releases, but any local process can read it or write these files
+directly. Unique session names and correct release discipline remain necessary.
 
 Lock files are runtime state — **do not commit them**. They are listed in
 `.gitignore`.

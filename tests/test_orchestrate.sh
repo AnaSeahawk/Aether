@@ -17,15 +17,48 @@ fail() {
   exit 1
 }
 
+active_claimed_paths() {
+  grep -v '^#' "$1" | sed 's/ #.*$//' | grep -v '^$' || true
+}
+
 assert_contains() {
   local text="$1"
   local expected="$2"
   [[ "$text" == *"$expected"* ]] || fail "expected output to contain: $expected"
 }
 
+lane_lock() {
+  local role="$1"
+  local lane="${2:-$1}"
+  if [ "$lane" = "$role" ]; then
+    printf '%s/%s.lock\n' "$test_workspace" "$role"
+  else
+    printf '%s/%s--%s.lock\n' "$test_workspace" "$role" "$lane"
+  fi
+}
+
+lane_token() {
+  local lock
+  lock="$(lane_lock "$@")"
+  # A lane that lost a race was never written; releasing it is still harmless.
+  [ -f "$lock" ] || return 0
+  sed -n 's/^# token: //p' "$lock" | head -n 1
+}
+
+# Release using the token the claim recorded, the way an owning session does.
+release_lane() {
+  local role="$1"
+  shift
+  local lane="$role"
+  if [ "${1:-}" = "--lane" ]; then
+    lane="$2"
+  fi
+  "$helper" release "$role" "$@" --token "$(lane_token "$role" "$lane")" >/dev/null
+}
+
 "$helper" claim researcher "$test_workspace/legacy" -- legacy >/dev/null
 [ -s "$test_workspace/researcher.lock" ] || fail 'legacy claim did not write researcher.lock'
-"$helper" release researcher >/dev/null
+release_lane researcher
 [ ! -s "$test_workspace/researcher.lock" ] || fail 'legacy release did not clear researcher.lock'
 
 "$helper" claim researcher --lane caraka-notes \
@@ -70,7 +103,7 @@ set -e
 
 [ "$invalid_status" -eq 64 ] || fail 'invalid lane did not exit 64'
 
-"$helper" release researcher --lane caraka-notes >/dev/null
+release_lane researcher --lane caraka-notes
 [ ! -s "$test_workspace/researcher--caraka-notes.lock" ] ||
   fail 'dynamic release did not clear its lock'
 
@@ -79,7 +112,7 @@ status_output="$("$helper" status)"
   fail 'released dynamic lane remained in active status'
 assert_contains "$status_output" 'researcher/alchemy-notes'
 
-"$helper" release researcher --lane alchemy-notes >/dev/null
+release_lane researcher --lane alchemy-notes
 
 expect_status() {
   local expected="$1"
@@ -101,8 +134,8 @@ for lane in analyst analyst--retained; do
   [ "$(cat "$test_workspace/$lane.lock")" = "$original" ] || fail 'conflict erased the original claim'
   expect_status 2 "$helper" claim analyst "${lane_args[@]}" "$test_workspace/unrelated" -- replacement
   [ "$(cat "$test_workspace/$lane.lock")" = "$original" ] || fail 'active lane was silently replaced'
-  "$helper" release analyst "${lane_args[@]}" >/dev/null
-  "$helper" release curator >/dev/null
+  release_lane analyst "${lane_args[@]}"
+  release_lane curator
 done
 
 # Normalized aliases and ancestor claims must respect an existing file claim.
@@ -114,10 +147,10 @@ for path in "$test_workspace/tree" "$test_workspace/alias/child/file.md" /; do
 done
 expect_status 2 "$helper" claim curator "$test_workspace/free" "$test_workspace/tree" -- atomic
 [ ! -s "$test_workspace/curator.lock" ] || fail 'rejected multipath request left a partial claim'
-"$helper" release writer >/dev/null
+release_lane writer
 "$helper" claim writer / -- root >/dev/null
 expect_status 2 "$helper" claim curator "$test_workspace/free" -- descendant
-"$helper" release writer >/dev/null
+release_lane writer
 
 for invalid_path in relative "$test_workspace/bad # record" "$test_workspace/trailing " $'/bad\nrecord'; do
   expect_status 64 "$helper" claim curator "$invalid_path" -- invalid
@@ -164,8 +197,8 @@ parallel_claims() {
   wait "$first_pid" "$second_pid"
   statuses="$(sort "$test_workspace/first-status" "$test_workspace/second-status" | tr '\n' ' ')"
   [ "$statuses" = "$expected" ] || fail "parallel claim results: $statuses"
-  "$helper" release analyst --lane first >/dev/null
-  [ "$second_lane" = first ] || "$helper" release analyst --lane "$second_lane" >/dev/null
+  release_lane analyst --lane first
+  [ "$second_lane" = first ] || release_lane analyst --lane "$second_lane"
 }
 
 parallel_claims second "$test_workspace/parallel/a/child" '0 2 '
@@ -179,5 +212,85 @@ for dependency in bash dirname realpath; do
 done
 expect_status 69 env PATH="$test_workspace/no-flock" "$helper" claim curator "$test_workspace/free" -- missing-flock
 [ ! -s "$test_workspace/curator.lock" ] || fail 'missing flock allowed a claim'
+
+# A claim records its lane, claim time, epoch, and a release token. Metadata
+# lines must never be read back as claimed paths.
+claim_output="$("$helper" claim curator "$test_workspace/tokened" -- token work)"
+assert_contains "$claim_output" 'Release token for curator: '
+curator_lock="$(lane_lock curator)"
+assert_contains "$(cat "$curator_lock")" '# lane: curator'
+assert_contains "$(cat "$curator_lock")" '# claimed: '
+assert_contains "$(cat "$curator_lock")" '# epoch: '
+token="$(lane_token curator)"
+[[ "$token" =~ ^[0-9a-f]{10}$ ]] || fail "claim did not record a usable token: $token"
+assert_contains "$claim_output" "$token"
+[ "$(active_claimed_paths "$curator_lock")" = "$test_workspace/tokened" ] ||
+  fail 'metadata lines were parsed as claimed paths'
+
+# Another session cannot release this lane: no token, and a wrong token, both
+# refuse and leave the claim standing.
+expect_status 3 "$helper" release curator
+assert_contains "$(cat "$test_workspace/last-output")" 'supply it with --token'
+[ -s "$curator_lock" ] || fail 'tokenless release cleared an owned lane'
+expect_status 3 "$helper" release curator --token 0000000000
+assert_contains "$(cat "$test_workspace/last-output")" 'does not match'
+[ -s "$curator_lock" ] || fail 'wrong token cleared an owned lane'
+
+# A fresh lane is not abandoned, so clear refuses it by default.
+expect_status 3 "$helper" clear curator
+assert_contains "$(cat "$test_workspace/last-output")" 'abandonment threshold'
+[ -s "$curator_lock" ] || fail 'clear removed a lane that was not stale'
+expect_status 64 "$helper" clear curator --older-than soon
+expect_status 64 "$helper" stale --older-than -1
+
+# The owning session releases with its recorded token.
+"$helper" release curator --token "$token" >/dev/null
+[ ! -s "$curator_lock" ] || fail 'correct token did not release the lane'
+
+# Records written before tokens existed still release, with a warning.
+printf '%s\n' "$test_workspace/legacy-record # old" > "$curator_lock"
+release_output="$("$helper" release curator --token whatever 2>&1 >/dev/null)"
+assert_contains "$release_output" 'predates release tokens'
+[ ! -s "$curator_lock" ] || fail 'legacy record was not released'
+printf '%s\n' "$test_workspace/legacy-record # old" > "$curator_lock"
+"$helper" release curator >/dev/null
+[ ! -s "$curator_lock" ] || fail 'legacy record required a token'
+
+# An abandoned lane is findable and reclaimable. Back-date the claim to stand
+# in for a session that ended without releasing.
+"$helper" claim writer --lane abandoned "$test_workspace/orphaned" -- interrupted >/dev/null
+abandoned_lock="$(lane_lock writer abandoned)"
+sed -i "s/^# epoch: .*/# epoch: $(( $(date -u +%s) - 172800 ))/" "$abandoned_lock"
+
+stale_output="$("$helper" stale)"
+assert_contains "$stale_output" 'writer/abandoned'
+assert_contains "$stale_output" "$test_workspace/orphaned"
+assert_contains "$stale_output" 'tools/orchestrate clear writer --lane abandoned'
+assert_contains "$("$helper" status)" 'STALE'
+
+# The blocked session is told why and what to do about it.
+expect_status 2 "$helper" claim curator "$test_workspace/orphaned" -- blocked
+assert_contains "$(cat "$test_workspace/last-output")" 'STALE'
+assert_contains "$(cat "$test_workspace/last-output")" 'tools/orchestrate stale'
+
+clear_output="$("$helper" clear writer --lane abandoned)"
+assert_contains "$clear_output" 'Clearing abandoned lane writer/abandoned'
+assert_contains "$clear_output" "$test_workspace/orphaned"
+[ ! -s "$abandoned_lock" ] || fail 'clear did not release the abandoned lane'
+assert_contains "$("$helper" clear writer --lane abandoned)" 'already idle'
+
+# With the lane cleared, the blocked work proceeds.
+"$helper" claim curator "$test_workspace/orphaned" -- unblocked >/dev/null
+release_lane curator
+
+# --older-than and --force override the threshold for a lane known to be dead.
+"$helper" claim analyst --lane fresh "$test_workspace/fresh" -- fresh >/dev/null
+"$helper" clear analyst --lane fresh --older-than 0 >/dev/null
+[ ! -s "$(lane_lock analyst fresh)" ] || fail '--older-than 0 did not clear the lane'
+"$helper" claim analyst --lane fresh "$test_workspace/fresh" -- fresh >/dev/null
+"$helper" clear analyst --lane fresh --force >/dev/null
+[ ! -s "$(lane_lock analyst fresh)" ] || fail '--force did not clear the lane'
+
+assert_contains "$("$helper" stale)" 'No lane has been held longer than'
 
 printf '%s\n' 'orchestrate tests passed'

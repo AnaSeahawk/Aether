@@ -5,13 +5,16 @@ default_workspace="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 workspace="$(realpath -m "${ORCHESTRATE_WORKSPACE_ROOT:-$default_workspace}")"
 
 ROLES=(researcher writer curator analyst)
+STALE_HOURS="${ORCHESTRATE_STALE_HOURS:-12}"
 
 usage() {
   cat <<'EOF'
 Usage:
   tools/orchestrate claim <role> [--lane <session>] <path> [more-paths] -- <reason>
-  tools/orchestrate release <role> [--lane <session>]
+  tools/orchestrate release <role> [--lane <session>] --token <token>
   tools/orchestrate status
+  tools/orchestrate stale [--older-than <hours>]
+  tools/orchestrate clear <role> [--lane <session>] [--older-than <hours>] [--force]
 
 Roles: researcher, writer, curator, analyst
 
@@ -23,9 +26,19 @@ Claiming a directory covers all files under it.
 An active lane cannot be replaced. Release your own lane before changing paths.
 Concurrent sessions must use unique lanes. Claims and releases require flock.
 
+A successful claim prints a release token. Keep it for the whole session:
+releasing a lane that recorded a token requires that token, so one session
+cannot release another session's lane by accident.
+
+When a session ends without releasing, its lane stays claimed. Use `stale` to
+find abandoned lanes and `clear` to reclaim one. `clear` refuses a lane younger
+than the staleness threshold (default 12h, ORCHESTRATE_STALE_HOURS) unless
+--older-than or --force is given.
+
 Lock files (<role>.lock or <role>--<session>.lock) are plain text.
 Empty means idle.
-Each line is one claimed path, optionally followed by # reason:
+Lines beginning with # are metadata: lane, claim time, epoch, release token.
+Every other line is one claimed path, optionally followed by # reason:
   /home/bird/Git/aether/Components/bibliography/ayurveda # pulling Caraka quotes
 EOF
 }
@@ -42,6 +55,10 @@ valid_role() {
 valid_lane() {
   local candidate="$1"
   [[ "$candidate" =~ ^[a-z]([a-z0-9-]{0,62}[a-z0-9])?$ ]]
+}
+
+valid_hours() {
+  [[ "$1" =~ ^[0-9]+$ ]]
 }
 
 lane_key() {
@@ -78,6 +95,21 @@ normal_path() {
   realpath -m "$1"
 }
 
+now_epoch() {
+  date -u +%s
+}
+
+new_token() {
+  local token=''
+  if [ -r /dev/urandom ]; then
+    token="$(od -An -N5 -tx1 /dev/urandom 2>/dev/null | tr -d ' \n' || true)"
+  fi
+  if [ -z "$token" ]; then
+    token="$(printf '%04x%04x%02x' "$RANDOM" "$RANDOM" "$((RANDOM % 256))")"
+  fi
+  printf '%s\n' "$token"
+}
+
 lock_workspace() {
   command -v flock >/dev/null 2>&1 || {
     printf '%s\n' 'flock is required for atomic coordination updates.' >&2
@@ -92,10 +124,22 @@ write_lock() {
   local role="$1"
   local lane="$2"
   local reason="${3:-}"
-  shift 3 || true
+  local token="${4:-}"
+  shift 4
   local lock temporary
   lock="$(lock_path "$role" "$lane")"
   temporary="$(mktemp "$workspace/.orchestrate-lock.XXXXXX")"
+
+  if [ "$#" -gt 0 ]; then
+    {
+      printf '# lane: %s\n' "$(lane_key "$role" "$lane")"
+      printf '# claimed: %s\n' "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+      printf '# epoch: %s\n' "$(now_epoch)"
+      if [ -n "$token" ]; then
+        printf '# token: %s\n' "$token"
+      fi
+    } >> "$temporary"
+  fi
 
   local path
   for path in "$@"; do
@@ -106,6 +150,57 @@ write_lock() {
     fi
   done
   mv "$temporary" "$lock"
+}
+
+lock_meta() {
+  local lock="$1"
+  local key="$2"
+  [ -f "$lock" ] || return 0
+  sed -n "s/^#[[:space:]]*$key:[[:space:]]*//p" "$lock" | head -n 1
+}
+
+lock_epoch() {
+  local lock="$1"
+  local epoch
+  epoch="$(lock_meta "$lock" epoch)"
+  if [[ ! "$epoch" =~ ^[0-9]+$ ]]; then
+    # Records written before claim metadata existed fall back to the file's own
+    # timestamp, so staleness still has an honest lower bound.
+    epoch="$(stat -c %Y "$lock" 2>/dev/null || printf '0')"
+  fi
+  printf '%s\n' "$epoch"
+}
+
+lock_age_seconds() {
+  local lock="$1"
+  local age
+  age=$(( $(now_epoch) - $(lock_epoch "$lock") ))
+  if [ "$age" -lt 0 ]; then
+    age=0
+  fi
+  printf '%s\n' "$age"
+}
+
+format_age() {
+  local seconds="$1"
+  local days hours minutes
+  days=$(( seconds / 86400 ))
+  hours=$(( (seconds % 86400) / 3600 ))
+  minutes=$(( (seconds % 3600) / 60 ))
+  if [ "$days" -gt 0 ]; then
+    printf '%dd%dh\n' "$days" "$hours"
+  elif [ "$hours" -gt 0 ]; then
+    printf '%dh%dm\n' "$hours" "$minutes"
+  else
+    printf '%dm\n' "$minutes"
+  fi
+}
+
+lock_is_stale() {
+  local lock="$1"
+  local hours="$2"
+  [ -s "$lock" ] || return 1
+  [ "$(lock_age_seconds "$lock")" -ge "$(( hours * 3600 ))" ]
 }
 
 active_paths() {
@@ -148,10 +243,18 @@ lock_identity() {
 print_lock() {
   local identity="$1"
   local lock="$2"
-  printf -- '--- %s ---\n' "$identity"
   if [ -s "$lock" ]; then
+    local claimed age marker=''
+    claimed="$(lock_meta "$lock" claimed)"
+    age="$(format_age "$(lock_age_seconds "$lock")")"
+    if lock_is_stale "$lock" "$STALE_HOURS"; then
+      marker=' STALE'
+    fi
+    printf -- '--- %s --- claimed %s, %s ago%s\n' \
+      "$identity" "${claimed:-unknown}" "$age" "$marker"
     cat "$lock"
   else
+    printf -- '--- %s ---\n' "$identity"
     printf '%s\n' '(idle)'
   fi
 }
@@ -209,6 +312,12 @@ claim() {
   if [ -s "$own_lock" ]; then
     printf 'Lane %s is already active; claim unchanged. Use a unique lane, or release your own lane before changing paths.\n' \
       "$(lock_identity "$own_lock")" >&2
+    if lock_is_stale "$own_lock" "$STALE_HOURS"; then
+      printf 'That lane has been held for %s. If its session is gone, reclaim it with: tools/orchestrate clear %s%s\n' \
+        "$(format_age "$(lock_age_seconds "$own_lock")")" \
+        "$role" \
+        "$([ "$lane" = "$role" ] || printf ' --lane %s' "$lane")" >&2
+    fi
     exit 2
   fi
   for own_path in "${paths[@]}"; do
@@ -226,9 +335,10 @@ claim() {
     while IFS= read -r peer_path; do
       for own_path in "${paths[@]}"; do
         if paths_overlap "$own_path" "$peer_path"; then
-          printf 'Conflict: %s overlaps %s (held by %s)\n' \
+          printf 'Conflict: %s overlaps %s (held by %s%s)\n' \
             "$(normal_path "$own_path")" "$peer_path" \
-            "$(lock_identity "$peer_lock")" >&2
+            "$(lock_identity "$peer_lock")" \
+            "$(lock_is_stale "$peer_lock" "$STALE_HOURS" && printf ', STALE' || true)" >&2
           conflict=1
         fi
       done
@@ -237,9 +347,17 @@ claim() {
 
   if [ "$conflict" -ne 0 ]; then
     printf '%s\n' 'Claim rejected; existing claims unchanged.' >&2
+    printf '%s\n' 'If a blocking lane is marked STALE, see: tools/orchestrate stale' >&2
     exit 2
   fi
-  write_lock "$role" "$lane" "$reason" "${paths[@]}"
+  local token
+  token="$(new_token)"
+  write_lock "$role" "$lane" "$reason" "$token" "${paths[@]}"
+  printf 'Release token for %s: %s\n' "$(lane_key "$role" "$lane")" "$token"
+  printf 'Keep it. Release with: tools/orchestrate release %s%s --token %s\n' \
+    "$role" \
+    "$([ "$lane" = "$role" ] || printf ' --lane %s' "$lane")" \
+    "$token"
   print_state
 }
 
@@ -248,19 +366,159 @@ release() {
   shift
   valid_role "$role" || { usage >&2; exit 64; }
   local lane="$role"
-  if [ "${1:-}" = "--lane" ]; then
-    [ "$#" -eq 2 ] || { usage >&2; exit 64; }
-    lane="$2"
-    valid_lane "$lane" || {
-      printf 'invalid lane: %s\n' "$lane" >&2
-      usage >&2
-      exit 64
-    }
-    shift 2
+  local supplied=''
+  while [ "$#" -gt 0 ]; do
+    case "$1" in
+      --lane)
+        [ "$#" -ge 2 ] || { usage >&2; exit 64; }
+        lane="$2"
+        valid_lane "$lane" || {
+          printf 'invalid lane: %s\n' "$lane" >&2
+          usage >&2
+          exit 64
+        }
+        shift 2
+        ;;
+      --token)
+        [ "$#" -ge 2 ] || { usage >&2; exit 64; }
+        supplied="$2"
+        shift 2
+        ;;
+      *)
+        usage >&2
+        exit 64
+        ;;
+    esac
+  done
+
+  local lock recorded
+  lock="$(lock_path "$role" "$lane")"
+  if [ -s "$lock" ]; then
+    recorded="$(lock_meta "$lock" token)"
+    if [ -n "$recorded" ]; then
+      if [ -z "$supplied" ]; then
+        printf 'Lane %s recorded a release token; supply it with --token.\n' \
+          "$(lock_identity "$lock")" >&2
+        printf 'Only the session that claimed this lane holds that token. If that session is gone, reclaim the lane with: tools/orchestrate clear %s%s\n' \
+          "$role" "$([ "$lane" = "$role" ] || printf ' --lane %s' "$lane")" >&2
+        exit 3
+      fi
+      if [ "$supplied" != "$recorded" ]; then
+        printf 'Release token does not match lane %s; nothing was released.\n' \
+          "$(lock_identity "$lock")" >&2
+        printf 'Do not release another session'"'"'s lane. If that session is gone, use: tools/orchestrate clear %s%s\n' \
+          "$role" "$([ "$lane" = "$role" ] || printf ' --lane %s' "$lane")" >&2
+        exit 3
+      fi
+    elif [ -n "$supplied" ]; then
+      printf 'Lane %s predates release tokens; releasing without a token check.\n' \
+        "$(lock_identity "$lock")" >&2
+    fi
   fi
-  [ "$#" -eq 0 ] || { usage >&2; exit 64; }
-  write_lock "$role" "$lane" ''
+  write_lock "$role" "$lane" '' ''
   print_state
+}
+
+clear_lane() {
+  local role="$1"
+  shift
+  valid_role "$role" || { usage >&2; exit 64; }
+  local lane="$role"
+  local hours="$STALE_HOURS"
+  local force=0
+  while [ "$#" -gt 0 ]; do
+    case "$1" in
+      --lane)
+        [ "$#" -ge 2 ] || { usage >&2; exit 64; }
+        lane="$2"
+        valid_lane "$lane" || {
+          printf 'invalid lane: %s\n' "$lane" >&2
+          usage >&2
+          exit 64
+        }
+        shift 2
+        ;;
+      --older-than)
+        [ "$#" -ge 2 ] || { usage >&2; exit 64; }
+        hours="$2"
+        valid_hours "$hours" || {
+          printf 'invalid hour count: %s\n' "$hours" >&2
+          exit 64
+        }
+        shift 2
+        ;;
+      --force)
+        force=1
+        shift
+        ;;
+      *)
+        usage >&2
+        exit 64
+        ;;
+    esac
+  done
+
+  local lock
+  lock="$(lock_path "$role" "$lane")"
+  if [ ! -s "$lock" ]; then
+    printf 'Lane %s is already idle; nothing to clear.\n' "$(lane_key "$role" "$lane")"
+    exit 0
+  fi
+
+  local age
+  age="$(lock_age_seconds "$lock")"
+  if [ "$force" -eq 0 ] && [ "$age" -lt "$(( hours * 3600 ))" ]; then
+    printf 'Lane %s was claimed %s ago, less than the %sh abandonment threshold.\n' \
+      "$(lock_identity "$lock")" "$(format_age "$age")" "$hours" >&2
+    printf 'Its session may still be working. Coordinate with it first. To override: --older-than <hours>, or --force when you know that session has ended.\n' >&2
+    exit 3
+  fi
+
+  printf 'Clearing abandoned lane %s, claimed %s ago:\n' \
+    "$(lock_identity "$lock")" "$(format_age "$age")"
+  cat "$lock"
+  write_lock "$role" "$lane" '' ''
+  printf '\n'
+  print_state
+}
+
+print_stale() {
+  local hours="$STALE_HOURS"
+  while [ "$#" -gt 0 ]; do
+    case "$1" in
+      --older-than)
+        [ "$#" -ge 2 ] || { usage >&2; exit 64; }
+        hours="$2"
+        valid_hours "$hours" || {
+          printf 'invalid hour count: %s\n' "$hours" >&2
+          exit 64
+        }
+        shift 2
+        ;;
+      *)
+        usage >&2
+        exit 64
+        ;;
+    esac
+  done
+
+  local lock found=0 identity
+  while IFS= read -r lock; do
+    [ -s "$lock" ] || continue
+    lock_is_stale "$lock" "$hours" || continue
+    found=1
+    identity="$(lock_identity "$lock")"
+    printf 'Lane %s has been held %s (threshold %sh).\n' \
+      "$identity" "$(format_age "$(lock_age_seconds "$lock")")" "$hours"
+    active_paths "$lock" | sed 's/^/  /'
+    printf '  Reclaim with: tools/orchestrate clear %s%s\n' \
+      "${identity%%/*}" \
+      "$([ "$identity" = "${identity%%/*}" ] || printf ' --lane %s' "${identity#*/}")"
+  done < <(all_lock_paths)
+
+  if [ "$found" -eq 0 ]; then
+    printf 'No lane has been held longer than %sh.\n' "$hours"
+  fi
 }
 
 case "${1:-}" in
@@ -279,6 +537,17 @@ case "${1:-}" in
   status)
     lock_workspace
     print_state
+    ;;
+  stale)
+    shift
+    lock_workspace
+    print_stale "$@"
+    ;;
+  clear)
+    shift
+    [ "$#" -ge 1 ] || { usage >&2; exit 64; }
+    lock_workspace
+    clear_lane "$@"
     ;;
   -h|--help|help|'')
     usage

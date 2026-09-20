@@ -19,17 +19,31 @@ The workspace supports four coordination roles for parallel agent work:
 
 **Before starting work, know your role.** Read the relevant skill file and
 claim your paths via `tools/orchestrate claim <role> <path> -- <reason>`.
-Release when done: `tools/orchestrate release <role>`.
+Release when done: `tools/orchestrate release <role> --token <token>`, using the
+release token the claim printed.
 
 When more than one agent uses the same role, each must use a unique session
 lane: `tools/orchestrate claim <role> --lane <session> <path> -- <reason>`.
 Release that same lane with
-`tools/orchestrate release <role> --lane <session>`.
+`tools/orchestrate release <role> --lane <session> --token <token>`.
+
+A claim prints a release token. Keep it for the whole session; release requires
+it, so no agent can clear another session's lane by accident. The token is an
+accident guard, not a credential.
 
 Never reuse an active lane or release another session's claim. Writer and
 curator responsibilities do not divide ownership within one file: only one
 session may edit that file at a time. Read-only inspection needs no edit claim;
 sensitivity and consent boundaries still apply.
+
+A session that ends without releasing leaves its lane claimed and its paths
+blocked; nothing expires on its own. Run `tools/orchestrate stale` to find lanes
+held past the abandonment threshold (12h by default) and
+`tools/orchestrate clear <role> [--lane <session>]` to reclaim one. `clear`
+refuses a lane younger than the threshold, prints the record it removes, and
+requires `--force` to override the age check. Clearing a lane releases the
+claim, not the work: check the working tree for edits that session left behind,
+and report any lane you cleared.
 
 Shared instructions (`AGENTS.md`, protocols, and role skills) need exact-path
 claims too. Coordinate a pause with other affected sessions before changing

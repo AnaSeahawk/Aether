@@ -77,7 +77,7 @@ into the website archive), and `make` (run start → inspect → render →
 transcribe → bundle in one command).
 
 Full command reference and examples live in
-[`tools/mother_spirit_video.md`](../tools/mother_spirit_video.md). Treat that
+[`tools/mother_spirit_video.md`](../../../tools/mother_spirit_video.md). Treat that
 file as the exhaustive source; this skill is the orientation and the
 transcription decision.
 
@@ -94,7 +94,7 @@ There are two ways to produce that transcript.
 ### Default — hosted: `tools/whisper-transcribe`
 
 Read
-[`audio-transcription`](../.agents/skills/audio-transcription/SKILL.md) before
+[`audio-transcription`](../audio-transcription/SKILL.md) before
 running this step. It is the canonical cross-agent workflow and credential
 boundary for existing media.
 
@@ -162,7 +162,7 @@ Water Magicians calls:
 - Keep the review index alongside the clips, not just in chat.
 
 Recordings are operational, often health-adjacent material — read
-[`.agents/skills/sensitive-content/SKILL.md`](.agents/skills/sensitive-content/SKILL.md) before handling them.
+[`.agents/skills/sensitive-content/SKILL.md`](../sensitive-content/SKILL.md) before handling them.
 
 ---
 
@@ -177,7 +177,7 @@ uploaded by this workflow.
 
 ## See also
 
-- [`tools/mother_spirit_video.md`](../tools/mother_spirit_video.md) — full command reference
-- [`.agents/skills/sensitive-content/SKILL.md`](.agents/skills/sensitive-content/SKILL.md) — privacy and consent boundaries
-- [`.agents/skills/curator/SKILL.md`](.agents/skills/curator/SKILL.md) — installing the archive entry into the website
+- [`tools/mother_spirit_video.md`](../../../tools/mother_spirit_video.md) — full command reference
+- [`.agents/skills/sensitive-content/SKILL.md`](../sensitive-content/SKILL.md) — privacy and consent boundaries
+- [`.agents/skills/curator/SKILL.md`](../curator/SKILL.md) — installing the archive entry into the website
 - `AGENTS.md` — the authoritative repo contract

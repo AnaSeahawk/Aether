@@ -15,10 +15,16 @@ Each `SKILL.md` has YAML frontmatter with `name` and `description`. The
 description tells the harness when to load the skill automatically and
 populates the `/` auto-complete in Claude Code.
 
+**Exception:** `remember` and `skills` have separate Claude Code
+implementations (not symlinks) because they contain harness-specific model,
+tool, or runtime guidance that differs between Claude Code and Codex.
+
 ## Adding a new skill
 
 1. Create `.agents/skills/<name>/SKILL.md` with frontmatter.
 2. Symlink: `ln -sfn "../../.agents/skills/<name>" ".claude/skills/<name>"`
+   (unless the skill needs harness-specific content — then write a separate
+   Claude Code version in `.claude/skills/<name>/`).
 3. Add a line to the table below.
 4. If the skill should be mentioned in `AGENTS.md` §Skill Loading, add it there.
 
@@ -52,6 +58,19 @@ Capability workflows any role may load when the task involves that tooling:
 | `audio-transcription` | creating a timed transcript from existing audio/video |
 | `video` | turning a recording into cleaned video, a transcript, and publishing drafts |
 | `water-of-life` | intake, processing, and stewardship for The Water of Life observational archive |
+| `solar-journal` | Solar Journal entries, AM dating, and Living Year design |
+| `phoenix-calculator` | Phoenix zodiacal point calculation and AM year assignment |
+
+## Harness skills
+
+These have separate implementations per harness (Claude Code vs Codex) because
+they contain harness-specific model, tool, or runtime guidance. They are not
+symlinked.
+
+| Skill | Use when |
+|---|---|
+| `remember` | persisting or recalling information across sessions |
+| `skills` | working on the skill system itself |
 
 ## See also
 

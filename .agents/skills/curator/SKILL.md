@@ -139,22 +139,16 @@ pointer will point at an unreachable commit for anyone else cloning.
 
 ---
 
-## Content architecture — Four Pillars
+## Content architecture
 
-```
-Components/website/
-├── Alchemical-Journals/        — lived notes, field-writing, dreamwork
-│   ├── The-Living-Year/
-│   ├── Dreamwork/
-│   └── Foundations/
-├── Sovereign-Biophysics/       — method, experiments, synthesis (SENSITIVE)
-│   └── sovereign-biophysics-distillation/
-├── The-Living-Year/            — private container structure, rhythm notes
-└── Community/                  — routes to external spaces
-```
+The authoritative website structure is documented in
+`Components/website/ARCHITECTURE.md`. Read it before reorganizing content.
 
-When reorganizing, maintain the Four Pillars structure. New top-level folders
-require explicit instruction.
+The site is organized around four thematic areas — Foundations, The Vessel,
+Sovereign Biophysics, and The Living Year — but the actual directory layout
+has evolved beyond the original "Four Pillars" naming. Do not rely on a
+memorized tree; check the live structure and ARCHITECTURE.md. New top-level
+folders require explicit instruction.
 
 ---
 

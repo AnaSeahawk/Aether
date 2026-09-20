@@ -185,7 +185,7 @@ For a batch:
 Use:
 
 ```bash
-python scripts/phoenix.py \
+scripts/run \
   --sign Scorpio \
   --degree 9 \
   --minute 52 \
@@ -196,4 +196,5 @@ python scripts/phoenix.py \
   --timezone Europe/Madrid
 ```
 
-The script prints a table and can emit JSON with `--json`.
+The `run` wrapper creates a Python venv with `pyswisseph` on first
+invocation. It prints a table and can emit JSON with `--json`.

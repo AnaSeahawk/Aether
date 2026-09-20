@@ -3,6 +3,7 @@
 .video-work/
 __pycache__/
 *.pyc
+.venv/
 
 # Solar Journal: 9MB photo master kept local; web version is committed
 .agents/skills/solar-journal/instruments-photo.jpg

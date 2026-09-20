@@ -9,14 +9,12 @@ A reusable skill package for Ana's Phoenix system.
 
 ## Dependency
 
-```bash
-pip install pyswisseph
-```
+`pyswisseph` — installed automatically in a local `.venv` on first run.
 
 ## Ana's current anchor example
 
 ```bash
-python scripts/phoenix.py \
+scripts/run \
   --sign Scorpio \
   --degree 9 \
   --minute 52 \
@@ -26,6 +24,7 @@ python scripts/phoenix.py \
   --timezone Europe/Madrid
 ```
 
-Use `--json` for machine-readable output.
+Use `--json` for machine-readable output. The `run` wrapper creates a
+Python venv and installs `pyswisseph` on first invocation.
 
 The `degree` input is the **cardinal degree inside the sign**, not the ordinal display degree. Therefore Ana's `10º Scorpio` anchor is entered as `--degree 9 --minute 52`.

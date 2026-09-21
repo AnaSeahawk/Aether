@@ -122,7 +122,7 @@ Every new content file needs YAML frontmatter:
 ---
 status: draft
 visibility: private
-claim_tier: personal
+claim_tier: aptopadesha
 ---
 ```
 

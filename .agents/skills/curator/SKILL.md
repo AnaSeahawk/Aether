@@ -56,27 +56,28 @@ Every content file carries:
 ---
 status: draft | review | approved | published
 visibility: private | community | public
-claim_tier: personal | observational | evidential | relational-source
+claim_tier: aptopadesha | pratyaksha | anumana | yukti
 ---
 ```
 
-**The four claim tiers** name where a claim's authority comes from and which
-review it needs. Every public release also requires Ana's explicit approval.
+**The four pramāṇas** — the four valid means of knowledge from the Caraka
+Samhita (Vimānasthāna 4, Sūtrasthāna 11). They name where a document's
+authority comes from. Every public release also requires Ana's explicit
+approval.
 
-| Tier | The claim rests on | Review requirement | Typical content |
+| Pramāṇa | Sanskrit meaning | The authority rests on | Typical content |
 |---|---|---|---|
-| `personal` | Ana's own experience, account, or interpretation | Ana's judgement | Backstory, field notes, orientation writing |
-| `observational` | Something observed and recorded | Ana's judgement | Experiment reports, contributor observations |
-| `evidential` | External, checkable sources — published literature, documented history, computation | Verify the supporting sources | Research modules, cited findings, sourced history |
-| `relational-source` | A named person inside a collaboration | **That person's consent** | Water Magicians transcripts, intake reports, collaborator packets |
+| `aptopadesha` | Trustworthy testimony (āptopadeśa) | The keeper's experience, voice, or interpretation — including experience entrusted by others | Backstory, field notes, presentations, orientation writing, personal synthesis |
+| `pratyaksha` | Direct perception (pratyakṣa) | What was observed and recorded firsthand, with dates, measurements, conditions | Experiment reports, field observations, contributor observations |
+| `anumana` | Reasoned together (anumāna) | Knowledge arrived at through dialogue, collaboration, or engagement with sources | Water Magicians transcripts, collaborative guides, intake reports, source-derived research |
+| `yukti` | Applied framework (yukti) | The structure that holds the other three together | READMEs, build logs, output manifests, lane scaffolding |
 
-`evidential` is the tier for material a reader could verify without trusting
-anyone in the archive. It carries its sources with it.
-
-`relational-source` adds a consent gate. Its release requires the named
-person's consent as well as Ana's release approval — see the Water Magicians watchpoint in
-`protocols/active-surfaces.md`. Never downgrade a file out of this tier to tidy
-metadata: the tag is doing safety work.
+`anumana` includes a consent gate when a named person is part of the
+collaboration. Its release requires that person's consent as well as Ana's
+release approval — see the Water Magicians watchpoint in
+`protocols/active-surfaces.md`. Never downgrade a file out of `anumana` to
+tidy metadata when a collaborator's consent is involved: the tag is doing
+safety work.
 
 **Only `community` and `public` files are candidates for publishing.**
 `visibility` is internal metadata — GitHub repo privacy controls actual access.

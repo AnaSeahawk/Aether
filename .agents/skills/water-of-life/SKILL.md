@@ -166,7 +166,8 @@ She does not re-verify consent the form already captured.
    archival record in
    `Components/the-vessel/80-archive-raw/water-of-life/YYYYMMDD-NNN-original.md`,
    using the same date-sequence as the published observation. Claim that
-   path under the coordination protocol.
+   path under the coordination protocol, then commit and push the Vessel.
+   The folder's `README.md` holds the naming and order of operations.
 2. Format the observation using the template above. Light editing for
    clarity, sequence, and framing compliance is expected — contributors
    do not always use observational language. Preserve the contributor's
@@ -179,8 +180,13 @@ She does not re-verify consent the form already captured.
 4. Once approved, install the observation in `site/content/entries/`,
    build, review the output, and commit/push only the approved paths
    under the coordination protocol.
-5. Delete the raw submission from Formspree and email, fulfilling the
-   privacy commitment. The original is preserved in the Vessel.
+5. Confirm the original from step 1 is pushed to the Vessel remote. Only
+   then delete the raw submission from Formspree and email, fulfilling the
+   privacy commitment. If the original is not pushed, do not delete.
+
+Observations 001–004 (2026-08-31 to 2026-09-01) predate this rule: their
+raw submissions were deleted without an original kept. Every later
+observation has its original in the Vessel.
 
 The archive keeps both the original submission and the published
 version as its permanent record. Intermediate drafts need not be
@@ -192,8 +198,8 @@ retained.
    upload authorization requirements; keep the recording and working
    draft private.
 2. Save the original transcript in
-   `Components/the-vessel/80-archive-raw/water-of-life/` as the
-   archival original.
+   `Components/the-vessel/80-archive-raw/water-of-life/YYYYMMDD-NNN-transcript.srt`
+   (or `.md`) as the archival original, then commit and push the Vessel.
 3. Extract the observation — what they did, what they noticed, what
    else was happening. Format in first person using their words; edit
    lightly for framing compliance.
@@ -203,8 +209,8 @@ retained.
 5. After the contributor approves the text and Ana approves publication,
    install and push using the form-submission steps above.
 6. Delete the recording after the contributor has approved the
-   transcript, as committed in the privacy page. The transcript is
-   preserved in the Vessel.
+   transcript, as committed in the privacy page, and only after the
+   transcript is pushed to the Vessel remote.
 
 ---
 

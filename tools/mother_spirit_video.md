@@ -197,7 +197,8 @@ That copies the draft into `Components/website/archive/` and runs:
 Components/website/tools/build_archive_views
 ```
 
-The entry remains `status: draft` and `visibility: community`. Nothing is
+The entry remains `status: draft`, `visibility: private`, and
+`claim_tier: anumana`. Nothing is
 published or uploaded by this workflow.
 
 ## Review boundary

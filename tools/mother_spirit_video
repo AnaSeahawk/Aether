@@ -698,9 +698,9 @@ def write_bundle(project: Path, manifest: dict[str, Any]) -> None:
             title: {title}
             date: {date}
             type: video
-            visibility: community
+            visibility: private
             status: draft
-            claim_tier: personal-account
+            claim_tier: anumana
             summary: {summary}
             phase: mother-spirit
             significance: minor

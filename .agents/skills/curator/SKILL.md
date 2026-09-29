@@ -115,9 +115,9 @@ does not authorize source deletion or a history rewrite.
 
 ## Sensitive content
 
-`Components/the-vessel/` contains sensitive operational material. The intended
-migration is to a private GitHub repo (tracked in AGENTS.md §Sensitive Content).
-Do not move, reorganize, or reference sensitive content in public-facing files.
+`Components/the-vessel/` is the private GitHub repo `AnaSeahawk/the-vessel`
+and holds sensitive operational material. Do not move, reorganize, or
+reference sensitive content in public-facing files.
 When in doubt, ask before acting.
 
 The `sovereign-biophysics-distillation/` folder inside `Components/website/` is

@@ -74,6 +74,14 @@ Load only the skill files the work actually triggers:
   transcript, or publishing drafts (`tools/mother_spirit_video`).
 - Read `.agents/skills/passwords/SKILL.md` before any task involving passwords,
   API tokens, credentials, or `gopass`.
+- Read `.agents/skills/solar-journal/SKILL.md` when working on The Solar
+  Journal, its degree notation, or Annus Mundi dating.
+- Read `.agents/skills/phoenix-calculator/SKILL.md` when calculating Phoenix
+  points or Phoenix AM years.
+- Read `.agents/skills/remember/SKILL.md` when Ana asks to continue, resume, or
+  pick up a prior conversation.
+- Read `.agents/skills/skills/SKILL.md` before creating, editing, moving, or
+  removing a skill.
 - Do not scan every skill file unless the task is explicitly about the skill
   system itself.
 
@@ -325,11 +333,7 @@ If the file is mislabeled, rename it to the correct extension or replace it with
 
 ### Content Architecture (Components/website)
 
-Content is organized around **Four Pillars**:
-1. **Alchemical Journals** — lived notes, field-writing (`The-Living-Year/`, `Dreamwork/`, `Foundations/`)
-2. **Sovereign Biophysics** — method, experiments, synthesis (`sovereign-biophysics-distillation/`)
-3. **The Living Year** — private container structure and rhythm notes (`The-Living-Year/`)
-4. **Community & Open Archives** — routes to external spaces
+`Components/website/ARCHITECTURE.md` is the authoritative map of the website's lanes. Read it before reorganizing content. The older "Four Pillars" naming no longer matches the directory layout; do not rely on it.
 
 ### Content Metadata
 
@@ -369,7 +373,7 @@ media, submissions, or history requires separate explicit scope.
 
 ### Sensitive Content
 
-The `sovereign-biophysics-distillation/` folder contains sensitive operational material. The intended direction (as of 2026-03-16) is to migrate this content to a separate private GitHub repo. Do not assume it is safe to publish or share. When in doubt about sensitivity, ask before acting.
+Sensitive operational material lives in the private `the-vessel` repo (`Components/the-vessel/`). The website's `sovereign-biophysics-distillation/` folder is its bounded public research layer and remains the most sensitive area of the public site. Do not assume anything there is safe to publish or share. When in doubt about sensitivity, ask before acting.
 
 Read `.agents/skills/sensitive-content/SKILL.md` before inspecting, editing, summarizing, or
 moving sensitive files.

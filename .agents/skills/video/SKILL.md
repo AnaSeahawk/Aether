@@ -20,9 +20,10 @@ involves recordings. It does not have its own orchestration lane; claim the
 `.video-work/` path (or the relevant publishing path) under whatever role you
 are working as.
 
-The whole pipeline is **local-first**. The only step that leaves the machine is
-the optional hosted transcription call described below, and only when you choose
-it over the offline transcriber.
+Everything except transcription runs locally. Transcription uses the hosted
+route by default, once Ana has authorized the paid upload; the local
+transcriber runs only when Ana explicitly asks for it. Both are described
+below.
 
 ---
 
@@ -169,9 +170,11 @@ Recordings are operational, often health-adjacent material — read
 ## Outputs
 
 Projects live under `.video-work/<slug>/` (git-ignored). The website archive
-entry is a draft (`status: draft`, `visibility: community`); install it into the
-website only after review with `install-archive-entry`. Nothing is published or
-uploaded by this workflow.
+entry starts as `status: draft`, `visibility: private`, `claim_tier: anumana`
+— most recordings involve other people, and `anumana` carries their consent
+gate. For a recording of Ana alone, change it to `aptopadesha`. Install the
+entry into the website only after review with `install-archive-entry`. Nothing
+is published or uploaded by this workflow.
 
 ---
 

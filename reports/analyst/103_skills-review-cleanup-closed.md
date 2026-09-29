@@ -1,11 +1,11 @@
-# 102. Skills Review and Cleanup
+# 103. Skills Review and Cleanup — Closed
 
 **Date:** 2026-09-28  
 **Agent:** Claude Code (Opus 5.5)  
-**Session topic:** Review of all fifteen skills, the Water of Life originals folder, cleanup Steps 1–5 completed, four decisions open
+**Session topic:** Review of all fifteen skills, the Water of Life originals folder, cleanup completed, all decisions closed
 
-Replaces Report 101, which recorded the review and plan before any fix was
-made.
+Replaces Reports 101 and 102, which recorded earlier states of the same
+work.
 
 ---
 
@@ -13,8 +13,8 @@ made.
 
 Report 100 closed the roadmap from Report 096. This session reread every
 skill, found where skills contradict each other or the repo contract, and
-fixed everything that did not need a decision from Ana. Four decisions remain
-open.
+fixed everything. Ana's four decisions were then applied. Nothing from this
+review remains open.
 
 This is a public-safe report. Private surfaces are named by path only.
 
@@ -69,26 +69,14 @@ first.
 
 ---
 
-## Decisions for Ana
+## Decisions (closed)
 
-1. **Aphorisms vs. prose rule.** `prose` deletes negative-contrast
-   constructions on sight; `solar-journal` says not to define the journal by
-   what it isn't; two of its fixed aphorisms do exactly that ("The clock is
-   not wrong…", "This is not a system to follow…"). Either name the aphorisms
-   as a deliberate exception, or rewrite those two. Recommendation: keep them
-   as a named exception.
-2. **Pramāṇa glosses.** In the Caraka Saṃhitā, *anumāna* is usually rendered
-   "inference" and *yukti* as reasoning that joins several factors. The repo
-   glosses them "reasoned together" and "applied framework". If that is a
-   deliberate house meaning, one sentence in `curator` saying so would stop a
-   future agent from "correcting" it. Not verified against the Sharma
-   translation.
-3. **Collaborator names.** Two public skills (`audio-transcription`, `video`)
-   use real collaborators' names as examples. Recommendation: replace them
-   with neutral placeholders.
-4. **Lost hardware-cut script.** `video` describes a GPU segment-cut method
-   whose script lived in a past session's temporary folder and is gone.
-   Rebuild it as a `mother_spirit_video` command, or remove the reference.
+| Decision | Ana's answer | Applied |
+|---|---|---|
+| Solar Journal aphorisms vs. `prose` negative-contrast rule | Keep the aphorisms | Named as a deliberate exception in `prose` and `solar-journal` (`f707711`) |
+| Pramāṇa glosses for *anumāna* and *yukti* | Intentional house meanings | `curator` says so and forbids "correcting" them (`f707711`) |
+| Collaborator names in public skills | Fiona Gardner has consented and is part of the project; keep her name | Kept in the `audio-transcription` example prompt, now described as recurring names (this commit). The `video` mention of another collaborator went with the lost-script reference |
+| Lost hardware-cut script | Not needed | Reference removed from `video`; the method description stays (`f707711`) |
 
 ## Noticed, not changed
 

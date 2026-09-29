@@ -26,7 +26,8 @@ artifacts private unless the user explicitly changes that boundary.
    ```
 
    `tools/whisper-transcribe` is the stable repo-level alias for the same
-   client.
+   client. The `--prompt` names and terms recur across recordings and help
+   Whisper spell them; add any other names spoken in the recording.
 5. Validate that the SRT is non-empty, begins with a numbered cue, has monotonic
    timestamps, and reaches plausibly close to the media duration.
 6. Treat speaker identity as unverified. Hosted Whisper produces timestamps but

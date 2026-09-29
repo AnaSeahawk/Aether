@@ -210,7 +210,7 @@ journal entry to determine the current moon phase.
 
 **Formula:**
 
-> ☉☽ = Moon° − Sun° (add 360 if the result is negative)
+> ☉☽ = Moonº − Sunº (add 360 if the result is negative)
 
 **Each sign's first degree (for converting to absolute degrees):**
 
@@ -231,10 +231,10 @@ isn't one.
 
 **Worked example:**
 
-Sun at ♏ 10° · Moon at ♊ 13°
-- Sun absolute: 210 + 10 = 220°
-- Moon absolute: 60 + 13 = 73°
-- ☉☽ = 73 − 220 + 360 = **213°** → Full (181°–225°)
+Sun at ♏ 10º · Moon at ♊ 13º
+- Sun absolute: 211 + (10 − 1) = 220º
+- Moon absolute: 61 + (13 − 1) = 73º
+- ☉☽ = 73 − 220 + 360 = **213º** → Full (181º–225º)
 
 ---
 

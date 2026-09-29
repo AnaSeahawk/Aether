@@ -71,15 +71,15 @@ finding the way back.
 ### Two kinds of time
 
 1. **Astronomical / natural time** — the primary calendar. The sun's
-   position on the ecliptic, measured in degrees 1°–360°.
+   position on the ecliptic, counted in ordinal degrees 1º–360º.
 2. **"Train time"** — the Gregorian calendar. Used for coordination with
    the conventional world. Always secondary, always lowercase, always
    small in the layout.
 
 ### The solar year
 
-- Starts at Aries 1° (~March 20 Gregorian).
-- Runs 1°–360°. There is no 0° — "0° doesn't exist in a real circle."
+- Starts at Aries 1º (~March 20 Gregorian).
+- Runs 1º–360º. There is no 0º — "0° doesn't exist in a real circle."
 - Each sign spans exactly 30°.
 - One degree ≈ one day (~0.9856° per day, varies with orbital speed).
 
@@ -123,24 +123,39 @@ indicator º (U+00BA):
 
 Any of these is a complete date.
 
+### Ordinal º and cardinal °
+
+The journal counts degrees **ordinally**: `1º` is the first degree of a
+sign and covers cardinal `0°00′–0°59′`. The ordinal degree is the whole
+cardinal degree plus one, so cardinal `9°52′ Scorpio` is `10º Scorpio`.
+
+The **cardinal** `°` measures arc from zero. Use it only for exact
+coordinates (`9°52′00″`), ephemeris values, and angular sizes (a sign
+spans 30°, an opposition is 180°). The Aries ingress is cardinal
+`0° Aries`, which is the start of `1º Aries`.
+
+Every date, position, and degree range printed in the journal uses `º`.
+`phoenix-calculator` follows the same convention. The page copy
+explaining the mark is in `references/front-matter-content.md`.
+
 ---
 
 ## Degree key — sign/degree/Gregorian correspondence
 
 | Glyph | Sign | Degrees | Absolute | ~Gregorian | Element | Modality | Polarity | Body |
 |---|---|---|---|---|---|---|---|---|
-| ♈ | Aries | 1°–30° | 1°–30° | Mar 20 – Apr 19 | Fire | Cardinal | Masc. | Head |
-| ♉ | Taurus | 1°–30° | 31°–60° | Apr 20 – May 20 | Earth | Fixed | Fem. | Neck, throat |
-| ♊ | Gemini | 1°–30° | 61°–90° | May 21 – Jun 20 | Air | Mutable | Masc. | Arms, lungs |
-| ♋ | Cancer | 1°–30° | 91°–120° | Jun 21 – Jul 22 | Water | Cardinal | Fem. | Chest, stomach |
-| ♌ | Leo | 1°–30° | 121°–150° | Jul 23 – Aug 22 | Fire | Fixed | Masc. | Heart, spine |
-| ♍ | Virgo | 1°–30° | 151°–180° | Aug 23 – Sep 22 | Earth | Mutable | Fem. | Intestines |
-| ♎ | Libra | 1°–30° | 181°–210° | Sep 23 – Oct 22 | Air | Cardinal | Masc. | Kidneys, lower back |
-| ♏ | Scorpio | 1°–30° | 211°–240° | Oct 23 – Nov 21 | Water | Fixed | Fem. | Reproductive organs |
-| ♐ | Sagittarius | 1°–30° | 241°–270° | Nov 22 – Dec 21 | Fire | Mutable | Masc. | Hips, thighs |
-| ♑ | Capricorn | 1°–30° | 271°–300° | Dec 22 – Jan 19 | Earth | Cardinal | Fem. | Knees, bones |
-| ♒ | Aquarius | 1°–30° | 301°–330° | Jan 20 – Feb 18 | Air | Fixed | Masc. | Ankles, circulation |
-| ♓ | Pisces | 1°–30° | 331°–360° | Feb 19 – Mar 20 | Water | Mutable | Fem. | Feet |
+| ♈ | Aries | 1º–30º | 1º–30º | Mar 20 – Apr 19 | Fire | Cardinal | Masc. | Head |
+| ♉ | Taurus | 1º–30º | 31º–60º | Apr 20 – May 20 | Earth | Fixed | Fem. | Neck, throat |
+| ♊ | Gemini | 1º–30º | 61º–90º | May 21 – Jun 20 | Air | Mutable | Masc. | Arms, lungs |
+| ♋ | Cancer | 1º–30º | 91º–120º | Jun 21 – Jul 22 | Water | Cardinal | Fem. | Chest, stomach |
+| ♌ | Leo | 1º–30º | 121º–150º | Jul 23 – Aug 22 | Fire | Fixed | Masc. | Heart, spine |
+| ♍ | Virgo | 1º–30º | 151º–180º | Aug 23 – Sep 22 | Earth | Mutable | Fem. | Intestines |
+| ♎ | Libra | 1º–30º | 181º–210º | Sep 23 – Oct 22 | Air | Cardinal | Masc. | Kidneys, lower back |
+| ♏ | Scorpio | 1º–30º | 211º–240º | Oct 23 – Nov 21 | Water | Fixed | Fem. | Reproductive organs |
+| ♐ | Sagittarius | 1º–30º | 241º–270º | Nov 22 – Dec 21 | Fire | Mutable | Masc. | Hips, thighs |
+| ♑ | Capricorn | 1º–30º | 271º–300º | Dec 22 – Jan 19 | Earth | Cardinal | Fem. | Knees, bones |
+| ♒ | Aquarius | 1º–30º | 301º–330º | Jan 20 – Feb 18 | Air | Fixed | Masc. | Ankles, circulation |
+| ♓ | Pisces | 1º–30º | 331º–360º | Feb 19 – Mar 20 | Water | Mutable | Fem. | Feet |
 
 Gregorian dates are approximate (±1 day per year). Degree ranges use
 en dash (–), not hyphen.

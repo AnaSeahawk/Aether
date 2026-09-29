@@ -1,10 +1,10 @@
-# 103. Skills Review and Cleanup — Closed
+# 104. Skills Review and Cleanup — Final
 
-**Date:** 2026-09-28  
+**Date:** 2026-09-29  
 **Agent:** Claude Code (Opus 5.5)  
 **Session topic:** Review of all fifteen skills, the Water of Life originals folder, cleanup completed, all decisions closed
 
-Replaces Reports 101 and 102, which recorded earlier states of the same
+Replaces Reports 101–103, which recorded earlier states of the same
 work.
 
 ---
@@ -78,12 +78,21 @@ first.
 | Collaborator names in public skills | Fiona Gardner has consented and is part of the project; keep her name | Kept in the `audio-transcription` example prompt, now described as recurring names (this commit). The `video` mention of another collaborator went with the lost-script reference |
 | Lost hardware-cut script | Not needed | Reference removed from `video`; the method description stays (`f707711`) |
 
-## Noticed, not changed
+## Follow-up completed
 
-- About forty website content files carry `sun:` values written with `°`
-  (e.g. `sun: 18° Sagittarius`). By the new convention these are ordinal and
-  would take `º`. Changing them is a content edit in the website submodule and
-  was left alone.
-- The Solar Journal product repo has an artboard named `DailyEntry.dc.html`,
-  and its README lists "Daily entry pages". The skill says the body pages are
-  not daily-entry pages and not to name a template `daily-entry`.
+**Website `sun:` values.** All 48 website files with a `sun:` value were
+checked against Swiss Ephemeris before editing. Only 2 were clearly ordinal;
+16 were whole cardinal degrees, 29 were ambiguous because the Sun crossed a
+degree boundary on that date, and 1 named the wrong sign. With Ana's
+approval, every value was recalculated as the ordinal degree at noon
+Europe/Madrid on the file's date: 27 numbers changed, 21 kept their number
+and gained `º`. The rule is now recorded in `curator`. Website `aa24098`,
+Aether `dff38e3`.
+
+The three `moon:` values were left unchanged: the Moon moves about 13° a
+day, so a date alone cannot verify them.
+
+**Solar Journal artboard.** `DailyEntry.dc.html` renamed `EntryPage.dc.html`,
+with the canvas title and README updated (solar-journal `0a4dc47`). The Sep 4
+design-canvas snapshot in `published/solar-journal.html` still carries the
+old name as history.

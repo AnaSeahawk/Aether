@@ -90,6 +90,10 @@ Optional astronomical fields (`sun:`, `moon:`, `moon-phase:`) are left blank
 unless a tool supplies the values. Do not flag blank astronomical fields as
 outstanding work.
 
+`sun:` uses the ordinal degree with `º` (see `solar-journal` §Ordinal º and
+cardinal °): `sun: 23º Aries`. When a file has only a date, compute the Sun's
+position at noon Europe/Madrid on that date.
+
 **Do not promote a file's status or visibility without explicit instruction from
 Ana.** The curator maintains the fields; Ana approves the transitions.
 

@@ -150,10 +150,9 @@ Before writing:
 2. Do not assume `primary` means the calendar the user intends.
 3. Search the target date range for existing Phoenix events to prevent duplicates.
 4. For a secondary personal calendar, create a clean solo event:
-   - `attendees=[]`
-   - `self_attendance="omit"` where supported
-   - `add_google_meet=false`
-   - `transparency="transparent"`
+   - no attendees, and no self-attendance entry where the tool allows it
+   - no video-conference link
+   - shown as free, not busy
 5. Prefer a short 15-minute marker beginning at the exact transit time.
 6. Title:
    - `Phoenix Point — 28º Sagittarius`

@@ -233,9 +233,9 @@ identical.
 ### Fillable
 
 Ruled blanks are real `<input>` elements styled as rules: they print as
-empty lines and are typeable on screen. Entries persist per viewer via
-`localStorage`, and via the `db` capability when the viewer's runtime
-grants it.
+empty lines and are typeable on screen. Entries persist per viewer in
+browser storage. Any host-specific persistence for the published page is
+recorded in the product repo README, not here.
 
 ### The degree mark renders inconsistently
 
@@ -268,7 +268,8 @@ the table beside it does not.
   `Components/solar-journal/`. Holds artboards, `canvas.json`, and
   published canvas under `published/`.
 - **This skill** stays in `aether`: skills belong to the coordination seed.
-- **Artifact (current):** `https://claude.ai/code/artifact/44896e33-8c4d-4470-92fb-2d1ed696ec48`
+- **Published front matter:** `published/front-matter.html` in the product
+  repo; its README records where the current version is hosted.
 - **Trim:** A5, 148 × 210 mm
 - **Superseded:** branch `claude/journal-design-tv0uqe` — history only,
   not the working copy.

@@ -72,6 +72,10 @@ approval.
 | `anumana` | Reasoned together (anumāna) | Knowledge arrived at through dialogue, collaboration, or engagement with sources | Water Magicians transcripts, collaborative guides, intake reports, source-derived research |
 | `yukti` | Applied framework (yukti) | The structure that holds the other three together | READMEs, build logs, output manifests, lane scaffolding |
 
+These glosses are Aether's own and deliberate. They differ from the common
+translations of *anumāna* ("inference") and *yukti* ("reasoning"); do not
+"correct" them toward those.
+
 `anumana` includes a consent gate when a named person is part of the
 collaboration. Its release requires that person's consent as well as Ana's
 release approval — see the Water Magicians watchpoint in

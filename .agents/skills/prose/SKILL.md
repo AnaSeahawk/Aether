@@ -130,6 +130,9 @@ building a positive claim by first denying an alternative.
 State the positive directly. If the dismissed alternative matters, absorb it
 as a trailing concession: "X is Z, not Y" — rarely, never as the default move.
 
+Exception: the established aphorisms listed in the `solar-journal` skill are
+settled language. Use them as written, even where they take this shape.
+
 **Filler phrases:**
 
 - "it is worth noting," "it is important to remember"

@@ -55,6 +55,10 @@ finding the way back.
 
 ### Established aphorisms (use these, don't reinvent)
 
+These are settled language, and a deliberate exception to both the posture
+rule above and the `prose` rule against negative-contrast constructions. Use
+them as written; do not write new sentences in that shape.
+
 - "The Sun tells the time of day. The watch tells when to catch the train."
 - "Civil time coordinates society. Solar time orients life."
 - "The calendar names it. The sky locates it."

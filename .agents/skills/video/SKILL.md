@@ -51,8 +51,7 @@ independently on the GPU (input `-ss START -t DURATION`, frame-accurate) to
 MPEG-TS parts, then stitch them with the concat demuxer using stream copy
 (`-f concat -safe 0 -i list.txt -c copy -movflags +faststart out.mp4`) — that
 final join does zero video re-encode. Audio can re-encode to AAC on CPU; it is
-negligible. This is the pattern used for the Darlene Teahan exchange cut; the
-script lived in the session scratchpad as `darlene_hwcut.sh`.
+negligible.
 
 ---
 

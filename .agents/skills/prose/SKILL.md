@@ -147,6 +147,43 @@ than invites. See `soul.md`: *"Invite, don't push."*
 **Instructive constructions:** "you should," "you will find," "try to," "notice
 how." The body is not addressed directly. The voice witnesses; it does not direct.
 
+## Website invitation language
+
+Website copy carries the same relational boundary as longer prose. The page
+orients by making its structure clear. It does not manage the visitor's
+attention, pace, or response.
+
+**Trust the context.** Do not explain what the visitor already knows from the
+page itself. On Ana's own homepage, a biography does not need an "About Ana"
+label followed by Ana's name. Remove headings that merely announce the content
+immediately below them.
+
+**Let sequence provide orientation.** If the next section already shows the
+available paths, do not preface it with another conceptual map. Phrases such as
+"three doors," "find a way in," and "see what is here now" add a layer between
+the visitor and the work. Use them only when they convey information the page
+cannot convey through order and design.
+
+**Name destinations rather than command actions.** Prefer noun phrases such as
+"Public archives," "Gatherings," and "Private calls" over "Enter the archive,"
+"See the gatherings," and "View private calls." A button may use an action when
+an actual action is required; name the outcome plainly and without pressure.
+
+**Do not choreograph the visitor's experience.** Delete language such as "stay
+as long as a page asks," "begin where you are," "take a moment," or "notice."
+These sentences prescribe pace, mood, or attention even when they sound gentle.
+State what the space holds and allow the visitor's relationship to it to remain
+their own.
+
+**Build hospitality into the structure.** Clear access, honest exchange, and a
+legible path create welcome. The copy does not need to grant permission or
+describe itself as welcoming.
+
+**Let Ana's language carry the page.** When Ana supplies finished language, it
+is the load-bearing voice. Navigation, labels, and functional copy remain
+subordinate to it and should introduce as little additional interpretation as
+possible.
+
 ---
 
 ## When the prose feels off

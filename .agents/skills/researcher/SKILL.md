@@ -1,6 +1,6 @@
 ---
 name: researcher
-description: Source research, bibliography management, book acquisition, and citation discipline. Use for finding texts, extracting quotes, and maintaining the bibliography submodule.
+description: Source research, bibliography management, book acquisition, and citation discipline. Use for finding texts, extracting quotes, maintaining the bibliography submodule, and stewarding the private Google Drive library and its CATALOG.md entries.
 ---
 
 # Skill — researcher
@@ -26,6 +26,10 @@ research notes, and structured passages the writer can build from.
 
 - `Components/bibliography/` — the entire bibliography submodule. The researcher
   adds files, writes `.md` companion notes, and keeps entries organized by topic.
+  This repo is **public** (remote `AnaSeahawk/bibliography`) — see §Public
+  repo vs. private shelf below.
+- The private library shelf on Google Drive, `gdrive:Bibliography/<topic>/` —
+  see §Private library shelf below.
 - Research notes filed in `reports/researcher/` (see `protocols/orchestration.md`).
 
 The researcher reads freely across `Components/the-vessel/` and
@@ -79,6 +83,57 @@ The companion `.md` uses this minimal form:
 
 ---
 
+## Public repo vs. private shelf
+
+`Components/bibliography/` (GitHub `AnaSeahawk/bibliography`) is **public**.
+Do not add copyrighted books to it. Its existing contents (many copyrighted)
+stay as they are until Ana decides otherwise — a later split is planned
+(GitHub keeps public-domain books plus a catalog of the privately held ones).
+For now: public-domain items may go here; copyrighted acquisitions go to the
+private shelf below instead.
+
+## Private library shelf — Google Drive
+
+Copyrighted and privately-held books live on `gdrive:Bibliography/<topic>/`
+(rclone remote, read-write — see `.agents/skills/passwords/SKILL.md` if a
+tool needs credentials). First topic: `living-design`.
+
+Each topic folder carries a `CATALOG.md` listing, per book:
+
+```markdown
+- **Filename:** ...
+- **Title:** full title
+- **Author:** ...
+- **Year / edition / publisher:** ...
+- **Format:** PDF/EPUB/...
+- **Why it's in the archive:** ...
+- **Provenance:** e.g. "from Ana's own library" vs. "newly acquired"
+  (mark previews/excerpts clearly as *not* the full book)
+```
+
+End each CATALOG.md with a **not landed** list: titles identified as wanted
+but not yet on the shelf.
+
+### Search before acquiring
+
+Ana's existing library is ~1,450 books, scattered. Search these before
+downloading anything new:
+
+- `gdrive:Laptop Archive/Books/` — largest cluster, ~1,092 books, organized by
+  topic folder (Ayurveda, alchemy, ferments, soil, BioPhilia, garden,
+  plasmaTherapy, tao, …).
+- `gdrive:Laptop Archive/Pictures/` — z-lib downloads mixed into photo folders.
+- `gdrive:Books/` — Ana's personal library, ~46 books, mostly urine-therapy
+  texts. Keep separate; don't reorganize it.
+- Local: `~/Documents/Archive-From-Alpha/` and
+  `~/Downloads/Telegram Desktop/`.
+
+If found, **copy** (never move) the book onto the shelf and record it in
+CATALOG.md with its real provenance. Never substitute a different edition or
+work for the one that was actually wanted.
+
+---
+
 ## Fetching texts — the `annas` CLI
 
 ```bash
@@ -86,24 +141,42 @@ The companion `.md` uses this minimal form:
 annas book-search "caraka samhita sharma"
 annas book-search "frawley ayurveda"
 
-# Download into the correct topic folder
-ANNAS_DOWNLOAD_PATH=/home/bird/Git/aether/Components/bibliography/ayurveda \
+# Download to a temp dir — never straight into Components/bibliography
+ANNAS_DOWNLOAD_PATH=/tmp/researcher-download \
   annas book-download <md5_hash> Author-Short-Title.pdf
 ```
 
 The wrapper at `/home/bird/.nix-profile/bin/annas` loads `ANNAS_SECRET_KEY` from
-gopass and sets `ANNAS_BASE_URL`. Always set `ANNAS_DOWNLOAD_PATH` explicitly.
+gopass and sets `ANNAS_BASE_URL`. Always set `ANNAS_DOWNLOAD_PATH` explicitly,
+to a temp dir, not to the bibliography repo. The `annas` service may be
+DDoS-Guard-blocked at times — if a download fails outright, say so rather than
+retrying silently or substituting another source.
 
-After download, verify the file type:
+After download, verify the file type and content before trusting it:
 
 ```bash
-head -c 16 Components/bibliography/<topic>/<file> | od -An -tx1 -c
+head -c 16 <tempfile> | od -An -tx1 -c
 ```
 
-If mislabeled, rename to the correct extension before committing.
+If mislabeled, rename to the correct extension. Archive.org previews can
+masquerade as full books — check page count and actual content, not just file
+type, before treating a download as complete. Never substitute a different
+edition or work for the one that was wanted.
 
-Prefer public-domain, openly licensed, or authorized sources. Do not download
-modern copyrighted texts unless Ana has confirmed authorization.
+### Landing the file
+
+1. Verify the temp download (above).
+2. If public domain: `rclone copy` into `Components/bibliography/<topic>/`
+   (the submodule) and commit as usual.
+3. If copyrighted or privately held: `rclone copy` the verified file onto
+   the private shelf, `gdrive:Bibliography/<topic>/`; update that topic's
+   CATALOG.md entry (including provenance); then delete the temp copy.
+4. Never leave a verified download sitting only in the temp dir.
+
+Copyright line: full copyrighted texts stay private (shelf, not GitHub). Any
+public-facing archive page may reference them only by name, number, and
+summary in our own words — never a reproduced excerpt — the way the Alexander
+pattern index does.
 
 ---
 

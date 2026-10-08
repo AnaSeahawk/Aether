@@ -45,7 +45,7 @@ Read exactly one role skill before work begins:
 
 | Role | Use when | Skill | Status | Lineage | Last tended |
 |---|---|---|---|---|---|
-| `researcher` | source research, bibliography, book acquisition | `.agents/skills/researcher/SKILL.md` | active | original | 2026-08-09 |
+| `researcher` | source research, bibliography, book acquisition | `.agents/skills/researcher/SKILL.md` | active | original | 2026-10-08 |
 | `writer` | drafting or revising prose | `.agents/skills/writer/SKILL.md` | active | original | 2026-09-21 |
 | `curator` | website structure, frontmatter, review/publish workflow | `.agents/skills/curator/SKILL.md` | active | original | 2026-10-08 |
 | `analyst` | reports, synthesis, continuity, audits | `.agents/skills/analyst/SKILL.md` | active | original | 2026-09-19 |

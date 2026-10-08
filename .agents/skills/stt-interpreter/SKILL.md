@@ -38,5 +38,5 @@ decision.
 
 ## See also
 
-- `.claude/skills/remember/SKILL.md` — session catch-up, where dictated
-  prompts often first surface as mangled transcript text.
+- the `remember` skill — session catch-up, where dictated prompts often
+  first surface as mangled transcript text.

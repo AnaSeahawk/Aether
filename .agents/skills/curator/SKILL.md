@@ -161,6 +161,20 @@ folders require explicit instruction.
 
 ---
 
+## Structure follows observation
+
+The curator adds structure to the archive, so it answers to the foundation
+principle in
+`Components/the-vessel/in-development/living-design/the-archive-is-an-ecosystem.md`.
+Before a new field, tag, section, or category, ask both threshold questions:
+
+**What will this let us see that we cannot see without it?**
+
+**Is this structure needed, or have we built the conditions that make it
+seem needed?**
+
+---
+
 ## See also
 
 - `AGENTS.md` — the authoritative source for workflow conventions

@@ -87,10 +87,14 @@ symlinked.
 
 ## Compost
 
-Empty for now. When a skill is retired, it is recorded here rather than
-deleted: its name, the date it was composted, why, what replaced it, and the
-path to its last living version in git history (e.g. a commit hash or tag),
-so the lineage stays traceable.
+When a skill is retired, it is recorded here rather than deleted: its name,
+the date it was composted, why, what replaced it, and the path to its last
+living version in git history (e.g. a commit hash or tag), so the lineage
+stays traceable.
+
+| Composted | Date | Why | What grew from it |
+|---|---|---|---|
+| `frontmatter` personal command (`~/.claude/commands/frontmatter.md`, outside the repo) | 2026-10-08 | Lived on one machine only; invisible to Codex and to the registry | Shared skill `.agents/skills/frontmatter/` (commit a8d73a8), identical instructions |
 
 ## Seasonal review
 

@@ -91,7 +91,12 @@ public catalog of everything in the library, including privately held titles.
 Copyrighted books go to the private shelf below.
 
 Many copyrighted books from earlier acquisitions are still in the public repo.
-Move them as you come across them, without waiting for a sweep:
+The **Shelf status** table at the top of `READING_LIST.md` shows which topic
+folders are sorted. When work touches a folder still marked *to sort*, sort the
+whole folder in that pass and update the table. Don't run a separate sweep.
+Drive already has an empty folder for every topic. Bulk-moved books can get
+short CATALOG.md entries (title, author, format, provenance); fill in the
+details when a book is next used. For each book:
 
 1. `rclone copy` the file to `gdrive:Bibliography/<topic>/`, keeping the
    same topic folder name as in the repo. Verify it landed with

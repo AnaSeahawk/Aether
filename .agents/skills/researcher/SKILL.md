@@ -86,11 +86,23 @@ The companion `.md` uses this minimal form:
 ## Public repo vs. private shelf
 
 `Components/bibliography/` (GitHub `AnaSeahawk/bibliography`) is **public**.
-Do not add copyrighted books to it. Its existing contents (many copyrighted)
-stay as they are until Ana decides otherwise — a later split is planned
-(GitHub keeps public-domain books plus a catalog of the privately held ones).
-For now: public-domain items may go here; copyrighted acquisitions go to the
-private shelf below instead.
+It holds public-domain and openly licensed books, plus `READING_LIST.md`, the
+public catalog of everything in the library, including privately held titles.
+Copyrighted books go to the private shelf below.
+
+Many copyrighted books from earlier acquisitions are still in the public repo.
+Move them as you come across them, without waiting for a sweep:
+
+1. `rclone copy` the file to `gdrive:Bibliography/<topic>/`, keeping the
+   same topic folder name as in the repo. Verify it landed with
+   `rclone lsf` and a matching size.
+2. Add its CATALOG.md entry. Provenance: "moved from public bibliography repo".
+3. `git rm` it from the submodule, keep its `READING_LIST.md` line (mark it
+   *private shelf*), commit and push the submodule, then commit the pointer
+   in `aether`.
+
+Removing a file does not erase it from Git history. Rewriting history is a
+separate, destructive step; do it only when Ana asks.
 
 ## Private library shelf — Google Drive
 
@@ -173,10 +185,20 @@ edition or work for the one that was wanted.
    CATALOG.md entry (including provenance); then delete the temp copy.
 4. Never leave a verified download sitting only in the temp dir.
 
-Copyright line: full copyrighted texts stay private (shelf, not GitHub). Any
-public-facing archive page may reference them only by name, number, and
-summary in our own words — never a reproduced excerpt — the way the Alexander
-pattern index does.
+### Quoting copyrighted books in public writing
+
+We never publish the book itself, but we do quote it. A public page may quote
+a copyrighted book when:
+
+- each quotation is short (a sentence or a passage, not pages) and is there
+  because our own writing comments on it, builds on it, or answers it;
+- the page is our writing, with quotations inside it, not a run of excerpts;
+- every quotation carries its citation (author, title, year, chapter or
+  page, edition or translator) and is quoted exactly.
+
+Reproducing a whole systematic work is different. A page that lists every
+entry of a structured book, such as Alexander's 253 patterns, uses names,
+numbers, and summaries in our own words.
 
 ---
 

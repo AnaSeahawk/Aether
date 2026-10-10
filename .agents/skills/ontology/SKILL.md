@@ -11,14 +11,16 @@ description: Tend the archive's ontology, its pattern language of recurring term
 
 ## Where it lives
 
-- Ontology: `Components/the-vessel/in-development/living-design/ontology/` (`README.md` for the form, `patterns.md` for the patterns)
+- Ontology: `Components/the-vessel/in-development/living-design/ontology/` (`README.md` for the form, `patterns.md` for the patterns, `lexicons/` for the complete source vocabularies)
 - Foundation principle: `Components/the-vessel/in-development/living-design/the-archive-is-an-ecosystem.md`
 - Dictionary it grafts onto: `Components/website/sovereign-biophysics-distillation/Dictionary/` (`terms.md`, `environments.md` for the nine registers)
 - Ecological, biological, and Ayurvedic vocabulary for matches: `Components/the-vessel/in-development/living-design/ecological-language-of-life.md`
 
 ## Rules
 
-1. **Recurrence first.** A word becomes a pattern only when it appears in at least three entries. Words from conversation wait under "Waiting at the edges" in the ontology README until entries use them.
+1. **Two layers.** *Lexicons* hold the complete vocabulary of each source tradition (alchemy, Ayurveda, ecology and biology, astrology, Alexander's patterns), entered whole from the library's sources whether or not the archive uses a term. *Patterns* are the archive's own language. The recurrence rule applies to patterns only.
+1a. **Recurrence first, for patterns.** A word becomes a pattern only when it appears in at least three entries. A lexicon term that starts recurring grows into a pattern; its lexicon entry stays.
+1b. **Lexicon entries are sourced.** Each term cites the book on the library shelf it comes from (author, title, chapter or page). Definitions are in our own words; quotations stay short and cited. Unverified references are marked.
 2. **Survey, don't guess.** Count recurrence with a file search over the entries (skip reports, agent reports, ops, the bibliography, and the Vessel's private method, experiment, synthesis, and Water Magicians folders). Record the count, the survey date, and example paths.
 3. **Graft, don't duplicate.** If the Dictionary defines the word, link to it. A pattern adds recurrence, larger/smaller links, and matches; it does not redefine.
 4. **Use the pattern form** in the ontology README. Working definitions come from how the entries use the word, not from outside definitions.

@@ -53,18 +53,21 @@ where it can be used.
 
 ## Bibliography structure
 
-```
-Components/bibliography/
-├── alchemy/
-├── ayurveda/
-├── chinese-medicine/
-├── mythology/
-├── women-healers/
-└── <topic>/
-```
+Both shelves use the same topic folders: alchemy, alexandrian-science,
+astrology, ayurveda, buddhism, daoism-chinese-medicine, dreamwork, ecology,
+embodiment, feminist-science, fermentation, grief-and-body, living-design
+(Drive only), mythology, plants, shamanism, urine-therapy, water,
+women-healers.
+
+`READING_LIST.md` §How the shelf is organized holds the filing rules, and
+each section's bold line is that folder's scope. In short: one book, one
+folder; a book that serves another topic gets a *Listed under* row there;
+file by the scope line, and propose a new folder rather than stretching one.
 
 Each file: the binary (PDF, EPUB, DJVU) plus an optional `.md` companion note
-naming the edition, key chapters, and any quotes already extracted.
+naming the edition, key chapters, and any quotes already extracted. Companion
+notes are our own writing and stay in the public repo, even when the book is
+on the private shelf.
 
 The companion `.md` uses this minimal form:
 
@@ -90,13 +93,12 @@ It holds public-domain and openly licensed books, plus `READING_LIST.md`, the
 public catalog of everything in the library, including privately held titles.
 Copyrighted books go to the private shelf below.
 
-Many copyrighted books from earlier acquisitions are still in the public repo.
-The **Shelf status** table at the top of `READING_LIST.md` shows which topic
-folders are sorted. When work touches a folder still marked *to sort*, sort the
-whole folder in that pass and update the table. Don't run a separate sweep.
-Drive already has an empty folder for every topic. Bulk-moved books can get
-short CATALOG.md entries (title, author, format, provenance); fill in the
-details when a book is next used. For each book:
+Every folder was sorted on 2026-10-13: the public repo now holds only
+public-domain editions. Check the edition, not just the original's date — a
+1651 text in a 2015 translation is copyrighted. If a copyrighted or
+uncertain-rights book turns up in the public repo, move it. CATALOG.md entries
+for bulk-moved books are short; fill in year, edition, and publisher when a
+book is next used. For each book:
 
 1. `rclone copy` the file to `gdrive:Bibliography/<topic>/`, keeping the
    same topic folder name as in the repo. Verify it landed with
@@ -225,10 +227,11 @@ local file, say so explicitly.
 
 ## Caraka Saṃhitā — current holdings
 
-Local PDFs:
-- `Components/bibliography/ayurveda/Sharma-Caraka-Samhita-Vol1.pdf`
-- `Components/bibliography/ayurveda/Sharma-Caraka-Samhita-Vol2.pdf`
-- Companion notes: `Components/bibliography/ayurveda/Sharma-Caraka-Samhita.md`
+Sharma's translation (2 vols) is on the private shelf,
+`gdrive:Bibliography/ayurveda/`. Local copies, too large for GitHub, stay
+untracked at `Components/bibliography/ayurveda/Sharma-Caraka-Samhita-Vol1.pdf`
+and `-Vol2.pdf`. Companion notes:
+`Components/bibliography/ayurveda/Sharma-Caraka-Samhita.md`.
 
 Li Goldragon's `caraka-samhita` repo (cloned at `/home/bird/Git/primary`) has
 per-page OCR, per-sthāna digests, and verse-level philological notes. Read it

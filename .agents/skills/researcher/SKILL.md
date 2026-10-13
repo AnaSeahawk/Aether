@@ -133,21 +133,12 @@ but not yet on the shelf.
 
 ### Search before acquiring
 
-Ana's existing library is ~1,450 books, scattered. Search these before
-downloading anything new:
-
-- `gdrive:Laptop Archive/Books/` — largest cluster, ~1,092 books, organized by
-  topic folder (Ayurveda, alchemy, ferments, soil, BioPhilia, garden,
-  plasmaTherapy, tao, …).
-- `gdrive:Laptop Archive/Pictures/` — z-lib downloads mixed into photo folders.
-- `gdrive:Books/` — Ana's personal library, ~46 books, mostly urine-therapy
-  texts. Keep separate; don't reorganize it.
-- Local: `~/Documents/Archive-From-Alpha/` and
-  `~/Downloads/Telegram Desktop/`.
-
-If found, **copy** (never move) the book onto the shelf and record it in
-CATALOG.md with its real provenance. Never substitute a different edition or
-work for the one that was actually wanted.
+Ana's existing library is about 1,450 books spread across Drive and local
+folders. Search those locations, listed in the private file
+`Components/the-vessel/90-ops/library-locations.md`, before downloading
+anything new. If found, **copy** (never move) the book onto the shelf and
+record it in CATALOG.md with its real provenance. Never substitute a different
+edition or work for the one that was actually wanted.
 
 ---
 

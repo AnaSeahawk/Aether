@@ -19,7 +19,7 @@ guess, and only ask if the guess turns out wrong.
 
 | Heard / transcribed as | Canonical |
 |---|---|
-| "Legal Dragon" / "Gold Dragon" / "Lee" | **Li Goldragon** — Ana's partner. Li's own `primary` repo instead uses "Goldragon" for Li's cluster-proposal repo; judge from context which one is meant. |
+| "Legal Dragon" / "Gold Dragon" / "Lee" | **Li Goldragon**. Li's own `primary` repo instead uses "Goldragon" for Li's cluster-proposal repo; judge from context which one is meant. |
 | "Shivamboo" | **Shivambu** — the auto-urine practice term used across the Water of Life archive. |
 
 ## When the table doesn't help

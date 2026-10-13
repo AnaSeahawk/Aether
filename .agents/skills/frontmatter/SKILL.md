@@ -1,21 +1,19 @@
 ---
 name: frontmatter
-description: Generate Aether content frontmatter with the current Sun position, status, visibility, and claim_tier.
+description: Generate Aether content frontmatter with the current Sun and Moon positions, moon phase, status, visibility, and claim_tier. Use when starting a new content file or when Ana asks for frontmatter.
 ---
 
-Run the following bash command and capture the output:
+Run from the Aether root:
+
 ```
-nix run github:LiGoldragon/mentci-ai#chronos
+.agents/skills/frontmatter/scripts/run
 ```
 
-The output is in the format `EPOCH.SIGN.DEGREE.MINUTE.SECOND` where:
-- EPOCH = traditional year (informational only)
-- SIGN = zodiac sign number (1=Aries, 2=Taurus, 3=Gemini, 4=Cancer, 5=Leo, 6=Virgo, 7=Libra, 8=Scorpio, 9=Sagittarius, 10=Capricorn, 11=Aquarius, 12=Pisces)
-- DEGREE = ordinal degree within the sign (1-30, where 1 is the first degree)
-- MINUTE.SECOND = arc minutes and seconds
-
-Convert the sign number to its name. Write the degree with the ordinal
-indicator º (U+00BA), not the degree sign °: e.g. `27º Pisces`.
+It prints the `date`, `sun`, `moon`, and `moon-phase` lines for this moment,
+computed locally with Swiss Ephemeris (the first run installs it, a few
+seconds). Degrees are ordinal with `º`: `21º Libra`. For a file that has
+only a date, pass `--date YYYY-MM-DD`; it computes noon Europe/Madrid, the
+curator convention.
 
 Then ask the user three questions.
 
@@ -41,10 +39,10 @@ Then generate front matter in this format:
 
 ```yaml
 ---
-date: YYYY-MM-DD
-sun: [DEGREE]º [SIGN_NAME]
-moon:
-moon-phase:
+date: [from the script]
+sun: [from the script]
+moon: [from the script]
+moon-phase: [from the script]
 type: [chosen type]
 status: draft
 visibility: [chosen visibility]
@@ -52,6 +50,5 @@ claim_tier: [chosen claim_tier]
 ---
 ```
 
-Use today's date. Leave `moon` and `moon-phase` blank unless a tool supplies
-them; do not suggest a manual lookup. New files always start at
-`status: draft`. Present the completed block ready to copy.
+New files always start at `status: draft`. Present the completed block
+ready to copy.

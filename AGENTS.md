@@ -82,6 +82,12 @@ Load only the skill files the work actually triggers:
   pick up a prior conversation.
 - Read `.agents/skills/skills/SKILL.md` before creating, editing, moving, or
   removing a skill.
+- Read `.agents/skills/frontmatter/SKILL.md` when starting a new content file
+  or generating frontmatter.
+- Read `.agents/skills/ontology/SKILL.md` when adding, revising, matching, or
+  composting an archive term or pattern, or running the term survey.
+- Read `.agents/skills/stt-interpreter/SKILL.md` when a dictated prompt
+  contains a word or name that doesn't parse in context.
 - Do not scan every skill file unless the task is explicitly about the skill
   system itself.
 

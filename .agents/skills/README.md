@@ -45,7 +45,7 @@ Read exactly one role skill before work begins:
 
 | Role | Use when | Skill | Status | Lineage | Last tended |
 |---|---|---|---|---|---|
-| `researcher` | source research, bibliography, book acquisition | `.agents/skills/researcher/SKILL.md` | active | original | 2026-10-08 |
+| `researcher` | source research, bibliography, book acquisition | `.agents/skills/researcher/SKILL.md` | active | original | 2026-10-09 |
 | `writer` | drafting or revising prose | `.agents/skills/writer/SKILL.md` | active | original | 2026-09-21 |
 | `curator` | website structure, frontmatter, review/publish workflow | `.agents/skills/curator/SKILL.md` | active | original | 2026-10-08 |
 | `analyst` | reports, synthesis, continuity, audits | `.agents/skills/analyst/SKILL.md` | active | original | 2026-09-19 |
@@ -72,8 +72,8 @@ Capability workflows any role may load when the task involves that tooling:
 | `solar-journal` | Solar Journal entries, AM dating, and Living Year design | active | original | 2026-09-28 |
 | `phoenix-calculator` | Phoenix zodiacal point calculation and AM year assignment | active | original | 2026-09-28 |
 | `stt-interpreter` | decoding phonetic near-misses in dictated prompts | active | adapted from LiGoldragon/primary stt-interpreter | 2026-10-08 |
-| `frontmatter` | generating content frontmatter with Sun position, status, visibility, claim_tier | active | adapted from `~/.claude/commands/frontmatter.md` | 2026-10-08 |
-| `ontology` | tending the archive's pattern language: adding, matching, or composting terms; term survey; seasonal review | active | grew from the Living Design dialogue and the Dictionary's format | 2026-10-08 |
+| `frontmatter` | generating content frontmatter with Sun position, status, visibility, claim_tier | active | adapted from `~/.claude/commands/frontmatter.md`; local Swiss Ephemeris script replaced the remote `chronos` call 2026-10-13 | 2026-10-13 |
+| `ontology` | tending the archive's pattern language: adding, matching, or composting terms; term survey; seasonal review | active | grew from the Living Design dialogue and the Dictionary's format | 2026-10-10 |
 
 ## Harness skills
 
@@ -83,7 +83,7 @@ symlinked.
 
 | Skill | Use when | Status | Lineage | Last tended |
 |---|---|---|---|---|
-| `remember` | recovering working context from a prior thread or session before continuing it | active | split from a shared skill (2026-09-06, "separate Codex and Claude skill surfaces") | Codex 2026-10-08 · Claude 2026-10-07 |
+| `remember` | recovering working context from a prior thread or session before continuing it | active | split from a shared skill (2026-09-06, "separate Codex and Claude skill surfaces") | Codex 2026-10-08 · Claude 2026-10-13 |
 | `skills` | working on the skill system itself | active | split from a shared skill (2026-09-06, "separate Codex and Claude skill surfaces") | Codex 2026-09-28 · Claude 2026-09-28 |
 
 ## Compost
@@ -102,7 +102,8 @@ stays traceable.
 The skill tree is walked each solstice and equinox, alongside the rest of the
 archive. What recurred is named, what no longer serves moves to Compost, and
 what waits at the edges is left to grow. Next review: winter solstice,
-around 2026-12-21.
+around 2026-12-21. At each review, check "Last tended" against
+`git log -1 --format=%cs -- <skill path>`; the dates drift.
 
 ## See also
 

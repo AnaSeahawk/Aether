@@ -27,8 +27,9 @@ timestamps, the human-prompt signal below, and the message text around it.
 
 ## Delegate the remembering pass
 
-Send one small, read-only subagent — Sonnet with light thinking, or Haiku.
-Never the expensive top model for this mechanical retrieval. Give it only the
+Send one small, read-only subagent — Sonnet with light thinking, as
+`CLAUDE.md` sets for retrieval. Never the expensive top model for this
+mechanical retrieval. Give it only the
 supplied identifier, title, topic clues, and the handoff format below. Do not
 pass the full current conversation.
 

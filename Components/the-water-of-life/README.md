@@ -15,6 +15,13 @@ the-water-of-life/
   README.md
 ```
 
+## Historical Context
+
+For the tradition your story joins — five thousand years of observation,
+diagnosis, symbols, and names across every literate civilization — see the
+[Golden Lexicon](../website/sovereign-biophysics-distillation/00-orientation/golden-lexicon.html)
+in the Sovereign Biophysics archive.
+
 ## Contributing
 
 Read `templates/contributor-template.md` and fill it out, or request an

@@ -74,6 +74,7 @@ Capability workflows any role may load when the task involves that tooling:
 | `stt-interpreter` | decoding phonetic near-misses in dictated prompts | active | adapted from LiGoldragon/primary stt-interpreter | 2026-10-08 |
 | `frontmatter` | generating content frontmatter with Sun position, status, visibility, claim_tier | active | adapted from `~/.claude/commands/frontmatter.md`; local Swiss Ephemeris script replaced the remote `chronos` call 2026-10-13 | 2026-10-13 |
 | `ontology` | tending the archive's pattern language: adding, matching, or composting terms; term survey; seasonal review | active | grew from the Living Design dialogue and the Dictionary's format | 2026-10-10 |
+| `book-collaboration` | co-creating a book with another author: manuscripts, series bible, discussion journal, Drive drafts into Git | active | original | 2026-10-14 |
 
 ## Harness skills
 

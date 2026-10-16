@@ -34,7 +34,9 @@ Components/the-vessel/36-book-collaborations-private/<author>-<work>/
   sources/<date>-<origin>/   original files as received, plus SHA256SUMS.txt
 ```
 
-List each project in the section's `README.md`. Before writing, confirm that
+List each project in the section's `README.md`, and link it from the author's
+person card in `Components/the-vessel/05-relationships-private/`. Before
+writing, confirm that
 the Vessel repository is still private.
 
 This skill is public. The specifics of a book stay in its Vessel folder:

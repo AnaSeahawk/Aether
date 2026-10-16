@@ -40,7 +40,7 @@ ANA SEAHAWK
 |   +-- Habitat Design
 |   |   Working with those conditions through responsive change.
 |   |
-|   +-- Urbiculture
+|   +-- Urbaculture
 |       The ecological writings.
 |       |
 |       +-- Biophilia and the Vivarium
@@ -114,7 +114,7 @@ link into Sovereign Biophysics, a personal journal entry can link to The Living
 Year, and the Vivarium can appear in the backstory with a link to its ecological
 writings.
 
-Ways of Living > Urbiculture > Relationship with Plants is an agreed direction.
+Ways of Living > Urbaculture > Relationship with Plants is an agreed direction.
 The guiding sentence's placement beneath Ways of Living remains a proposal.
 This tree describes destinations, not a requirement to put every branch in the
 top navigation.

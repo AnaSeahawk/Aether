@@ -6,6 +6,8 @@
 
 **Session topic:** Editorial structure for the Ana Seahawk website redesign.
 
+**Superseded by:** [107. Revised Website Sitemap](107_ana-seahawk-sitemap-revised.md), 2026-10-18.
+
 ---
 
 Ana authorized saving and pushing this corrected sitemap. It is a planning

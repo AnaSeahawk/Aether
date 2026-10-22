@@ -7,6 +7,7 @@ Python: 3.9+ (zoneinfo)
 
 from __future__ import annotations
 import argparse
+import os
 import json
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone, timedelta
@@ -157,6 +158,16 @@ def parse_after(value: str) -> datetime:
     return dt
 
 
+def system_zone():
+    """The system's IANA timezone name, which localtimed keeps following Ana."""
+    if os.environ.get("TZ"):
+        return os.environ["TZ"].lstrip(":")
+    target = os.path.realpath("/etc/localtime")
+    if "zoneinfo/" in target:
+        return target.split("zoneinfo/", 1)[1]
+    return "UTC"
+
+
 def main():
     p = argparse.ArgumentParser(description="Calculate Phoenix points and exact solar transit times.")
     p.add_argument("--sign", required=True, choices=SIGNS)
@@ -167,7 +178,8 @@ def main():
     p.add_argument("--count", type=int, default=1)
     p.add_argument("--after", type=parse_after, required=True,
                    help="Timezone-aware ISO datetime, e.g. 2026-09-05T00:00:00+02:00")
-    p.add_argument("--timezone", default="Europe/Madrid")
+    p.add_argument("--timezone", default=system_zone(),
+                   help="Area/City for local times; defaults to the system timezone")
     p.add_argument("--am-offset", type=int, default=3894)
     p.add_argument("--json", action="store_true")
     args = p.parse_args()

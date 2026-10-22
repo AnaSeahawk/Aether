@@ -191,9 +191,11 @@ scripts/run \
   --second 0 \
   --start-n 136 \
   --count 12 \
-  --after 2026-09-05T00:00:00+02:00 \
-  --timezone Europe/Madrid
+  --after 2026-09-05T00:00:00+02:00
 ```
+
+Local transit times use the system timezone, which follows Ana's location
+(localtimed). Pass `--timezone Area/City` to show another place's times.
 
 The `run` wrapper creates a Python venv with `pyswisseph` on first
 invocation. It prints a table and can emit JSON with `--json`.

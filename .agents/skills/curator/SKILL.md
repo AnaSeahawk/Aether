@@ -92,7 +92,8 @@ outstanding work.
 
 `sun:` uses the ordinal degree with `º` (see `solar-journal` §Ordinal º and
 cardinal °): `sun: 23º Aries`. When a file has only a date, compute the Sun's
-position at noon Europe/Madrid on that date.
+position at local noon on that date, where Ana wrote it (the `frontmatter`
+script: system timezone by default, `--tz Area/City` otherwise).
 
 **Do not promote a file's status or visibility without explicit instruction from
 Ana.** The curator maintains the fields; Ana approves the transitions.

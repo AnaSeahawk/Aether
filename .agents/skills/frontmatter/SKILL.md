@@ -12,8 +12,11 @@ Run from the Aether root:
 It prints the `date`, `sun`, `moon`, and `moon-phase` lines for this moment,
 computed locally with Swiss Ephemeris (the first run installs it, a few
 seconds). Degrees are ordinal with `º`: `21º Libra`. For a file that has
-only a date, pass `--date YYYY-MM-DD`; it computes noon Europe/Madrid, the
-curator convention.
+only a date, pass `--date YYYY-MM-DD`; it computes local noon where Ana
+wrote it. The system timezone follows her location (localtimed), so the
+default is right for work written here and now; for something written
+elsewhere, add `--tz Area/City`. The script names the zone it used.
+Fill `moon:` and `moon-phase:` too; never leave a computed value blank.
 
 Then ask the user three questions.
 

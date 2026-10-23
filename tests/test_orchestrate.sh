@@ -207,7 +207,7 @@ parallel_claims first "$test_workspace/parallel/b" '0 2 '
 
 # A missing transaction-lock dependency must stop before any claim is written.
 mkdir "$test_workspace/no-flock"
-for dependency in bash dirname realpath; do
+for dependency in bash dirname realpath mkdir; do
   ln -s "$(command -v "$dependency")" "$test_workspace/no-flock/$dependency"
 done
 expect_status 69 env PATH="$test_workspace/no-flock" "$helper" claim curator "$test_workspace/free" -- missing-flock
@@ -292,5 +292,27 @@ release_lane curator
 [ ! -s "$(lane_lock analyst fresh)" ] || fail '--force did not clear the lane'
 
 assert_contains "$("$helper" stale)" 'No lane has been held longer than'
+
+# Default storage stays outside the worktree, and linked worktrees share claims.
+fixture="$test_workspace/default-repo"
+mkdir -p "$fixture/tools"
+cp "$helper" "$fixture/tools/orchestrate"
+git -C "$fixture" init -q
+unset ORCHESTRATE_WORKSPACE_ROOT
+"$fixture/tools/orchestrate" claim analyst "$fixture/owned" -- fixture >/dev/null
+record="$fixture/.git/aether-orchestration/analyst.lock"
+[ -s "$record" ] || fail 'default registry is not inside Git metadata'
+[ ! -e "$fixture/analyst.lock" ] || fail 'default registry polluted worktree'
+token="$(sed -n 's/^# token: //p' "$record")"
+git -C "$fixture" -c user.name=Test -c user.email=test@example.invalid commit --allow-empty -qm fixture
+git -C "$fixture" worktree add -qb linked "$test_workspace/linked"
+mkdir -p "$test_workspace/linked/tools"
+cp "$helper" "$test_workspace/linked/tools/orchestrate"
+expect_status 2 "$test_workspace/linked/tools/orchestrate" claim writer "$fixture/owned" -- conflict
+"$fixture/tools/orchestrate" release analyst --token "$token" >/dev/null
+[ ! -e "$record" ] || fail 'release left an idle record'
+"$fixture/tools/orchestrate" claim analyst "$fixture/owned" -- fixture >/dev/null
+"$fixture/tools/orchestrate" clear analyst --force >/dev/null
+[ ! -e "$record" ] || fail 'clear left an idle record'
 
 printf '%s\n' 'orchestrate tests passed'

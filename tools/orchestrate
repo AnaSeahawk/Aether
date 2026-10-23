@@ -2,7 +2,13 @@
 set -euo pipefail
 
 default_workspace="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-workspace="$(realpath -m "${ORCHESTRATE_WORKSPACE_ROOT:-$default_workspace}")"
+if [ -n "${ORCHESTRATE_WORKSPACE_ROOT:-}" ]; then
+  workspace="$(realpath -m "$ORCHESTRATE_WORKSPACE_ROOT")"
+else
+  common_dir="$(git -C "$default_workspace" rev-parse --path-format=absolute --git-common-dir)"
+  workspace="$common_dir/aether-orchestration"
+fi
+mkdir -p "$workspace"
 
 ROLES=(researcher writer curator analyst)
 STALE_HOURS="${ORCHESTRATE_STALE_HOURS:-12}"
@@ -415,7 +421,7 @@ release() {
         "$(lock_identity "$lock")" >&2
     fi
   fi
-  write_lock "$role" "$lane" '' ''
+  rm -f -- "$(lock_path "$role" "$lane")"
   print_state
 }
 
@@ -477,7 +483,7 @@ clear_lane() {
   printf 'Clearing abandoned lane %s, claimed %s ago:\n' \
     "$(lock_identity "$lock")" "$(format_age "$age")"
   cat "$lock"
-  write_lock "$role" "$lane" '' ''
+  rm -f -- "$(lock_path "$role" "$lane")"
   printf '\n'
   print_state
 }

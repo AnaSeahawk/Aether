@@ -57,8 +57,11 @@ tools/orchestrate clear researcher --lane caraka-notes
 `clear` prints the record it removes and refuses a lane younger than the
 threshold unless given `--older-than <hours>` or `--force`.
 
-The helper requires Bash, realpath, and util-linux `flock` to serialize updates.
-`ORCHESTRATE_WORKSPACE_ROOT` can select a shared registry for multiple checkouts.
+The helper requires Git, Bash, realpath, and util-linux `flock` to serialize updates.
+Runtime records live in the Git common directory (`.git/aether-orchestration`
+in a normal checkout), outside the working tree. Linked worktrees share it.
+Release and clear remove their records. `ORCHESTRATE_WORKSPACE_ROOT` can
+select another shared registry for independent checkouts.
 `ORCHESTRATE_STALE_HOURS` sets the abandonment threshold.
 
 Use separate worktrees for concurrent editing, or coordinate exclusive staging

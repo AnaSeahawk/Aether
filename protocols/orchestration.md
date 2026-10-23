@@ -279,7 +279,7 @@ the current map of what is safe to touch.
 
 `<role>.lock` and `<role>--<lane>.lock` are plain text. Lines beginning with `#`
 are claim metadata; every other line is one claimed path, optionally followed by
-`# reason`. Empty file means idle.
+`# reason`. A missing or empty file means idle. Release and clear remove the record.
 
 ```
 # lane: researcher--caraka-notes
@@ -302,8 +302,13 @@ helper does not authenticate lane owners: the release token prevents accidental
 cross-session releases, but any local process can read it or write these files
 directly. Unique session names and correct release discipline remain necessary.
 
-Lock files are runtime state — **do not commit them**. They are listed in
-`.gitignore`.
+Lock files are runtime state — **do not commit them**. The default registry is
+`aether-orchestration/` inside the Git common directory, outside the working
+tree; linked worktrees share it. Release and clear remove lane records.
+`ORCHESTRATE_WORKSPACE_ROOT` overrides that location for independent checkouts
+or tests. Restart older helpers before switching registry locations; they must
+not coordinate against the old root-level records. Legacy `*.lock` files remain
+ignored as a precaution.
 
 ---
 

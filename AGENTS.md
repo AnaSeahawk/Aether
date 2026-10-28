@@ -78,6 +78,9 @@ Load only the skill files the work actually triggers:
   Journal, its degree notation, or Annus Mundi dating.
 - Read `.agents/skills/phoenix-calculator/SKILL.md` when calculating Phoenix
   points or Phoenix AM years.
+- Read `.agents/skills/book-collaboration/SKILL.md` when working on a book Ana
+  co-creates with another author, including its characters and illustrations
+  (The Names of Light: `Components/the-names-of-light/`, private).
 - Read `.agents/skills/remember/SKILL.md` when Ana asks to continue, resume, or
   pick up a prior conversation.
 - Read `.agents/skills/skills/SKILL.md` before creating, editing, moving, or

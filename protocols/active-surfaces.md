@@ -22,6 +22,7 @@ Proposed in report 075 (June 28), carried unbuilt through reports 077, 079, and
 | The Water of Life | `Components/the-water-of-life` | **public** | Open observational archive: contributor entries, methodology, templates |
 | The Vessel | `Components/the-vessel` | **private** | Everything operational, relational, intimate, or unreviewed |
 | The Solar Journal | `Components/solar-journal` | **private** | The journal as a product: artboards, canvas, published design. Part of The Living Year. Private until release. |
+| The Names of Light | `Components/the-names-of-light` | **private** | Fiona Gardner's children's series, co-developed with Ana: manuscripts, series bible, journal, character and illustration development. Collaboration-private; nothing leaves without Fiona's agreement and Ana's approval. Photographs of real people stay in Drive, never here. |
 
 `aether` being public is the single most-missed fact in this archive's history.
 Five analyst reports reached it carrying private material before anyone noticed.

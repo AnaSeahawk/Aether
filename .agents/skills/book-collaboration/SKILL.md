@@ -22,10 +22,14 @@ private collaboration material.
 
 ## Where things live
 
-Each project gets one private folder:
+Each project gets one private home: a folder in the Vessel, or its own
+private repository once it needs room (illustrations) or the author needs
+access. A project lives in one place only. When it moves, move it, and leave
+a pointer in the Vessel section's `README.md`.
 
 ```
 Components/the-vessel/36-book-collaborations-private/<author>-<work>/
+  (or a private repository with the same layout)
   README.md          doorway: what this is, read order, where else things live
   series-bible.md    settled decisions only, each dated
   journal.md         one dated entry per conversation, newest last
@@ -39,7 +43,12 @@ person card in `Components/the-vessel/05-relationships-private/`. Before
 writing, confirm that
 the Vessel repository is still private.
 
-This skill is public. The specifics of a book stay in its Vessel folder:
+Photographs of real people used as references for illustrations, above all
+children, never enter Git. They stay in a private Drive folder, and image
+tools receive a written description. A photograph goes to an outside image
+service only with the agreement of the author and, for a child, the parents.
+
+This skill is public. The specifics of a book stay in its private home:
 names, plot, decisions, and anything personal. Never copy them here.
 
 ---

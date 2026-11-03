@@ -19,3 +19,6 @@
 [submodule "Components/the-names-of-light"]
 	path = Components/the-names-of-light
 	url = git@github.com:AnaSeahawk/the-names-of-light.git
+[submodule "Components/workshops"]
+	path = Components/workshops
+	url = git@github.com:AnaSeahawk/workshops.git

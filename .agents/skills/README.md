@@ -68,7 +68,7 @@ Capability workflows any role may load when the task involves that tooling:
 |---|---|---|---|---|
 | `audio-transcription` | creating a timed transcript from existing audio/video | active | original | 2026-09-28 |
 | `video` | turning a recording into cleaned video, a transcript, and publishing drafts | active | original | 2026-09-28 |
-| `water-of-life` | intake, processing, and stewardship for The Water of Life observational archive | active | original | 2026-09-28 |
+| `water-of-life` | intake, retelling, and stewardship for The Water of Life cooperative archive | active | original | 2026-11-07 |
 | `solar-journal` | Solar Journal entries, AM dating, and Living Year design | active | original | 2026-09-28 |
 | `phoenix-calculator` | Phoenix zodiacal point calculation and AM year assignment | active | original | 2026-09-28 |
 | `stt-interpreter` | decoding phonetic near-misses in dictated prompts | active | adapted from LiGoldragon/primary stt-interpreter | 2026-10-08 |

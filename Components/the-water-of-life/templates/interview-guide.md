@@ -8,18 +8,18 @@ archive observations.
 ## Before the conversation
 
 1. **Explain the archive.** A public observational archive, not a
-   medical study or advocacy project. Their words will be publicly
-   accessible.
+   medical study or advocacy project. The account is retold with light
+   editing in their own voice, published, and stays in the archive.
 
-2. **Display name.** Ask how they want to appear: a name, a nickname,
-   or anonymous (the default).
+2. **Name.** Ask whether a name should appear: a name, a nickname, or
+   none (the default). A name comes off the site on request.
 
-3. **Consent.** Confirm they understand the observation will be public
-   and that the archive makes no medical claims.
+3. **Consent.** Confirm they understand the account will be public and
+   stay in the archive, and that the archive makes no medical claims.
 
 4. **Recording.** Confirm they consent to being recorded. The audio is
-   stored privately until the transcript is reviewed and approved, then
-   deleted. Only the transcript enters the archive.
+   stored privately and deleted, with the transcript, once the account is
+   retold and published. Only the retold account enters the archive.
 
 ---
 

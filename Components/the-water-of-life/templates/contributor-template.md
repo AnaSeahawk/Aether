@@ -8,10 +8,10 @@ One moment in your practice, recorded.
 You can come back and add more over time. This is a field notebook, not
 a one-time survey.
 
-Contributors must be 18 or older. You choose how you are identified:
-real name, pseudonym, or anonymous. Details you share may make you
-recognizable to people who know you — consider this when deciding what
-to include.
+Contributors are 18 or older. Each account is retold for the archive
+with light editing, then published, where it stays. A name appears only
+when one is given, and comes off the site on request. Details in an
+account can make a person recognizable to those who know them.
 
 ---
 
@@ -65,7 +65,7 @@ A detail, a longer story, something the form didn't ask?
 
 ---
 
-**Display name** (optional — leave blank to appear anonymously):
+**Name to show with this account** (optional — left blank, no name appears):
 
 **Age range** (optional): 18–19 / 20s / 30s / 40s / 50s / 60s / 70s / 80+
 
@@ -73,7 +73,7 @@ A detail, a longer story, something the form didn't ask?
 
 ## Consent
 
-- [ ] I am 18 or older. This is my own observation in my own words. I understand it will be published as part of a public archive, and I consent to The Water of Life processing and publishing the information I have chosen to provide, including any health-related information. I can request removal at any time by contacting the archive steward.
+- [ ] I am 18 or older and this account is my own. It may be retold with light editing and published in The Water of Life archive, where it stays, including any health details shared here. A name given here comes off the site on request.
 
 ---
 

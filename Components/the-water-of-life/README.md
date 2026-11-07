@@ -1,7 +1,9 @@
 # The Water of Life
 
-An open-source, participatory observational archive collecting first-person
-accounts of engagement with auto-urine practice.
+A cooperative observational archive of accounts of engagement with
+auto-urine practice, retold with light editing in each contributor's own
+voice. Maintained by Ana Seahawk with the support of Fiona Gardner and
+Megan Macdonald.
 
 No claims. No diagnoses. No prescriptions. Just the data.
 

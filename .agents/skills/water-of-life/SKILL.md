@@ -1,6 +1,6 @@
 ---
 name: water-of-life
-description: Intake, processing, and stewardship skill for The Water of Life — a public, participatory observational archive for auto-urine practice. Handles observation formatting, transcript processing, framing discipline, and editorial principles.
+description: Intake, processing, and stewardship skill for The Water of Life — a cooperative observational archive for auto-urine practice. Handles retelling accounts, transcript processing, framing discipline, and editorial principles.
 ---
 
 # Skill — The Water of Life Archive
@@ -13,36 +13,59 @@ description: Intake, processing, and stewardship skill for The Water of Life —
 
 Use this skill when:
 
-- Preparing a form submission for review and approved publication
-- Formatting an interview transcript into an observation
+- Retelling a form submission for review and approved publication
+- Retelling an interview as an observation
 - Validating observations for framing compliance
 - Working on the website or archive structure
 - Evolving the methodology as the archive grows
 
 ---
 
+## Who holds the archive
+
+The Water of Life is a cooperative archive, maintained by Ana Seahawk
+with the support of Fiona Gardner (GitHub `fiology`) and Megan Macdonald
+(GitHub `ExpansionHealing`). Ana maintains it; Fiona and Megan support
+it. On the site their names link to `anaseahawk.com`,
+`fionagardner.org`, and `expansionhealing.ca`.
+
+---
+
 ## Repositories
 
-- **Website:** `/home/bird/Git/the-water-of-life/` → `github.com/AnaSeahawk/the-water-of-life`
+- **Website (public):** `/home/bird/Git/the-water-of-life/` →
+  `github.com/AnaSeahawk/the-water-of-life`
   - Hugo static site, deployed to GitHub Pages
   - Site lives at `https://anaseahawk.github.io/the-water-of-life/`
-  - Hugo template functions (`relURL` etc.) do NOT work in content `.md` files — only in layout templates. Use relative paths (`../privacy/`) in content.
-- **Aether repo:** `/home/bird/Git/aether/Components/the-water-of-life/`
+  - Hugo template functions (`relURL` etc.) do NOT work in content `.md`
+    files — only in layout templates. Use relative paths (`../privacy/`)
+    in content.
+- **Keeping (private):** `/home/bird/Git/water-of-life-keeping/` →
+  `github.com/AnaSeahawk/water-of-life-keeping`
+  - `in-progress/` — a retelling until it is published, then deleted
+  - `mailing-list.md` — emails left for news of upcoming events
+  - `originals/` — the 005 and 006 originals only; no new originals
+- **Aether:** `/home/bird/Git/aether/Components/the-water-of-life/`
   - Methodology and templates (synced with website versions)
-  - Skill file at `.agents/skills/water-of-life/SKILL.md`
 
-When editing the founding document, sync both copies.
+The founding document exists in three copies: the website's
+`site/content/methodology/founding-document.md` and
+`methodology/founding-document.md`, and Aether's
+`Components/the-water-of-life/methodology/founding-document.md`. Edit
+all three together.
+
+Water of Life material does not go in the Vessel.
 
 ---
 
 ## The archive's position
 
-The Water of Life is a public, participatory observational archive
-collecting first-person accounts of engagement with auto-urine practice.
+The Water of Life collects accounts of engagement with auto-urine
+practice, retold with light editing in the contributor's own voice.
 
 It is **not** a medical resource, treatment guide, or advocacy site. It
-makes no therapeutic claims. It collects self-reported observations with
-concurrent factors documented, in the contributor's own words.
+makes no therapeutic claims. It holds self-reported observations with
+concurrent factors documented.
 
 As of August 2026, no controlled clinical trial evaluating auto-urine
 practice as a therapeutic intervention in humans has been identified.
@@ -67,6 +90,9 @@ these rules.
 | "What else was happening..." | "No other treatment was needed..." |
 | "Changes I noticed..." | "Results..." / "Outcomes..." |
 
+These rules govern the archive's own words. A contributor's own
+interpretation, kept in their voice, stays theirs (see below).
+
 ### Structural rules
 
 1. **No diagnostic labels as categories.** Observations are not
@@ -84,40 +110,45 @@ these rules.
 
 ## Editorial principles
 
-These were established while processing the first observations:
-
-1. **First person.** Observations are published in the contributor's own
-   voice, exactly as they gave them. Do not convert to third person.
-2. **Preserve their words.** Correct grammar, clarify sequence, remove
-   unnecessary repetition — but do not change the meaning or intensity
-   of what someone said.
+1. **Retold in the contributor's voice.** Accounts are retold with light
+   editing and stay in first person, the way the contributor gave them.
+   Do not convert to third person.
+2. **Light editing.** Correct grammar and spelling, clarify sequence,
+   write out shorthand, remove unnecessary repetition. Do not change the
+   meaning or intensity of what someone said.
 3. **Their interpretation stays theirs.** If a contributor says "I felt
-   I was about to have a stroke" or "I feel it saved my life," that is
-   their experience. Keep it as their interpretation, not silently
-   convert it into the archive's claim or soften it into something they
-   didn't say.
-4. **Every form field they filled out appears in the published
-   observation.** Pathways, duration, overall experience, concurrent
-   factors — nothing submitted gets silently dropped.
+   I was about to have a stroke," "I feel it saved my life," or "it is
+   the only treatment that has ever cleared my dandruff," keep it as
+   their interpretation. Do not convert it into the archive's claim or
+   soften it into something they didn't say.
+4. **Every observation field they filled out appears.** Pathways,
+   duration, overall experience, concurrent factors, anything else —
+   nothing submitted gets silently dropped. Email is the exception: it
+   goes only to the mailing list.
+5. **When unsure of a correction, ask Ana.** Name what changed and why
+   when presenting a draft.
 
 ---
 
 ## Observation format
 
-The archive uses a field notebook model. The basic unit is an
-**observation** — a short, first-person record of what someone did,
-what they noticed, and what else was happening at the time.
+The basic unit is an **observation** — a short, first-person record of
+what someone did, what they noticed, and what else was happening at the
+time. On the site, the call to contribute is "Share an account"; the
+published entry is titled "Observation NNN".
 
 Every observation is a markdown file in `site/content/entries/`.
 
-Filename: `YYYYMMDD-NNN.md` (date + sequence number)
+Filename: `YYYYMMDD-NNN.md` — the date the account was submitted, and
+the next sequence number. A late entry keeps its submission date, even
+when that places it out of order.
 
 ```markdown
 ---
 title: "Observation NNN"
 date: YYYY-MM-DD
 contributor: <display name or "anonymous">
-overall: <positive | neutral | mixed | negative | stopped>
+overall: <positive | neutral | mixed | negative | stopped | stopped-other>
 ---
 
 ## Practice
@@ -126,91 +157,73 @@ overall: <positive | neutral | mixed | negative | stopped>
 
 **Duration:** <how long, how often>
 
-**Overall:** <positive | neutral | mixed | negative | stopped>
+**Overall:** <same value as front matter>
 
 ## What I observed
 
-<Their words. First person. What they did, what they noticed, what
-changed, what didn't, what surprised them.>
+<Their words, lightly edited. First person.>
 
 ## What else was happening
 
-<Concurrent factors. Other treatments, diet, lifestyle, stress,
-medications, environment. Their words.>
+<Age range, if given. Concurrent factors. Their words.>
 ```
 
-Optional additions if the contributor provided them:
-- Display name (otherwise anonymous)
-- Age range
-- "Anything else" section
+Add `## Anything else` when the contributor filled that field.
 
-If the contributor provided an email address, it is recorded only in
-the private archival original. It never appears in the published
-observation.
+---
 
-### Consent and authority
+## Consent and authority
 
 The form's consent checkbox and the privacy page together constitute the
-contributor's informed consent to processing, editing, and publication.
-The privacy page commits to deleting the raw submission from Formspree
-and email after the observation is formatted and published. Honoring
-that commitment is part of the workflow, not a separate authorization.
+contributor's consent to retelling, light editing, and publication.
+Ana's role is editorial review: framing, formatting, and readiness. She
+does not re-verify consent the form already captured. Contributor
+consent does not replace Ana's publication approval.
 
-Ana's role in the intake workflow is editorial review: framing
-compliance, formatting quality, and readiness for the public archive.
-She does not re-verify consent the form already captured.
+### Terms by date
 
-### Processing a form submission
+- **Shared on or after 2026-11-07:** the account stays once published.
+  A named contributor can ask for their name to come off the public
+  site; the account stays. No original is kept.
+- **Observations 001–006 (shared before 2026-11-07):** given under the
+  earlier terms, which included removal of the whole observation on
+  request. Honor that for them.
 
-1. Receive the submission and save the original verbatim as a private
-   archival record in
-   `Components/the-vessel/80-archive-raw/water-of-life/YYYYMMDD-NNN-original.md`,
-   using the same date-sequence as the published observation. Claim that
-   path under the coordination protocol, then commit and push the Vessel.
-   The folder's `README.md` holds the naming and order of operations.
-2. Format the observation using the template above. Light editing for
-   clarity, sequence, and framing compliance is expected — contributors
-   do not always use observational language. Preserve the contributor's
-   first-person voice, intensity, and interpretation. Apply the
-   sensitive-content skill to the working location. Do not place the
-   draft in the public repo before review.
-3. Ana reviews the formatted draft for framing quality and readiness.
-   Use her explicit approval if already given; otherwise present the
-   completed draft.
+---
+
+## Processing a form submission
+
+1. Find the submission in Ana's email (Formspree, subject "New
+   submission from Water of Life Contributions"). Read it; do not save
+   a copy of the original anywhere.
+2. Retell it in the format above, with light editing. Keep any working
+   draft in `water-of-life-keeping/in-progress/` or in chat — never in
+   the public repo before approval.
+3. Present the draft to Ana with a short list of what changed. Use her
+   explicit approval if already given.
 4. Once approved, install the observation in `site/content/entries/`,
-   build, review the output, and commit/push only the approved paths
-   under the coordination protocol.
-5. Confirm the original from step 1 is pushed to the Vessel remote. Only
-   then delete the raw submission from Formspree and email, fulfilling the
-   privacy commitment. If the original is not pushed, do not delete.
+   build, review the output, commit, push, and confirm it is live.
+5. If the contributor left an email, add it with the date to
+   `water-of-life-keeping/mailing-list.md`, with nothing else about them.
+   Commit and push.
+6. Delete the submission email permanently (including from Trash), and
+   delete any `in-progress/` draft. Ana clears Formspree herself.
 
-Observations 001–004 (2026-08-31 to 2026-09-01) predate this rule: their
-raw submissions were deleted without an original kept. Every later
-observation has its original in the Vessel.
+---
 
-The archive keeps both the original submission and the published
-version as its permanent record. Intermediate drafts need not be
-retained.
-
-### Processing an interview
+## Processing an interview
 
 1. Transcribe the recording using the audio-transcription skill and its
-   upload authorization requirements; keep the recording and working
-   draft private.
-2. Save the original transcript in
-   `Components/the-vessel/80-archive-raw/water-of-life/YYYYMMDD-NNN-transcript.srt`
-   (or `.md`) as the archival original, then commit and push the Vessel.
-3. Extract the observation — what they did, what they noticed, what
-   else was happening. Format in first person using their words; edit
-   lightly for framing compliance.
-4. Prepare the draft for contributor review. Send it only when
+   upload authorization requirements; keep the recording and transcript
+   private.
+2. Retell the account in the contributor's voice, in the format above.
+3. Prepare the draft for contributor review. Send it only when
    communication with that contributor is explicitly authorized;
    otherwise return it to Ana.
-5. After the contributor approves the text and Ana approves publication,
-   install and push using the form-submission steps above.
-6. Delete the recording after the contributor has approved the
-   transcript, as committed in the privacy page, and only after the
-   transcript is pushed to the Vessel remote.
+4. After the contributor approves the text and Ana approves publication,
+   install and push as in the form steps.
+5. Delete the recording and transcript once the account is retold and
+   published.
 
 ---
 
@@ -219,28 +232,31 @@ retained.
 A person can contribute as often as they want. Observations stand alone.
 Where a contributor uses a display name, related observations may
 naturally become identifiable as part of an ongoing record. There is no
-identity management system, no deduplication infrastructure, no key
-pairs. If that's needed someday, build it then.
+identity management system and no linking by email.
 
 ---
 
 ## Privacy
 
-Contributors choose how they appear: a display name or anonymous (the
-default). The form optionally collects an email address for linking
-observations privately. Email addresses are stored only in the private
-archival original in the Vessel — never in the published observation,
-never on the public site.
+What the privacy page promises, and this workflow keeps:
 
-The original submission and the published observation are both kept as
-the archive's permanent record — the original privately in the Vessel,
-the edited version publicly on the site. Raw submissions in Formspree
-and email are deleted after the observation is published, as the
-privacy page commits to. Audio recordings are deleted after the
-contributor approves the transcript.
+- A name appears only when one is given; it comes off the site on request.
+- Email is optional and only for the mailing list of upcoming events.
+  Never published, never connected to an account.
+- The submission is deleted once the account is published; recordings
+  once the account is retold.
+- Submissions and the mailing list are seen by the archive's keepers
+  (Ana, with Fiona and Megan supporting). Everyday tools keep it
+  running: email, Formspree, GitHub.
+- No cookies, analytics, or tracking.
 
-Contact for data rights is through [anaseahawk.com](https://anaseahawk.com),
-not a published email address.
+Removing a name means removing it from the public site. Git history
+rewriting is not promised.
+
+Site copy follows the prose skill: noun-led, with "I" and "you" kept
+sparse.
+
+Contact for requests is through [anaseahawk.com](https://anaseahawk.com).
 
 ---
 
@@ -260,6 +276,7 @@ the form or consent without explicit direction.
 - **Booking:** `https://cal.com/anaseahawk/the-water-of-life-a-conversation`
 - **Template functions in content files:** Hugo does NOT process Go template syntax (`relURL`, etc.) in `.md` content files. Use relative paths (`../privacy/`, `../images/foo.jpg`) instead.
 - **GitHub Pages base path:** site lives at `/the-water-of-life/`, not root
+- **Logo:** none yet. The Ana Seahawk emblem is not the archive's logo; leave the spot blank.
 
 ---
 
@@ -286,3 +303,4 @@ cannot see without it?" If the answer isn't compelling, don't add it.
 - `Components/the-water-of-life/templates/contributor-template.md`
 - `Components/the-water-of-life/templates/interview-guide.md`
 - `.agents/skills/sensitive-content/SKILL.md`
+- `.agents/skills/prose/SKILL.md`

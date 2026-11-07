@@ -4,14 +4,16 @@ title: "Founding Document"
 
 
 **Date:** 2026-08-29
-**Founder and steward:** Ana Seahawk
+**Founder and steward:** [Ana Seahawk](https://anaseahawk.com)
+**Supported by:** [Fiona Gardner](https://fionagardner.org) and [Megan Macdonald](https://expansionhealing.ca)
 
 ---
 
 ## What this is
 
-The Water of Life is a public, participatory observational archive
-collecting first-person accounts of engagement with auto-urine practice.
+The Water of Life is a cooperative observational archive of accounts of
+engagement with auto-urine practice. Contributors share what they
+noticed, and the archive retells it.
 
 It is not a book. It is not a medical resource. It is not an advocacy site. It
 is an archive — a structured, searchable collection of self-reported
@@ -34,7 +36,7 @@ The absence of clinical evidence is not evidence that the practice works.
 It is not evidence that it does not. It is a gap.
 
 There is another layer of evidence that has gone largely uncollected:
-structured first-person accounts of what contemporary practitioners
+structured accounts of what contemporary practitioners
 actually do, what else is happening in their lives, and what they observe
 over time. An unknown but potentially large number of people are living
 this practice right now — and have been for years, for decades, for
@@ -79,9 +81,10 @@ identify with.
 
 ### What Armstrong did differently, and what we do differently from him
 
-Armstrong collected case histories told through his own voice — third-person
-accounts of his patients. This archive collects first-person accounts. The
-contributor is the observer and the narrator.
+Armstrong collected case histories and told them in his own voice. This
+archive also retells what contributors share, with light editing, and
+keeps each account in the contributor's own voice. The contributor is the
+observer and the narrator.
 
 Armstrong made direct causal claims throughout his book. This archive makes
 none. Observations are documented. Concurrent factors are documented. Patterns
@@ -166,9 +169,9 @@ want. Observations may stand alone. Where a contributor uses a display
 name, related observations may naturally become identifiable as part of
 an ongoing record.
 
-Audio recordings from interviews are stored privately until the
-transcript is reviewed and approved by the contributor, then deleted.
-Only transcripts enter the public archive.
+Submissions are deleted once the story has been retold and published.
+Audio recordings from conversations are deleted once the story has been
+retold. Only the retold story enters the public archive.
 
 ---
 
@@ -217,7 +220,10 @@ to violate the archive's consent terms. Removals are tracked in the git
 history — the record shows that the entry existed and was removed, and why.
 The archive does not quietly delete anything.
 
-Contributors may request removal of their own entry at any time.
+Once published, a story stays in the archive. A contributor whose name
+appears can ask for the name to be removed from the site. Stories shared
+before 7 November 2026 keep the terms they were given under, which
+include removal of the whole entry on request.
 
 ---
 

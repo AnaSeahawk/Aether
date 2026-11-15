@@ -358,7 +358,7 @@ fields.
 2. **Moon degree** — sign glyph + ordinal degree, plus the phase
    symbol. The moon moves ~13º per day (~0.5º per hour), so this
    tells you the time within the day. Example: ♊ 22º, crescent
-3. **Year** — Annus Mundi, Gregorian, or both. Example: 5920 / 2026
+3. **Year** — Anno Mundi, Gregorian, or both. Example: 5920 / 2026
 
 These three values together are a complete timestamp. The Gregorian
 date is derivable from the sun degree and the year.

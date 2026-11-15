@@ -75,7 +75,7 @@ Load only the skill files the work actually triggers:
 - Read `.agents/skills/passwords/SKILL.md` before any task involving passwords,
   API tokens, credentials, or `gopass`.
 - Read `.agents/skills/solar-journal/SKILL.md` when working on The Solar
-  Journal, its degree notation, or Annus Mundi dating.
+  Journal, its degree notation, or Anno Mundi dating.
 - Read `.agents/skills/phoenix-calculator/SKILL.md` when calculating Phoenix
   points or Phoenix AM years.
 - Read `.agents/skills/book-collaboration/SKILL.md` when working on a book Ana

@@ -15,7 +15,7 @@ Use this skill when:
 
 - Designing pages or sections for The Solar Journal
 - Working with the degree-based date notation
-- Converting between Gregorian, solar degree, and Annus Mundi dates
+- Converting between Gregorian, solar degree, and Anno Mundi dates
 - Building the front-matter codebook (degree key, moon phases, etc.)
 
 Product content for each page (tables, diagrams, calculations) lives in
@@ -87,7 +87,7 @@ them as written; do not write new sentences in that shape.
 - Each sign spans exactly 30°.
 - One degree ≈ one day (~0.9856° per day, varies with orbital speed).
 
-### Annus Mundi year count
+### Anno Mundi year count
 
 From Jason Breshears' Archaix research. An ancient year-count system
 predating Anno Domini.
@@ -110,7 +110,7 @@ the AM year is still the previous one.
 ### The journal is timeless
 
 No year is printed. Users buy it anytime, fill in their own year
-(Gregorian, Annus Mundi, or both). The first act is finding where they
+(Gregorian, Anno Mundi, or both). The first act is finding where they
 are astronomically.
 
 ---
@@ -120,7 +120,7 @@ are astronomically.
 The journal teaches a compact date notation using the ordinal
 indicator º (U+00BA):
 
-- **5920 · ♈ 15º** — Annus Mundi year, sign glyph, degree within sign
+- **5920 · ♈ 15º** — Anno Mundi year, sign glyph, degree within sign
 - **♈ 15º** — sign-relative
 - **15º** — absolute degree
 - **2026 · 15º** — Gregorian year + absolute degree
@@ -190,7 +190,7 @@ Each entry captures:
 1. **Sun degree** — sign glyph + ordinal degree. This is the date.
 2. **Moon degree and phase** — sign glyph + ordinal degree, plus the
    phase symbol.
-3. **Year** — Annus Mundi, Gregorian, or both.
+3. **Year** — Anno Mundi, Gregorian, or both.
 4. **Location** — latitude and longitude. Written once, updated when
    the reader moves.
 5. **Solar time** — sunrise, noon, sunset. Looked up for the reader's

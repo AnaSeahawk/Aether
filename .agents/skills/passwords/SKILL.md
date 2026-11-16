@@ -159,6 +159,34 @@ authorized task; do not silently export a secret or delegate setup to Ana.
 
 ---
 
+## Capturing a secret a web page shows once
+
+A dashboard that shows a new API key once wants you to copy it. Move it into
+Gopass without the agent ever reading it.
+
+1. **Stop reading the page as soon as the secret could be showing.** No
+   screenshots, page-text extraction, accessibility trees, or element searches.
+   All of them read the value into the agent's context, and an element search
+   lists the key's text box. If you need a button, run a small page script
+   that returns only that button's coordinates, then click those coordinates.
+2. **Use the page's Download button if it has one.** It writes a file and
+   bypasses the clipboard, which is often unreliable under automation. Find the
+   newest file in `~/Downloads` by name and size only, then:
+   ```sh
+   set -o pipefail
+   tr -d '\n' < "$F" | gopass insert -f <domain>/api-key >/dev/null && shred -u "$F"
+   ```
+   If there is only a Copy button, use `wl-paste -n | gopass insert -f
+   <domain>/api-key`, then `wl-copy --clear`.
+3. **Prove it works with a harmless API call** that reads nothing sensitive,
+   with the key passed from Gopass through the pipe pattern. For example, list
+   the account's resources and check the status code.
+4. **If the value leaked**, even partially, make a new key the same way,
+   confirm the new one works, and delete the leaked one. Don't leave a known
+   leaked credential active.
+
+---
+
 ## When this skill applies
 
 - Any task that requires authentication credentials, API tokens, or

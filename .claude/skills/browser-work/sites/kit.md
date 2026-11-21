@@ -17,4 +17,11 @@
   - "Ana Seahawk" 9877706 (uid f98310d679);
   - "Mother Spirit" 9993901;
   - "The Soli Lunar Guide" 10224590 (uid 78f97b8f73), published 2026-11-21, "Clare"
-    template, email field only.
+    template, email field only;
+  - "Women's Shivambu Circle" 10224695 (uid f13d154062), published
+    2026-11-21, used by circle.mother-spirit.com.
+- **Recommendations (Creator Network):** `/creator-network`, then Settings,
+  then Recommendations. "Edit" picks which forms show other creators'
+  newsletters; as of 2026-11-21 none do, and "Enable by default" is off.
+- **Helpers:** they decline or are refused on save, publish and settings
+  clicks. The main agent makes those clicks, where Ana's yes was given.

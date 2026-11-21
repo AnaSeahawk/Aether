@@ -9,6 +9,22 @@ Ana's standing preference (2026-11-21): the main conversation decides, a helper
 clicks. Screenshots and page dumps stay in the helper's context, not the main
 one.
 
+## Ana's standing approval
+
+Ana (2026-11-21): a task she gives is her yes to every click that task needs,
+whatever the button says (save, publish, upload, confirm). Do not ask again for
+clicks inside the task, and never ask her to click herself.
+
+Still ask first for:
+- anything beyond what the task named;
+- sending a message or email to other people;
+- payments or purchases;
+- permanent deletion;
+- accepting terms.
+
+She never types for the agent, and no password or code is entered by anyone but
+her.
+
 ## Who does what
 
 **Main agent**

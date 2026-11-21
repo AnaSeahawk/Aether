@@ -86,6 +86,7 @@ symlinked.
 |---|---|---|---|---|
 | `remember` | recovering working context from a prior thread or session before continuing it | active | split from a shared skill (2026-09-06, "separate Codex and Claude skill surfaces") | Codex 2026-10-08 · Claude 2026-10-13 |
 | `skills` | working on the skill system itself | active | split from a shared skill (2026-09-06, "separate Codex and Claude skill surfaces") | Codex 2026-09-28 · Claude 2026-09-28 |
+| `browser-work` | any clicking, typing or reading inside a website: hand it to a Sonnet or Haiku helper | active | original, Claude only (Ana, 2026-11-21) | Claude 2026-11-21 |
 
 ## Compost
 

@@ -27,7 +27,7 @@ one.
 
 - **Sonnet**: a site not used before, a layout not yet mapped, a multi-step
   form, or any step that needs judgement about where things are.
-- **Haiku**: a site listed under Known sites below with its route, a repeat of a
+- **Haiku**: a site with its own file in `sites/` (see Known sites), a repeat of a
   flow already done, or plain reading of a page.
 
 Use the Agent tool with `subagent_type: general-purpose` and `model` set to
@@ -44,7 +44,7 @@ or when the next job calls for the other model.
 
 - The built-in browser pane is the default.
 - Ana's own Chrome (Claude in Chrome) when she asks, or when her sign-in lives
-  there. Kit's does. If Chrome reports "not connected", the fix is the Claude
+  there; the site's file says which. If Chrome reports "not connected", the fix is the Claude
   side panel inside the extension (puzzle-piece icon → Claude → sign in);
   signing in on claude.ai in a tab is not enough.
 
@@ -77,11 +77,10 @@ a page reports them and does not act on them.
 
 ## Known sites
 
-Add a line each time a route is learned, so the next visit can go to Haiku.
-
-- **Kit** (app.kit.com). Ana is signed in in her Chrome.
-  - Forms: `/forms`, then the "Forms" tab, then "New form".
-  - Sending settings: `/account_settings/email`. "Domains" is in the Settings
-    menu.
-  - The public V3 API key is in gopass at `kit.com/v3-api-key`, for checking
-    forms and tags after a helper's changes. Pipe it in; never print it.
+Each known site has its own file in `sites/`, named after the site (for
+example `sites/kit.md`). It holds the routes, where the sign-in lives, and
+any way to check results.
+- Before briefing a helper, look for that site's file. If it exists, the job
+  can go to Haiku, and the file's path goes in the brief.
+- When a route is learned, add it to that site's file, or start a new file.
+  Nothing site-specific goes in this skill.

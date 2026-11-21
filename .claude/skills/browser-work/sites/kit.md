@@ -16,5 +16,5 @@
 - **Forms so far:**
   - "Ana Seahawk" 9877706 (uid f98310d679);
   - "Mother Spirit" 9993901;
-  - "The Soli Lunar Guide" 10224590 (uid 78f97b8f73), made with the "Clare"
+  - "The Soli Lunar Guide" 10224590 (uid 78f97b8f73), published 2026-11-21, "Clare"
     template, email field only.

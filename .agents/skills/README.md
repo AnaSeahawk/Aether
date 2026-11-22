@@ -57,6 +57,7 @@ Load these only when triggered:
 | Skill | Use when | Status | Lineage | Last tended |
 |---|---|---|---|---|
 | `prose` | drafting, editing, reviewing, or evaluating writing | active | original | 2026-09-30 |
+| `writing-voice` | writing in Ana's voice or about her life; editing her dictated thoughts into finished prose | active | original (Ana, 2026-11-21): the living inquiry essay, from a Rudhyar reading of her chart | 2026-11-21 |
 | `sensitive-content` | touching private, operational, health-adjacent, collaboration-private, or publishing-sensitive material | active | original | 2026-09-20 |
 | `passwords` | any task involving passwords, API tokens, or credentials (`gopass`) | active | original | 2026-09-19 |
 

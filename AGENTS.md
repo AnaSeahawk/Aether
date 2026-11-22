@@ -62,6 +62,8 @@ Load only the skill files the work actually triggers:
 
 - Always read this file and the skill file for the role you are using.
 - Read `.agents/skills/prose/SKILL.md` for drafting, editing, or evaluating prose.
+- Read `.agents/skills/writing-voice/SKILL.md` with `prose` when writing in Ana's
+  voice or about her life, or turning her dictated thoughts into finished prose.
 - Read `.agents/skills/sensitive-content/SKILL.md` before touching private, operational,
   health-adjacent, collaboration-private, or publishing-sensitive material.
 - Read `.agents/skills/water-of-life/SKILL.md` when working with The Water of

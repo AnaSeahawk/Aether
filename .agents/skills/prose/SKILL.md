@@ -180,7 +180,8 @@ legible path create welcome. The copy does not need to grant permission or
 describe itself as welcoming.
 
 **Let Ana's language carry the page.** When Ana supplies finished language, it
-is the load-bearing voice. Navigation, labels, and functional copy remain
+is the load-bearing voice. Dictated or spoken thoughts are raw material, not
+finished language: edit them into her voice (see `writing-voice`). Navigation, labels, and functional copy remain
 subordinate to it and should introduce as little additional interpretation as
 possible.
 

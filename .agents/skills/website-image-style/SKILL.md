@@ -1,6 +1,6 @@
 ---
 name: website-image-style
-description: Design or review Ana Seahawk website thumbnails, logos, entry emblems and illustrations meant to explain an idea at a glance. Use when connecting a link to its destination or developing related site imagery. Individual essay artwork has its own direction.
+description: Design or review Ana Seahawk website thumbnails, logos, entry emblems and illustrations meant to explain an idea at a glance. Use also when generating full illustrations or body images that should work across light and dark themes. Individual essay artwork has its own direction.
 ---
 
 # Website image style
@@ -12,6 +12,16 @@ Start with the reader's moment. On a card they are choosing where to go. At the 
 - **A thumbnail and its destination.** Keep the name legible as page text. Reuse the approved thumbnail wherever an illustrated link leads to that destination. The same mark can appear at the title. When the full emblem invites a closer look, draw a simpler thumbnail with the same silhouette, color relationships and principal subjects in the same positions.
 - **An illustration that carries words.** Name the thought someone should understand at a glance. Cover the caption briefly and describe what you see. A few words can finish the thought. In Place Readings, the order from basket to board to pot to bowl to rack lets the eye follow a meal. In A Website of One’s Own, two women with cups of tea convey the ease of a first conversation. Each style fits its subject.
 - **Art specific to a piece.** The individual illustrations in essays, including the longer Sovereign Biophysics pieces, belong to those works. Keep a navigation review focused on the links and entry points Ana identifies.
+
+## Generate one image for both themes
+
+Carry this preference into each website image brief, from a tiny link mark to a full emblem or an illustration in the body of a page. Aim for one artwork that reads on both the light and dark site surfaces. Handle export choices without asking Ana for format terminology.
+
+For a subject that sits directly on the page, request genuinely transparent surroundings. Give the important shapes enough contrast on both surfaces. Keep intentional backgrounds within the artwork, such as the seasonal field inside a roundel. A full scene can carry its own sky, room or other opaque background and still work in both themes.
+
+Keep the original artwork. A transparent PNG is a useful source for generated cutouts. For the site, export a suitably sized WebP with transparency when needed. JPEG suits imported photographs, including Ana’s own. Preserve their originals and choose a web-sized copy for the placement.
+
+Preview the exported file at its actual display size on both page backgrounds. Look for a pale fringe, a box around the subject, or details that disappear. Adjust the shared artwork first. Use separate theme versions only when the shared image cannot carry the intended detail on both surfaces or when Ana requests them.
 
 ## Work from an approved reference
 

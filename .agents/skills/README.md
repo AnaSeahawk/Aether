@@ -77,6 +77,7 @@ Capability workflows any role may load when the task involves that tooling:
 | `frontmatter` | generating content frontmatter with Sun position, status, visibility, claim_tier | active | adapted from `~/.claude/commands/frontmatter.md`; local Swiss Ephemeris script replaced the remote `chronos` call 2026-10-13 | 2026-10-13 |
 | `ontology` | tending the archive's pattern language: adding, matching, or composting terms; term survey; seasonal review | active | grew from the Living Design dialogue and the Dictionary's format | 2026-10-10 |
 | `book-collaboration` | co-creating a book with another author: manuscripts, series bible, discussion journal, Drive drafts into Git | active | original | 2026-10-14 |
+| `circle-booking` | opening a Circle date on Cal.com: a speaking seat and a listening seat on two accounts, booked as one | active (Claude-specific; uses the Cal.com MCP) | original (seat test, 2026-11-27) | 2026-11-27 |
 
 ## Harness skills
 
